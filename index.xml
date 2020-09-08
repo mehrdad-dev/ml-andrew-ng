@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>هوش مصنوعی به فارسی on ai.eng</title>
-    <link>https://ai-eng.github.io/ml-andrew-ng/</link>
+    <link>https://mehrdad-dev.github.io/ml-andrew-ng/</link>
     <description>Recent content in هوش مصنوعی به فارسی on ai.eng</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 05 Sep 2020 18:40:41 +0430</lastBuildDate>
     
-	<atom:link href="https://ai-eng.github.io/ml-andrew-ng/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://mehrdad-dev.github.io/ml-andrew-ng/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>یادگیری ماشین چیست؟</title>
-      <link>https://ai-eng.github.io/ml-andrew-ng/week1/what-is-ml/</link>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week1/what-is-ml/</link>
       <pubDate>Sat, 05 Sep 2020 18:40:41 +0430</pubDate>
       
-      <guid>https://ai-eng.github.io/ml-andrew-ng/week1/what-is-ml/</guid>
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week1/what-is-ml/</guid>
       <description>دو تعریف از یادگیری ماشین ارائه شده است:
  Arthur Samuel: رشته مطالعاتی که به کامپیوتر ها این توانایی را می‌دهد که بدون برنامه نویسی صریح یاد بگیرند.
  توجه: این یک تعریف قدیمی و غیر رسمی است!
@@ -26,10 +26,10 @@
     
     <item>
       <title>یادگیری نظارتی چیست؟</title>
-      <link>https://ai-eng.github.io/ml-andrew-ng/week1/supervised/</link>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week1/supervised/</link>
       <pubDate>Sun, 06 Sep 2020 12:54:05 +0430</pubDate>
       
-      <guid>https://ai-eng.github.io/ml-andrew-ng/week1/supervised/</guid>
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week1/supervised/</guid>
       <description>تعریف یادگیری نظارتی در یـادگـیری نــظارتـی یک مجموعه داده داریم و از قبل می‌دانیم که خروجی صحیح باید چطور باشد، اصطلاحا داده های لیبل خورده اند! با این ایده که به بین خروجی و ورودی رابطه وجود دارد.
 مسائل یادگیری نظارتی یا همان Supervised Learning به دو دسته رگرسیون و طبقه بندی تقسیم می‌شوند.
 رگرسیون | Regression در این مسائل سعی می‌کنیم خروجی ای با مقدار پیوسته را پیش بینی کنیم.</description>
@@ -37,20 +37,20 @@
     
     <item>
       <title>یادگیری غیر نظارتی چیست؟</title>
-      <link>https://ai-eng.github.io/ml-andrew-ng/week1/unsupervised/</link>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week1/unsupervised/</link>
       <pubDate>Sun, 06 Sep 2020 12:56:04 +0430</pubDate>
       
-      <guid>https://ai-eng.github.io/ml-andrew-ng/week1/unsupervised/</guid>
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week1/unsupervised/</guid>
       <description>تعریف یادگیری غیر نظارتی یادگیری بدون نظارت این امکان را به ما مـی‌دهد کــه بدون داشتن هیچ ایده ای نسبت به خروجی داده ها به حل مشکلات نزدیک شویم. در واقع در اینجا داده های ما هیچ برچسبی نـدارنـد و الگوریتم‌ها به حال خود رها می‌شوند تا سـاختـارهــای موجود در میان داده‌ها را کشف کنند. Unsupervised Learning ها به دو دسته خوشه بندی و غیر خوشه بندی تقسیم می‌شوند.
 خوشه بندی | Clustering در این مسـائـــل سـعــی مـی‌کــنیم داده هایی با ویژگی های مشترک را به چـندین گــروه تقـسیم کــنیم، یعنی آن ها را به خوشه ها تخصیص بدهیم.</description>
     </item>
     
     <item>
       <title>رگرسیون خطی با یک متغیر</title>
-      <link>https://ai-eng.github.io/ml-andrew-ng/week1/linear-regression-one-variable/</link>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week1/linear-regression-one-variable/</link>
       <pubDate>Sun, 06 Sep 2020 13:26:16 +0430</pubDate>
       
-      <guid>https://ai-eng.github.io/ml-andrew-ng/week1/linear-regression-one-variable/</guid>
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week1/linear-regression-one-variable/</guid>
       <description>بررسی نماد ها و مفاهیم مثلا در دیتای خانه ها نماد ها به این صورت هستند:
    نماد      $m$ تعداد کل ردیف های جدول دیتای یادگیری   $x$ متغیر های ورودی   $y$ متغیر های خروجی یا هدف    برای آدرس دهی در جدول به این شکل عمل می‌کنیم:
 $$(x_i, y_i) \Rightarrow x_1= 2104, y_1 = 460$$
@@ -59,10 +59,10 @@ $$(x_i, y_i) \Rightarrow x_1= 2104, y_1 = 460$$
     
     <item>
       <title>تابع هزینه قسمت اول</title>
-      <link>https://ai-eng.github.io/ml-andrew-ng/week1/cost1/</link>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week1/cost1/</link>
       <pubDate>Sun, 06 Sep 2020 14:08:57 +0430</pubDate>
       
-      <guid>https://ai-eng.github.io/ml-andrew-ng/week1/cost1/</guid>
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week1/cost1/</guid>
       <description>تعریف تابع هزینه | Cost Function با این تابع می‌توانیم بهترین خط مستقیم را برای داده هایمان به دست آوریم. با این تابع می‌توانیم بهترین خط مستقیم را برای داده هایمان به دست آوریم.
 در رگرسیون خطی مجموعه آموزشی مثل این نمودار داریم و می‌خواهیم مقادیری برای $\theta_0$ و $\theta_1$ به دست آوریم به طوری که خط راستی که رسم می‌کنیم، بهترین تطابق را با داده هایمان داشته باشد.
 بنابراین مقادیر را باید طوری تعیین کنیم که خروجی تابع $h$ بر حسب $x$ تا جای ممکن به مقادیر واقعی $y$ در مجموعه دیتای آموزشی نزدیک باشد.</description>
@@ -70,10 +70,10 @@ $$(x_i, y_i) \Rightarrow x_1= 2104, y_1 = 460$$
     
     <item>
       <title>تابع هزینه قسمت دوم</title>
-      <link>https://ai-eng.github.io/ml-andrew-ng/week1/cost2/</link>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week1/cost2/</link>
       <pubDate>Sun, 06 Sep 2020 14:26:42 +0430</pubDate>
       
-      <guid>https://ai-eng.github.io/ml-andrew-ng/week1/cost2/</guid>
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week1/cost2/</guid>
       <description>تا اینجا به طور خلاصه تمام چیزی که از تابع هزینه می‌دانیم در زیر آمده است:
 اما اجازه بدید برای ساده سازی تابع فرضیه را تنها با یک پارامتر به این شکل در نظر بگیریم: $ h_\theta(x) = \theta_1x $ و سه مقدار مختلف $0$، $5.0 $ و $1$ رو حساب کنیم &amp;hellip;
 مثلا برای مقدار تتا برابر با $1$ محاسبات زیر را خواهیم داشت:
@@ -82,10 +82,10 @@ $$ {\color{Red} J(\theta_1) = \frac{1}{2m} \sum_{i=1}^{m} (\theta_1x - y_i)^2 \R
     
     <item>
       <title>تابع هزینه قسمت سوم</title>
-      <link>https://ai-eng.github.io/ml-andrew-ng/week1/cost3/</link>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week1/cost3/</link>
       <pubDate>Sun, 06 Sep 2020 16:31:03 +0430</pubDate>
       
-      <guid>https://ai-eng.github.io/ml-andrew-ng/week1/cost3/</guid>
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week1/cost3/</guid>
       <description>قسمت قبل دیدیم که با داشتن فقط یک پارامتر برای تابع فرضیه، نمودار تابع هزینه یا همان J به صورت سهمی بود. اگر دو پارامتر داشته باشیم باز هم به صورت سهمی است، اما سه بعدی و بسته به دیتای ما ممکن است به شکل زیر باشد:
 اما ما برای نمایش این تابع از شکل سه بعدی استفاده نمی‌کنیم‌، بلکه از نمودار های کانتور استفاده می‌کنیم!
 در این نمودار ها هر یک از بیضی ها نشان دهنده مجموعه ای از نقاط است که مقادیر یکسانی در J بر حسب تتا صفر و تتا یک های مختلف دارند.</description>
