@@ -85,7 +85,7 @@ jQuery(document).ready(function() {
 
   clip.on('success', function(e) {
       e.clearSelection();
-      $(e.trigger).attr('aria-label', 'Link copied to clipboard!').addClass('tooltipped tooltipped-s');
+      $(e.trigger).attr('aria-label', 'لینک  این قسمت کپی شد!').addClass('tooltipped tooltipped-s');
   });
   $('code.language-mermaid').each(function(index, element) {
     var content = $(element).html().replace(/&amp;/g, '&');

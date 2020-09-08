@@ -60,13 +60,26 @@ body #chapter h1 {
 @media only all and (min-width: 48em) and (max-width: 59.938em) {
     body #chapter h1 {
         font-family: "Vazir";
-        font-size: 3em;
+        font-size: 3vw;
     }
 }
 @media only all and (max-width: 47.938em) {
     body #chapter h1 {
         font-family: "Vazir";
-        font-size: 2rem;
+        font-size: 2rvw;
+    }
+}
+
+/* mobile */
+@media (max-width: 767px) {
+    body h1 {
+     font-size: 24px;
+    }
+    body h3 {
+        font-size: 21px;
+    }
+    body h2 {
+        font-size: 21px;
     }
 }
 
@@ -534,7 +547,7 @@ body {
     font-family: "Vazir";
     font-weight: 300;
     line-height: 1.6;
-    font-size: 18px !important;
+    font-size: 18vw !important;
 }
 h2,
 h3,
@@ -602,28 +615,28 @@ div.notices.info p {
     background: #fff2db;
 }
 div.notices.info p:first-child:after {
-    content: "Info";
+    content: "اطلاعات";
 }
 div.notices.warning p {
     border-top: 30px solid rgba(217, 83, 79, 0.8);
     background: #fae2e2;
 }
 div.notices.warning p:first-child:after {
-    content: "Warning";
+    content: "توجه";
 }
 div.notices.note p {
     border-top: 30px solid #6ab0de;
     background: #e7f2fa;
 }
 div.notices.note p:first-child:after {
-    content: "Note";
+    content: "توضیحات";
 }
 div.notices.tip p {
     border-top: 30px solid rgba(92, 184, 92, 0.8);
     background: #e6f9e6;
 }
 div.notices.tip p:first-child:after {
-    content: "Tip";
+    content: "نکته";
 }
 
 /* attachments shortcode */
@@ -1191,7 +1204,7 @@ pre .copy-to-clipboard {
     top: 4px;
     background-color: #949bab;
     color: #ccc;
-    border-radius: 2px;
+    border-radius: 10px;
 }
 pre .copy-to-clipboard:hover {
     background-color: #656c72;
