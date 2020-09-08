@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title> هفته دوم on ai.eng</title>
-    <link>ai-eng.github.io/ml-andrew-ng/week2/</link>
+    <link>https://ai-eng.github.io/ml-andrew-ng/week2/</link>
     <description>Recent content in  هفته دوم on ai.eng</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 05 Sep 2020 18:30:44 +0430</lastBuildDate>
     
-	<atom:link href="ai-eng.github.io/ml-andrew-ng/week2/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ai-eng.github.io/ml-andrew-ng/week2/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
