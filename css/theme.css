@@ -46,19 +46,23 @@
     /* font-weight: 200; */
 }
 body {
+    font-family: 'Vazir';
     background: #fff;
     color: #777;
 }
 body #chapter h1 {
+    font-family: 'Vazir';
     font-size: 3.5rem;
 }
 @media only all and (min-width: 48em) and (max-width: 59.938em) {
     body #chapter h1 {
+        font-family: 'Vazir';
         font-size: 3rem;
     }
 }
 @media only all and (max-width: 47.938em) {
     body #chapter h1 {
+        font-family: 'Vazir';
         font-size: 2rem;
     }
 }
@@ -130,9 +134,10 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     position: relative;
     border: 1px solid #915eae;
     background: #764890;
-    border-radius: 4px;
+    border-radius: 15px;
 }
 .searchbox label {
+    font-family: 'Vazir';
     color: rgba(255, 255, 255, 0.8);
     position: absolute;
     left: 10px;
