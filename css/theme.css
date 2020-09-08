@@ -154,6 +154,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     color: rgba(255, 255, 255, 0.9);
 }
 .searchbox input {
+    font-family: "Vazir";
     display: inline-block;
     color: #fff;
     width: 100%;
@@ -181,20 +182,20 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
 }
 @media only all and (max-width: 47.938em) {
     #sidebar-toggle-span {
+        font-family: "Vazir";
         display: inline;
     }
 }
 #sidebar {
-    
+    font-family: "Vazir";
     background-color: #322A38;
     position: fixed;
     top: 0;
     width: 300px;
     bottom: 0;
-    left: 0;
+    left: 0px;
     font-weight: 400;
     font-size: 15px;
-    
 }
 #sidebar a {
     color: #ccc;
@@ -380,6 +381,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
 }
 @media only all and (max-width: 59.938em) {
     #body #navigation {
+        font-family: "Vazir";
         position: static;
         margin-right: 0 !important;
         width: 100%;
@@ -404,6 +406,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
 }
 @media only all and (max-width: 59.938em) {
     #body .nav {
+        font-family: "Vazir";
         display: table-cell;
         position: static;
         top: auto;
