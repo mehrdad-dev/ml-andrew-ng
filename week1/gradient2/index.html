@@ -36,7 +36,7 @@
 
     <link rel="icon" href="/ml-andrew-ng/images/favicon.png" type="image/png">
 
-    <title>یادگیری غیر نظارتی چیست؟ :: Machine Learning Andrew Ng</title>
+    <title>گرادیان کاهشی قسمت دوم :: Machine Learning Andrew Ng</title>
 
     
     <link href="/ml-andrew-ng/css/nucleus.css" rel="stylesheet">
@@ -63,7 +63,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/ml-andrew-ng/week1/unsupervised/">
+  <body class="" data-url="/ml-andrew-ng/week1/gradient2/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -998,7 +998,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week1/unsupervised/" title="یادگیری غیر نظارتی چیست؟" class="dd-item active">
+      <li data-nav-id="/ml-andrew-ng/week1/unsupervised/" title="یادگیری غیر نظارتی چیست؟" class="dd-item ">
         <a href="/ml-andrew-ng/week1/unsupervised/">
         یادگیری غیر نظارتی چیست؟
         <i class="fas fa-check read-icon"></i>
@@ -1124,7 +1124,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week1/gradient2/" title="گرادیان کاهشی قسمت دوم" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week1/gradient2/" title="گرادیان کاهشی قسمت دوم" class="dd-item active">
         <a href="/ml-andrew-ng/week1/gradient2/">
         گرادیان کاهشی قسمت دوم
         <i class="fas fa-check read-icon"></i>
@@ -1249,7 +1249,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/week1/unsupervised.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/week1/gradient2.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text"> ویرایش صفحه</span>
                     </a>
@@ -1280,7 +1280,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
             
           
           
-            <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week1/'>   هفته اول </a> > یادگیری غیر نظارتی چیست؟
+            <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week1/'>   هفته اول </a> > گرادیان کاهشی قسمت دوم
           
         
           
@@ -1293,16 +1293,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#تعریف-یادگیری-غیر-نظارتی">تعریف یادگیری غیر نظارتی</a></li>
-        <li><a href="#خوشه-بندی--clustering">خوشه بندی | Clustering</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -1318,39 +1309,89 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
           
             <h1>
               
-              یادگیری غیر نظارتی چیست؟
+              گرادیان کاهشی قسمت دوم
             </h1>
           
 
         
 
 
-<h3 id="تعریف-یادگیری-غیر-نظارتی">تعریف یادگیری غیر نظارتی</h3>
-<p>یادگیری بدون نظارت این امکان را به ما مـی‌دهد کــه
-بدون داشتن هیچ ایده ای نسبت به خروجی داده ها
-به حل مشکلات نزدیک شویم.
-در واقع در اینجا داده های ما هیچ برچسبی نـدارنـد و
-الگوریتم‌ها به حال خود رها می‌شوند تا سـاختـارهــای
-موجود در میان داده‌ها را کشف کنند.
-Unsupervised Learning  ها به دو دسته <strong>خوشه بندی</strong>
-و <strong>غیر خوشه بندی</strong> تقسیم می‌شوند.</p>
-<h3 id="خوشه-بندی--clustering">خوشه بندی | Clustering</h3>
-<p><img src="../images/clustering.png?width=30pc" alt="clustering"></p>
-<p>در این مسـائـــل سـعــی مـی‌کــنیم
-داده هایی با ویژگی های مشترک
-را به چـندین گــروه تقـسیم کــنیم،
-یعنی آن ها را به خوشه ها تخصیص بدهیم.
-فرض کنید مجموعه داده از 1000000 ژن مختلف دارید
-و می‌خواهید راهی پیدا کنید که به صورت خودکار آن ها
-را گروه بندی کند که به نوعی به هم شباهت دارند.</p>
-<p><strong>مثال های بیشتر &hellip;</strong></p>
-<ol>
-<li>دسته بندی مشتری های فروشگاه اینترنتی تا بتوانیم
-مشتری های مشابه را در یک خوشه نگه داری کنیم.</li>
-<li>الگوریتم Cocktail Party به شما امکان می‌دهد کـــه
-در مــحیط بــی نظم سـاختـار پیدا کنید:</li>
-</ol>
-<p><img src="../images/cocktail-party.jpeg?width=30pc" alt="cocktail-party"></p>
+<p><img src="../images/image36.png?width=30pc" alt="image36.png"></p>
+<p>در قسمت قبل گرادیان کاهشی را به این صورت معرفی
+کردیم، در این قسمت می‌خواهیم به توضیح آلفا و
+عبارت مشتق بپردازیم.
+اما برای برای درک بهتر می‌خواهیم با یک مثال ساده تر
+تابعی با یک پارامتر را مینیمم کنیم،  یعنی فرض
+می‌کنیم تابع هزینه $J$ فقط یک پارامتر دارد.</p>
+<p>تصور کنید تابع $J$ زیر
+را با پارامتر تتا یک در این
+نقطه داریم، و از این نقطه
+کارمان را شروع می‌کنیم.</p>
+<p><img src="../images/image42.png?width=15pc" alt="image42.png"></p>
+<p>کاری که عبارت مشتق می‌کند این است که تانژانت این
+نقطه را می‌گیرد، مثل این خط قرمز که با تابع مماس
+است.
+پس از این عبارت شیب خط را به دست می‌آوریم و
+می‌بینیم که در اینجا شیب خط قرمز ما مثبت است،
+پس متوجه شدیم که در
+این شکل حاصل مشتق
+مثبت است، همچنین
+نرخ یادگیری نیز همیشه
+عددی مثبت است.</p>
+<p>بنابراین تغییر $\theta$ طبق فرمول به این صورت است:
+$$ \theta_1 := \theta_1 - \alpha \text{ } \cdot \text{ (positive number)} $$</p>
+<p>بنابراین داریم $\theta$ منهای مقداری مثبت که این
+باعث می‌شود $\theta$ ما کاهش یابد و به سمت چپ برود!</p>
+<p><strong>همان چیزی که می‌خواهیم، نزدیک شدن به مینیمم!</strong></p>
+<p>و اگر طبق مثال قبل از این
+نقطه جدید شروع کنیم
+شیب خط ما منفی خواهد
+شد، یعنی مشتق منفی!</p>
+<p><img src="../images/image43.png?width=15pc" alt="image43.png"></p>
+<p>بنابراین تغییر تتا طبق فرمول به این صورت است:
+$$ \theta_1 := \theta_1 - \alpha \text{ } \cdot \text{ (negative number)} $$</p>
+<p>می‌بینیم که داریم تتا یک منهای مقداری منفی که این
+باعث می‌شود تتا ما افزایش یابد و به سمت راست برود!</p>
+<p><img src="../images/image44.jpg?width=30pc" alt="image44.jpg"></p>
+<p>در شکل سمت چپ مقدار آلفا بسیار کوچک است که
+باعث می‌شود گرادیان کاهشی خیلی کند تر به مینیمم
+برسد یعنی نیاز داریم قدم های بیشتری به پایین برداریم.</p>
+<p>اما در شکل راست آلفا بسیار بزرگ تر است که باعث
+شده گرادیان کاهشی هیچ وقت به مینیمم نرسد.
+یعنی گرادیان کاهشی ما همگرا نیست بلکه واگرا است!</p>
+<p><strong>حالا شما جواب بدید!</strong></p>
+<p>چه اتفاقی می‌افتد اگر در شکل زیر پارامتر $\theta_1$ در نقطه
+مینیمم باشد؟!</p>
+<p><img src="../images/image45.png?width=20pc" alt="image45.png"></p>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	برای پاسخ کلیک کن
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <p>por kon :)</p>
+
+    </div>
+</div>
+<p>گرادیان نزولی به مینیمم
+موضعی ختم می‌شود حتی
+زمانی که نرخ یادگیری یا
+همان آلفا ثابت باشد!</p>
+<p><img src="../images/image46.png?width=20pc" alt="image46.png"></p>
+<p>زیرا در هر بار انجام الگوریتم شیب خط حاصل از عبارت
+مشتق ملایم تر از حالت دفعه قبلش است و همینطور
+که به مینیمم نزدیک تر می‌شویم، مشتق نیز به صفر
+میل می‌کند.
+بنابراین هر بار مشتق کوچک تر می‌شود و این باعث
+می‌شود قدم ها هر بار کوچک تر و کوچک تر شوند.
+به این خاطر نیازی نیست در طول زمان مقدار آلفا را
+کاهش دهیم!</p>
 
 
 <footer class="footline">
@@ -1437,26 +1478,6 @@ Unsupervised Learning  ها به دو دسته <strong>خوشه بندی</strong
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
                 
                 
 
@@ -1552,6 +1573,26 @@ Unsupervised Learning  ها به دو دسته <strong>خوشه بندی</strong
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -1592,10 +1633,10 @@ Unsupervised Learning  ها به دو دسته <strong>خوشه بندی</strong
 	 
 	 
 		
-			<a class="nav nav-prev" href="/ml-andrew-ng/week1/supervised/" title="یادگیری نظارتی چیست؟"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/ml-andrew-ng/week1/gradient1/" title="گرادیان کاهشی قسمت اول"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ml-andrew-ng/week1/linear-regression-one-variable/" title="رگرسیون خطی با یک متغیر" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/ml-andrew-ng/week1/gradient3/" title="گرادیان کاهشی قسمت سوم" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

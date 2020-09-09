@@ -36,7 +36,7 @@
 
     <link rel="icon" href="/ml-andrew-ng/images/favicon.png" type="image/png">
 
-    <title>یادگیری غیر نظارتی چیست؟ :: Machine Learning Andrew Ng</title>
+    <title>گرادیان کاهشی قسمت سوم :: Machine Learning Andrew Ng</title>
 
     
     <link href="/ml-andrew-ng/css/nucleus.css" rel="stylesheet">
@@ -63,7 +63,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/ml-andrew-ng/week1/unsupervised/">
+  <body class="" data-url="/ml-andrew-ng/week1/gradient3/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -998,7 +998,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week1/unsupervised/" title="یادگیری غیر نظارتی چیست؟" class="dd-item active">
+      <li data-nav-id="/ml-andrew-ng/week1/unsupervised/" title="یادگیری غیر نظارتی چیست؟" class="dd-item ">
         <a href="/ml-andrew-ng/week1/unsupervised/">
         یادگیری غیر نظارتی چیست؟
         <i class="fas fa-check read-icon"></i>
@@ -1145,7 +1145,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week1/gradient3/" title="گرادیان کاهشی قسمت سوم" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week1/gradient3/" title="گرادیان کاهشی قسمت سوم" class="dd-item active">
         <a href="/ml-andrew-ng/week1/gradient3/">
         گرادیان کاهشی قسمت سوم
         <i class="fas fa-check read-icon"></i>
@@ -1249,7 +1249,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/week1/unsupervised.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/week1/gradient3.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text"> ویرایش صفحه</span>
                     </a>
@@ -1280,7 +1280,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
             
           
           
-            <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week1/'>   هفته اول </a> > یادگیری غیر نظارتی چیست؟
+            <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week1/'>   هفته اول </a> > گرادیان کاهشی قسمت سوم
           
         
           
@@ -1293,16 +1293,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#تعریف-یادگیری-غیر-نظارتی">تعریف یادگیری غیر نظارتی</a></li>
-        <li><a href="#خوشه-بندی--clustering">خوشه بندی | Clustering</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -1318,39 +1309,44 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
           
             <h1>
               
-              یادگیری غیر نظارتی چیست؟
+              گرادیان کاهشی قسمت سوم
             </h1>
           
 
         
 
 
-<h3 id="تعریف-یادگیری-غیر-نظارتی">تعریف یادگیری غیر نظارتی</h3>
-<p>یادگیری بدون نظارت این امکان را به ما مـی‌دهد کــه
-بدون داشتن هیچ ایده ای نسبت به خروجی داده ها
-به حل مشکلات نزدیک شویم.
-در واقع در اینجا داده های ما هیچ برچسبی نـدارنـد و
-الگوریتم‌ها به حال خود رها می‌شوند تا سـاختـارهــای
-موجود در میان داده‌ها را کشف کنند.
-Unsupervised Learning  ها به دو دسته <strong>خوشه بندی</strong>
-و <strong>غیر خوشه بندی</strong> تقسیم می‌شوند.</p>
-<h3 id="خوشه-بندی--clustering">خوشه بندی | Clustering</h3>
-<p><img src="../images/clustering.png?width=30pc" alt="clustering"></p>
-<p>در این مسـائـــل سـعــی مـی‌کــنیم
-داده هایی با ویژگی های مشترک
-را به چـندین گــروه تقـسیم کــنیم،
-یعنی آن ها را به خوشه ها تخصیص بدهیم.
-فرض کنید مجموعه داده از 1000000 ژن مختلف دارید
-و می‌خواهید راهی پیدا کنید که به صورت خودکار آن ها
-را گروه بندی کند که به نوعی به هم شباهت دارند.</p>
-<p><strong>مثال های بیشتر &hellip;</strong></p>
-<ol>
-<li>دسته بندی مشتری های فروشگاه اینترنتی تا بتوانیم
-مشتری های مشابه را در یک خوشه نگه داری کنیم.</li>
-<li>الگوریتم Cocktail Party به شما امکان می‌دهد کـــه
-در مــحیط بــی نظم سـاختـار پیدا کنید:</li>
-</ol>
-<p><img src="../images/cocktail-party.jpeg?width=30pc" alt="cocktail-party"></p>
+<p>در این قسمت گرادیان کاهشی را با تابع هزینه ترکیب
+می‌کنیم و الگوریتم رگرسیون خطی را به دست می‌آوریم.
+تا اینجای کار به این ها رسیدیم:</p>
+<p><img src="../images/image47.png?width=40pc" alt="image47.png"></p>
+<p>اینجا می‌خواهیم از گرادیان کاهشی برای مینیمم کردن
+تابع هزینه استفاده کنیم!
+ابتدا تابع $J$ را در الگوریتم گرادیان جاگذاری می‌کنیم و &hellip;</p>
+<p>با محاسبه عبارت مشتق جزئی در گرادیان کاهشی برای
+دو پارامتر $\theta_0$ و $\theta_1$ خواهیم داشت:</p>
+<p>$$ \theta_0, j = 0: \frac{\partial}{\partial \theta_j} J(\theta_0, \theta_1) = \frac{1}{m} \sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)}) $$</p>
+<p>$$ \theta_1, j = 1: \frac{\partial}{\partial \theta_j} J(\theta_0, \theta_1) = \frac{1}{m} \sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)}) \cdot x^{(i)} $$</p>
+<p>به الگوریتم گرادیان کاهشی بر‌ می‌گردیم و جایگذاری،
+و در واقع به الگوریتم رگرسیون خطی می‌رسیم!</p>
+<p><img src="../images/image49.png?width=35pc" alt="image49.png"></p>
+<p>در قسمت اول گرادیان کاهشی در مثال موتور سوار
+دیدیم که بسته به اینکه از کجا شروع کنیم ممکن است
+که به مینیمم موضعی برسیم!
+اما تابع هزینه برای رگرسیون خطی همیشه تابعی سهمی
+مانند مثل این است:</p>
+<p><img src="../images/image22.png?width=25pc" alt="image22.png"></p>
+<p>این تابع محدب مینیمم
+موضعی ندارد، و فقط
+یک مینیمم کلی دارد.
+یعنی گرادیان کاهشی
+برای این تابع هزینه
+همیشه به نقطه بهینه می‌رسد!
+و بنابراین گرادیان نزولی را در عمل برای داده خانه ها به
+به این صورت می‌بینیم، که نتیجه تناسب خوبی دارد:</p>
+<p><img src="../images/image51.png?width=35pc" alt="image51.png"></p>
+<p>و حالا می‌توانید از آن استفاده کنید تا قیمت خانه ها
+را برای دوستانتان پیشبینی کنید!</p>
 
 
 <footer class="footline">
@@ -1437,26 +1433,6 @@ Unsupervised Learning  ها به دو دسته <strong>خوشه بندی</strong
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
                 
                 
 
@@ -1564,6 +1540,23 @@ Unsupervised Learning  ها به دو دسته <strong>خوشه بندی</strong
             
         
                     
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1571,6 +1564,9 @@ Unsupervised Learning  ها به دو دسته <strong>خوشه بندی</strong
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1592,10 +1588,10 @@ Unsupervised Learning  ها به دو دسته <strong>خوشه بندی</strong
 	 
 	 
 		
-			<a class="nav nav-prev" href="/ml-andrew-ng/week1/supervised/" title="یادگیری نظارتی چیست؟"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/ml-andrew-ng/week1/gradient2/" title="گرادیان کاهشی قسمت دوم"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ml-andrew-ng/week1/linear-regression-one-variable/" title="رگرسیون خطی با یک متغیر" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/ml-andrew-ng/week2/" title=" هفته دوم" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
