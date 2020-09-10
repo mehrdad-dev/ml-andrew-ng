@@ -11,5 +11,73 @@
 	<atom:link href="https://mehrdad-dev.github.io/ml-andrew-ng/week2/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>رگرسیون خطی چند متغیره</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week2/linear-regression-many-variable/</link>
+      <pubDate>Wed, 09 Sep 2020 21:11:53 +0430</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week2/linear-regression-many-variable/</guid>
+      <description>توی این هفته قراره در مورد رگرسیون خطی با چندین متغیر صحبت کنیم!
+مثلا دیتا ای شبیه به این برای خانه ها را فرض کنید:
+   نماد      $m$ تعداد کل سطر های جدول داده ها   $n$ تعداد ویژگی ها یا همان متغیر ها   $x^{(i)}$ i امین ردیف از جدول شامل متغیر ها   $x_j^{(i)}$ مقدار موجود در ردیف i ام و ستون متغیر j    بنابراین برای تابع فرضه داریم: $h_\theta = \theta_0 + \theta_1 + \theta_2x + &amp;hellip; + \theta_nx$</description>
+    </item>
+    
+    <item>
+      <title>گرادیان کاهشی چند متغیره</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week2/gradient-many-variable/</link>
+      <pubDate>Wed, 09 Sep 2020 21:27:26 +0430</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week2/gradient-many-variable/</guid>
+      <description>الگوریتم جدید ما برای گرادیان کاهشی با چندین متغیر به این صورت است:
+و قسمت $ \frac{1}{m} \sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)} ) x_j^{(i)} $ همان مشتق جرئی $\frac {\partial} {\partial\theta_0} J(\theta)$ است.
+به طور مثال برای دو متغیره و یا بیشتر خواهیم داشت:
+یادآوری: مقدار $x_0$ برابر $1$ است.
+ </description>
+    </item>
+    
+    <item>
+      <title>Feature Scaling</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week2/feature-scaling/</link>
+      <pubDate>Wed, 09 Sep 2020 21:48:49 +0430</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week2/feature-scaling/</guid>
+      <description>در این قسمت و قسمت بعدی در مورد فوت و فن هایی برای اعمال الگوریتم گرادیـــان کـــاهشی صحبت می‌کنیم.
+اگر شما مسئله ای دارید که چندین ویژگی یا متغیر دارد و اگر مطمئن هستید که متغیر ها در مقیاس مشابه ای نسبت به هم هستند، در این حــالت گرادیــــان کـــاهشی با سرعت بیشتری به همگرایی می‌رسد.
+فرض کنید مسئله ما دو متغیر به صورت زیر دارد: $$ x_1 = \text {size(0-2000 feet^2) }$$ $$ x_2 = \text {number of bedrooms(1-5) }$$</description>
+    </item>
+    
+    <item>
+      <title>Debugging Gradient</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week2/debugging-gradient/</link>
+      <pubDate>Wed, 09 Sep 2020 22:03:11 +0430</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week2/debugging-gradient/</guid>
+      <description>در این قسمت در مورد تکنیک هایی برای اطمینان از درستی کار گرادیان کاهشی صحبت مـی‌کنیم. و در ادامه در مورد نحوه انتخاب مقدار پارامتر آلفا.
+همانطور که می‌دانیم کار گرادیان کاهشی پیدا کردن مقدار تتا برای ما است تا تابع هزینه مینیمم شود. می‌خواهیم نمودار تابع $J$ بر حسب دفعات انــــجام گرادیان کاهشی را رسم کنیم و تا متوجه بشویم که گرادیان کاهشی عملکرد درستی دارد یا نه!
+به این ترتیب نموداری به این شکل خواهیم داشت: می‌بینیم که احتملا گرادیان کاهشی درست کار مـی‌کند چون بعد از هر بار انجام مقدار $J$ کاهش می‌یابد!</description>
+    </item>
+    
+    <item>
+      <title>رگرسیون چند جمله ای</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week2/polynomial-regression/</link>
+      <pubDate>Wed, 09 Sep 2020 22:12:45 +0430</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week2/polynomial-regression/</guid>
+      <description>Polynomial Regression تابع فرضیه $h$ می‌تواند خطی نباشد، اگر تناسب خوبی با داده های ما ندارد، می‌توانیم برای تغییر منحنی تابع از توابع چند جمله ای استفاده کنیم تا به تناسب بهتری برای داده ها برسیم.
+فرض کنید که تابع فرضیه ما $ h_\theta(x) = \theta_0 + \theta_1 x_1$ باشد بنابراین می‌توانیم ویژگی جدیدی بر پایه ویژگی $x_1$ اضافه کنیم تا به تابعی quadratic یا درجه دوم برسیم:
+$$ {\color{Blue} h_\theta(x) = \theta_0 + \theta_1 x_1 + \theta_2 x_1^2}$$</description>
+    </item>
+    
+    <item>
+      <title>معادله نرمال</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week2/normal-equation/</link>
+      <pubDate>Thu, 10 Sep 2020 11:44:59 +0430</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week2/normal-equation/</guid>
+      <description>Normal Equation الگوریتم گرادیان کاهشی روشی بود برای مینیمم کردن تابع $J$ ، اما روش دومی نیز وجود دارد که بدون داشتن حلقه تکرار این کار را انجام بدهد که معادله نرمال نام دارد.
+فرض کنید که تابع هزینه درجه دو ای مثل این داریم: $$ J(\theta) = a\theta^2 + b\theta + c $$ $$ \frac{\partial} {\partial x} J(\theta) \overset{\underset{\mathrm{set}}{}}{=} 0 $$
+که برای مینیمم کردن این تابع درجه دو مشتق آن را می‌گیریم و برابر با صفر قرار می‌دهیم، که این به ما اجازه می‌دهد که مقدار $\theta$ را برای مینیمم کردن تابع پیدا کنیم.</description>
+    </item>
+    
   </channel>
 </rss>

@@ -36,7 +36,7 @@
 
     <link rel="icon" href="/ml-andrew-ng/images/favicon.png" type="image/png">
 
-    <title>تابع هزینه قسمت سوم :: Machine Learning Andrew Ng</title>
+    <title>گرادیان کاهشی چند متغیره :: Machine Learning Andrew Ng</title>
 
     
     <link href="/ml-andrew-ng/css/nucleus.css" rel="stylesheet">
@@ -63,7 +63,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/ml-andrew-ng/week1/cost3/">
+  <body class="" data-url="/ml-andrew-ng/week2/gradient-many-variable/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -928,7 +928,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
   
     
     <li data-nav-id="/ml-andrew-ng/week1/" title="   هفته اول " class="dd-item 
-        parent
+        
         
         
         ">
@@ -1082,7 +1082,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week1/cost3/" title="تابع هزینه قسمت سوم" class="dd-item active">
+      <li data-nav-id="/ml-andrew-ng/week1/cost3/" title="تابع هزینه قسمت سوم" class="dd-item ">
         <a href="/ml-andrew-ng/week1/cost3/">
         تابع هزینه قسمت سوم
         <i class="fas fa-check read-icon"></i>
@@ -1174,7 +1174,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
   
     
     <li data-nav-id="/ml-andrew-ng/week2/" title=" هفته دوم" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1223,7 +1223,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week2/gradient-many-variable/" title="گرادیان کاهشی چند متغیره" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week2/gradient-many-variable/" title="گرادیان کاهشی چند متغیره" class="dd-item active">
         <a href="/ml-andrew-ng/week2/gradient-many-variable/">
         گرادیان کاهشی چند متغیره
         <i class="fas fa-check read-icon"></i>
@@ -1385,7 +1385,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/week1/cost3.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/week2/gradient-many-variable.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text"> ویرایش صفحه</span>
                     </a>
@@ -1416,7 +1416,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
             
           
           
-            <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week1/'>   هفته اول </a> > تابع هزینه قسمت سوم
+            <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week2/'> هفته دوم</a> > گرادیان کاهشی چند متغیره
           
         
           
@@ -1445,45 +1445,23 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
           
             <h1>
               
-              تابع هزینه قسمت سوم
+              گرادیان کاهشی چند متغیره
             </h1>
           
 
         
 
 
-<p>قسمت قبل دیدیم که با داشتن فقط یک پارامتر برای
-تابع فرضیه، نمودار تابع هزینه یا همان $J$  به صورت
-سهمی بود.
-اگر دو پارامتر داشته باشیم باز هم به صورت سهمی
-است، اما سه بعدی و بسته به دیتای ما ممکن است به
-شکل زیر باشد:</p>
-<p><img src="../images/image22.png?width=25pc" alt="image22.png"></p>
-<p>اما ما برای نمایش این تابع از شکل سه بعدی استفاده
-نمی‌کنیم‌، بلکه از نمودار های کانتور استفاده می‌کنیم!</p>
-<p>در این نمودار ها هر یک از بیضی ها نشان دهنده
-مجموعه ای از نقاط است که مقادیر یکسانی در $J$
-بر حسب $\theta_0$ و $\theta_1$ های مختلف دارند.</p>
-<p><strong>مثالی از یک نمودار کانتور:</strong></p>
-<p><img src="../images/image25.png?width=20pc" alt="image25.png"></p>
-<p>مثلا نقطه قرمز روی نمودار کانتور سمت راست برابر
-است با: $ \theta_1 = -0.15, \theta_0 = 800 $</p>
-<p><img src="../images/image18.png?width=35pc" alt="image18.png"></p>
-<p>اما همینطور که می‌بینیم خط حاصل از تابع فرضیه
-تناسب خوبی با دیتا های ما ندارد!
-به این خاطر که نقطه ما از مینیمم که کوچکترین
-بیضی است خیلی دور است!</p>
-<p><img src="../images/image19.png?width=35pc" alt="image19.png"></p>
-<p>در این نقطه جدید هم کاملا مینیمم نیست اما خیلی
-بهتر از قبلی است.
-باز هم خط حاصل از تابع فرضیه بر حسب مقادیر
-انتخابی برای دو پارامتر مسئله با داده های ما
-متناسب نیست &hellip;</p>
-<p>در واقع ما به الگوریتمی نیاز داریم که برای ما مقادیر
-$\theta_0$ و $\theta_1$  را در حالتی که تابع $J$  مینیمم است
-بیابد.</p>
-<p><strong>که پاسخ ما  گرادیان کاهشی یا همان Gradient Descent  است !</strong></p>
-<p><img src="../images/image28.png?width=35pc" alt="image28.png"></p>
+<p>الگوریتم جدید ما برای گرادیان کاهشی با چندین متغیر
+به این صورت است:</p>
+<p><img src="../images/image61.png?width=25pc" alt="image61.png"></p>
+<p>و قسمت $ \frac{1}{m} \sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)} ) x_j^{(i)} $ همان مشتق جرئی $\frac {\partial} {\partial\theta_0} J(\theta)$ است.</p>
+<p>به طور مثال برای دو متغیره و یا بیشتر خواهیم داشت:</p>
+<p><img src="../images/image64.png?width=25pc" alt="image64.png"></p>
+
+<div class="notices note" ><p>یادآوری:  مقدار $x_0$ برابر $1$ است.</p>
+</div>
+
 
 
 <footer class="footline">
@@ -1521,20 +1499,6 @@ $\theta_0$ و $\theta_1$  را در حالتی که تابع $J$  مینیمم �
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
                         
                         
                     
@@ -1545,9 +1509,6 @@ $\theta_0$ و $\theta_1$  را در حالتی که تابع $J$  مینیمم �
                     
                     
 
-                    
-            
-        
                     
                         
             
@@ -1634,26 +1595,6 @@ $\theta_0$ و $\theta_1$  را در حالتی که تابع $J$  مینیمم �
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
                 
                 
 
@@ -1697,22 +1638,6 @@ $\theta_0$ و $\theta_1$  را در حالتی که تابع $J$  مینیمم �
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
             
             
@@ -1745,10 +1670,66 @@ $\theta_0$ و $\theta_1$  را در حالتی که تابع $J$  مینیمم �
             
         
                     
+            
+        
+                    
                         
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -1821,10 +1802,10 @@ $\theta_0$ و $\theta_1$  را در حالتی که تابع $J$  مینیمم �
 	 
 	 
 		
-			<a class="nav nav-prev" href="/ml-andrew-ng/week1/cost2/" title="تابع هزینه قسمت دوم"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/ml-andrew-ng/week2/linear-regression-many-variable/" title="رگرسیون خطی چند متغیره"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ml-andrew-ng/week1/gradient1/" title="گرادیان کاهشی قسمت اول" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/ml-andrew-ng/week2/feature-scaling/" title="Feature Scaling" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
