@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title> هفته سوم on Machine Learning Andrew Ng</title>
+    <link>https://mehrdad-dev.github.io/ml-andrew-ng/week3/</link>
+    <description>Recent content in  هفته سوم on Machine Learning Andrew Ng</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 05 Sep 2020 18:30:44 +0430</lastBuildDate>
+    
+	<atom:link href="https://mehrdad-dev.github.io/ml-andrew-ng/week3/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>طبقه بندی</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week3/classification/</link>
+      <pubDate>Thu, 10 Sep 2020 12:51:11 +0430</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week3/classification/</guid>
+      <description>Logistic Regresstion اینجا از مسائل Regression به مسائل Classification می‌رویم، اما با اسم Logistic Regression گیج نشوید! این اسم به دلایل تاریخی نامگذاری شده که در واقع رویکردی برای حل مسائل طبقه بندی است نه رگرسیون!
+Binary Classification به جای اینکه خروجی یعنی $y$ مقداری پیوسته در یک محدوده باشد، فقط $0$ یا $1$ است، یعنی : $ y \in \text{{0,1}} $
+به طوری که معمولا به $0$، negative class و به $1$ هم positive class می‌گوییم، اما شما آزاد هستید که هر اسم دلخواهی را برای نام‌گذاری آن ها انتخاب کنید!</description>
+    </item>
+    
+  </channel>
+</rss>

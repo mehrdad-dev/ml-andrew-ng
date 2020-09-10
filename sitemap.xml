@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/</loc>
+    <lastmod>2020-09-05T18:40:41+04:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week1/</loc>
     <lastmod>2020-09-05T18:30:44+04:30</lastmod>
   </url>
@@ -18,6 +23,21 @@
   </url>
   
   <url>
+    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week2/</loc>
+    <lastmod>2020-09-05T18:30:44+04:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week3/</loc>
+    <lastmod>2020-09-05T18:30:44+04:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/useful-articles/</loc>
+    <lastmod>2020-09-10T17:04:49+04:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week2/gradient-many-variable/</loc>
     <lastmod>2020-09-09T21:27:26+04:30</lastmod>
   </url>
@@ -25,6 +45,16 @@
   <url>
     <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week1/supervised/</loc>
     <lastmod>2020-09-06T12:54:05+04:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/sponsor/</loc>
+    <lastmod>2020-09-10T17:18:51+04:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/info/</loc>
+    <lastmod>2020-09-10T17:16:09+04:30</lastmod>
   </url>
   
   <url>
@@ -88,13 +118,8 @@
   </url>
   
   <url>
-    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/</loc>
-    <lastmod>2020-09-05T18:40:41+04:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week2/</loc>
-    <lastmod>2020-09-05T18:30:44+04:30</lastmod>
+    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week3/classification/</loc>
+    <lastmod>2020-09-10T12:51:11+04:30</lastmod>
   </url>
   
   <url>

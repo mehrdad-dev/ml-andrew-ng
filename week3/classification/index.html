@@ -36,7 +36,7 @@
 
     <link rel="icon" href="/ml-andrew-ng/images/favicon.png" type="image/png">
 
-    <title>تابع هزینه قسمت دوم :: Machine Learning Andrew Ng</title>
+    <title>طبقه بندی :: Machine Learning Andrew Ng</title>
 
     
     <link href="/ml-andrew-ng/css/nucleus.css" rel="stylesheet">
@@ -63,7 +63,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/ml-andrew-ng/week1/cost2/">
+  <body class="" data-url="/ml-andrew-ng/week3/classification/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -928,7 +928,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
   
     
     <li data-nav-id="/ml-andrew-ng/week1/" title="   هفته اول " class="dd-item 
-        parent
+        
         
         
         ">
@@ -1061,7 +1061,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week1/cost2/" title="تابع هزینه قسمت دوم" class="dd-item active">
+      <li data-nav-id="/ml-andrew-ng/week1/cost2/" title="تابع هزینه قسمت دوم" class="dd-item ">
         <a href="/ml-andrew-ng/week1/cost2/">
         تابع هزینه قسمت دوم
         <i class="fas fa-check read-icon"></i>
@@ -1336,7 +1336,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
   
     
     <li data-nav-id="/ml-andrew-ng/week3/" title=" هفته سوم" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1364,7 +1364,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week3/classification/" title="طبقه بندی" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week3/classification/" title="طبقه بندی" class="dd-item active">
         <a href="/ml-andrew-ng/week3/classification/">
         طبقه بندی
         <i class="fas fa-check read-icon"></i>
@@ -1520,7 +1520,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/week1/cost2.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/week3/classification.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text"> ویرایش صفحه</span>
                     </a>
@@ -1551,7 +1551,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
             
           
           
-            <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week1/'>   هفته اول </a> > تابع هزینه قسمت دوم
+            <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week3/'> هفته سوم</a> > طبقه بندی
           
         
           
@@ -1564,7 +1564,18 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#logistic-regresstion">Logistic Regresstion</a></li>
+        <li><a href="#binary-classification">Binary Classification</a></li>
+        <li><a href="#hypothesis-representation">Hypothesis Representation</a></li>
+        <li><a href="#decision-boundry">Decision Boundry</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1580,33 +1591,88 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
           
             <h1>
               
-              تابع هزینه قسمت دوم
+              طبقه بندی
             </h1>
           
 
         
 
 
-<p>تا اینجا به طور خلاصه تمام چیزی که از تابع هزینه
-می‌دانیم در زیر آمده است:</p>
-<p><img src="../images/image13.png?width=20pc" alt="image13.png"></p>
-<p>اما اجازه بدید برای ساده سازی تابع فرضیه را تنها با
-یک پارامتر به این شکل در نظر بگیریم:
-$ h_\theta(x) = \theta_1x $
-و سه مقدار مختلف $0$، $5.0 $ و $1$ رو حساب کنیم &hellip;</p>
-<p>مثلا برای مقدار تتا برابر با $1$ محاسبات زیر را خواهیم داشت:</p>
-<p><img src="../images/image15.png?width=30pc" alt="image15.png"></p>
-<p>$$ {\color{Red} J(\theta_1) =  \frac{1}{2m} \sum_{i=1}^{m} (\theta_1x - y_i)^2 \Rightarrow \frac{1}{2m} (0^2 + 0^2 + 0^2) = 0 } $$
-به همین صورت برای دو مقدار دیگر داریم:</p>
-<p><img src="../images/image16.png?width=30pc" alt="image16.png"></p>
-<p>$$ {\color{Blue}  J(0.5) =  \frac{1}{2m} [ (0.5 - 1)^2 + (1-2)^2 + (1.5 -3)^2] \Rightarrow 0.58 }  $$
-$$ {\color{Green}  J(0) =  \frac{1}{2m} ( 1^2 + 2^2 + 3^2 +) \Rightarrow 2.3  }$$</p>
-<p>و اگر به همین ترتیب برای مقادیر دیگر رسم کنیم:</p>
-<p><img src="../images/image17.png?width=30pc" alt="image17.png"></p>
-<p>متوجه می‌شویم که به ازای هر مقدار تتا به یک تابع
-فرضیه متفاوت و یک مقدار متفاوت برای تابع $J$ می‌رسیم
-و همینطور که می‌بینیم در نقطه $1$ در مینیمم ترین
-حالت ممکن هستیم و این همان هدف ما است!</p>
+<h3 id="logistic-regresstion">Logistic Regresstion</h3>
+<p>اینجا از مسائل Regression به مسائل Classification
+می‌رویم، اما با اسم Logistic Regression گیج نشوید!
+این اسم به دلایل تاریخی نامگذاری شده که در واقع
+رویکردی برای حل مسائل طبقه بندی است نه رگرسیون!</p>
+<p><img src="../images/image86.png?width=18pc" alt="image86.png"></p>
+<h3 id="binary-classification">Binary Classification</h3>
+<p>به جای اینکه خروجی یعنی $y$  مقداری پیوسته در یک
+محدوده باشد، فقط $0$ یا $1$ است، یعنی : $ y \in \text{{0,1}} $</p>
+<p>به طوری که معمولا به $0$، negative class   و به $1$ هم
+positive class می‌گوییم، اما شما آزاد هستید که هر
+اسم دلخواهی را برای نام‌گذاری آن ها انتخاب کنید!</p>
+<p>فعلا فقط دو تا کلاس داریم که به این نوع از مسئله
+Binary Classification می‌گوییم.</p>
+<p>فرض کنید از رگرسیون خطی استفاده کنیم و نتیجه
+تمام پیش بینی های بیشتر از $0.5$ را به عنوان 1 در
+نظر بگیریم (نگاشت کنیم) ، و هم چنین تمام موارد
+کوچکتر از $0.5$ را $0$ در نظر بگیریم.</p>
+<p><strong>آیا این متد برای مسائل طبقه بندی باینری خوب است؟</strong></p>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	برای پاسخ کلیک کن
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <p>naghes</p>
+
+    </div>
+</div>
+<h3 id="hypothesis-representation">Hypothesis Representation</h3>
+<p>تابع فرضیه ما باید به این شکل باشد:</p>
+<p>$$ h_\theta(x) = g(\theta^T x)  \hspace{2cm} 0 \leqslant h_\theta(x) \leqslant 1  $$</p>
+<p>$$ g(z) = \frac{1}{1 + e^{-z}} \hspace{2cm} z = \theta^Tx $$</p>
+<p>که به این فرم جدید <strong>تابع سیگموئید</strong> یا <strong>تابع لجستیک</strong>
+می‌گوییم.</p>
+
+<div class="notices note" ><p>کار با نمودار تعاملی تابع سیگموئید:
+<a href="http://desmos.com/calculator/bgontvxotm">http://desmos.com/calculator/bgontvxotm</a></p>
+</div>
+
+<p>تابع $g(z)$ در اینجا اعداد حقیقی را به عددی بین $0$ و
+$1$ نگاشت می‌کند.</p>
+<p>$h_\theta(x)$ به ما احتمال اینکه خروجی ما $1$ است را می‌دهد
+برای مثال $h_\theta(x) = 0.7$ احتمال 70 درصدی را به ما
+می‌دهد که خروجی $1$ باشد.</p>
+<p>و احتمال اینکه پیش بینی ما در کلاس $0$ باشد متمم
+احتمال کلاس 0 است، که اینجا $\text{30%} $ می‌شود.</p>
+<p>$$ h_\theta(x)  = P (y=1 | x;\theta) =  1 - P (y = 0 | x;\theta) $$
+$$ P (y=0 | x;\theta) + P (y=1 | x;\theta) = 1 $$</p>
+<h3 id="decision-boundry">Decision Boundry</h3>
+<p>برای مجزا کردن کلاس های $0$ و $1$ طبقه بندی باید
+خروجی تابع فرضیه را به این صورت تبدیل کنیم:</p>
+<p>$$ h_\theta(x) \geqslant 0.5 \rightarrow y = 1 \hspace{2cm} h_\theta(x) &lt; 0.5  \rightarrow  y = 0  $$</p>
+<p>نحوه عملکرد تابع لجستیکی $g$ ما به این صورت است
+که وقتی ورودی آن بزرگتر یا برابر صفر باشد، خروجی
+آن بزرگ تر یا مساوی $0.5$ می‌شود:</p>
+<p>$$ g(z) \geqslant 0.5 $$
+$$ \text{ when } z \geqslant 0 $$</p>
+<p>به یاد داشته باشید که:
+$$z = 0, e^0 = 1 \Rightarrow g(z) = \frac{1}{2} $$
+$$ z \rightarrow \infty, e^{-\infty} \rightarrow 0 \Rightarrow  g(z) = 1 $$
+$$ z \rightarrow -\infty, e^{\infty} \rightarrow \infty \Rightarrow  g(z) = 0 $$</p>
+<p>و اگر ورودی تابع g ،$ \theta^T x $ باشد به این معنی است که:</p>
+<p>$$ h_\theta(x) = g(\theta^T x) \geqslant 0.5 \hspace{1.5cm} \text{when } \theta^T x \geqslant 0 $$</p>
+<p>حالا می‌توانیم بگوییم که:</p>
+<p>$$ \theta^T x \geqslant 0 \Rightarrow y = 1 \hspace{1cm} \theta^T x &lt; 0  \Rightarrow  y = 0  $$</p>
+<p>خط تصمیم گیری، خطی است که قسمتی که 1=y است
+را از قسمت های 0=y جدا می‌کند، که این خط توسط
+تابع فرضیه ساخته می‌شود.</p>
 
 
 <footer class="footline">
@@ -1644,20 +1710,6 @@ $$ {\color{Green}  J(0) =  \frac{1}{2m} ( 1^2 + 2^2 + 3^2 +) \Rightarrow 2.3  }$
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
                         
                         
                     
@@ -1668,9 +1720,6 @@ $$ {\color{Green}  J(0) =  \frac{1}{2m} ( 1^2 + 2^2 + 3^2 +) \Rightarrow 2.3  }$
                     
                     
 
-                    
-            
-        
                     
                         
             
@@ -1735,106 +1784,6 @@ $$ {\color{Green}  J(0) =  \frac{1}{2m} ( 1^2 + 2^2 + 3^2 +) \Rightarrow 2.3  }$
                     
             
         
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
                     
                         
             
@@ -1964,6 +1913,19 @@ $$ {\color{Green}  J(0) =  \frac{1}{2m} ( 1^2 + 2^2 + 3^2 +) \Rightarrow 2.3  }$
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
             
         
                     
@@ -1971,6 +1933,110 @@ $$ {\color{Green}  J(0) =  \frac{1}{2m} ( 1^2 + 2^2 + 3^2 +) \Rightarrow 2.3  }$
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -2024,10 +2090,10 @@ $$ {\color{Green}  J(0) =  \frac{1}{2m} ( 1^2 + 2^2 + 3^2 +) \Rightarrow 2.3  }$
 	 
 	 
 		
-			<a class="nav nav-prev" href="/ml-andrew-ng/week1/cost1/" title="تابع هزینه قسمت اول"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/ml-andrew-ng/week3/" title=" هفته سوم"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ml-andrew-ng/week1/cost3/" title="تابع هزینه قسمت سوم" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/ml-andrew-ng/useful-articles/" title="منابع مفید " style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
