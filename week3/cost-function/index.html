@@ -36,7 +36,7 @@
 
     <link rel="icon" href="/ml-andrew-ng/images/favicon.png" type="image/png">
 
-    <title>Tags :: Machine Learning Andrew Ng</title>
+    <title>تابع هزینه :: Machine Learning Andrew Ng</title>
 
     
     <link href="/ml-andrew-ng/css/nucleus.css" rel="stylesheet">
@@ -63,7 +63,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/ml-andrew-ng/tags/">
+  <body class="" data-url="/ml-andrew-ng/week3/cost-function/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -1336,7 +1336,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
   
     
     <li data-nav-id="/ml-andrew-ng/week3/" title=" هفته سوم" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1385,7 +1385,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week3/cost-function/" title="تابع هزینه" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week3/cost-function/" title="تابع هزینه" class="dd-item active">
         <a href="/ml-andrew-ng/week3/cost-function/">
         تابع هزینه
         <i class="fas fa-check read-icon"></i>
@@ -1599,7 +1599,13 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
             
           
           
-            <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > Tags
+            
+            
+          
+          
+            <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week3/'> هفته سوم</a> > تابع هزینه
+          
+        
           
         
           
@@ -1610,7 +1616,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -1626,24 +1632,40 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
           
             <h1>
               
-                taxonomy ::
-              
-              Tags
+              تابع هزینه
             </h1>
           
 
         
 
 
+<p>ما نمی‌توانیم از همان تابعی هزینه ای که برای رگرسیون خطی استفاده کردیم، برای تابع لجستیک نیز استفاده کنیم، زیرا خروجی تابع لجستیک موج گونه است و باعث ایجاد تعداد زیادی مینیمم محلی می‌شود.
+به عبارت دیگر یک تابع محدب (convex) نیست.</p>
+<p>تابع هزینه ما برای Logistic Regression به این صورت است:</p>
+<p>$$ J(\theta) = \frac{1}{m} \sum_{i = 1}^m Cost(h_\theta(x^{(i)}, y^{(i)})) $$</p>
+<p>$$ Cost(h_\theta(x), y) = -log(h_\theta(x)) \hspace{1cm} if \hspace{0.3cm} y = 1 $$</p>
+<p>$$ Cost(h_\theta(x), y) = -log(1 - h_\theta(x)) \hspace{1cm} if \hspace{0.3cm} y = 0 $$</p>
+<p><img src="../images/image1.png?width=18pc" alt="image1.png"></p>
+<p><img src="../images/image2.png?width=16pc" alt="image2.png"></p>
+<p>هرچه تابع فرضیه از $y$ دور تر باشد،
+خروجی تابع هزینه بزرگ تر است.</p>
+<p>و اگر تابع فرضیه برابر با $y$ باشد،
+هزینه ما $0$ است.</p>
+<p>$$ Cost(h_\theta(x), y) = 0 \hspace{0.3cm} if \hspace{0.3cm} h_\theta(x)) = y  $$</p>
+<p>$$ Cost(h_\theta(x), y)  \rightarrow \infty  \hspace{0.5cm} if \hspace{0.3cm} y = 0 \hspace{0.3cm}  and \hspace{0.3cm} h_\theta(x) \rightarrow 1$$</p>
+<p>$$ Cost(h_\theta(x), y)  \rightarrow \infty  \hspace{0.5cm} if \hspace{0.3cm} y = 1 \hspace{0.3cm}  and \hspace{0.3cm} h_\theta(x) \rightarrow 0 $$</p>
+<p>اگر پاسخ صحیح ما  $y = 0$  باشد،
+سپس تابع هزینه $0$ خواهد شد،
+اگر خروجی تابع فرضیه ما نیز $0$ شود.</p>
+<p>اگر فرضیه ما به $1$ میل کند، سپس تابع هزینه به بی نهایت میل می‌کند.</p>
+<p>اگر پاسخ صحیح ما $y = 1$  باشد،
+سپس تابع هزینه $0$ خواهد شد،
+اگر خروجی تابع فرضیه ما $1$ شود.</p>
+<p>اگر فرضیه ما به $0$ میل کند، سپس تابع هزینه به بی نهایت میل می‌کند.</p>
+<p>به خاطر داشته باشید که نوشتن تابع هزینه به این روش که $J(\theta)$ برای رگرسیون لجستیک محدب است.</p>
 
 
-
-<ul>
-	
-</ul>
-
-
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -1969,6 +1991,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
             
                 
                     
+                    
                 
                 
 
@@ -1981,6 +2004,9 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1998,6 +2024,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
             
                 
                     
+                    
                 
                 
 
@@ -2013,6 +2040,9 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2101,8 +2131,10 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
 	 
 	 
 		
+			<a class="nav nav-prev" href="/ml-andrew-ng/week3/classification/" title="طبقه بندی"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/ml-andrew-ng/week1/" title="   هفته اول " style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/ml-andrew-ng/week3/simplified-cost-gradient/" title="ساده شده تابع هزینه و گرادیان کاهشی" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -2132,3 +2164,4 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
 
   </body>
 </html>
+

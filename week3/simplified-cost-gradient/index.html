@@ -36,7 +36,7 @@
 
     <link rel="icon" href="/ml-andrew-ng/images/favicon.png" type="image/png">
 
-    <title>Tags :: Machine Learning Andrew Ng</title>
+    <title>ساده شده تابع هزینه و گرادیان کاهشی :: Machine Learning Andrew Ng</title>
 
     
     <link href="/ml-andrew-ng/css/nucleus.css" rel="stylesheet">
@@ -63,7 +63,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/ml-andrew-ng/tags/">
+  <body class="" data-url="/ml-andrew-ng/week3/simplified-cost-gradient/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -1336,7 +1336,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
   
     
     <li data-nav-id="/ml-andrew-ng/week3/" title=" هفته سوم" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1406,7 +1406,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week3/simplified-cost-gradient/" title="ساده شده تابع هزینه و گرادیان کاهشی" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week3/simplified-cost-gradient/" title="ساده شده تابع هزینه و گرادیان کاهشی" class="dd-item active">
         <a href="/ml-andrew-ng/week3/simplified-cost-gradient/">
         ساده شده تابع هزینه و گرادیان کاهشی
         <i class="fas fa-check read-icon"></i>
@@ -1599,7 +1599,13 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
             
           
           
-            <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > Tags
+            
+            
+          
+          
+            <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week3/'> هفته سوم</a> > ساده شده تابع هزینه و گرادیان کاهشی
+          
+        
           
         
           
@@ -1610,7 +1616,16 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#cost-function">Cost Function</a></li>
+        <li><a href="#gradient-descent">Gradient Descent</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1626,24 +1641,52 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
           
             <h1>
               
-                taxonomy ::
-              
-              Tags
+              ساده شده تابع هزینه و گرادیان کاهشی
             </h1>
           
 
         
 
 
+<h3 id="cost-function">Cost Function</h3>
+<p>ما می‌توانیم دو حالت شرطی تابع هزینه خودمان در قسمت قبلی را در یک حالت فشرده شده بنویسیم:</p>
+<p>$$
+Cost(h_\theta(x), y) = - y \hspace{0.2cm} log(h_\theta(x)) - (1 - y) log(1 - h_\theta(x))
+$$</p>
+<p>در خاطر داشته باشید وقتی که $y$  برابر $1$ است،
+قسمت
+$(1 - y) log(1 - h_\theta(x))$
+برار $0$ خواهد شد.</p>
+<p>اگر $y$ برابر با $1$ باشد،
+سپس قسمت
+$- y \hspace{0.2cm} log(h_\theta(x))$
+برابر $0$ خواهد شد
+و در نتیجه تاثیری ندارد.</p>
+<p>در نهایت می‌توانیم کل تابه هزینه را به این صورت بنویسیم:</p>
+<p>$$
+J(\theta) = - \frac{1}{m} \sum_{i = 1}^m [y^{(i)} log(h_\theta(x^{(i)})) + (1 - y^{(i)}) log(1 - h_\theta(x^{(i)})) ]
+$$</p>
+<p>و پیاده سازی برداری شده (vectorized) به این صورت خواهد بود:</p>
+<p>$$
+\begin{align*} &amp; h = g(X\theta)\newline &amp; J(\theta) = \frac{1}{m} \cdot \left(-y^{T}\log(h)-(1-y)^{T}\log(1-h)\right) \end{align*}
+$$</p>
+<h3 id="gradient-descent">Gradient Descent</h3>
+<p>به یاد داشته باشید که شکل کلی گرادیان کاهشی به این صورت است:</p>
+<p>$$
+\begin{align*}&amp; Repeat \lbrace \newline &amp;  \theta_j := \theta_j - \alpha \dfrac{\partial}{\partial \theta_j}J(\theta) \newline &amp; \rbrace\end{align*}
+$$</p>
+<p>می‌توانیم قسمت مشتق را با استفاده از حساب دیفرانسیل محاسبه کنیم:</p>
+<p>$$
+\begin{align*} &amp; Repeat \lbrace \newline &amp;  \theta_j := \theta_j - \frac{\alpha}{m} \sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)}) x_j^{(i)} \newline &amp; \rbrace \end{align*}
+$$</p>
+<p>توجه داشته باشید که این الگوریتم مشابه الگوریتمی است که ما در رگرسیون خطی استفاده کردیم، هنوز باید به صورت همزمان همه مقادیر $\theta$ را به روز کنیم.</p>
+<p>و پیاده سازی برداری شده (vectorized) به این صورت خواهد بود:</p>
+<p>$$
+\theta := \theta - \frac{\alpha}{m} X^T g((X \theta) -\vec{y} )
+$$</p>
 
 
-
-<ul>
-	
-</ul>
-
-
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -1969,6 +2012,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
             
                 
                     
+                    
                 
                 
 
@@ -1981,6 +2025,9 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2014,6 +2061,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
             
                 
                     
+                    
                 
                 
 
@@ -2029,6 +2077,9 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2101,8 +2152,10 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
 	 
 	 
 		
+			<a class="nav nav-prev" href="/ml-andrew-ng/week3/cost-function/" title="تابع هزینه"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/ml-andrew-ng/week1/" title="   هفته اول " style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/ml-andrew-ng/week3/advanced-optimization/" title="بهینه سازی پیشرفته" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -2132,3 +2185,4 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
 
   </body>
 </html>
+
