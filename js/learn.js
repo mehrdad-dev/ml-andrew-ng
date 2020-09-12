@@ -412,7 +412,7 @@ jQuery.extend({
 jQuery.fn.unhighlight = function (options) {
     var settings = {
         className: 'highlight',
-        element: 'span'
+        element: 'span',
     };
     jQuery.extend(settings, options);
 
@@ -473,9 +473,9 @@ function disableSelection(target){
      target.style.cursor = "default";
 }
 
-$(document).ready(function(){
-    disableSelection(document.body);
-});
+// $(document).ready(function(){
+//     disableSelection(document.body);
+// });
 
 
 // var isCtrl = false;

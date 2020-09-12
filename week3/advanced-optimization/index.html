@@ -1439,6 +1439,27 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
 
             
           
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ml-andrew-ng/week3/multiclass-classification/" title="طبقه بندی چند کلاسه" class="dd-item ">
+        <a href="/ml-andrew-ng/week3/multiclass-classification/">
+        طبقه بندی چند کلاسه
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
         
         </ul>
               
@@ -1639,6 +1660,27 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
         
 
 
+<p>Conjugate gradient, BFGS و L-BFGS
+راه های پیچیده تر و سریع تری برای بهینه سازی $\theta$ به جای Gradient descent هستند.</p>
+<p>پیشنهاد می‌شود که این الگوریتم های پیچیده را خودتان ننویسید
+(مگر اینکه در محاسبات عددی متخصص باشید)،
+و به جای آن از کتابخانه ها استفاده کنید، زیرا قبلا آزمایش شده اند و بسیار بهینه شده اند.</p>
+<p>ابتدا لازم است تابعی بسازیم که دو مقدار زیر را با ورودی مقدار $\theta$ برگرداند:</p>
+<p>$$
+\begin{align*} &amp; J(\theta) \newline &amp; \dfrac{\partial}{\partial \theta_j}J(\theta)\end{align*}
+$$</p>
+<p>تابعی می‌نویسیم که هر دو این مقادیر را بر گرداند:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab"><span style="color:#66d9ef">function</span> [jVal, gradient] = <span style="color:#a6e22e">costFunction</span>(theta)
+  jVal = [<span style="color:#75715e">...code to compute J(theta)...];</span>
+  gradient = [<span style="color:#75715e">...code to compute derivative of J(theta)...];</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>سپس می‌توانیم از الگوریتم بهینه سازی ()fminunc در اکتاو به همراه تابع ()optimset برای ساخت یک
+object شامل تنظیمات و گزینه هایی که می‌خواهیم به عنوان ورودی به تابع ()fminunc بدهیم.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">options = optimset(<span style="color:#e6db74">&#39;GradObj&#39;</span>, <span style="color:#e6db74">&#39;on&#39;</span>, <span style="color:#e6db74">&#39;MaxIter&#39;</span>, <span style="color:#ae81ff">100</span>);
+initialTheta = zeros(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">1</span>);
+   [optTheta, functionVal, exitFlag] = fminunc(@costFunction, initialTheta, options);
+</code></pre></div><p>به عنوان ورودی به تابع ()fminunc:</p>
+<p>تابع هزینه، وکتور مقادیر تتا، و options را که از قبل درست کرده ایم می‌دهیم.</p>
 
 
 <footer class="footline">
@@ -2044,9 +2086,6 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
             
         
                     
-            
-        
-                    
                         
             
             
@@ -2054,6 +2093,25 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
                     
                         
                         
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -2110,7 +2168,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
 			<a class="nav nav-prev" href="/ml-andrew-ng/week3/simplified-cost-gradient/" title="ساده شده تابع هزینه و گرادیان کاهشی"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ml-andrew-ng/useful-articles/" title="منابع مفید " style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/ml-andrew-ng/week3/multiclass-classification/" title="طبقه بندی چند کلاسه" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

@@ -36,7 +36,7 @@
 
     <link rel="icon" href="/ml-andrew-ng/images/favicon.png" type="image/png">
 
-    <title>یادگیری نظارتی چیست؟ :: Machine Learning Andrew Ng</title>
+    <title>طبقه بندی چند کلاسه :: Machine Learning Andrew Ng</title>
 
     
     <link href="/ml-andrew-ng/css/nucleus.css" rel="stylesheet">
@@ -63,7 +63,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/ml-andrew-ng/week1/supervised/">
+  <body class="" data-url="/ml-andrew-ng/week3/multiclass-classification/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -928,7 +928,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
   
     
     <li data-nav-id="/ml-andrew-ng/week1/" title="   هفته اول " class="dd-item 
-        parent
+        
         
         
         ">
@@ -977,7 +977,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week1/supervised/" title="یادگیری نظارتی چیست؟" class="dd-item active">
+      <li data-nav-id="/ml-andrew-ng/week1/supervised/" title="یادگیری نظارتی چیست؟" class="dd-item ">
         <a href="/ml-andrew-ng/week1/supervised/">
         یادگیری نظارتی چیست؟
         <i class="fas fa-check read-icon"></i>
@@ -1336,7 +1336,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
   
     
     <li data-nav-id="/ml-andrew-ng/week3/" title=" هفته سوم" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1448,7 +1448,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week3/multiclass-classification/" title="طبقه بندی چند کلاسه" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week3/multiclass-classification/" title="طبقه بندی چند کلاسه" class="dd-item active">
         <a href="/ml-andrew-ng/week3/multiclass-classification/">
         طبقه بندی چند کلاسه
         <i class="fas fa-check read-icon"></i>
@@ -1624,7 +1624,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
             
           
           
-            <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week1/'>   هفته اول </a> > یادگیری نظارتی چیست؟
+            <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week3/'> هفته سوم</a> > طبقه بندی چند کلاسه
           
         
           
@@ -1637,18 +1637,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#تعریف-یادگیری-نظارتی">تعریف یادگیری نظارتی</a></li>
-        <li><a href="#رگرسیون--regression">رگرسیون | Regression</a></li>
-        <li><a href="#طبقه-بندی--classification">طبقه بندی | Classification</a></li>
-        <li><a href="#مثال-های-بیشتری-که-شما-پاسخ-دهید">مثال های بیشتری که شما پاسخ دهید!</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -1664,64 +1653,35 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
           
             <h1>
               
-              یادگیری نظارتی چیست؟
+              طبقه بندی چند کلاسه
             </h1>
           
 
         
 
 
-<h3 id="تعریف-یادگیری-نظارتی">تعریف یادگیری نظارتی</h3>
-<p>در یـادگـیری نــظارتـی یک مجموعه داده داریم و از قبل
-می‌دانیم که خروجی صحیح باید چطور باشد، اصطلاحا
-داده های لیبل خورده اند!
-با این ایده که به بین خروجی و ورودی رابطه وجود دارد.</p>
-<p>مسائل یادگیری نظارتی یا همان Supervised Learning
-به دو دسته <strong>رگرسیون</strong> و <strong>طبقه بندی</strong> تقسیم می‌شوند.</p>
-<h3 id="رگرسیون--regression">رگرسیون | Regression</h3>
-<p><img src="../images/linearRegression.jpg?width=30pc" alt="linearRegression"></p>
-<p>در این مسائل سعی می‌کنیم خروجی ای با مقدار پیوسته
-را پیش بینی کنیم.</p>
-<p>در مسئله پیش بینی قیمت خانه می‌خواهیم با مجموعه
-داده ای از قیمت های واقعی خانه ها بر اساس اندازه،
-قیمت خانه ای جدیدی را پیش بینی کنیم.</p>
-<h3 id="طبقه-بندی--classification">طبقه بندی | Classification</h3>
-<p><img src="../images/classification.png?width=30pc" alt="classification"></p>
-<p>در عوض اینجا سعی می‌کنیم خروجی ای با مقدار
-گسسته  پیش بینی کنیم.
-مثلا در مسئله تشخیص وخیم بودن یا نبودن سرطان
-می‌خواهیم بر اساس دو ویژگی سن و سایز تومور نتیجه
-را در یکی از دو دسته وخیم یا غیر وخیم طبقه بندی کنیم.</p>
-<h3 id="مثال-های-بیشتری-که-شما-پاسخ-دهید">مثال های بیشتری که شما پاسخ دهید!</h3>
-<ol>
-<li>با توجه به عکسی که از یک شخص دریافت کردید
-تشخیص دهید که سنش چه قدر است.</li>
-<li>می‌خواهید حساب های مشتری هارا بررسی کنید
-و تصمیم بگیرید که هک شده است یا نه.</li>
-<li>شما انبار بزرگی از اقلام یکسان دارید و می‌ خواهید
-پیش بینی کنید که طی 3 ماه آینده چه تعداد از این اقلام
-به فروش می رسند.</li>
-</ol>
-
-<div class="expand">
-    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
-        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
-        <span>
-        
-    	
-    	برای پاسخ مثال ها کلیک کن
-    	
-    	</span>
-    </div>
-    <div class="expand-content" style="display: none;">
-        <ol>
-<li>Regression</li>
-<li>Classification</li>
-<li>Regression</li>
-</ol>
-
-    </div>
-</div>
+<p>هنگامی که در classifiction، بیش از دو دسته داشته باشیم
+به جای $y = \text{ {0,1} }$
+تعاریف خود را به $ y = \text { {0,1, &hellip;, n} } $</p>
+<p>از آنجا که ما مسئله خودمان را به n+1 (n+1 به این خاطر که ایندکس از صفر شروع می‌شود)
+مسئله طبقه بندی باینری تبدیل می‌کنیم، در هر کدام از آن ها ما احتمال عضویت $y$ را در یکی از
+کلاس هایمان را پیش بینی می‌کنیم:</p>
+<p>$$
+\begin{align*}&amp; y \in \lbrace0, 1 &hellip; n\rbrace \newline&amp; h_\theta^{(0)}(x) = P(y = 0 | x ; \theta) \newline&amp; h_\theta^{(1)}(x) = P(y = 1 | x ; \theta) \newline&amp; \cdots \newline&amp; h_\theta^{(n)}(x) = P(y = n | x ; \theta) \newline&amp; \mathrm{prediction} = \max_i( h_\theta ^{(i)}(x) )\newline\end{align*}
+$$</p>
+<p>ما در واقع یک کلاس را انتخاب می‌کنیم و سپس بقیه را به یک کلاس دوم واحد تبدیل می‌کنیم،
+این کار را به طور مکرر انجام می‌دهیم ،
+و binary logistic regression برای هر کدام از آن ها به کار می‌بریم،
+و سپس از تابع فرضیه ای برای پیش بینی استفاده می‌کنیم که بالاترین مقدار را برگرداننده است.</p>
+<p>تصویر زیر نحوه طبقه بندی 3 کلاس را نشان می‌دهد:</p>
+<p><img src="../images/image3.png?width=35pc" alt="image3.png"></p>
+<p>به طور خلاصه:</p>
+<p>برای هر $class \text{ } i$ تابع فرضیه logistic regression classifier را برای پیش‌بینی احتمال $y=i$
+تشکیل بدهید.</p>
+<p>و برای یک ورودی جدید به اسم $x$ ، $i$ امین کلاسی را که ماکسیمم است را انتخاب کنید.</p>
+<p>$$
+\max_i ( h_\theta^{(i)} (x) )
+$$</p>
 
 
 <footer class="footline">
@@ -1759,6 +1719,8 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
             
                 
                     
+                        
+                        
                     
                 
                 
@@ -1772,26 +1734,6 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
             
             
                 
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -1809,8 +1751,21 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
-                        
+            
+            
+                
                     
                 
                 
@@ -2055,6 +2010,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
             
                 
                     
+                    
                 
                 
 
@@ -2067,6 +2023,9 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2132,6 +2091,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
             
                 
                     
+                    
                 
                 
 
@@ -2150,6 +2110,9 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2203,10 +2166,10 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
 	 
 	 
 		
-			<a class="nav nav-prev" href="/ml-andrew-ng/week1/what-is-ml/" title="یادگیری ماشین چیست؟"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/ml-andrew-ng/week3/advanced-optimization/" title="بهینه سازی پیشرفته"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ml-andrew-ng/week1/unsupervised/" title="یادگیری غیر نظارتی چیست؟" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/ml-andrew-ng/useful-articles/" title="منابع مفید " style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

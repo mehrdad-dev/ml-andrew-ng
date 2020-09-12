@@ -143,7 +143,9 @@ $$(x_i, y_i) \Rightarrow x_1= 2104, y_1 = 460$$
       <pubDate>Fri, 11 Sep 2020 13:28:40 +0430</pubDate>
       
       <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week3/advanced-optimization/</guid>
-      <description></description>
+      <description>Conjugate gradient, BFGS و L-BFGS راه های پیچیده تر و سریع تری برای بهینه سازی $\theta$ به جای Gradient descent هستند.
+پیشنهاد می‌شود که این الگوریتم های پیچیده را خودتان ننویسید (مگر اینکه در محاسبات عددی متخصص باشید)، و به جای آن از کتابخانه ها استفاده کنید، زیرا قبلا آزمایش شده اند و بسیار بهینه شده اند.
+ابتدا لازم است تابعی بسازیم که دو مقدار زیر را با ورودی مقدار $\theta$ برگرداند:</description>
     </item>
     
     <item>
@@ -164,6 +166,16 @@ $$ {\color{Blue} h_\theta(x) = \theta_0 + \theta_1 x_1 + \theta_2 x_1^2}$$</desc
       
       <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week1/cost1/</guid>
       <description>تعریف تابع هزینه | Cost Function با این تابع می‌توانیم بهترین خط مستقیم را برای داده هایمان به دست آوریم. با انتخاب های متفاوت برای پارامتر های $\theta_1$ و $\theta_0$ تابع های فرضیه متفاوتی به دست می‌آوریم: در رگرسیون خطی مجموعه آموزشی مثل این نمودار داریم و می‌خواهیم مقادیری برای $\theta_0$ و $\theta_1$ به دست آوریم به طوری که خط راستی که رسم می‌کنیم، بهترین تطابق را با داده هایمان داشته باشد.</description>
+    </item>
+    
+    <item>
+      <title>طبقه بندی چند کلاسه</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week3/multiclass-classification/</link>
+      <pubDate>Sat, 12 Sep 2020 10:56:25 +0430</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week3/multiclass-classification/</guid>
+      <description>هنگامی که در classifiction، بیش از دو دسته داشته باشیم به جای $y = \text{ {0,1} }$ تعاریف خود را به $ y = \text { {0,1, &amp;hellip;, n} } $
+از آنجا که ما مسئله خودمان را به n+1 (n+1 به این خاطر که ایندکس از صفر شروع می‌شود) مسئله طبقه بندی باینری تبدیل می‌کنیم، در هر کدام از آن ها ما احتمال عضویت $y$ را در یکی از کلاس هایمان را پیش بینی می‌کنیم:</description>
     </item>
     
     <item>

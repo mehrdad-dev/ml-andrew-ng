@@ -1023,6 +1023,11 @@ td {
     margin-top: -5px;
     border-right-color: rgba(0, 0, 0, 0.8);
 }
+
+.highlight {
+    align: left;
+}
+
 .highlightable {
     padding: 1rem 0 1rem;
     overflow: auto;
