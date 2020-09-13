@@ -36,7 +36,7 @@
 
     <link rel="icon" href="/ml-andrew-ng/images/favicon.png" type="image/png">
 
-    <title>رگرسیون خطی چند متغیره :: Machine Learning Andrew Ng</title>
+    <title> تابع هزینه در Overfitting :: Machine Learning Andrew Ng</title>
 
     
     <link href="/ml-andrew-ng/css/nucleus.css" rel="stylesheet">
@@ -63,7 +63,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/ml-andrew-ng/week2/linear-regression-many-variable/">
+  <body class="" data-url="/ml-andrew-ng/week3/cost-function-overfitting/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -1174,7 +1174,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
   
     
     <li data-nav-id="/ml-andrew-ng/week2/" title=" هفته دوم" class="dd-item 
-        parent
+        
         
         
         ">
@@ -1202,7 +1202,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week2/linear-regression-many-variable/" title="رگرسیون خطی چند متغیره" class="dd-item active">
+      <li data-nav-id="/ml-andrew-ng/week2/linear-regression-many-variable/" title="رگرسیون خطی چند متغیره" class="dd-item ">
         <a href="/ml-andrew-ng/week2/linear-regression-many-variable/">
         رگرسیون خطی چند متغیره
         <i class="fas fa-check read-icon"></i>
@@ -1336,7 +1336,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
   
     
     <li data-nav-id="/ml-andrew-ng/week3/" title=" هفته سوم" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1490,7 +1490,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week3/cost-function-overfitting/" title=" تابع هزینه در Overfitting" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week3/cost-function-overfitting/" title=" تابع هزینه در Overfitting" class="dd-item active">
         <a href="/ml-andrew-ng/week3/cost-function-overfitting/">
          تابع هزینه در Overfitting
         <i class="fas fa-check read-icon"></i>
@@ -1687,7 +1687,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
             
           
           
-            <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week2/'> هفته دوم</a> > رگرسیون خطی چند متغیره
+            <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week3/'> هفته سوم</a> >  تابع هزینه در Overfitting
           
         
           
@@ -1716,49 +1716,56 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
           
             <h1>
               
-              رگرسیون خطی چند متغیره
+               تابع هزینه در Overfitting
             </h1>
           
 
         
 
 
-<p>توی این هفته قراره در مورد رگرسیون خطی با چندین
-متغیر صحبت کنیم!</p>
-<p>مثلا دیتا ای شبیه به این برای خانه ها را فرض کنید:</p>
-<p><img src="../images/image52.png?width=30pc" alt="image52.png"></p>
-<table>
-<thead>
-<tr>
-<th align="right">نماد</th>
-<th align="right"></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="right">$m$</td>
-<td align="right">تعداد کل سطر های جدول داده ها</td>
-</tr>
-<tr>
-<td align="right">$n$</td>
-<td align="right">تعداد ویژگی ها یا همان متغیر ها</td>
-</tr>
-<tr>
-<td align="right">$x^{(i)}$</td>
-<td align="right">i امین ردیف از جدول شامل متغیر ها</td>
-</tr>
-<tr>
-<td align="right">$x_j^{(i)}$</td>
-<td align="right">مقدار موجود در ردیف i ام و ستون متغیر j</td>
-</tr>
-</tbody>
-</table>
-<p>بنابراین برای تابع فرضه داریم:   $h_\theta = \theta_0 + \theta_1 + \theta_2x + &hellip; + \theta_nx$</p>
-<p>با مقدار پیشفرض برای $x_0$ که برابر با مقدار $1$ است.</p>
-<p>که می‌توانیم برای محاسبه این مقدار از ضرب ترانهاده
-وکتور مقادیر تتا و وکتور x ها استفاده کنیم:</p>
-<p><img src="../images/image59.png?width=20pc" alt="image59.png">
-<img src="../images/image1.png?width=23pc" alt="image1.png"></p>
+<p>اگر تابع فرضیه ما مشکل overfitting دارد،
+ما می‌توانیم وزن بعضی از بخش های تابع فرضیه را با افزایش هزینه آن ها کاهش دهیم:</p>
+<p>تصور کنید که تابع زیر را درجه ۲ (quadratic) تر کنیم:
+$$
+\theta_0 + \theta_1x + \theta_2 x^2 + \theta_3 x^3 +\theta_4 x^4
+$$</p>
+<p>ما می‌خواهیم تاثیر $\theta_3 x^3$ و $\theta_4 x^4$ را از بین ببریم ،
+بدون اینکه از شر این ویژگی ها خلاص شویم یا فرم تابع فرضیه خود را تغییر دهیم،
+ما می‌توانیم <strong>تابع هزینه</strong> خود را اصلاح کنیم:</p>
+<p>$$
+min_\theta  \frac{1}{2m} \sum_{i = 1}^m (h_\theta(x^{(i)}) - y^{(i)})^2 + 1000 \cdot \theta_3 ^2 +
+1000 \cdot \theta_4 ^ 2
+$$</p>
+<p>ما اینجا در انتها دو بخش اضافه کرده ایم تا هزینه $\theta_3$ و $\theta_4$ را افزایش دهیم.
+حالا برای اینکه تابع هزینه به صفر نزدیک شود، ما باید مقادیر $\theta_3$ و $\theta_4$  را به صفر نزدیک کنیم.</p>
+<p>این کار به خوبی مقادیر $\theta_3 x^3$ و $\theta_4 x^4$ را در تابع هزینه ما کاهش می‌هد.</p>
+<p>در نتیجه می‌بینیم که فرضیه جدید (که توسط منحنی صورتی نشان داده شده است) مانند یک تابع درجه دوم به نظر می‌رسد، و به خاطر اصلاحات در $\theta_3 x^3$ و $\theta_4 x^4$ باداده ها تناسب بهتری دارد.</p>
+<p><img src="../images/image6.png?width=40pc" alt="image6.png"></p>
+<p>و برای جمع بندی می‌توانیم بنویسیم:
+$$
+min_\theta  \frac{1}{2m} \sum_{i = 1}^m (h_\theta(x^{(i)}) - y^{(i)})^2 + \lambda \sum_{j = 1}^n  \theta_j ^ 2
+$$</p>
+<p>لامبدا ($\lambda$) پارامتر منظم سازی (regularization parameter) است،
+تعیین می‌کند که هزینه پارامتر های تتا ما چه قدر باید زیاد شود.</p>
+<p>با استفاده از تابع هزینه بالا ما می‌توانیم خروجی تابع فرضیه خود را صافکاری کنیم تا وضعیت overfitting را کاهش دهیم.</p>
+<p>اگر پارامتر لامبدا بسیار بزرگ انتخاب شود، ممکن است تابع ما را بیش از حد صافکاری کند و باعث underfitting شود!</p>
+<p>حالا به نظر شما چه اتفاقی می‌افتد اگر لامبدا $0$ یا خیلی کوچک انتخاب شود ؟</p>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	برای پاسخ کلیک کن
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <p>باید پر بشه</p>
+
+    </div>
+</div>
 
 
 <footer class="footline">
@@ -1975,123 +1982,6 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                 
                 
 
@@ -2196,6 +2086,42 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
             
         
                     
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
             
             
@@ -2216,6 +2142,90 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -2288,10 +2298,10 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
 	 
 	 
 		
-			<a class="nav nav-prev" href="/ml-andrew-ng/week2/" title=" هفته دوم"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/ml-andrew-ng/week3/overfitting/" title="مشکل Overfitting"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ml-andrew-ng/week2/gradient-many-variable/" title="گرادیان کاهشی چند متغیره" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/ml-andrew-ng/week3/regularized-linear-regression/" title="رگرسیون خطی منظم" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

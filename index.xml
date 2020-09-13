@@ -174,8 +174,8 @@ $$ {\color{Blue} h_\theta(x) = \theta_0 + \theta_1 x_1 + \theta_2 x_1^2}$$</desc
       <pubDate>Sat, 12 Sep 2020 10:56:25 +0430</pubDate>
       
       <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week3/multiclass-classification/</guid>
-      <description>هنگامی که در classifiction، بیش از دو دسته داشته باشیم به جای $y = \text{ {0,1} }$ تعاریف خود را به $ y = \text { {0,1, &amp;hellip;, n} } $
-از آنجا که ما مسئله خودمان را به n+1 (n+1 به این خاطر که ایندکس از صفر شروع می‌شود) مسئله طبقه بندی باینری تبدیل می‌کنیم، در هر کدام از آن ها ما احتمال عضویت $y$ را در یکی از کلاس هایمان را پیش بینی می‌کنیم:</description>
+      <description>هنگامی که در classifiction، بیش از دو دسته داشته باشیم به جای $y = \text{ {0,1} }$ تعاریف خود را به $ y = \text { {0,1, &amp;hellip;, n} } $ گسترش می‌دهیم.
+از آنجا که ما مسئله خودمان را به n+1 (n+1 به این خاطر که ایندکس از صفر شروع می‌شود) مسئله طبقه بندی باینری تقسیم می‌کنیم، در هر کدام از آن ها ما احتمال عضویت $y$ را در یکی از کلاس هایمان پیش بینی می‌کنیم:</description>
     </item>
     
     <item>
@@ -202,6 +202,17 @@ $$ {\color{Red} J(\theta_1) = \frac{1}{2m} \sum_{i=1}^{m} (\theta_1x - y_i)^2 \R
     </item>
     
     <item>
+      <title>مشکل Overfitting</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week3/overfitting/</link>
+      <pubDate>Sun, 13 Sep 2020 10:33:52 +0430</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week3/overfitting/</guid>
+      <description>تصور کنید مسئله پیش بینی $y$ را، به صورتی که $x \in R$ است را داریم.
+سمت چپ ترین شکل زیر نتیجه fitting، $y = \theta_0 + \theta_1x$ را بر روی مجموعه داده نشان می‌دهد. می بینیم که داده ها واقعاً روی خط مستقیم قرار ندارند، بنابراین اصطلاحا خوب fit نشده است (تناسب خوبی با داده ها ندارد).
+در عوض اگر ویژگی $x^2$ را اضافه کنیم، و $y = \theta_0 + \theta_1x+ \theta_2 x^2$ را fit کنیم، سپس کمی بهتر با داده ها مطابقت پیدا می‌کنیم که در شکل وسطی می‌بینیم.</description>
+    </item>
+    
+    <item>
       <title>تابع هزینه قسمت سوم</title>
       <link>https://mehrdad-dev.github.io/ml-andrew-ng/week1/cost3/</link>
       <pubDate>Sun, 06 Sep 2020 16:31:03 +0430</pubDate>
@@ -210,6 +221,17 @@ $$ {\color{Red} J(\theta_1) = \frac{1}{2m} \sum_{i=1}^{m} (\theta_1x - y_i)^2 \R
       <description>قسمت قبل دیدیم که با داشتن فقط یک پارامتر برای تابع فرضیه، نمودار تابع هزینه یا همان $J$ به صورت سهمی بود. اگر دو پارامتر داشته باشیم باز هم به صورت سهمی است، اما سه بعدی و بسته به دیتای ما ممکن است به شکل زیر باشد:
 اما ما برای نمایش این تابع از شکل سه بعدی استفاده نمی‌کنیم‌، بلکه از نمودار های کانتور استفاده می‌کنیم!
 در این نمودار ها هر یک از بیضی ها نشان دهنده مجموعه ای از نقاط است که مقادیر یکسانی در $J$ بر حسب $\theta_0$ و $\theta_1$ های مختلف دارند.</description>
+    </item>
+    
+    <item>
+      <title> تابع هزینه در Overfitting</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week3/cost-function-overfitting/</link>
+      <pubDate>Sun, 13 Sep 2020 12:19:33 +0430</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week3/cost-function-overfitting/</guid>
+      <description>اگر تابع فرضیه ما مشکل overfitting دارد، ما می‌توانیم وزن بعضی از بخش های تابع فرضیه را با افزایش هزینه آن ها کاهش دهیم:
+تصور کنید که تابع زیر را درجه ۲ (quadratic) تر کنیم: $$ \theta_0 + \theta_1x + \theta_2 x^2 + \theta_3 x^3 +\theta_4 x^4 $$
+ما می‌خواهیم تاثیر $\theta_3 x^3$ و $\theta_4 x^4$ را از بین ببریم ، بدون اینکه از شر این ویژگی ها خلاص شویم یا فرم تابع فرضیه خود را تغییر دهیم، ما می‌توانیم تابع هزینه خود را اصلاح کنیم:</description>
     </item>
     
     <item>
@@ -222,6 +244,15 @@ $$ {\color{Red} J(\theta_1) = \frac{1}{2m} \sum_{i=1}^{m} (\theta_1x - y_i)^2 \R
 مراحل کار به این شکل است:
 با حدس های اولیه برای دو پارامتر $\theta_0$ و $\theta_1$ شروع می‌کنیم، مثلا مقدار هر دو را در ابتدا $0$ تعیین می‌کنیم.
 و سپس مقادیر $\theta_0$ و $\theta_1$ را به صورت جزئی تغییر می‌دهیم تا تابع $J$ کاهش یابد، تا زمانی که به مینیمم کلی یا محلی برسیم.</description>
+    </item>
+    
+    <item>
+      <title>رگرسیون خطی منظم</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week3/regularized-linear-regression/</link>
+      <pubDate>Sun, 13 Sep 2020 12:59:40 +0430</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week3/regularized-linear-regression/</guid>
+      <description>ما می‌توانیم regularization را هم برای رگرسیون خطی و هم برای رگرسیون لجستیک استفاده کنیم. که اینجا ابتدا رگرسیون خطی را بررسی می‌کنیم.</description>
     </item>
     
     <item>

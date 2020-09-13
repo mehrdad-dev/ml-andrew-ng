@@ -36,7 +36,7 @@
 
     <link rel="icon" href="/ml-andrew-ng/images/favicon.png" type="image/png">
 
-    <title>رگرسیون خطی چند متغیره :: Machine Learning Andrew Ng</title>
+    <title>رگرسیون خطی منظم :: Machine Learning Andrew Ng</title>
 
     
     <link href="/ml-andrew-ng/css/nucleus.css" rel="stylesheet">
@@ -63,7 +63,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/ml-andrew-ng/week2/linear-regression-many-variable/">
+  <body class="" data-url="/ml-andrew-ng/week3/regularized-linear-regression/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -1174,7 +1174,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
   
     
     <li data-nav-id="/ml-andrew-ng/week2/" title=" هفته دوم" class="dd-item 
-        parent
+        
         
         
         ">
@@ -1202,7 +1202,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week2/linear-regression-many-variable/" title="رگرسیون خطی چند متغیره" class="dd-item active">
+      <li data-nav-id="/ml-andrew-ng/week2/linear-regression-many-variable/" title="رگرسیون خطی چند متغیره" class="dd-item ">
         <a href="/ml-andrew-ng/week2/linear-regression-many-variable/">
         رگرسیون خطی چند متغیره
         <i class="fas fa-check read-icon"></i>
@@ -1336,7 +1336,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
   
     
     <li data-nav-id="/ml-andrew-ng/week3/" title=" هفته سوم" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1511,7 +1511,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week3/regularized-linear-regression/" title="رگرسیون خطی منظم" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week3/regularized-linear-regression/" title="رگرسیون خطی منظم" class="dd-item active">
         <a href="/ml-andrew-ng/week3/regularized-linear-regression/">
         رگرسیون خطی منظم
         <i class="fas fa-check read-icon"></i>
@@ -1687,7 +1687,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
             
           
           
-            <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week2/'> هفته دوم</a> > رگرسیون خطی چند متغیره
+            <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week3/'> هفته سوم</a> > رگرسیون خطی منظم
           
         
           
@@ -1716,49 +1716,15 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
           
             <h1>
               
-              رگرسیون خطی چند متغیره
+              رگرسیون خطی منظم
             </h1>
           
 
         
 
 
-<p>توی این هفته قراره در مورد رگرسیون خطی با چندین
-متغیر صحبت کنیم!</p>
-<p>مثلا دیتا ای شبیه به این برای خانه ها را فرض کنید:</p>
-<p><img src="../images/image52.png?width=30pc" alt="image52.png"></p>
-<table>
-<thead>
-<tr>
-<th align="right">نماد</th>
-<th align="right"></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="right">$m$</td>
-<td align="right">تعداد کل سطر های جدول داده ها</td>
-</tr>
-<tr>
-<td align="right">$n$</td>
-<td align="right">تعداد ویژگی ها یا همان متغیر ها</td>
-</tr>
-<tr>
-<td align="right">$x^{(i)}$</td>
-<td align="right">i امین ردیف از جدول شامل متغیر ها</td>
-</tr>
-<tr>
-<td align="right">$x_j^{(i)}$</td>
-<td align="right">مقدار موجود در ردیف i ام و ستون متغیر j</td>
-</tr>
-</tbody>
-</table>
-<p>بنابراین برای تابع فرضه داریم:   $h_\theta = \theta_0 + \theta_1 + \theta_2x + &hellip; + \theta_nx$</p>
-<p>با مقدار پیشفرض برای $x_0$ که برابر با مقدار $1$ است.</p>
-<p>که می‌توانیم برای محاسبه این مقدار از ضرب ترانهاده
-وکتور مقادیر تتا و وکتور x ها استفاده کنیم:</p>
-<p><img src="../images/image59.png?width=20pc" alt="image59.png">
-<img src="../images/image1.png?width=23pc" alt="image1.png"></p>
+<p>ما می‌توانیم regularization را هم برای رگرسیون خطی و هم برای رگرسیون لجستیک استفاده کنیم.
+که اینجا ابتدا رگرسیون خطی را بررسی می‌کنیم.</p>
 
 
 <footer class="footline">
@@ -1975,7 +1941,6 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
             
                 
                     
-                    
                 
                 
 
@@ -1988,7 +1953,6 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
             
             
                 
-                    
                     
                 
                 
@@ -2005,9 +1969,6 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2092,6 +2053,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
             
                 
                     
+                    
                 
                 
 
@@ -2105,21 +2067,8 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
+                        
                     
                 
                 
@@ -2228,6 +2177,23 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
             
         
                     
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -2235,6 +2201,9 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2288,10 +2257,10 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
 	 
 	 
 		
-			<a class="nav nav-prev" href="/ml-andrew-ng/week2/" title=" هفته دوم"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/ml-andrew-ng/week3/cost-function-overfitting/" title=" تابع هزینه در Overfitting"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ml-andrew-ng/week2/gradient-many-variable/" title="گرادیان کاهشی چند متغیره" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/ml-andrew-ng/useful-articles/" title="منابع مفید " style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
