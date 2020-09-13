@@ -95,7 +95,9 @@ $$ Cost(h_\theta(x), y) = - y \hspace{0.2cm} log(h_\theta(x)) - (1 - y) log(1 - 
       <pubDate>Sun, 13 Sep 2020 12:59:40 +0430</pubDate>
       
       <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week3/regularized-linear-regression/</guid>
-      <description>ما می‌توانیم regularization را هم برای رگرسیون خطی و هم برای رگرسیون لجستیک استفاده کنیم. که اینجا ابتدا رگرسیون خطی را بررسی می‌کنیم.</description>
+      <description>ما می‌توانیم regularization را هم برای رگرسیون خطی و هم برای رگرسیون لجستیک استفاده کنیم. که اینجا ابتدا رگرسیون خطی را بررسی می‌کنیم.
+Gradient Descent گرادیان کاهشی را اصلاح می‌کنیم تا $\theta_0$ را از بقیه پارامتر ها جدا کنیم، زیرا نمی‌خواهیم تاثیر $\theta_0$ را کاهش دهیم و از بین ببریم:
+$$ \begin{align*} &amp;amp; \text{Repeat}\ \lbrace \newline &amp;amp; \ \ \ \ \theta_0 := \theta_0 - \alpha\ \frac{1}{m}\ \sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)})x_0^{(i)} \newline &amp;amp; \ \ \ \ \theta_j := \theta_j - \alpha\ \left[ \left( \frac{1}{m}\ \sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)})x_j^{(i)} \right) + \frac{\lambda}{m}\theta_j \right] &amp;amp;\ \ \ \ \ \ \ \ \ \ j \in \lbrace 1,2&amp;hellip;n\rbrace\newline &amp;amp; \rbrace \end{align*} $$</description>
     </item>
     
   </channel>

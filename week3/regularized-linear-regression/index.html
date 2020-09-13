@@ -1700,7 +1700,16 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#gradient-descent">Gradient Descent</a></li>
+        <li><a href="#normal-equation">Normal Equation</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1725,6 +1734,41 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
 
 <p>ما می‌توانیم regularization را هم برای رگرسیون خطی و هم برای رگرسیون لجستیک استفاده کنیم.
 که اینجا ابتدا رگرسیون خطی را بررسی می‌کنیم.</p>
+<h3 id="gradient-descent">Gradient Descent</h3>
+<p>گرادیان کاهشی را اصلاح می‌کنیم تا $\theta_0$ را از بقیه پارامتر ها جدا کنیم،
+زیرا نمی‌خواهیم تاثیر $\theta_0$ را کاهش دهیم و از بین ببریم:</p>
+<p>$$
+\begin{align*} &amp; \text{Repeat}\ \lbrace \newline &amp; \ \ \ \ \theta_0 := \theta_0 - \alpha\ \frac{1}{m}\ \sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)})x_0^{(i)} \newline &amp; \ \ \ \ \theta_j := \theta_j - \alpha\ \left[ \left( \frac{1}{m}\ \sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)})x_j^{(i)} \right) + \frac{\lambda}{m}\theta_j \right] &amp;\ \ \ \ \ \ \ \ \ \ j \in \lbrace 1,2&hellip;n\rbrace\newline &amp; \rbrace \end{align*}
+$$</p>
+<p>قسمت $\frac{\lambda}{m}\theta_j$ منظم سازی ما را انجام می‌دهد.
+و با یک مقدار دستکاری می‌توانیم $\theta_j$ را به این صورت نشان دهیم:</p>
+<p>$$
+\theta_j := \theta_j(1 - \alpha \frac{\lambda}{m} ) - \alpha \frac{1}{m} \sum_{i = 1}^m (h_\theta(x^{(i)}) - y^{(i)}) x_j ^ {(i)}
+$$</p>
+<p>قسمت اول معدله یعنی $1 - \alpha \frac{\lambda}{m}$
+همیشه کم از $1$ خواهد بود، و به طور چشمی می‌بینیم که مقدار
+$\theta_j$ را در هر بروزرسانی کمتر می‌کند.</p>
+<p>توجه داشته باشید که قسمت دوم دقیقا مثل قبل است.</p>
+<h3 id="normal-equation">Normal Equation</h3>
+<p>حالا منظم سازی را با یک روش جایگزین و بدون نیاز به تکرار (non-iterative) یعنی معادله نرمال بررسی می‌کنیم.</p>
+<p>برای این کار معادله ما شبیه به معادله اصلی است، با این تفاوت که یک بخش جدید در داخل پرانتز اضافه می‌کنیم:</p>
+<p>$$
+\begin{align*}&amp; \theta = \left( X^TX + \lambda \cdot L \right)^{-1} X^Ty \newline&amp; \text{where}\ \ L = \begin{bmatrix} 0 &amp; &amp; &amp; &amp; \newline &amp; 1 &amp; &amp; &amp; \newline &amp; &amp; 1 &amp; &amp; \newline &amp; &amp; &amp; \ddots &amp; \newline &amp; &amp; &amp; &amp; 1 \newline\end{bmatrix}\end{align*}
+$$</p>
+<p>L یک ماتریس است که به صورت مورب از قسمت بالا سمت چپ با $0$ شروع شده و تا انتهای  بخش مورب
+$1$ است.
+و سایر خانه های ماتریس نیز مقدار $0$ دارند، که ابعاد آن
+(n+1)*(n+1) است.</p>
+<p>در واقع یک ماتریس همانی (identity matrix) است،
+(اگر چه که شامل $x_0$ نمی‌شود)
+که در عدد حقیقی لامبدا ضرب شده است.</p>
+<p><strong>به خاطر بیاورید که:</strong></p>
+<p>$$
+\text{if  } m &lt; n \text{ then  } X^TX
+$$
+وارون ناپذیر (non-invertible) بود.
+اگر چه وقتی ما قسمت $\lambda . L $ را اضافه می‌کنیم،
+سپس $ X^TX + \lambda . L$ وارون پذیر می‌شود.</p>
 
 
 <footer class="footline">
