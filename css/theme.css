@@ -41,51 +41,82 @@
     font-weight: 500;
     src: url("../fonts/Work_Sans_500.eot?#iefix") format("embedded-opentype"), url("../fonts/Work_Sans_500.woff") format("woff"), url("../fonts/Work_Sans_500.woff2") format("woff2"), url("../fonts/Work_Sans_500.svg#WorkSans") format("svg"), url("../fonts/Work_Sans_500.ttf") format("truetype");
 } */
+/* 
 @font-face {
-    font-family: "Vazir";
+    font-family: Vazir !important;
     src: url("../fonts/Vazir.eot");
-    /* src: url("../fonts/Novecentosanswide-UltraLight-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Novecentosanswide-UltraLight-webfont.woff2") format("woff2"), url("../fonts/Novecentosanswide-UltraLight-webfont.woff") format("woff"), url("../fonts/Novecentosanswide-UltraLight-webfont.ttf") format("truetype"), url("../fonts/Novecentosanswide-UltraLight-webfont.svg#novecento_sans_wideultralight") format("svg"); */
-    /* font-style: normal; */
-    /* font-weight: 200; */
+    src: url("../fonts/Vazir.eot?#iefix") format("embedded-opentype"), url("../fonts/Vazir.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: Vazir !important;
+    src: url("../fonts/Vazir-Bold.eot");
+    src: url("../fonts/Vazir-Bold.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/Vazir-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: Vazir !important;
+    src: url("../fonts/Vazir-Light.eot");
+    src: url("../fonts/Vazir-Light.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/Vazir-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+} */
+h1,
+h2,
+h3,
+h4,
+h5,
+div,
+p {
+    font-family: Vazir !important;
+    font-weight: normal;
+    font-style: normal;
+}
+ol {
+    list-style-type: persian;
 }
 body {
-    font-family: "Vazir";
+    font-family: Vazir !important;
     background: #fff;
     color: #777;
 }
 body #chapter h1 {
-    font-family: "Vazir";
+    font-family: Vazir !important;
     font-size: 3.5em;
 }
 @media only all and (min-width: 48em) and (max-width: 59.938em) {
     body #chapter h1 {
-        font-family: "Vazir";
+        font-family: Vazir !important;
         font-size: 3vw;
     }
 }
 @media only all and (max-width: 47.938em) {
     body #chapter h1 {
-        font-family: "Vazir";
+        font-family: Vazir !important;
         font-size: 2rvw;
     }
 }
 
 /* mobile */
-@media all {
-    body p span a{ 
-        font-family: "Vazir";
+@media (max-width: 767px) {
+    body p span a {
+        font-family: Vazir !important;
     }
     body h1 {
-     font-family: "Vazir";
-     font-size: 24px;
-     font-weight: bold;
+        font-family: Vazir !important;
+        font-size: 24px;
+        font-weight: bold;
     }
     body h3 {
-        font-family: "Vazir";
+        font-family: Vazir !important;
         font-size: 21px;
     }
     body h2 {
-        font-family: "Vazir";
+        font-family: Vazir !important;
         font-size: 21px;
     }
 }
@@ -216,7 +247,7 @@ select[multiple="multiple"]:focus {
     border-radius: 15px;
 }
 .searchbox label {
-    font-family: "Vazir";
+    font-family: Vazir !important;
     color: rgba(255, 255, 255, 0.8);
     position: absolute;
     left: 10px;
@@ -233,7 +264,7 @@ select[multiple="multiple"]:focus {
     color: rgba(255, 255, 255, 0.9);
 }
 .searchbox input {
-    font-family: "Vazir";
+    font-family: Vazir !important;
     display: inline-block;
     color: #fff;
     width: 100%;
@@ -261,12 +292,12 @@ select[multiple="multiple"]:focus {
 }
 @media only all and (max-width: 47.938em) {
     #sidebar-toggle-span {
-        font-family: "Vazir";
+        font-family: Vazir !important;
         display: inline;
     }
 }
 #sidebar {
-    font-family: "Vazir";
+    font-family: Vazir !important;
     background-color: #322a38;
     position: fixed;
     top: 0;
@@ -466,7 +497,7 @@ select[multiple="multiple"]:focus {
 }
 @media only all and (max-width: 59.938em) {
     #body #navigation {
-        font-family: "Vazir";
+        font-family: Vazir !important;
         position: static;
         margin-right: 0 !important;
         width: 100%;
@@ -491,7 +522,7 @@ select[multiple="multiple"]:focus {
 }
 @media only all and (max-width: 59.938em) {
     #body .nav {
-        font-family: "Vazir";
+        font-family: Vazir !important;
         display: table-cell;
         position: static;
         top: auto;
@@ -529,7 +560,7 @@ select[multiple="multiple"]:focus {
     max-width: 80%;
 }
 #chapter h3 {
-    font-family: "Vazir";
+    font-family: Vazir !important;
     font-weight: 300;
     text-align: center;
 }
@@ -551,7 +582,7 @@ select[multiple="multiple"]:focus {
 }
 body {
     /* font-family: "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif; */
-    font-family: "Vazir";
+    font-family: Vazir !important;
     font-weight: 300;
     line-height: 1.6;
     font-size: 18vw !important;
@@ -562,7 +593,7 @@ h4,
 h5,
 h6 {
     /* font-family: "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif; */
-    font-family: "Vazir";
+    font-family: Vazir !important;
     text-rendering: optimizeLegibility;
     color: #5e5e5e;
     font-weight: 400;
@@ -570,7 +601,7 @@ h6 {
 }
 h1 {
     /* font-family: "Novacento Sans Wide", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif; */
-    font-family: "Vazir";
+    font-family: Vazir !important;
     text-align: center;
     /* text-transform: uppercase; */
     color: #222;
@@ -581,7 +612,7 @@ blockquote {
     border-left: 10px solid #f0f2f4;
 }
 blockquote p {
-    font-family: "Vazir";
+    font-family: Vazir !important;
     font-size: 1.1rem;
     color: #999;
 }
@@ -1255,7 +1286,7 @@ pre .copy-to-clipboard:hover {
 
 #sidebar #shortcuts h3 {
     /* font-family: "Novacento Sans Wide", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif; */
-    font-family: "Vazir";
+    font-family: Vazir !important;
     color: white;
     margin-top: 1rem;
     padding-left: 1rem;
