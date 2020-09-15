@@ -17,7 +17,9 @@
       <pubDate>Tue, 15 Sep 2020 13:37:07 +0430</pubDate>
       
       <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week4/non-linear-hypotheses/</guid>
-      <description></description>
+      <description>انجام رگرسیون لجستیک با مجموعه ای پیچیده از داده ها و ویژگی های زیاد، کار بسیار دشواری است. تصور کنید فرضیه ای با ۳ ویژگی دارید به همراه تمام جملات درجه ۲ آن:
+$$ g(\theta_0 + \theta_1 x_1^2 + \theta_2 x_1 x_2 + \theta_3 x_1 x_3 + \theta_4 x_2 ^2 + \theta_5 x_2 x_3 + \theta_6 x_3 ^2 ) $$ می‌بینیم که ۶ ویژگی به ما می‌دهد.
+روشی دقیق برای محاسبه تعداد ویژگی ها: $ \frac{(n + r - 1)!</description>
     </item>
     
     <item>
@@ -42,6 +44,15 @@
  توجه: این یک تعریف قدیمی و غیر رسمی است!
  اما تعریفی مدرن تر &amp;hellip;
  Tom Mitchell: به یک برنامه کامپیوتری گفته می‌شود که: برای یادگیری از تجربه E با توجه به برخی از وظایف به عنوان T و اندازه گیری عملکرد با P اگر عملکرد وظیفه T با استفاده از P اندازه گیری شود با استفاده از تجربه E بهبود یابد.</description>
+    </item>
+    
+    <item>
+      <title>نورون ها و مغز</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week4/neurons-and-brain/</link>
+      <pubDate>Tue, 15 Sep 2020 19:18:30 +0430</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week4/neurons-and-brain/</guid>
+      <description></description>
     </item>
     
     <item>

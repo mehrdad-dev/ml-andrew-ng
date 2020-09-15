@@ -32,12 +32,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
   <meta name="generator" content="Hugo 0.74.3" />
-  <meta name="description" content="Andrew Ng دوره ماشین لرنینگ پروفسور">
+  <meta name="description" content="دوره یادگیری ماشین دانشگاه استنفورد به فارسی">
 <meta name="author" content="Mehrdad Mohammadian">
 
   <link rel="icon" href="/ml-andrew-ng/images/favicon.png" type="image/png">
 
-  <title>دوره یادگیری ماشین دانشگاه استنفورد به فارسی :: Machine Learning Andrew Ng</title>
+  <title>نورون ها و مغز :: Machine Learning Andrew Ng</title>
 
   
   <link href="/ml-andrew-ng/css/nucleus.css" rel="stylesheet">
@@ -97,7 +97,7 @@
   
 </head>
 
-<body class="" data-url="/ml-andrew-ng/">
+<body class="" data-url="/ml-andrew-ng/week4/neurons-and-brain/">
   <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -1595,7 +1595,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
   
     
     <li data-nav-id="/ml-andrew-ng/week4/" title=" هفته چهارم" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1644,7 +1644,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week4/neurons-and-brain/" title="نورون ها و مغز" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week4/neurons-and-brain/" title="نورون ها و مغز" class="dd-item active">
         <a href="/ml-andrew-ng/week4/neurons-and-brain/">
         نورون ها و مغز
         <i class="fas fa-check read-icon"></i>
@@ -1793,1208 +1793,74 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
     <div id="overlay"></div>
     <div class="padding highlightable">
       
+      <div>
+        <div id="top-bar">
+          
+          
+          <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+            <span id="sidebar-toggle-span">
+              <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                <i class="fas fa-bars"></i>
+              </a>
+            </span>
+            
+            <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+            
+            <span class="links">
+              
+              
+              
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week4/'> هفته چهارم</a> > نورون ها و مغز
+          
+          
+          
+          
+          
+          
+              
+            </span>
+          </div>
+          
+          <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents"></nav>
+    </div>
+</div>
+
+          
+        </div>
+      </div>
+      
       <div dir="rtl" align="right" id="head-tags">
         
       </div>
       
         <div dir="rtl" align="right" id="body-inner">
           
+          <h1>
+            
+            نورون ها و مغز
+          </h1>
+          
 
           
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> منو</a>
-</span>
 
- 
-<h2 id="دوره-یادگیری-ماشین-دانشگاه-استنفورد">دوره یادگیری ماشین دانشگاه استنفورد</h2>
-<p>در حال تکمیل &hellip;</p>
-<h2 id="فهرست-مطالب">فهرست مطالب</h2>
 
 
-
-
-
-
-
-<ul class="children children-li">
-	
-
-	
-		
-		
-		
-	
-
-	
-
-	
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week1/" >   هفته اول </a>
-</li>
-				
-
-				
-			
-			
-
-				
-<ul>
-				
-
-				
-					
-				
-
-				
-
-				
-					
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week1/what-is-ml/" >یادگیری ماشین چیست؟</a>
-</li>
-				
-
-				
-			
-			
-
-				
-<ul>
-				
-
-				
-					
-				
-
-				
-
-				
-					
-	
-
-				
-
-				
-</ul>
-				
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week1/supervised/" >یادگیری نظارتی چیست؟</a>
-</li>
-				
-
-				
-			
-			
-
-				
-<ul>
-				
-
-				
-					
-				
-
-				
-
-				
-					
-	
-
-				
-
-				
-</ul>
-				
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week1/unsupervised/" >یادگیری غیر نظارتی چیست؟</a>
-</li>
-				
-
-				
-			
-			
-
-				
-<ul>
-				
-
-				
-					
-				
-
-				
-
-				
-					
-	
-
-				
-
-				
-</ul>
-				
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week1/linear-regression-one-variable/" >رگرسیون خطی با یک متغیر</a>
-</li>
-				
-
-				
-			
-			
-
-				
-<ul>
-				
-
-				
-					
-				
-
-				
-
-				
-					
-	
-
-				
-
-				
-</ul>
-				
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week1/cost1/" >تابع هزینه قسمت اول</a>
-</li>
-				
-
-				
-			
-			
-
-				
-<ul>
-				
-
-				
-					
-				
-
-				
-
-				
-					
-	
-
-				
-
-				
-</ul>
-				
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week1/cost2/" >تابع هزینه قسمت دوم</a>
-</li>
-				
-
-				
-			
-			
-
-				
-<ul>
-				
-
-				
-					
-				
-
-				
-
-				
-					
-	
-
-				
-
-				
-</ul>
-				
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week1/cost3/" >تابع هزینه قسمت سوم</a>
-</li>
-				
-
-				
-			
-			
-
-				
-<ul>
-				
-
-				
-					
-				
-
-				
-
-				
-					
-	
-
-				
-
-				
-</ul>
-				
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week1/gradient1/" >گرادیان کاهشی قسمت اول</a>
-</li>
-				
-
-				
-			
-			
-
-				
-<ul>
-				
-
-				
-					
-				
-
-				
-
-				
-					
-	
-
-				
-
-				
-</ul>
-				
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week1/gradient2/" >گرادیان کاهشی قسمت دوم</a>
-</li>
-				
-
-				
-			
-			
-
-				
-<ul>
-				
-
-				
-					
-				
-
-				
-
-				
-					
-	
-
-				
-
-				
-</ul>
-				
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week1/gradient3/" >گرادیان کاهشی قسمت سوم</a>
-</li>
-				
-
-				
-			
-			
-
-				
-<ul>
-				
-
-				
-					
-				
-
-				
-
-				
-					
-	
-
-				
-
-				
-</ul>
-				
-			
-		
-	
-
-				
-
-				
-</ul>
-				
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week2/" > هفته دوم</a>
-</li>
-				
-
-				
-			
-			
-
-				
-<ul>
-				
-
-				
-					
-				
-
-				
-
-				
-					
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week2/linear-regression-many-variable/" >رگرسیون خطی چند متغیره</a>
-</li>
-				
-
-				
-			
-			
-
-				
-<ul>
-				
-
-				
-					
-				
-
-				
-
-				
-					
-	
-
-				
-
-				
-</ul>
-				
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week2/gradient-many-variable/" >گرادیان کاهشی چند متغیره</a>
-</li>
-				
-
-				
-			
-			
-
-				
-<ul>
-				
-
-				
-					
-				
-
-				
-
-				
-					
-	
-
-				
-
-				
-</ul>
-				
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week2/feature-scaling/" >Feature Scaling</a>
-</li>
-				
-
-				
-			
-			
-
-				
-<ul>
-				
-
-				
-					
-				
-
-				
-
-				
-					
-	
-
-				
-
-				
-</ul>
-				
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week2/debugging-gradient/" >Debugging Gradient</a>
-</li>
-				
-
-				
-			
-			
-
-				
-<ul>
-				
-
-				
-					
-				
-
-				
-
-				
-					
-	
-
-				
-
-				
-</ul>
-				
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week2/polynomial-regression/" >رگرسیون چند جمله ای</a>
-</li>
-				
-
-				
-			
-			
-
-				
-<ul>
-				
-
-				
-					
-				
-
-				
-
-				
-					
-	
-
-				
-
-				
-</ul>
-				
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week2/normal-equation/" >معادله نرمال</a>
-</li>
-				
-
-				
-			
-			
-
-				
-<ul>
-				
-
-				
-					
-				
-
-				
-
-				
-					
-	
-
-				
-
-				
-</ul>
-				
-			
-		
-	
-
-				
-
-				
-</ul>
-				
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week3/" > هفته سوم</a>
-</li>
-				
-
-				
-			
-			
-
-				
-<ul>
-				
-
-				
-					
-				
-
-				
-
-				
-					
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week3/classification/" >طبقه بندی</a>
-</li>
-				
-
-				
-			
-			
-
-				
-<ul>
-				
-
-				
-					
-				
-
-				
-
-				
-					
-	
-
-				
-
-				
-</ul>
-				
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week3/cost-function/" >تابع هزینه</a>
-</li>
-				
-
-				
-			
-			
-
-				
-<ul>
-				
-
-				
-					
-				
-
-				
-
-				
-					
-	
-
-				
-
-				
-</ul>
-				
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week3/simplified-cost-gradient/" >ساده شده تابع هزینه و گرادیان کاهشی</a>
-</li>
-				
-
-				
-			
-			
-
-				
-<ul>
-				
-
-				
-					
-				
-
-				
-
-				
-					
-	
-
-				
-
-				
-</ul>
-				
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week3/advanced-optimization/" >بهینه سازی پیشرفته</a>
-</li>
-				
-
-				
-			
-			
-
-				
-<ul>
-				
-
-				
-					
-				
-
-				
-
-				
-					
-	
-
-				
-
-				
-</ul>
-				
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week3/multiclass-classification/" >طبقه بندی چند کلاسه</a>
-</li>
-				
-
-				
-			
-			
-
-				
-<ul>
-				
-
-				
-					
-				
-
-				
-
-				
-					
-	
-
-				
-
-				
-</ul>
-				
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week3/overfitting/" >مشکل Overfitting</a>
-</li>
-				
-
-				
-			
-			
-
-				
-<ul>
-				
-
-				
-					
-				
-
-				
-
-				
-					
-	
-
-				
-
-				
-</ul>
-				
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week3/cost-function-overfitting/" > تابع هزینه در Overfitting</a>
-</li>
-				
-
-				
-			
-			
-
-				
-<ul>
-				
-
-				
-					
-				
-
-				
-
-				
-					
-	
-
-				
-
-				
-</ul>
-				
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week3/regularized-linear-regression/" >رگرسیون خطی منظم</a>
-</li>
-				
-
-				
-			
-			
-
-				
-<ul>
-				
-
-				
-					
-				
-
-				
-
-				
-					
-	
-
-				
-
-				
-</ul>
-				
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week3/regularized-logistic-regression/" >رگرسیون لجستیک منظم</a>
-</li>
-				
-
-				
-			
-			
-
-				
-<ul>
-				
-
-				
-					
-				
-
-				
-
-				
-					
-	
-
-				
-
-				
-</ul>
-				
-			
-		
-	
-
-				
-
-				
-</ul>
-				
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week4/" > هفته چهارم</a>
-</li>
-				
-
-				
-			
-			
-
-				
-<ul>
-				
-
-				
-					
-				
-
-				
-
-				
-					
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week4/non-linear-hypotheses/" >فرضیه غیر خطی</a>
-</li>
-				
-
-				
-			
-			
-
-				
-<ul>
-				
-
-				
-					
-				
-
-				
-
-				
-					
-	
-
-				
-
-				
-</ul>
-				
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week4/neurons-and-brain/" >نورون ها و مغز</a>
-</li>
-				
-
-				
-			
-			
-
-				
-<ul>
-				
-
-				
-					
-				
-
-				
-
-				
-					
-	
-
-				
-
-				
-</ul>
-				
-			
-		
-	
-
-				
-
-				
-</ul>
-				
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/useful-articles/" >منابع مفید </a>
-</li>
-				
-
-				
-			
-			
-
-				
-<ul>
-				
-
-				
-					
-				
-
-				
-
-				
-					
-	
-
-				
-
-				
-</ul>
-				
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/sponsor/" >حمایت</a>
-</li>
-				
-
-				
-			
-			
-
-				
-<ul>
-				
-
-				
-					
-				
-
-				
-
-				
-					
-	
-
-				
-
-				
-</ul>
-				
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/info/" >درباره </a>
-</li>
-				
-
-				
-			
-			
-
-				
-<ul>
-				
-
-				
-					
-				
-
-				
-
-				
-					
-	
-
-				
-
-				
-</ul>
-				
-			
-		
+<footer class="footline">
 	
+</footer>
 
-	
-</ul>
-
-
-
-
-	
-  
         
         </div> 
         
@@ -3477,6 +2343,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
             
                 
                     
+                    
                 
                 
 
@@ -3489,6 +2356,9 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -3506,6 +2376,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
             
                 
                     
+                    
                 
                 
 
@@ -3524,6 +2395,9 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -3577,8 +2451,10 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
 	 
 	 
 		
+			<a class="nav nav-prev" href="/ml-andrew-ng/week4/non-linear-hypotheses/" title="فرضیه غیر خطی"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/ml-andrew-ng/week1/" title="   هفته اول " style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/ml-andrew-ng/useful-articles/" title="منابع مفید " style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
