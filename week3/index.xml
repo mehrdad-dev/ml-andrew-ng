@@ -100,5 +100,19 @@ Gradient Descent گرادیان کاهشی را اصلاح می‌کنیم تا 
 $$ \begin{align*} &amp;amp; \text{Repeat}\ \lbrace \newline &amp;amp; \ \ \ \ \theta_0 := \theta_0 - \alpha\ \frac{1}{m}\ \sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)})x_0^{(i)} \newline &amp;amp; \ \ \ \ \theta_j := \theta_j - \alpha\ \left[ \left( \frac{1}{m}\ \sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)})x_j^{(i)} \right) + \frac{\lambda}{m}\theta_j \right] &amp;amp;\ \ \ \ \ \ \ \ \ \ j \in \lbrace 1,2&amp;hellip;n\rbrace\newline &amp;amp; \rbrace \end{align*} $$</description>
     </item>
     
+    <item>
+      <title>رگرسیون لجستیک منظم</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week3/regularized-logistic-regression/</link>
+      <pubDate>Tue, 15 Sep 2020 12:48:24 +0430</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week3/regularized-logistic-regression/</guid>
+      <description>می‌توانیم Logistic Regression را به روشی مشابه رگرسیون خطی منظم سازی کنیم، که در نتیجه می‌توانیم از overfitting پرهیز کنیم.
+Cost Function به یاد بیاورید که تابع هزینه ما برای رگرسیون لجستیک به این شکل بود:
+$$ J(\theta) = - \frac{1}{m} \sum_{i=1}^m [y^{(i)} log(h_\theta(x^{(i)})) + (1 - y^{(i)}) log(1 - h_\theta(x^{(i)}) )]
+$$
+ما می‌توانیم این معادله را با اضافه کردن یک قسمت به انتهای آن منظم کنیم:
+$$ J(\theta) = - \frac{1}{m} \sum_{i=1}^m [y^{(i)} log(h_\theta(x^{(i)})) + (1 - y^{(i)}) log(1 - h_\theta(x^{(i)}) )] + \frac{\lambda}{2m} \sum_{j=1}^n \theta_j ^ 2 $$</description>
+    </item>
+    
   </channel>
 </rss>
