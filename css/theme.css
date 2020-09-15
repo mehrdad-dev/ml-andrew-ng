@@ -72,13 +72,20 @@ body #chapter h1 {
 
 /* mobile */
 @media (max-width: 767px) {
+    body p span a{ 
+        font-family: "Vazir";
+    }
     body h1 {
+     font-family: "Vazir";
      font-size: 24px;
+     font-weight: bold;
     }
     body h3 {
+        font-family: "Vazir";
         font-size: 21px;
     }
     body h2 {
+        font-family: "Vazir";
         font-size: 21px;
     }
 }
