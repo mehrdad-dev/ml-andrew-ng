@@ -71,7 +71,7 @@ body #chapter h1 {
 }
 
 /* mobile */
-@media (max-width: 767px) {
+@media all {
     body p span a{ 
         font-family: "Vazir";
     }
