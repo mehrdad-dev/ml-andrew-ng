@@ -28,6 +28,16 @@ $$ g(\theta_0 + \theta_1 x_1^2 + \theta_2 x_1 x_2 + \theta_3 x_1 x_3 + \theta_4 
       <pubDate>Tue, 15 Sep 2020 19:18:30 +0430</pubDate>
       
       <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week4/neurons-and-brain/</guid>
+      <description>مبدا و سرچشمه شبکه های عصبی (Neural networks) ساخت الگوریتم هایی است که سعی کنند از مغز تقلید کنند. شبکه های عصبی در دهه ۸۰ و ۹۰ میلادی بسیار مورد استفاده قرار می‌گرفته اند، اما در اواخر دهه ۹۰ از محبوبیت آن ها کاسته شد، و اخیرا به دلیل پشرفت در سخت افزار کامپیوتر ها دوباره احیا شده است.
+شواهدی وجود دارد که مغز تنها از یک الگوریتم یادگیری برای انجام تمام عملکرذ های محتلف خود استفاده می‌کند.</description>
+    </item>
+    
+    <item>
+      <title>ارائه مدل قسمت اول</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week4/model-representation-1/</link>
+      <pubDate>Thu, 17 Sep 2020 11:13:34 +0430</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week4/model-representation-1/</guid>
       <description></description>
     </item>
     
