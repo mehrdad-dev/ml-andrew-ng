@@ -38,7 +38,11 @@ $$ g(\theta_0 + \theta_1 x_1^2 + \theta_2 x_1 x_2 + \theta_3 x_1 x_3 + \theta_4 
       <pubDate>Thu, 17 Sep 2020 11:13:34 +0430</pubDate>
       
       <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week4/model-representation-1/</guid>
-      <description></description>
+      <description>چگونه یک تابع فرضیه را با استفاده از شبکه های عصبی نشان خواهیم داد؟
+شبکه های عصبی به عنوان روشی برای شبیه سازی نورون ها یا شبکه ای از نورون های در مغز ساخته شده اند.
+یک نورون در مغز به این شکل است:
+که به طور کلی از سه بخش قابل توجه زیر ساخته شده است:
+ بدنه سلول (Cell body) بخش ورودی دنریت (dendrites) بخش خروجی اکسون(axon)  به طور ساده می‌توانیم بگوییم که:</description>
     </item>
     
   </channel>
