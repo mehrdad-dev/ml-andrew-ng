@@ -1678,6 +1678,27 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
 
             
           
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ml-andrew-ng/week4/model-representation-2/" title="ارائه مدل قسمت دوم" class="dd-item ">
+        <a href="/ml-andrew-ng/week4/model-representation-2/">
+        ارائه مدل قسمت دوم
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
         
         </ul>
               
@@ -1922,13 +1943,24 @@ $$</p>
 <p>$$
 \begin{align*} a_1^{(2)} = g(\Theta_{10}^{(1)}x_0 + \Theta_{11}^{(1)}x_1 + \Theta_{12}^{(1)}x_2 + \Theta_{13}^{(1)}x_3) \newline a_2^{(2)} = g(\Theta_{20}^{(1)}x_0 + \Theta_{21}^{(1)}x_1 + \Theta_{22}^{(1)}x_2 + \Theta_{23}^{(1)}x_3) \newline a_3^{(2)} = g(\Theta_{30}^{(1)}x_0 + \Theta_{31}^{(1)}x_1 + \Theta_{32}^{(1)}x_2 + \Theta_{33}^{(1)}x_3) \newline h_\Theta(x) = a_1^{(3)} = g(\Theta_{10}^{(2)}a_0^{(2)} + \Theta_{11}^{(2)}a_1^{(2)} + \Theta_{12}^{(2)}a_2^{(2)} + \Theta_{13}^{(2)}a_3^{(2)}) \newline \end{align*}
 $$</p>
-<p><img src="../images/image10.png?width=17pc" alt="image10.png"></p>
+<p><img src="../images/image10.png?width=40pc" alt="image10.png"></p>
 <p>این به ما می‌گوید که نود های فعال ساز مان را با استفاده از یک ماتریس
 $3 \times 4$ از پارامتر ها محاسبه می‌کنیم.
 به این ترتیب که ما هر ردیف (row) از پارامتر ها را به ورودی های خود
 اعمال می‌کنیم، تا مقدار یک نود فعال ساز را بدست آوریم.</p>
+<p><img src="../images/image12.png?width=40pc" alt="image12.png">
+<img src="../images/image11.png?width=40pc" alt="image11.png"></p>
 <p>و خروجی فرضیه ما تابعی لجستیکی است که روی مجموع مقادیر نود های فعال ساز ما اعمال می‌شود،
 که در ماتریسی از پارامتر های دیگری ($\Theta^{(2)}$) ضرب می‌شود.</p>
+<p><strong>محاسبه $a_1 ^{(2)}$ :</strong>
+<img src="../images/image13.png?width=30pc" alt="image13.png"></p>
+<p><strong>محاسبه $a_2 ^{(2)}$ :</strong>
+<img src="../images/image14.png?width=30pc" alt="image14.png"></p>
+<p><strong>محاسبه $a_3 ^{(2)}$ :</strong></p>
+<p>[تصحیح: ردیف سوم از ماتریس $\Theta^T X$ باید انتخاب شود]
+<img src="../images/image15.png?width=30pc" alt="image15.png"></p>
+<p><strong>محاسبه</strong> $a_1 ^{(3)}$ <strong>یا همان</strong> $h_\Theta(x)$:
+<img src="../images/image16.png?width=30pc" alt="image16.png"></p>
 
 <div class="notices note" ><p>$\Theta^{(2)}$
 شامل وزن های نود های لایه دوم است.</p>
@@ -1953,8 +1985,8 @@ $ s_{j+1} \times (s_j + 1) $ خواهد بود.</p>
 ابعاد $\Theta^{(1)}$ به صورت
 $4 \times 3$ خواهد بود،
 به طوری که:</p>
-<p>$s_j = 2,  s_{j+1} = 4$</p>
-<p>$ s_{j+1} \times (s_j + 1) = 4 \times 3 $</p>
+<p>$$ s_j = 2,  s_{j+1} = 4 $$</p>
+<p>$$ s_{j+1} \times (s_j + 1) = 4 \times 3 $$</p>
 
 
 <footer class="footline">
@@ -2504,9 +2536,6 @@ $4 \times 3$ خواهد بود،
             
         
                     
-            
-        
-                    
                         
             
             
@@ -2514,6 +2543,25 @@ $4 \times 3$ خواهد بود،
                     
                         
                         
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -2570,7 +2618,7 @@ $4 \times 3$ خواهد بود،
 			<a class="nav nav-prev" href="/ml-andrew-ng/week4/neurons-and-brain/" title="نورون ها و مغز"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ml-andrew-ng/useful-articles/" title="منابع مفید " style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/ml-andrew-ng/week4/model-representation-2/" title="ارائه مدل قسمت دوم" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

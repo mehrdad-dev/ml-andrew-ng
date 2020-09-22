@@ -45,5 +45,14 @@ $$ g(\theta_0 + \theta_1 x_1^2 + \theta_2 x_1 x_2 + \theta_3 x_1 x_3 + \theta_4 
  بدنه سلول (Cell body) بخش ورودی دنریت (dendrites) بخش خروجی اکسون(axon)  به طور ساده می‌توانیم بگوییم که:</description>
     </item>
     
+    <item>
+      <title>ارائه مدل قسمت دوم</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week4/model-representation-2/</link>
+      <pubDate>Sun, 20 Sep 2020 15:54:56 +0430</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week4/model-representation-2/</guid>
+      <description>در این قسمت چگونگی انجام محسابات را به صورت بهینه تر از طریق پیاده سازی به روش vectorized بررسی می‌کنیم.</description>
+    </item>
+    
   </channel>
 </rss>

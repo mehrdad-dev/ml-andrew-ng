@@ -38,7 +38,7 @@
 
   <link rel="icon" href="/ml-andrew-ng/images/favicon.png" type="image/png">
 
-  <title>طبقه بندی چند کلاسه :: Machine Learning Andrew Ng</title>
+  <title>ارائه مدل قسمت دوم :: Machine Learning Andrew Ng</title>
 
   
   <link href="/ml-andrew-ng/css/nucleus.css" rel="stylesheet">
@@ -98,7 +98,7 @@
   
 </head>
 
-<body class="" data-url="/ml-andrew-ng/week3/multiclass-classification/">
+<body class="" data-url="/ml-andrew-ng/week4/model-representation-2/">
   <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -1371,7 +1371,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
   
     
     <li data-nav-id="/ml-andrew-ng/week3/" title=" هفته سوم" class="dd-item 
-        parent
+        
         
         
         ">
@@ -1483,7 +1483,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week3/multiclass-classification/" title="طبقه بندی چند کلاسه" class="dd-item active">
+      <li data-nav-id="/ml-andrew-ng/week3/multiclass-classification/" title="طبقه بندی چند کلاسه" class="dd-item ">
         <a href="/ml-andrew-ng/week3/multiclass-classification/">
         طبقه بندی چند کلاسه
         <i class="fas fa-check read-icon"></i>
@@ -1596,7 +1596,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
   
     
     <li data-nav-id="/ml-andrew-ng/week4/" title=" هفته چهارم" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1687,7 +1687,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week4/model-representation-2/" title="ارائه مدل قسمت دوم" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week4/model-representation-2/" title="ارائه مدل قسمت دوم" class="dd-item active">
         <a href="/ml-andrew-ng/week4/model-representation-2/">
         ارائه مدل قسمت دوم
         <i class="fas fa-check read-icon"></i>
@@ -1863,7 +1863,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
           
           
           
-          <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week3/'> هفته سوم</a> > طبقه بندی چند کلاسه
+          <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week4/'> هفته چهارم</a> > ارائه مدل قسمت دوم
           
           
           
@@ -1892,35 +1892,13 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
           
           <h1>
             
-            طبقه بندی چند کلاسه
+            ارائه مدل قسمت دوم
           </h1>
           
 
           
 
-<p>هنگامی که در classifiction، بیش از دو دسته داشته باشیم
-به جای $y = \text{ {0,1} }$
-تعاریف خود را به $ y = \text { {0,1, &hellip;, n} } $
-گسترش می‌دهیم.</p>
-<p>از آنجا که ما مسئله خودمان را به n+1 (n+1 به این خاطر که ایندکس از صفر شروع می‌شود)
-مسئله طبقه بندی باینری تقسیم می‌کنیم، در هر کدام از آن ها ما احتمال عضویت $y$ را در یکی از
-کلاس هایمان پیش بینی می‌کنیم:</p>
-<p>$$
-\begin{align*}&amp; y \in \lbrace0, 1 &hellip; n\rbrace \newline&amp; h_\theta^{(0)}(x) = P(y = 0 | x ; \theta) \newline&amp; h_\theta^{(1)}(x) = P(y = 1 | x ; \theta) \newline&amp; \cdots \newline&amp; h_\theta^{(n)}(x) = P(y = n | x ; \theta) \newline&amp; \mathrm{prediction} = \max_i( h_\theta ^{(i)}(x) )\newline\end{align*}
-$$</p>
-<p>ما در واقع یک کلاس را انتخاب می‌کنیم و سپس بقیه را به یک کلاس دوم واحد تبدیل می‌کنیم،
-این کار را به طور مکرر انجام می‌دهیم ،
-و binary logistic regression برای هر کدام از آن ها به کار می‌بریم،
-و سپس از تابع فرضیه ای برای پیش بینی استفاده می‌کنیم که بالاترین مقدار را برگرداننده باشد.</p>
-<p>تصویر زیر نحوه طبقه بندی 3 کلاس را نشان می‌دهد:</p>
-<p><img src="../images/image3.png?width=35pc" alt="image3.png"></p>
-<p><strong>به طور خلاصه:</strong></p>
-<p>برای هر $class \text{ } i$ تابع فرضیه logistic regression classifier را برای پیش‌بینی احتمال $y=i$
-تشکیل بدهید.</p>
-<p>و برای یک ورودی جدید به اسم $x$ ، $i$ امین کلاسی که ماکسیمم است را انتخاب کنید:</p>
-<p>$$
-\max_i ( h_\theta^{(i)} (x) )
-$$</p>
+<p>در این قسمت چگونگی انجام محسابات را به صورت بهینه تر از طریق پیاده سازی به روش vectorized بررسی می‌کنیم.</p>
 
 
 <footer class="footline">
@@ -2249,174 +2227,6 @@ $$</p>
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                 
                 
 
@@ -2489,6 +2299,19 @@ $$</p>
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
             
         
                     
@@ -2496,6 +2319,161 @@ $$</p>
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -2549,10 +2527,10 @@ $$</p>
 	 
 	 
 		
-			<a class="nav nav-prev" href="/ml-andrew-ng/week3/advanced-optimization/" title="بهینه سازی پیشرفته"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/ml-andrew-ng/week4/model-representation-1/" title="ارائه مدل قسمت اول"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ml-andrew-ng/week3/overfitting/" title="مشکل Overfitting" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/ml-andrew-ng/useful-articles/" title="منابع مفید " style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
