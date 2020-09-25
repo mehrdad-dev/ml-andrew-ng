@@ -1,3 +1,4 @@
+<div dir=rtl align="right">
 ## دوره یادگیری ماشین دانشگاه استنفورد 
 
 **در حال تکمیل است ...** 
@@ -37,3 +38,5 @@ https://mehrdad-dev.github.io/ml-andrew-ng/
 به ایمیل
 [mehrdad.mohammadian.contact@gmail.com](mailto:mehrdad.mohammadian.contact@gmail.com)
 ارسال کنید.
+
+</div>
