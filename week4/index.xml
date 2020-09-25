@@ -51,7 +51,9 @@ $$ g(\theta_0 + \theta_1 x_1^2 + \theta_2 x_1 x_2 + \theta_3 x_1 x_3 + \theta_4 
       <pubDate>Sun, 20 Sep 2020 15:54:56 +0430</pubDate>
       
       <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week4/model-representation-2/</guid>
-      <description>در این قسمت چگونگی انجام محسابات را به صورت بهینه تر از طریق پیاده سازی به روش vectorized بررسی می‌کنیم.</description>
+      <description>در این قسمت چگونگی انجام محاسبات را به صورت بهینه تر از طریق پیاده سازی به روش vectorized بررسی می‌کنیم. و می‌آموزیم که چرا شبکه های عصبی خوب هستند و چطور می‌توانیم از آن ها برای یادگیری چیز های پیچیده و غیر خطی استفاده کنیم.
+برای یادآوری عبارات زیر مثالی های شبکه های عصبی بودند:
+$$ \begin{align*} a_1^{(2)} = g(\Theta_{10}^{(1)}x_0 + \Theta_{11}^{(1)}x_1 + \Theta_{12}^{(1)}x_2 + \Theta_{13}^{(1)}x_3) \newline a_2^{(2)} = g(\Theta_{20}^{(1)}x_0 + \Theta_{21}^{(1)}x_1 + \Theta_{22}^{(1)}x_2 + \Theta_{23}^{(1)}x_3) \newline a_3^{(2)} = g(\Theta_{30}^{(1)}x_0 + \Theta_{31}^{(1)}x_1 + \Theta_{32}^{(1)}x_2 + \Theta_{33}^{(1)}x_3) \newline h_\Theta(x) = a_1^{(3)} = g(\Theta_{10}^{(2)}a_0^{(2)} + \Theta_{11}^{(2)}a_1^{(2)} + \Theta_{12}^{(2)}a_2^{(2)} + \Theta_{13}^{(2)}a_3^{(2)}) \newline \end{align*} $$</description>
     </item>
     
   </channel>
