@@ -40,4 +40,7 @@ https://mehrdad-dev.github.io/ml-andrew-ng
 [mehrdad.mohammadian.contact@gmail.com](mailto:mehrdad.mohammadian.contact@gmail.com)
 ارسال کنید.
 
+**مخزن گیت هاب سورس کد وب سایت برای مشارکت:**
+https://github.com/mehrdad-dev/ml-andrew-ng-code
+
 </div>
