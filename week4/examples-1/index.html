@@ -38,7 +38,7 @@
 
   <link rel="icon" href="/ml-andrew-ng/images/favicon.png" type="image/png">
 
-  <title>رگرسیون چند جمله ای :: Machine Learning Andrew Ng</title>
+  <title>مثال ها قسمت اول :: Machine Learning Andrew Ng</title>
 
   
   <link href="/ml-andrew-ng/css/nucleus.css" rel="stylesheet">
@@ -98,7 +98,7 @@
   
 </head>
 
-<body class="" data-url="/ml-andrew-ng/week2/polynomial-regression/">
+<body class="" data-url="/ml-andrew-ng/week4/examples-1/">
   <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -1209,7 +1209,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
   
     
     <li data-nav-id="/ml-andrew-ng/week2/" title=" هفته دوم" class="dd-item 
-        parent
+        
         
         
         ">
@@ -1321,7 +1321,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week2/polynomial-regression/" title="رگرسیون چند جمله ای" class="dd-item active">
+      <li data-nav-id="/ml-andrew-ng/week2/polynomial-regression/" title="رگرسیون چند جمله ای" class="dd-item ">
         <a href="/ml-andrew-ng/week2/polynomial-regression/">
         رگرسیون چند جمله ای
         <i class="fas fa-check read-icon"></i>
@@ -1596,7 +1596,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
   
     
     <li data-nav-id="/ml-andrew-ng/week4/" title=" هفته چهارم" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1708,7 +1708,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week4/examples-1/" title="مثال ها قسمت اول" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week4/examples-1/" title="مثال ها قسمت اول" class="dd-item active">
         <a href="/ml-andrew-ng/week4/examples-1/">
         مثال ها قسمت اول
         <i class="fas fa-check read-icon"></i>
@@ -1884,7 +1884,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
           
           
           
-          <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week2/'> هفته دوم</a> > رگرسیون چند جمله ای
+          <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week4/'> هفته چهارم</a> > مثال ها قسمت اول
           
           
           
@@ -1897,15 +1897,7 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
           
           <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#polynomial-regression">Polynomial Regression</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -1921,32 +1913,12 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
           
           <h1>
             
-            رگرسیون چند جمله ای
+            مثال ها قسمت اول
           </h1>
           
 
           
 
-<h3 id="polynomial-regression">Polynomial Regression</h3>
-<p>تابع فرضیه $h$ می‌تواند خطی نباشد، اگر تناسب خوبی
-با داده های ما ندارد،
-می‌توانیم برای تغییر منحنی تابع از توابع چند جمله ای
-استفاده کنیم تا به تناسب بهتری برای داده ها برسیم.</p>
-<p>فرض کنید که تابع فرضیه ما $ h_\theta(x) = \theta_0 + \theta_1 x_1$ باشد
-بنابراین می‌توانیم ویژگی جدیدی بر پایه ویژگی $x_1$
-اضافه کنیم تا به تابعی quadratic یا درجه دوم برسیم:</p>
-<p>$$ {\color{Blue} h_\theta(x) = \theta_0 + \theta_1 x_1 + \theta_2 x_1^2}$$</p>
-<p>یا به تابعی درجه سه یا cubic:
-$$ {\color{Green} h_\theta(x) = \theta_0 + \theta_1 x_1 + \theta_2 x_1^2 + \theta_3 x_1^3}$$</p>
-<p><img src="../images/image78.png?width=25pc" alt="image78.png"></p>
-<p>به طور مثال برای تابع درجه سه می‌نویسیم:</p>
-<p><img src="../images/image79.png?width=25pc" alt="image79.png"></p>
-<p>همچنین می‌توانیم از نمودار ریشه دوم یا squaer root
-استفاده کنیم:</p>
-<p>$$ h_\theta(x) = \theta_0 + \theta_1 x_1 + \theta_2 \sqrt{x}$$</p>
-<p>توجه کنید بعد از اینکه ویژگی های جدید خود را به
-این روش اضافه کردید، انجام feature scaling  برای
-برای ویژگی ها یا همان متغیر ها خیلی مهم است!</p>
 
 
 <footer class="footline">
@@ -2163,7 +2135,6 @@ $$ {\color{Green} h_\theta(x) = \theta_0 + \theta_1 x_1 + \theta_2 x_1^2 + \thet
             
                 
                     
-                    
                 
                 
 
@@ -2171,173 +2142,6 @@ $$ {\color{Green} h_\theta(x) = \theta_0 + \theta_1 x_1 + \theta_2 x_1^2 + \thet
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -2531,6 +2335,19 @@ $$ {\color{Green} h_\theta(x) = \theta_0 + \theta_1 x_1 + \theta_2 x_1^2 + \thet
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
             
         
                     
@@ -2538,6 +2355,161 @@ $$ {\color{Green} h_\theta(x) = \theta_0 + \theta_1 x_1 + \theta_2 x_1^2 + \thet
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -2591,10 +2563,10 @@ $$ {\color{Green} h_\theta(x) = \theta_0 + \theta_1 x_1 + \theta_2 x_1^2 + \thet
 	 
 	 
 		
-			<a class="nav nav-prev" href="/ml-andrew-ng/week2/debugging-gradient/" title="Debugging Gradient"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/ml-andrew-ng/week4/model-representation-2/" title="ارائه مدل قسمت دوم"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ml-andrew-ng/week2/normal-equation/" title="معادله نرمال" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/ml-andrew-ng/useful-articles/" title="منابع مفید " style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
