@@ -1897,7 +1897,16 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
           
           <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#عملگر-منطقی-and">عملگر منطقی AND</a></li>
+        <li><a href="#عملگر-منطقی-or">عملگر منطقی OR</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1918,7 +1927,30 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
           
 
           
+<div class="page-description"><i class="fas fa-clock"></i> 1 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/09/27
+</div>
+<h3 id="عملگر-منطقی-and">عملگر منطقی AND</h3>
+<p>یک مثال ساده از کاربرد شبکه های عصبی پیش بینی
+نتیجه عملگر منطقی AND بین دو متغیر $x_1$ و $x_2$ است.</p>
+<p>می‌دانیم که جدول درستی عملگر AND به این صورت است:</p>
+<p><img src="../images/image17.png?width=20pc" alt="image17.png"></p>
+<p>شکل کلی توابع به صورت زیر است:</p>
+<p>$$
+\begin{align*}\begin{bmatrix}x_0 \newline x_1 \newline x_2\end{bmatrix} \rightarrow\begin{bmatrix}g(z^{(2)})\end{bmatrix} \rightarrow h_\Theta(x)\end{align*}
+$$</p>
 
+<div class="notices note" ><p>به خاطر داشته باشید که $x_0$ متغیر بایاس ما است، و همواره برابر با مقدار 1 است.</p>
+</div>
+
+<p>و ماتریس وزن های خود را به این صورت تنظیم می‌کنیم:</p>
+<p>$$
+\Theta^{(1)} = [-30 \hspace{0.5cm} 20 \hspace{0.5cm} 20]
+$$</p>
+<p>این کار باعث می‌شود که نتیجه تابع فرضیه ۱ شود، اگر هر دو متغیر $x_1$ و $x_2$ ۱ باشند.</p>
+<p>به صورت خلاصه می‌توانیم این مثال را به شکل زیر شرح دهیم:
+<img src="../images/image18.png?width=40pc" alt="image18.png"></p>
+<p><img src="../images/image19.png?width=40pc" alt="image19.png"></p>
+<h3 id="عملگر-منطقی-or">عملگر منطقی OR</h3>
 
 
 <footer class="footline">
@@ -2596,4 +2628,3 @@ SW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=" />
 
   </body>
 </html>
-

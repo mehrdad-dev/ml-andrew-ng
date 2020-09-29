@@ -185,10 +185,15 @@ $$(x_i, y_i) \Rightarrow x_1= 2104, y_1 = 460$$
     <item>
       <title>مثال ها قسمت اول</title>
       <link>https://mehrdad-dev.github.io/ml-andrew-ng/week4/examples-1/</link>
-      <pubDate>Sun, 27 Sep 2020 16:20:48 +0330</pubDate>
+      <pubDate>Sun, 27 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week4/examples-1/</guid>
-      <description></description>
+      <description>عملگر منطقی AND یک مثال ساده از کاربرد شبکه های عصبی پیش بینی نتیجه عملگر منطقی AND بین دو متغیر $x_1$ و $x_2$ است.
+می‌دانیم که جدول درستی عملگر AND به این صورت است:
+شکل کلی توابع به صورت زیر است:
+$$ \begin{align*}\begin{bmatrix}x_0 \newline x_1 \newline x_2\end{bmatrix} \rightarrow\begin{bmatrix}g(z^{(2)})\end{bmatrix} \rightarrow h_\Theta(x)\end{align*} $$
+به خاطر داشته باشید که $x_0$ متغیر بایاس ما است، و همواره برابر با مقدار 1 است.
+ و ماتریس وزن های خود را به این صورت تنظیم می‌کنیم:</description>
     </item>
     
     <item>
