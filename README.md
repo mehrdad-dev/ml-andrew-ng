@@ -2,9 +2,9 @@
 
 # دوره یادگیری ماشین دانشگاه استنفورد به فارسی
 
-Languages 
 [🇬🇧](https://github.com/mehrdad-dev/ml-andrew-ng/blob/master/README-EN.md) &nbsp;
-[🇮🇷](https://github.com/mehrdad-dev/ml-andrew-ng/blob/master/README.md)
+[🇮🇷](https://github.com/mehrdad-dev/ml-andrew-ng/blob/master/README.md)  &nbsp;
+ Language / زبان
 
 **در حال تکمیل است ...** 
 
@@ -47,9 +47,11 @@ https://github.com/BahramJannesar/AndrewNgMachineLearningCoursePersianSubtitle
 
 https://github.com/mehrdad-dev/ml-andrew-ng-code
 
-برای ارتباط بیشتر با آدرس ایمیل در ارتباط باشید:
+برای اطلاعات بیشتر با آدرس ایمیل زیر در ارتباط باشید:
 
 [mehrdad.mohammadian.contact@gmail.com](mailto:mehrdad.mohammadian.contact@gmail.com)
 
+## مجوز
+[LICENSE](https://github.com/mehrdad-dev/ml-andrew-ng/blob/master/LICENSE)
 
 </div>
