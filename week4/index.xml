@@ -70,5 +70,24 @@ $$ \begin{align*}\begin{bmatrix}x_0 \newline x_1 \newline x_2\end{bmatrix} \righ
  و ماتریس وزن های خود را به این صورت تنظیم می‌کنیم:</description>
     </item>
     
+    <item>
+      <title>مثال ها قسمت دوم</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week4/examples-2/</link>
+      <pubDate>Wed, 30 Sep 2020 12:06:57 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week4/examples-2/</guid>
+      <description>عملگر XNOR از قسمت قبل به خاطر داریم که ماتریس وزن $\Theta^{(1)}$ برای عملگر های منطقی AND، OR و NOR به این صورت بود: $$ \begin{align*}AND:\newline\Theta^{(1)} &amp;amp;=\begin{bmatrix}-30 &amp;amp; 20 &amp;amp; 20\end{bmatrix} \newline NOR:\newline\Theta^{(1)} &amp;amp;= \begin{bmatrix}10 &amp;amp; -20 &amp;amp; -20\end{bmatrix} \newline OR:\newline\Theta^{(1)} &amp;amp;= \begin{bmatrix}-10 &amp;amp; 20 &amp;amp; 20\end{bmatrix} \newline\end{align*} $$
+با ترکیب آن ها می‌توانیم عملگر منطقی XNOR را به دست آوریم: $$ \begin{align*}\begin{bmatrix}x_0 \newline x_1 \newline x_2\end{bmatrix} \rightarrow\begin{bmatrix}a_1^{(2)} \newline a_2^{(2)} \end{bmatrix} \rightarrow\begin{bmatrix}a^{(3)}\end{bmatrix} \rightarrow h_\Theta(x)\end{align*} $$</description>
+    </item>
+    
+    <item>
+      <title>فایل های هفته چهارم</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week4/files/</link>
+      <pubDate>Wed, 30 Sep 2020 13:04:55 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week4/files/</guid>
+      <description>اسلاید ها  Neural Networks: Representation - pdf  غلط نامه  Errata - pdf  تمرین برنامه نویسی  Programming Exercise 3: Multi-class Classification and Neural Networks - pdf | problem  </description>
+    </item>
+    
   </channel>
 </rss>

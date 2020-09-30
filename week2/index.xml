@@ -79,5 +79,14 @@ $$ {\color{Blue} h_\theta(x) = \theta_0 + \theta_1 x_1 + \theta_2 x_1^2}$$</desc
 که برای مینیمم کردن این تابع درجه دو مشتق آن را می‌گیریم و برابر با صفر قرار می‌دهیم، که این به ما اجازه می‌دهد که مقدار $\theta$ را برای مینیمم کردن تابع پیدا کنیم.</description>
     </item>
     
+    <item>
+      <title>فایل های هفته دوم</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week2/files/</link>
+      <pubDate>Wed, 30 Sep 2020 12:56:30 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week2/files/</guid>
+      <description>اسلاید ها  Linear regression with multiple variables - pdf Octave tutorial - pdf  غلط نامه  Errata - pdf  تمرین برنامه نویسی  Programming Exercise 1: Linear Regression - pdf | problem  </description>
+    </item>
+    
   </channel>
 </rss>

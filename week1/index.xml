@@ -122,5 +122,14 @@ $$ {\color{Red} J(\theta_1) = \frac{1}{2m} \sum_{i=1}^{m} (\theta_1x - y_i)^2 \R
 $$ \theta_0, j = 0: \frac{\partial}{\partial \theta_j} J(\theta_0, \theta_1) = \frac{1}{m} \sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)}) $$</description>
     </item>
     
+    <item>
+      <title>فایل های هفته اول</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week1/files/</link>
+      <pubDate>Wed, 30 Sep 2020 12:46:19 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week1/files/</guid>
+      <description>اسلاید ها  Welcome - pdf Linear regression with one variable - pdf Linear Algebra review (Optional) - pdf  غلط نامه  Errata - pdf  </description>
+    </item>
+    
   </channel>
 </rss>
