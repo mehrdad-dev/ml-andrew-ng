@@ -1,6 +1,10 @@
 <div dir=rtl align="right">
 
-# دوره یادگیری ماشین دانشگاه استنفورد
+# دوره یادگیری ماشین دانشگاه استنفورد به فارسی
+
+Languages 
+[🇬🇧](https://github.com/mehrdad-dev/ml-andrew-ng/blob/master/README-EN.md) &nbsp;
+[🇮🇷](https://github.com/mehrdad-dev/ml-andrew-ng/blob/master/README.md)
 
 **در حال تکمیل است ...** 
 
@@ -25,6 +29,11 @@ https://mehrdad-dev.github.io/ml-andrew-ng
 1. [تماشای ویدئو ها از طریق یوتیوب](https://www.youtube.com/watch?v=PPLop4L2eGk&list=PLLssT5z_DsK-h9vYZkQkYNWcItqhlRJLN)
 
 2. [دسترسی به دوره از طریق کورسرا](https://www.coursera.org/learn/machine-learning?)
+
+ریپو زیرنویس های این دوره به فارسی:
+
+https://github.com/BahramJannesar/AndrewNgMachineLearningCoursePersianSubtitle
+
 
 
 ## مشارکت
