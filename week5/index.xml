@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title> هفته پنجم on Machine Learning Andrew Ng</title>
+    <link>https://mehrdad-dev.github.io/ml-andrew-ng/week5/</link>
+    <description>Recent content in  هفته پنجم on Machine Learning Andrew Ng</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 30 Sep 2020 17:44:01 +0330</lastBuildDate>
+    
+	<atom:link href="https://mehrdad-dev.github.io/ml-andrew-ng/week5/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>تابع هزینه شبکه عصبی</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week5/nn-cost-function/</link>
+      <pubDate>Wed, 30 Sep 2020 17:52:45 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week5/nn-cost-function/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

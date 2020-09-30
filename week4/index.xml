@@ -81,6 +81,15 @@ $$ \begin{align*}\begin{bmatrix}x_0 \newline x_1 \newline x_2\end{bmatrix} \righ
     </item>
     
     <item>
+      <title>طبقه بندی چند کلاسه</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week4/multiclass-classification/</link>
+      <pubDate>Wed, 30 Sep 2020 16:39:28 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week4/multiclass-classification/</guid>
+      <description>برای طبقه بندی داده ها در چندین کلاس، نیاز داریم که تابع فرضیه ما وکتوری از مقادیر را برگرداند. مثلا اگر بخواهیم داده هایمان را در یکی از ۴ دسته طبقه بندی کنیم می‌توانیم برای دیدن نحوه انجام این طبقه بندی از مثال زیر استفاده می‌کنیم، این الگوریتم یک تصویر را به عنوان ورودی گرفته و بر اساس آن طبقه بندی را انجام می‌دهد، ۴ دسته ما عبارت اند از:</description>
+    </item>
+    
+    <item>
       <title>فایل های هفته چهارم</title>
       <link>https://mehrdad-dev.github.io/ml-andrew-ng/week4/files/</link>
       <pubDate>Wed, 30 Sep 2020 13:04:55 +0330</pubDate>

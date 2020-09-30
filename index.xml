@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>تابع هزینه شبکه عصبی</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week5/nn-cost-function/</link>
+      <pubDate>Wed, 30 Sep 2020 17:52:45 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week5/nn-cost-function/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>فرضیه غیر خطی</title>
       <link>https://mehrdad-dev.github.io/ml-andrew-ng/week4/non-linear-hypotheses/</link>
       <pubDate>Tue, 15 Sep 2020 13:37:07 +0430</pubDate>
@@ -268,6 +277,15 @@ $$ {\color{Blue} h_\theta(x) = \theta_0 + \theta_1 x_1 + \theta_2 x_1^2}$$</desc
 اما اجازه بدید برای ساده سازی تابع فرضیه را تنها با یک پارامتر به این شکل در نظر بگیریم: $ h_\theta(x) = \theta_1x $ و سه مقدار مختلف $0$، $5.0 $ و $1$ رو حساب کنیم &amp;hellip;
 مثلا برای مقدار تتا برابر با $1$ محاسبات زیر را خواهیم داشت:
 $$ {\color{Red} J(\theta_1) = \frac{1}{2m} \sum_{i=1}^{m} (\theta_1x - y_i)^2 \Rightarrow \frac{1}{2m} (0^2 + 0^2 + 0^2) = 0 } $$ به همین صورت برای دو مقدار دیگر داریم:</description>
+    </item>
+    
+    <item>
+      <title>طبقه بندی چند کلاسه</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week4/multiclass-classification/</link>
+      <pubDate>Wed, 30 Sep 2020 16:39:28 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week4/multiclass-classification/</guid>
+      <description>برای طبقه بندی داده ها در چندین کلاس، نیاز داریم که تابع فرضیه ما وکتوری از مقادیر را برگرداند. مثلا اگر بخواهیم داده هایمان را در یکی از ۴ دسته طبقه بندی کنیم می‌توانیم برای دیدن نحوه انجام این طبقه بندی از مثال زیر استفاده می‌کنیم، این الگوریتم یک تصویر را به عنوان ورودی گرفته و بر اساس آن طبقه بندی را انجام می‌دهد، ۴ دسته ما عبارت اند از:</description>
     </item>
     
     <item>

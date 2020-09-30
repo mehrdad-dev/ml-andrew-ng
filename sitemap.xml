@@ -13,6 +13,11 @@
   </url>
   
   <url>
+    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week5/nn-cost-function/</loc>
+    <lastmod>2020-09-30T17:52:45+03:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week4/non-linear-hypotheses/</loc>
     <lastmod>2020-09-15T13:37:07+04:30</lastmod>
   </url>
@@ -48,11 +53,6 @@
   </url>
   
   <url>
-    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/useful-articles/</loc>
-    <lastmod>2020-09-10T17:04:49+04:30</lastmod>
-  </url>
-  
-  <url>
     <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week3/classification/</loc>
     <lastmod>2020-09-10T12:51:11+04:30</lastmod>
   </url>
@@ -68,8 +68,8 @@
   </url>
   
   <url>
-    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/sponsor/</loc>
-    <lastmod>2020-09-10T17:18:51+04:30</lastmod>
+    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week5/</loc>
+    <lastmod>2020-09-30T17:44:01+03:30</lastmod>
   </url>
   
   <url>
@@ -83,8 +83,8 @@
   </url>
   
   <url>
-    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/about/</loc>
-    <lastmod>2020-09-10T17:16:09+04:30</lastmod>
+    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/useful-articles/</loc>
+    <lastmod>2020-09-10T17:04:49+04:30</lastmod>
   </url>
   
   <url>
@@ -98,6 +98,11 @@
   </url>
   
   <url>
+    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/sponsor/</loc>
+    <lastmod>2020-09-10T17:18:51+04:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week4/model-representation-2/</loc>
     <lastmod>2020-09-20T15:54:56+04:30</lastmod>
   </url>
@@ -105,6 +110,11 @@
   <url>
     <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week3/simplified-cost-gradient/</loc>
     <lastmod>2020-09-11T12:53:43+04:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/about/</loc>
+    <lastmod>2020-09-10T17:16:09+04:30</lastmod>
   </url>
   
   <url>
@@ -155,6 +165,11 @@
   <url>
     <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week1/cost2/</loc>
     <lastmod>2020-09-06T14:26:42+04:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week4/multiclass-classification/</loc>
+    <lastmod>2020-09-30T16:39:28+03:30</lastmod>
   </url>
   
   <url>
