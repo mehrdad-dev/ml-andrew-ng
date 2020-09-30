@@ -54,4 +54,9 @@ https://github.com/mehrdad-dev/ml-andrew-ng-code
 ## مجوز
 [LICENSE](https://github.com/mehrdad-dev/ml-andrew-ng/blob/master/LICENSE)
 
+<!-- 
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/mehrdad-dev/ml-andrew-ng.svg)](https://starchart.cc/mehrdad-dev/ml-andrew-ng) -->
+
 </div>
