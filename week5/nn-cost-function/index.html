@@ -4758,6 +4758,27 @@
 
             
           
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ml-andrew-ng/week5/backpropagation/" title="Backpropagation" class="dd-item ">
+        <a href="/ml-andrew-ng/week5/backpropagation/">
+        Backpropagation
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
         
         </ul>
               
@@ -4800,12 +4821,12 @@
  
   
     
-    <li data-nav-id="/ml-andrew-ng/sponsor/" title="حمایت" class="dd-item 
+    <li data-nav-id="/ml-andrew-ng/sponsorship/" title="حمایت" class="dd-item 
         
         
         
         ">
-      <a href="/ml-andrew-ng/sponsor/">
+      <a href="/ml-andrew-ng/sponsorship/">
           <i class='fa fa-heart' ></i> حمایت 
           
             <i  class="fas fa-check read-icon"></i>
@@ -4965,8 +4986,59 @@
           
 
           
-<div class="page-description"><i class="fas fa-clock"></i> 0 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/09/30
+<div class="page-description"><i class="fas fa-clock"></i> 2 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/09/30
 </div>
+<p>اجازه دهید برای شروع چند متغیر تعریف کنیم:</p>
+<table>
+<thead>
+<tr>
+<th align="right">متغیر</th>
+<th align="right"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">$L$</td>
+<td align="right">تعداد کل لایه ها در شبکه عصبی</td>
+</tr>
+<tr>
+<td align="right">$s_l$</td>
+<td align="right">تعداد نود ها در لایه $l$ ام (بدون احتساب نود بایاس)</td>
+</tr>
+<tr>
+<td align="right">$K$</td>
+<td align="right">تعداد کلاس های خروجی</td>
+</tr>
+</tbody>
+</table>
+<p>به یاد بیاورید که در شبکه های عصبی ممکن است تعداد نود های خروجی زیادی داشته باشیم.
+ما $h_\Theta(x)_k$ را به عنوان یک فرضیه در نظر می‌گیریم،
+که منجر به خروجی $k^{th}$ می‌شود.</p>
+<p>تابع هزینه ما برای شبکه های عصبی تعمیم تابعی است، که برای
+<a href="http://localhost:1313/ml-andrew-ng/week3/cost-function/">رگرسیون لجستیک در هفته سوم</a>
+استفاده می‌کردیم.</p>
+<p>به عنوان یادآوری، تابع هزینه برای
+<a href="http://localhost:1313/ml-andrew-ng/week3/regularized-logistic-regression/">رگرسیون لجستیک منظم</a>
+به این صورت بود:</p>
+<p>$$
+J(\theta) = - \frac{1}{m} \sum_{i=1}^m [y^{(i)} log(h_\theta(x^{(i)})) + (1 - y^{(i)}) log(1 - h_\theta(x^{(i)}) )]  + \frac{\lambda}{2m} \sum_{j=1}^n \theta_j ^ 2
+$$</p>
+<p>که برای شبکه های عصبی کمی پیچیده تر خواهد شد:
+$$
+\begin{gather*} J(\Theta) = - \frac{1}{m} \sum_{i=1}^m \sum_{k=1}^K \left[y^{(i)}_k \log ((h_\Theta (x^{(i)}))_k) + (1 - y^{(i)}_k)\log (1 - (h_\Theta(x^{(i)}))_k)\right] + \frac{\lambda}{2m}\sum_{l=1}^{L-1} \sum_{i=1}^{s_l} \sum_{j=1}^{s_{l+1}} ( \Theta_{j,i}^{(l)})^2\end{gather*}
+$$</p>
+<p><img src="../images/andrew-meme-1.jpg?width=25pc" alt="andrew-meme-1.jpg"></p>
+<p><strong>تصویر بالا:</strong>
+فقط یک ‌ذره 😂😂😅</p>
+<p>ما برای چند نود خروجی خود، چند جمع تو در تو (nested summations) اضافه کرده ایم.
+در قسمت اول معادله قبل از براکت ها، ما یک جمع جدید برای تعداد نود های خروجی داریم:
+$ \sum_{k=1}^K $</p>
+<p>در قسمت منظم سازی (regularization) بعد از براکت ها،
+باید چند ماتریس تتا را حساب کنیم.</p>
+<p>تعداد ستون ها در هر ماتریس تتای ما برابر است با تعداد نود های موجود در لایه ی آن
+(به همراه نود بایاس)،
+و تعداد ردیف های آن برابر است با تعداد نود های موجود در لایه بعدی اش
+(به استثنای نود بایاس).</p>
 
 
 <footer class="footline">
@@ -5673,9 +5745,6 @@
             
         
                     
-            
-        
-                    
                         
             
             
@@ -5683,6 +5752,25 @@
                     
                         
                         
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -5739,7 +5827,7 @@
 			<a class="nav nav-prev" href="/ml-andrew-ng/week5/" title=" هفته پنجم"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ml-andrew-ng/useful-articles/" title="منابع مفید " style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/ml-andrew-ng/week5/backpropagation/" title="Backpropagation" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

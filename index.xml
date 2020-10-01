@@ -17,7 +17,8 @@
       <pubDate>Wed, 30 Sep 2020 17:52:45 +0330</pubDate>
       
       <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week5/nn-cost-function/</guid>
-      <description></description>
+      <description>اجازه دهید برای شروع چند متغیر تعریف کنیم:
+   متغیر      $L$ تعداد کل لایه ها در شبکه عصبی   $s_l$ تعداد نود ها در لایه $l$ ام (بدون احتساب نود بایاس)   $K$ تعداد کلاس های خروجی    به یاد بیاورید که در شبکه های عصبی ممکن است تعداد نود های خروجی زیادی داشته باشیم. ما $h_\Theta(x)_k$ را به عنوان یک فرضیه در نظر می‌گیریم، که منجر به خروجی $k^{th}$ می‌شود.</description>
     </item>
     
     <item>
@@ -53,6 +54,15 @@ $$ g(\theta_0 + \theta_1 x_1^2 + \theta_2 x_1 x_2 + \theta_3 x_1 x_3 + \theta_4 
  توجه: این یک تعریف قدیمی و غیر رسمی است!
  اما تعریفی مدرن تر &amp;hellip;
  Tom Mitchell: به یک برنامه کامپیوتری گفته می‌شود که: برای یادگیری از تجربه E با توجه به برخی از وظایف به عنوان T و اندازه گیری عملکرد با P اگر عملکرد وظیفه T با استفاده از P اندازه گیری شود با استفاده از تجربه E بهبود یابد.</description>
+    </item>
+    
+    <item>
+      <title>Backpropagation</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week5/backpropagation/</link>
+      <pubDate>Thu, 01 Oct 2020 12:30:31 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week5/backpropagation/</guid>
+      <description></description>
     </item>
     
     <item>
