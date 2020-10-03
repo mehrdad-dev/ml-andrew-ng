@@ -78,6 +78,11 @@
   </url>
   
   <url>
+    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/questions/</loc>
+    <lastmod>2020-10-03T13:28:44+03:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week4/model-representation-1/</loc>
     <lastmod>2020-09-17T11:13:34+04:30</lastmod>
   </url>
@@ -85,11 +90,6 @@
   <url>
     <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week3/cost-function/</loc>
     <lastmod>2020-09-11T11:12:45+04:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/useful-articles/</loc>
-    <lastmod>2020-09-10T17:04:49+04:30</lastmod>
   </url>
   
   <url>
@@ -103,8 +103,8 @@
   </url>
   
   <url>
-    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/sponsorship/</loc>
-    <lastmod>2020-09-10T17:18:51+04:30</lastmod>
+    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/useful-articles/</loc>
+    <lastmod>2020-09-10T17:04:49+04:30</lastmod>
   </url>
   
   <url>
@@ -118,8 +118,8 @@
   </url>
   
   <url>
-    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/about/</loc>
-    <lastmod>2020-09-10T17:16:09+04:30</lastmod>
+    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/sponsorship/</loc>
+    <lastmod>2020-09-10T17:18:51+04:30</lastmod>
   </url>
   
   <url>
@@ -130,6 +130,11 @@
   <url>
     <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week1/linear-regression-one-variable/</loc>
     <lastmod>2020-09-06T13:26:16+04:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/about/</loc>
+    <lastmod>2020-09-10T17:16:09+04:30</lastmod>
   </url>
   
   <url>
