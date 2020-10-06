@@ -38,7 +38,7 @@
 
   <link rel="icon" href="/ml-andrew-ng/images/favicon.png" type="image/png">
 
-  <title>تابع هزینه :: Machine Learning Andrew Ng</title>
+  <title>ارزیابی فرضیه :: Machine Learning Andrew Ng</title>
 
   
   <link href="/ml-andrew-ng/css/nucleus.css" rel="stylesheet">
@@ -82,7 +82,7 @@
   
 </head>
 
-<body class="" data-url="/ml-andrew-ng/week3/cost-function/">
+<body class="" data-url="/ml-andrew-ng/week6/evaluating-hypothesis/">
   <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -4268,7 +4268,7 @@
   
     
     <li data-nav-id="/ml-andrew-ng/week3/" title=" هفته سوم" class="dd-item 
-        parent
+        
         
         
         ">
@@ -4317,7 +4317,7 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week3/cost-function/" title="تابع هزینه" class="dd-item active">
+      <li data-nav-id="/ml-andrew-ng/week3/cost-function/" title="تابع هزینه" class="dd-item ">
         <a href="/ml-andrew-ng/week3/cost-function/">
         تابع هزینه
         <i class="fas fa-check read-icon"></i>
@@ -4796,7 +4796,7 @@
   
     
     <li data-nav-id="/ml-andrew-ng/week6/" title=" هفته ششم" class="dd-item 
-        
+        parent
         
         
         ">
@@ -4824,7 +4824,7 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week6/evaluating-hypothesis/" title="ارزیابی فرضیه" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week6/evaluating-hypothesis/" title="ارزیابی فرضیه" class="dd-item active">
         <a href="/ml-andrew-ng/week6/evaluating-hypothesis/">
         ارزیابی فرضیه
         <i class="fas fa-check read-icon"></i>
@@ -5035,7 +5035,7 @@
           
           
           
-          <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week3/'> هفته سوم</a> > تابع هزینه
+          <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week6/'> هفته ششم</a> > ارزیابی فرضیه
           
           
           
@@ -5048,7 +5048,16 @@
           
           <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#ارزیابی-یک-فرضیه">ارزیابی یک فرضیه</a></li>
+        <li><a href="#محاسبه-خطای-مجموعه-تست">محاسبه خطای مجموعه تست</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -5064,37 +5073,60 @@
           
           <h1>
             
-            تابع هزینه
+            ارزیابی فرضیه
           </h1>
           
 
           
-<div class="page-description"><i class="fas fa-clock"></i> 2 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/09/11
+<div class="page-description"><i class="fas fa-clock"></i> 2 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/10/04
 </div>
-<p>ما نمی‌توانیم از همان تابعی هزینه ای که برای رگرسیون خطی استفاده کردیم، برای تابع لجستیک نیز استفاده کنیم، زیرا خروجی تابع لجستیک موج گونه است و باعث ایجاد تعداد زیادی مینیمم محلی می‌شود.
-به عبارت دیگر یک تابع محدب (convex) نیست.</p>
-<p>تابع هزینه ما برای Logistic Regression به این صورت است:</p>
-<p>$$ J(\theta) = \frac{1}{m} \sum_{i = 1}^m Cost(h_\theta(x^{(i)}, y^{(i)})) $$</p>
-<p>$$ Cost(h_\theta(x), y) = -log(h_\theta(x)) \hspace{1cm} if \hspace{0.3cm} y = 1 $$</p>
-<p>$$ Cost(h_\theta(x), y) = -log(1 - h_\theta(x)) \hspace{1cm} if \hspace{0.3cm} y = 0 $$</p>
-<p><img src="../images/image1.png?width=18pc" alt="image1.png"></p>
-<p><img src="../images/image2.png?width=16pc" alt="image2.png"></p>
-<p>هرچه تابع فرضیه از $y$ دور تر باشد،
-خروجی تابع هزینه بزرگ تر است.</p>
-<p>و اگر تابع فرضیه برابر با $y$ باشد،
-هزینه ما $0$ است.</p>
-<p>$$ Cost(h_\theta(x), y) = 0 \hspace{0.3cm} if \hspace{0.3cm} h_\theta(x)) = y  $$</p>
-<p>$$ Cost(h_\theta(x), y)  \rightarrow \infty  \hspace{0.5cm} if \hspace{0.3cm} y = 0 \hspace{0.3cm}  and \hspace{0.3cm} h_\theta(x) \rightarrow 1$$</p>
-<p>$$ Cost(h_\theta(x), y)  \rightarrow \infty  \hspace{0.5cm} if \hspace{0.3cm} y = 1 \hspace{0.3cm}  and \hspace{0.3cm} h_\theta(x) \rightarrow 0 $$</p>
-<p>اگر پاسخ صحیح ما  $y = 0$  باشد،
-سپس تابع هزینه $0$ خواهد شد،
-اگر خروجی تابع فرضیه ما نیز $0$ شود.</p>
-<p>اگر فرضیه ما به $1$ میل کند، سپس تابع هزینه به بی نهایت میل می‌کند.</p>
-<p>اگر پاسخ صحیح ما $y = 1$  باشد،
-سپس تابع هزینه $0$ خواهد شد،
-اگر خروجی تابع فرضیه ما $1$ شود.</p>
-<p>اگر فرضیه ما به $0$ میل کند، سپس تابع هزینه به بی نهایت میل می‌کند.</p>
-<p>به خاطر داشته باشید که نوشتن تابع هزینه به این روش که $J(\theta)$ برای رگرسیون لجستیک محدب است.</p>
+<p>خطاهای موجود در پیش بینی هایتان را با استفاده از روش های زیر می‌توانید عیب یابی کنید:</p>
+<ul>
+<li>جمع آوری دیتا های آموزشی بیشتر</li>
+<li>استفاده از مجموعه های ویژگی کوچکتر</li>
+<li>امتحان کردن ویژگی های اضافی</li>
+<li>استفاده از ویژگی های چند جمله ای</li>
+<li>افزایش یا کاهش مقدار $\lambda$</li>
+</ul>
+
+<div class="notices note" ><p>برای عیب یابی یکی از راه های ذکر شده در بالا را به صورت تصادفی انتخاب نکنید، در بخش های بعدی تکنیک هایی برای انتخاب یکی از راه حل ها را بررسی می‌کنیم.</p>
+</div>
+
+<h3 id="ارزیابی-یک-فرضیه">ارزیابی یک فرضیه</h3>
+<p>یک فرضیه ممکن است برای یک نمونه آموزشی مقدار خطای کمی داشته باشد اما همچنان نادرست باشد (به دلیل overfitting).</p>
+<p>یک مجموعه داده از نمونه های آموزشی را می‌توانیم به دو مجموعه جدا تقسیم کنیم:</p>
+<p>۱. مجموعه آموزش (training set)</p>
+<p>۲. مجموعه تست (test set)</p>
+<p>روش جدید با استفاده از این دو مجموعه به صورت زیر خواهد بود:</p>
+<ol>
+<li>
+<p>یادگیری $\Theta$ و کمینه کردن مقدار $J_{train}\left ( \Theta  \right )$ با استفاده از مجموعه آموزشی</p>
+</li>
+<li>
+<p>محاسبه خطای مجموعه تست $J_{test}\left ( \Theta  \right )$</p>
+</li>
+</ol>
+<h3 id="محاسبه-خطای-مجموعه-تست">محاسبه خطای مجموعه تست</h3>
+<ol>
+<li>
+<p>برای رگرسیون خطی:
+$$
+J_{test\left ( \Theta  \right )} = \frac{1}{2m_{test}}\sum_{i=1}^{m_{test}}\left ( h_{\Theta }\left ( x_{test}^{(i) } \right ) - y_{test}^{(i)} \right )^{2}
+$$</p>
+</li>
+<li>
+<p>برای طبقه بندی - خطای طبقه بندی غلط:
+$$
+err(h_\Theta(x),y) = \begin{matrix} 1 &amp; \mbox{if } h_\Theta(x) \geq 0.5\ and\ y = 0\ or\ h_\Theta(x) &lt; 0.5\ and\ y = 1\newline 0 &amp; \mbox otherwise \end{matrix}
+$$</p>
+</li>
+</ol>
+<p>این به ما یک نتیجه دودویی به صورت 0 یا 1 می‌دهد، که بر اساس طبقه بندی غلط (misclassification) است.</p>
+<p>میانگین خطای تست، برای مجموعه دیتای تست به این صورت است:
+$$
+Test Error = \frac{1}{m_{test}}\sum_{i=1}^{m_{test}}err(h_{\Theta }(x_{test}^{(i)}), y_{test}^{(i)})
+$$</p>
+<p>که این به ما نسبت داده های تستی (test data) که در طبقه بندی غلط قرار دارند را می‌دهد.</p>
 
 
 <footer class="footline">
@@ -5455,7 +5487,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -5468,26 +5499,6 @@
             
             
                 
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -5505,8 +5516,21 @@
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
-                        
+            
+            
+                
                     
                 
                 
@@ -5831,6 +5855,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -5843,6 +5868,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -5862,6 +5888,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -5931,10 +5960,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/ml-andrew-ng/week3/classification/" title="طبقه بندی"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/ml-andrew-ng/week6/" title=" هفته ششم"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ml-andrew-ng/week3/simplified-cost-gradient/" title="ساده شده تابع هزینه و گرادیان کاهشی" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/ml-andrew-ng/questions/" title="سوالات متداول افراد " style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

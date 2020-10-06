@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>ارزیابی فرضیه</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week6/evaluating-hypothesis/</link>
+      <pubDate>Sun, 04 Oct 2020 13:22:30 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week6/evaluating-hypothesis/</guid>
+      <description>خطاهای موجود در پیش بینی هایتان را با استفاده از روش های زیر می‌توانید عیب یابی کنید:
+ جمع آوری دیتا های آموزشی بیشتر استفاده از مجموعه های ویژگی کوچکتر امتحان کردن ویژگی های اضافی استفاده از ویژگی های چند جمله ای افزایش یا کاهش مقدار $\lambda$  برای عیب یابی یکی از راه های ذکر شده در بالا را به صورت تصادفی انتخاب نکنید، در بخش های بعدی تکنیک هایی برای انتخاب یکی از راه حل ها را بررسی می‌کنیم.</description>
+    </item>
+    
+    <item>
       <title>تابع هزینه شبکه عصبی</title>
       <link>https://mehrdad-dev.github.io/ml-andrew-ng/week5/nn-cost-function/</link>
       <pubDate>Wed, 30 Sep 2020 17:52:45 +0330</pubDate>

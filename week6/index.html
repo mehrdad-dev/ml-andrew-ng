@@ -38,7 +38,7 @@
 
   <link rel="icon" href="/ml-andrew-ng/images/favicon.png" type="image/png">
 
-  <title>تابع هزینه :: Machine Learning Andrew Ng</title>
+  <title> هفته ششم :: Machine Learning Andrew Ng</title>
 
   
   <link href="/ml-andrew-ng/css/nucleus.css" rel="stylesheet">
@@ -82,7 +82,7 @@
   
 </head>
 
-<body class="" data-url="/ml-andrew-ng/week3/cost-function/">
+<body class="" data-url="/ml-andrew-ng/week6/">
   <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -4268,7 +4268,7 @@
   
     
     <li data-nav-id="/ml-andrew-ng/week3/" title=" هفته سوم" class="dd-item 
-        parent
+        
         
         
         ">
@@ -4317,7 +4317,7 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week3/cost-function/" title="تابع هزینه" class="dd-item active">
+      <li data-nav-id="/ml-andrew-ng/week3/cost-function/" title="تابع هزینه" class="dd-item ">
         <a href="/ml-andrew-ng/week3/cost-function/">
         تابع هزینه
         <i class="fas fa-check read-icon"></i>
@@ -4796,8 +4796,8 @@
   
     
     <li data-nav-id="/ml-andrew-ng/week6/" title=" هفته ششم" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/ml-andrew-ng/week6/">
@@ -5031,13 +5031,7 @@
           
           
           
-          
-          
-          
-          
-          <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week3/'> هفته سوم</a> > تابع هزینه
-          
-          
+          <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> >  هفته ششم
           
           
           
@@ -5064,40 +5058,58 @@
           
           <h1>
             
-            تابع هزینه
+             هفته ششم
           </h1>
           
 
           
-<div class="page-description"><i class="fas fa-clock"></i> 2 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/09/11
-</div>
-<p>ما نمی‌توانیم از همان تابعی هزینه ای که برای رگرسیون خطی استفاده کردیم، برای تابع لجستیک نیز استفاده کنیم، زیرا خروجی تابع لجستیک موج گونه است و باعث ایجاد تعداد زیادی مینیمم محلی می‌شود.
-به عبارت دیگر یک تابع محدب (convex) نیست.</p>
-<p>تابع هزینه ما برای Logistic Regression به این صورت است:</p>
-<p>$$ J(\theta) = \frac{1}{m} \sum_{i = 1}^m Cost(h_\theta(x^{(i)}, y^{(i)})) $$</p>
-<p>$$ Cost(h_\theta(x), y) = -log(h_\theta(x)) \hspace{1cm} if \hspace{0.3cm} y = 1 $$</p>
-<p>$$ Cost(h_\theta(x), y) = -log(1 - h_\theta(x)) \hspace{1cm} if \hspace{0.3cm} y = 0 $$</p>
-<p><img src="../images/image1.png?width=18pc" alt="image1.png"></p>
-<p><img src="../images/image2.png?width=16pc" alt="image2.png"></p>
-<p>هرچه تابع فرضیه از $y$ دور تر باشد،
-خروجی تابع هزینه بزرگ تر است.</p>
-<p>و اگر تابع فرضیه برابر با $y$ باشد،
-هزینه ما $0$ است.</p>
-<p>$$ Cost(h_\theta(x), y) = 0 \hspace{0.3cm} if \hspace{0.3cm} h_\theta(x)) = y  $$</p>
-<p>$$ Cost(h_\theta(x), y)  \rightarrow \infty  \hspace{0.5cm} if \hspace{0.3cm} y = 0 \hspace{0.3cm}  and \hspace{0.3cm} h_\theta(x) \rightarrow 1$$</p>
-<p>$$ Cost(h_\theta(x), y)  \rightarrow \infty  \hspace{0.5cm} if \hspace{0.3cm} y = 1 \hspace{0.3cm}  and \hspace{0.3cm} h_\theta(x) \rightarrow 0 $$</p>
-<p>اگر پاسخ صحیح ما  $y = 0$  باشد،
-سپس تابع هزینه $0$ خواهد شد،
-اگر خروجی تابع فرضیه ما نیز $0$ شود.</p>
-<p>اگر فرضیه ما به $1$ میل کند، سپس تابع هزینه به بی نهایت میل می‌کند.</p>
-<p>اگر پاسخ صحیح ما $y = 1$  باشد،
-سپس تابع هزینه $0$ خواهد شد،
-اگر خروجی تابع فرضیه ما $1$ شود.</p>
-<p>اگر فرضیه ما به $0$ میل کند، سپس تابع هزینه به بی نهایت میل می‌کند.</p>
-<p>به خاطر داشته باشید که نوشتن تابع هزینه به این روش که $J(\theta)$ برای رگرسیون لجستیک محدب است.</p>
 
 
-<footer class="footline">
+	
+
+
+
+
+
+
+<ul class="children children-li">
+	
+
+	
+		
+	
+
+	
+
+	
+		
+	
+		
+			
+				
+<li>
+<a href="/ml-andrew-ng/week6/evaluating-hypothesis/" >ارزیابی فرضیه</a>
+</li>
+				
+
+				
+			
+			
+		
+	
+
+	
+</ul>
+
+
+
+
+
+
+
+
+
+<footer class=" footline" >
 	
 </footer>
 
@@ -5455,7 +5467,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -5468,26 +5479,6 @@
             
             
                 
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -5505,8 +5496,21 @@
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
-                        
+            
+            
+                
                     
                 
                 
@@ -5831,6 +5835,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -5843,6 +5848,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -5931,10 +5939,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/ml-andrew-ng/week3/classification/" title="طبقه بندی"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/ml-andrew-ng/week5/backpropagation/" title="Backpropagation"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ml-andrew-ng/week3/simplified-cost-gradient/" title="ساده شده تابع هزینه و گرادیان کاهشی" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/ml-andrew-ng/week6/evaluating-hypothesis/" title="ارزیابی فرضیه" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

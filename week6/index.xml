@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title> هفته ششم on Machine Learning Andrew Ng</title>
+    <link>https://mehrdad-dev.github.io/ml-andrew-ng/week6/</link>
+    <description>Recent content in  هفته ششم on Machine Learning Andrew Ng</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 04 Oct 2020 13:22:07 +0330</lastBuildDate>
+    
+	<atom:link href="https://mehrdad-dev.github.io/ml-andrew-ng/week6/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ارزیابی فرضیه</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week6/evaluating-hypothesis/</link>
+      <pubDate>Sun, 04 Oct 2020 13:22:30 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week6/evaluating-hypothesis/</guid>
+      <description>خطاهای موجود در پیش بینی هایتان را با استفاده از روش های زیر می‌توانید عیب یابی کنید:
+ جمع آوری دیتا های آموزشی بیشتر استفاده از مجموعه های ویژگی کوچکتر امتحان کردن ویژگی های اضافی استفاده از ویژگی های چند جمله ای افزایش یا کاهش مقدار $\lambda$  برای عیب یابی یکی از راه های ذکر شده در بالا را به صورت تصادفی انتخاب نکنید، در بخش های بعدی تکنیک هایی برای انتخاب یکی از راه حل ها را بررسی می‌کنیم.</description>
+    </item>
+    
+  </channel>
+</rss>
