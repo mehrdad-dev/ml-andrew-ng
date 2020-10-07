@@ -72,7 +72,11 @@ $$ g(\theta_0 + \theta_1 x_1^2 + \theta_2 x_1 x_2 + \theta_3 x_1 x_3 + \theta_4 
       <pubDate>Thu, 01 Oct 2020 12:30:31 +0330</pubDate>
       
       <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week5/backpropagation/</guid>
-      <description></description>
+      <description>اصطلاح Backpropagation یا به فارسی پس انتشار در شبکه های عصبی، برای به حداقل رساندن تابع هزینه (minimizing cost function) مثل کاری که با گرادیان کاهشی در رگرسیون لجستیک و خطی انجام می‌دادیم، استفاده می‌شود.
+هدف ما محاسبه این است:
+$$ min_\Theta J(\Theta) $$
+یعنی می‌خواهیم تابع هزیه $J$ را با استفاده از یک محموعه بهینه از پارامتر $\Theta$ به حداقل برسانیم (یا به عبارتی دیگر مینیمم کنیم).
+در این بخش به معادلاتی که برای محاسبه مشتق جزئی تابع $J(\Theta)$ استفاده می‌کنیم، خواهیم پرداخت:</description>
     </item>
     
     <item>

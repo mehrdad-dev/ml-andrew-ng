@@ -4962,10 +4962,6 @@
               </li>
           
               <li> 
-                  <a class="padding" href="https://mehrdad-dev.github.io/ml-andrew-ng"><i class='fab fa-fw fa-youtube'></i>  یوتیوب</a>
-              </li>
-          
-              <li> 
                   <a class="padding" href="https://github.com/mehrdad-dev/ml-andrew-ng"><i class='fab fa-fw fa-github'></i> گیت هاب</a>
               </li>
           
@@ -5098,10 +5094,10 @@
 ما $h_\Theta(x)_k$ را به عنوان یک فرضیه در نظر می‌گیریم،
 که منجر به خروجی $k^{th}$ می‌شود.</p>
 <p>تابع هزینه ما برای شبکه های عصبی تعمیم تابعی است، که برای
-<a href="http://localhost:1313/ml-andrew-ng/week3/cost-function/">رگرسیون لجستیک در هفته سوم</a>
+<a href="https://mehrdad-dev.github.io/ml-andrew-ng/week3/cost-function/">رگرسیون لجستیک در هفته سوم</a>
 استفاده می‌کردیم.</p>
 <p>به عنوان یادآوری، تابع هزینه برای
-<a href="http://localhost:1313/ml-andrew-ng/week3/regularized-logistic-regression/">رگرسیون لجستیک منظم</a>
+<a href="https://mehrdad-dev.github.io/ml-andrew-ng/week3/regularized-logistic-regression/">رگرسیون لجستیک منظم</a>
 به این صورت بود:</p>
 <p>$$
 J(\theta) = - \frac{1}{m} \sum_{i=1}^m [y^{(i)} log(h_\theta(x^{(i)})) + (1 - y^{(i)}) log(1 - h_\theta(x^{(i)}) )]  + \frac{\lambda}{2m} \sum_{j=1}^n \theta_j ^ 2
@@ -5111,8 +5107,9 @@ $$
 \begin{gather*} J(\Theta) = - \frac{1}{m} \sum_{i=1}^m \sum_{k=1}^K \left[y^{(i)}_k \log ((h_\Theta (x^{(i)}))_k) + (1 - y^{(i)}_k)\log (1 - (h_\Theta(x^{(i)}))_k)\right] + \frac{\lambda}{2m}\sum_{l=1}^{L-1} \sum_{i=1}^{s_l} \sum_{j=1}^{s_{l+1}} ( \Theta_{j,i}^{(l)})^2\end{gather*}
 $$</p>
 <p><img src="../images/andrew-meme-1.jpg?width=25pc" alt="andrew-meme-1.jpg"></p>
-<p><strong>تصویر بالا:</strong>
-فقط یک ‌ذره 😂😂😅</p>
+<p align="center" style="margin-top:-30px; margin-bottom: 50px; color: gray;" >
+فقط یک ‌ذره 😂😂😅
+<p>
 <p>ما برای چند نود خروجی خود، چند جمع تو در تو (nested summations) اضافه کرده ایم.
 در قسمت اول معادله قبل از براکت ها، ما یک جمع جدید برای تعداد نود های خروجی داریم:
 $ \sum_{k=1}^K $</p>
