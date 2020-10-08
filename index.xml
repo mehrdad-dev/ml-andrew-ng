@@ -67,11 +67,11 @@ $$ g(\theta_0 + \theta_1 x_1^2 + \theta_2 x_1 x_2 + \theta_3 x_1 x_3 + \theta_4 
     </item>
     
     <item>
-      <title>Backpropagation</title>
-      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week5/backpropagation/</link>
+      <title>Backpropagation قسمت اول</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week5/backpropagation-1/</link>
       <pubDate>Thu, 01 Oct 2020 12:30:31 +0330</pubDate>
       
-      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week5/backpropagation/</guid>
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week5/backpropagation-1/</guid>
       <description>اصطلاح Backpropagation یا به فارسی پس انتشار در شبکه های عصبی، برای به حداقل رساندن تابع هزینه (minimizing cost function) مثل کاری که با گرادیان کاهشی در رگرسیون لجستیک و خطی انجام می‌دادیم، استفاده می‌شود.
 هدف ما محاسبه این است:
 $$ min_\Theta J(\Theta) $$
@@ -122,6 +122,16 @@ Binary Classification به جای اینکه خروجی یعنی $y$ مقدار�
       <description>تعریف یادگیری نظارتی در یـادگـیری نــظارتـی یک مجموعه داده داریم و از قبل می‌دانیم که خروجی صحیح باید چطور باشد، اصطلاحا داده های لیبل خورده اند! با این ایده که به بین خروجی و ورودی رابطه وجود دارد.
 مسائل یادگیری نظارتی یا همان Supervised Learning به دو دسته رگرسیون و طبقه بندی تقسیم می‌شوند.
 رگرسیون | Regression در این مسائل سعی می‌کنیم خروجی ای با مقدار پیوسته را پیش بینی کنیم.</description>
+    </item>
+    
+    <item>
+      <title>Backpropagation قسمت دوم</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week5/backpropagation-2/</link>
+      <pubDate>Thu, 08 Oct 2020 12:25:51 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week5/backpropagation-2/</guid>
+      <description>به یاد بیاورید که تابع هزینه برای یک شبکه عصبی به این صورت بود:
+$$ \begin{gather*}J(\Theta) = - \frac{1}{m} \sum_{t=1}^m\sum_{k=1}^K \left[ y^{(t)}_k \ \log (h_\Theta (x^{(t)}))_k + (1 - y^{(t)}_k)\ \log (1 - h_\Theta(x^{(t)})_k)\right] + \frac{\lambda}{2m}\sum_{l=1}^{L-1} \sum_{i=1}^{s_l} \sum_{j=1}^{s_l+1} ( \Theta_{j,i}^{(l)})^2\end{gather*} $$</description>
     </item>
     
     <item>

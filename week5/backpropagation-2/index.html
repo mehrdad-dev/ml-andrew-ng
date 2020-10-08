@@ -38,7 +38,7 @@
 
   <link rel="icon" href="/ml-andrew-ng/images/favicon.png" type="image/png">
 
-  <title>مشکل Overfitting :: Machine Learning Andrew Ng</title>
+  <title>Backpropagation قسمت دوم :: Machine Learning Andrew Ng</title>
 
   
   <link href="/ml-andrew-ng/css/nucleus.css" rel="stylesheet">
@@ -82,7 +82,7 @@
   
 </head>
 
-<body class="" data-url="/ml-andrew-ng/week3/overfitting/">
+<body class="" data-url="/ml-andrew-ng/week5/backpropagation-2/">
   <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -4268,7 +4268,7 @@
   
     
     <li data-nav-id="/ml-andrew-ng/week3/" title=" هفته سوم" class="dd-item 
-        parent
+        
         
         
         ">
@@ -4401,7 +4401,7 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week3/overfitting/" title="مشکل Overfitting" class="dd-item active">
+      <li data-nav-id="/ml-andrew-ng/week3/overfitting/" title="مشکل Overfitting" class="dd-item ">
         <a href="/ml-andrew-ng/week3/overfitting/">
         مشکل Overfitting
         <i class="fas fa-check read-icon"></i>
@@ -4718,7 +4718,7 @@
   
     
     <li data-nav-id="/ml-andrew-ng/week5/" title=" هفته پنجم" class="dd-item 
-        
+        parent
         
         
         ">
@@ -4788,7 +4788,7 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week5/backpropagation-2/" title="Backpropagation قسمت دوم" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week5/backpropagation-2/" title="Backpropagation قسمت دوم" class="dd-item active">
         <a href="/ml-andrew-ng/week5/backpropagation-2/">
         Backpropagation قسمت دوم
         <i class="fas fa-check read-icon"></i>
@@ -5052,7 +5052,7 @@
           
           
           
-          <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week3/'> هفته سوم</a> > مشکل Overfitting
+          <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week5/'> هفته پنجم</a> > Backpropagation قسمت دوم
           
           
           
@@ -5065,16 +5065,7 @@
           
           <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#underfitting">Underfitting</a></li>
-        <li><a href="#overfitting">Overfitting</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -5090,58 +5081,17 @@
           
           <h1>
             
-            مشکل Overfitting
+            Backpropagation قسمت دوم
           </h1>
           
 
           
-<div class="page-description"><i class="fas fa-clock"></i> 2 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/09/13
+<div class="page-description"><i class="fas fa-clock"></i> 1 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/10/08
 </div>
-<p>تصور کنید مسئله پیش بینی $y$ را،
-به صورتی که $x \in R$ است را داریم.</p>
-<p>سمت چپ ترین شکل زیر نتیجه fitting،
-$y = \theta_0 + \theta_1x$ را بر روی  مجموعه داده نشان می‌دهد.
-می بینیم که داده ها واقعاً روی خط مستقیم قرار ندارند، بنابراین اصطلاحا خوب fit نشده است
-(تناسب خوبی با داده ها ندارد).</p>
-<p><img src="../images/image4.png?width=40pc" alt="image4.png"></p>
-<p>در عوض اگر ویژگی $x^2$ را اضافه کنیم،
-و $y = \theta_0 + \theta_1x+ \theta_2 x^2$ را fit کنیم،
-سپس کمی بهتر با داده ها مطابقت پیدا می‌کنیم که در شکل وسطی می‌بینیم.
-به طور ساده لوحانه ممکن است به نظر برسد که هرچه تعداد ویژگی بیشتری اضافه کنیم بهتر است!</p>
-<p>با این حال اضافه کردن ویژگی های بیش از حد نیز خطراتی دارد!</p>
-<p>سمت راست ترین شکل نتیجه چند جمله ای مرتبه ۵
-$y = \sum_{j = 0}^5  \theta _j x^j$ است.</p>
-<p>ما می‌بینیم که منحنی اعمال شده به خوبی از داده ها عبور می‌کند، اما انتظار نداریم که
-این پیش بینی کننده (predictor) خوبی برای
-پیش بینی قیمت مسکن (y) در مناطق مختلف قابل سکونت (x) باشد.</p>
-<p>بدون اینکه به طور رسمی معنی این اصطلاحات را مشخص کنیم، می‌گوییم که:</p>
-<p>شکل سمت چپ نمونه ای از <strong>underfitting</strong> است.
-و شکل سمت راست نیز نمونه ای <strong>overfitting</strong> است.</p>
-<h3 id="underfitting">Underfitting</h3>
-<p>Underfitting یا بایاس زیاد (high bias)
-زمانی رخ می‌دهد که شکل حاصل از تابع فرضیه ما (h) به طور ضعیفی با روند داده های ما در مجموعه داده (dataset) تطابق داشته باشد.</p>
-<p>این وضعیت معمولا به دلیل بسیار ساده بودن تابع یا استفاده از ویژگی های کم رخ می‌دهد.</p>
-<h3 id="overfitting">Overfitting</h3>
-<p>در طرف دیگر overfitting یا واریانس زیاد (high variance)
-وضعیتی است که توسط یک تابع فرضیه ایجاد می‌شود که تناسب خوبی با داده های ما دارد، اما پیش بینی داده های جدید که تا کنون ندیده است را به خوبی انجام نمی‌دهد، اصطلاحا generalize نیست.</p>
-<p>این وضعیت معمولا به دلیل پیچیده بودن تابع فرضیه ایجاد می‌شود که انحنا ها و زوایای غیر ضروری
-زیادی را ایجاد می‌کند که با داده های ما ارتباطی ندارند.</p>
-<p><img src="../images/image5.png?width=40pc" alt="image5.png"></p>
-<p>دو گزینه برای حل مشکل overfitting وجود دارد:</p>
-<ol>
-<li>تعداد ویژگی ها را کاهش دهید</li>
-</ol>
-<ul>
-<li>به طور دستی ویژگی هایی را برای نگهداری انتخاب کنید</li>
-<li>از یک الگوریتم model selection استفاده کنید</li>
-</ul>
-<ol start="2">
-<li>منظم سازی | Regularization</li>
-</ol>
-<ul>
-<li>همه ویژگی ها را نگه دارید، اما اندازه پارامتر های $\theta_j$ را کاهش دهید</li>
-<li>Regularization زمانی خوب عمل می‌کند که ویژگی های مفیدی داشته باشیم</li>
-</ul>
+<p>به یاد بیاورید که تابع هزینه برای یک شبکه عصبی به این صورت بود:</p>
+<p>$$
+\begin{gather*}J(\Theta) = - \frac{1}{m} \sum_{t=1}^m\sum_{k=1}^K \left[ y^{(t)}_k \ \log (h_\Theta (x^{(t)}))_k + (1 - y^{(t)}_k)\ \log (1 - h_\Theta(x^{(t)})_k)\right] + \frac{\lambda}{2m}\sum_{l=1}^{L-1} \sum_{i=1}^{s_l} \sum_{j=1}^{s_l+1} ( \Theta_{j,i}^{(l)})^2\end{gather*}
+$$</p>
 
 
 <footer class="footline">
@@ -5502,7 +5452,6 @@ $y = \sum_{j = 0}^5  \theta _j x^j$ است.</p>
             
                 
                     
-                    
                 
                 
 
@@ -5515,9 +5464,6 @@ $y = \sum_{j = 0}^5  \theta _j x^j$ است.</p>
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -5599,7 +5545,6 @@ $y = \sum_{j = 0}^5  \theta _j x^j$ است.</p>
             
                 
                     
-                    
                 
                 
 
@@ -5615,9 +5560,6 @@ $y = \sum_{j = 0}^5  \theta _j x^j$ است.</p>
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -5830,6 +5772,7 @@ $y = \sum_{j = 0}^5  \theta _j x^j$ است.</p>
             
                 
                     
+                    
                 
                 
 
@@ -5842,6 +5785,9 @@ $y = \sum_{j = 0}^5  \theta _j x^j$ است.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -5875,6 +5821,7 @@ $y = \sum_{j = 0}^5  \theta _j x^j$ است.</p>
             
                 
                     
+                    
                 
                 
 
@@ -5893,6 +5840,9 @@ $y = \sum_{j = 0}^5  \theta _j x^j$ است.</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -5994,10 +5944,10 @@ $y = \sum_{j = 0}^5  \theta _j x^j$ است.</p>
 	 
 	 
 		
-			<a class="nav nav-prev" href="/ml-andrew-ng/week3/multiclass-classification/" title="طبقه بندی چند کلاسه"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/ml-andrew-ng/week5/backpropagation-1/" title="Backpropagation قسمت اول"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ml-andrew-ng/week3/cost-function-overfitting/" title=" تابع هزینه در Overfitting" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/ml-andrew-ng/week6/" title=" هفته ششم" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
