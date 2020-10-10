@@ -38,7 +38,7 @@
 
   <link rel="icon" href="/ml-andrew-ng/images/favicon.png" type="image/png">
 
-  <title>Backpropagation قسمت دوم :: Machine Learning Andrew Ng</title>
+  <title>Backpropagation قسمت دوم | Machine Learning Andrew Ng</title>
 
   
   <link href="/ml-andrew-ng/css/nucleus.css" rel="stylesheet">
@@ -63,7 +63,6 @@
 
   <script src="/ml-andrew-ng/js/jquery-3.3.1.min.js"></script>
 
-  
   
   
   
@@ -4800,6 +4799,27 @@
 
             
           
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ml-andrew-ng/week5/unrolling-parameters/" title="Unrolling Parameters" class="dd-item ">
+        <a href="/ml-andrew-ng/week5/unrolling-parameters/">
+        Unrolling Parameters
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
         
         </ul>
               
@@ -5086,11 +5106,44 @@
           
 
           
-<div class="page-description"><i class="fas fa-clock"></i> 1 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/10/08
+<div class="page-description"><i class="fas fa-clock"></i> 2 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/10/08
 </div>
 <p>به یاد بیاورید که تابع هزینه برای یک شبکه عصبی به این صورت بود:</p>
 <p>$$
 \begin{gather*}J(\Theta) = - \frac{1}{m} \sum_{t=1}^m\sum_{k=1}^K \left[ y^{(t)}_k \ \log (h_\Theta (x^{(t)}))_k + (1 - y^{(t)}_k)\ \log (1 - h_\Theta(x^{(t)})_k)\right] + \frac{\lambda}{2m}\sum_{l=1}^{L-1} \sum_{i=1}^{s_l} \sum_{j=1}^{s_l+1} ( \Theta_{j,i}^{(l)})^2\end{gather*}
+$$</p>
+<p>اگر یک طبقه ساده، و غیر چند کلاسه (non-multiclass, $k=1$) را در نظر بگیریم و همچنین منظم سازی یا همان
+regularization را هم نادیده بگیریم، هزینه ما به این صورت محاسبه خواهد شد:</p>
+<p>$$
+cost(t) = y^{(t)} \log(h_\Theta(x^{(t)})) + (1 - y^{(t)}) \log(1 - h_\Theta(x^{(t)}))
+$$</p>
+<p>واضح است که $\delta^{(l)} _j$ به عنوان <strong>خطا</strong> برای
+$a^{(l)} _j$ است
+(گره $j$ ام در لایه $l$).</p>
+<p>به طور رسمی تر، مقادیر دلتا در واقع مشتق تابع هزینه هستند:
+$$
+\delta^{(l)} _j = \frac{\delta}{\delta z_j ^{(l)}} cost(t)
+$$</p>
+<p>به یاد آورید که مشتق ما شیب یک خط مماس با تابع هزینه است،
+بنابراین هرچه شیب بیشتر باشد، بیشتر در اشتباه هستیم.</p>
+<p>بیایید شبکه عصبی زیر را در نظر بگیریم و ببینیم که چطور می‌شود برخی از
+$\delta^{(l)} _j$ ها را محاسبه کرد:</p>
+<p><img src="../images/image1.png?width=35pc" alt="image1.png"></p>
+<p>در تصویر بالا برای محاسبه $\delta^{(2)} _2$ (بالا سمت راست تصویر)
+وزن های $\Theta ^ {(2)} _{12}$ و $\Theta ^ {(2)} _{22}$ را با هم ضرب کرده ایم، و
+مقادیر $\delta$ مربوطه نیز در سمت راست هر کدام از آن ها وجود دارد،
+که بنابرانی خواهیم داشت:
+$$
+\delta^{(2)} _2 = \Theta ^ {(2)} _{12} \ast \delta^{(3)} _1 +  \Theta ^ {(2)} _{22} \ast \delta^{(3)} _2
+$$</p>
+<p>برای محاسبه هر کدام از $\delta ^ {(l)} _j$ های ممکن،
+می‌توانیم از سمت راست نمودار شروع کنیم،
+تصور می‌کنیم که جهت $\Theta _ {ij}$ هایمان از سمت راست به چپ است،
+و برای محاسبه هر $\delta ^ {(l)} _j$ فقط باید جمع همه وزن ها را در مقدار
+$\delta$ ای که از آن جا آمده اید ضرب کنید.</p>
+<p>به همین شکل یک مثال دیگر می‌تواند به این صورت باشد:
+$$
+\delta ^ {(3)} _2 = \Theta ^ {(3)} _{12} \ast \delta^{(4)} _1
 $$</p>
 
 
@@ -5833,9 +5886,6 @@ $$</p>
             
         
                     
-            
-        
-                    
                         
             
             
@@ -5843,6 +5893,25 @@ $$</p>
                     
                         
                         
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -5947,7 +6016,7 @@ $$</p>
 			<a class="nav nav-prev" href="/ml-andrew-ng/week5/backpropagation-1/" title="Backpropagation قسمت اول"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ml-andrew-ng/week6/" title=" هفته ششم" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/ml-andrew-ng/week5/unrolling-parameters/" title="Unrolling Parameters" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
