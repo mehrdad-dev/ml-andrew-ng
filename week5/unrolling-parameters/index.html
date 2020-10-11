@@ -4820,6 +4820,48 @@
 
             
           
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ml-andrew-ng/week5/gradient-checking/" title="بررسی گرادیان" class="dd-item ">
+        <a href="/ml-andrew-ng/week5/gradient-checking/">
+        بررسی گرادیان
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ml-andrew-ng/week5/random-initialization/" title="مقدار دهی اولیه تصادفی" class="dd-item ">
+        <a href="/ml-andrew-ng/week5/random-initialization/">
+        مقدار دهی اولیه تصادفی
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
         
         </ul>
               
@@ -5106,8 +5148,28 @@
           
 
           
-<div class="page-description"><i class="fas fa-clock"></i> 0 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/10/10
+<div class="page-description"><i class="fas fa-clock"></i> 1 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/10/10
 </div>
+<p>ما در شبکه های عصبی در حال کار با مجموعه ای از ماتریس ها هستیم:
+$$
+\begin{align*} \Theta^{(1)}, \Theta^{(2)}, \Theta^{(3)}, \dots \newline D^{(1)}, D^{(2)}, D^{(3)}, \dots \end{align*}
+$$</p>
+<p>برای استفاده از تابع بهینه سازی مثل <strong>()fminunc</strong>،
+می‌خواهیم همه عضو ها را <strong>unroll</strong> کرده (باز کنیم)
+و داخل یک وکتور طولانی قرار دهیم:</p>
+<div align="left">
+<pre><code>thetaVector = [ Theta1(:); Theta2(:); Theta3(:); ]
+deltaVector = [ D1(:); D2(:); D3(:) ]
+</code></pre></div>
+<p>اگر ابعاد Theta1 $10 \times 11$ و Theta2 $10 \times 11$ و Theta3 $1 \times 11$ باشند،
+سپس می‌توانیم ماتریس های اصلی مان را از نسخه های <strong>unrolled</strong> به این شکل برگردانیم:</p>
+<div align="left">
+<pre><code>Theta1 = reshape(thetaVector(1:110),10,11)
+Theta2 = reshape(thetaVector(111:220),10,11)
+Theta3 = reshape(thetaVector(221:231),1,11)
+</code></pre></div>
+<p>به طور خلاصه:</p>
+<p><img src="../images/image2.png?width=40pc" alt="image2.png"></p>
 
 
 <footer class="footline">
@@ -5865,6 +5927,22 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
             
         
                     
@@ -5873,8 +5951,24 @@
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
                         
-                        
+            
+            
+                
                     
                 
                 
@@ -5979,7 +6073,7 @@
 			<a class="nav nav-prev" href="/ml-andrew-ng/week5/backpropagation-2/" title="Backpropagation قسمت دوم"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ml-andrew-ng/week6/" title=" هفته ششم" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/ml-andrew-ng/week5/gradient-checking/" title="بررسی گرادیان" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

@@ -187,7 +187,9 @@ $$ Cost(h_\theta(x), y) = -log(h_\theta(x)) \hspace{1cm} if \hspace{0.3cm} y = 1
       <pubDate>Sat, 10 Oct 2020 13:31:21 +0330</pubDate>
       
       <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week5/unrolling-parameters/</guid>
-      <description></description>
+      <description>ما در شبکه های عصبی در حال کار با مجموعه ای از ماتریس ها هستیم: $$ \begin{align*} \Theta^{(1)}, \Theta^{(2)}, \Theta^{(3)}, \dots \newline D^{(1)}, D^{(2)}, D^{(3)}, \dots \end{align*} $$
+برای استفاده از تابع بهینه سازی مثل ()fminunc، می‌خواهیم همه عضو ها را unroll کرده (باز کنیم) و داخل یک وکتور طولانی قرار دهیم:
+thetaVector = [ Theta1(:); Theta2(:); Theta3(:); ] deltaVector = [ D1(:); D2(:); D3(:) ]  اگر ابعاد Theta1 $10 \times 11$ و Theta2 $10 \times 11$ و Theta3 $1 \times 11$ باشند، سپس می‌توانیم ماتریس های اصلی مان را از نسخه های unrolled به این شکل برگردانیم:</description>
     </item>
     
     <item>
@@ -236,6 +238,18 @@ $$(x_i, y_i) \Rightarrow x_1= 2104, y_1 = 460$$
     </item>
     
     <item>
+      <title>بررسی گرادیان</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week5/gradient-checking/</link>
+      <pubDate>Sun, 11 Oct 2020 16:33:27 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week5/gradient-checking/</guid>
+      <description>بررسی گرادیان یا همان Gradient checking به شما این اطمینان را می‌دهد که Backpropagation همانطور که در نظر گرفته شده کار می‌کند‌ (مطابق هدف کار می‌کند).
+ما می‌توانیم مشتق تابع خود را به این صورت تقریب بزنیم: $$ \frac{\partial}{\partial \Theta} J(\Theta) \approx \frac { J(\Theta + \epsilon) - J(\Theta - \epsilon) } {2 \epsilon} $$
+با چند ماتریس تتا، می‌توانیم مشتق را با توجه به $\Theta _j$ تقریب بزنیم:
+$$ \frac{\partial}{\partial \Theta} J(\Theta) \approx \frac{ J(\Theta _1, &amp;hellip;, \Theta _j + \epsilon, &amp;hellip;, \Theta _n) - J(\Theta _1, &amp;hellip;, \Theta _j - \epsilon, &amp;hellip;, \Theta _n)} {2 \epsilon} $$</description>
+    </item>
+    
+    <item>
       <title>مثال ها قسمت اول</title>
       <link>https://mehrdad-dev.github.io/ml-andrew-ng/week4/examples-1/</link>
       <pubDate>Sun, 27 Sep 2020 00:00:00 +0000</pubDate>
@@ -278,6 +292,15 @@ $$ {\color{Blue} h_\theta(x) = \theta_0 + \theta_1 x_1 + \theta_2 x_1^2}$$</desc
       
       <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week1/cost1/</guid>
       <description>تعریف تابع هزینه | Cost Function با این تابع می‌توانیم بهترین خط مستقیم را برای داده هایمان به دست آوریم. با انتخاب های متفاوت برای پارامتر های $\theta_1$ و $\theta_0$ تابع های فرضیه متفاوتی به دست می‌آوریم: در رگرسیون خطی مجموعه آموزشی مثل این نمودار داریم و می‌خواهیم مقادیری برای $\theta_0$ و $\theta_1$ به دست آوریم به طوری که خط راستی که رسم می‌کنیم، بهترین تطابق را با داده هایمان داشته باشد.</description>
+    </item>
+    
+    <item>
+      <title>مقدار دهی اولیه تصادفی</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week5/random-initialization/</link>
+      <pubDate>Sun, 11 Oct 2020 17:13:59 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week5/random-initialization/</guid>
+      <description></description>
     </item>
     
     <item>
