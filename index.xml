@@ -300,7 +300,9 @@ $$ {\color{Blue} h_\theta(x) = \theta_0 + \theta_1 x_1 + \theta_2 x_1^2}$$</desc
       <pubDate>Sun, 11 Oct 2020 17:13:59 +0330</pubDate>
       
       <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week5/random-initialization/</guid>
-      <description></description>
+      <description>مقدار دهی اولیه همه وزن های تتا (theta weights) به مقدار $0$ برای شبکه های عصبی کار ساز نیست!
+وقتی از Backpropagation استفاده می‌کنیم، همه گره ها به طور مکرر به یک مقدار مشابه به روز می‌شوند. اما در عوض می‌توانیم وزن های ماتریس $\Theta$ خودمان را به روش زیر به صورت تصادفی مقدار دهی کنیم:
+از این رو، ما هر $\Theta _{ij} ^{(l)}$ را به صورت عددی تصادفی بین $[ - \epsilon, \epsilon]$ مقدار دهی می‌کنیم، و استفاده از فرمول بالا تضمین می‌کند که این حد مد نظر را به دست می‌آوریم، همین رویه برای همه $\Theta$ ها انجام می‌شود.</description>
     </item>
     
     <item>
@@ -344,6 +346,15 @@ $$ {\color{Blue} h_\theta(x) = \theta_0 + \theta_1 x_1 + \theta_2 x_1^2}$$</desc
 اما اجازه بدید برای ساده سازی تابع فرضیه را تنها با یک پارامتر به این شکل در نظر بگیریم: $ h_\theta(x) = \theta_1x $ و سه مقدار مختلف $0$، $5.0 $ و $1$ رو حساب کنیم &amp;hellip;
 مثلا برای مقدار تتا برابر با $1$ محاسبات زیر را خواهیم داشت:
 $$ {\color{Red} J(\theta_1) = \frac{1}{2m} \sum_{i=1}^{m} (\theta_1x - y_i)^2 \Rightarrow \frac{1}{2m} (0^2 + 0^2 + 0^2) = 0 } $$ به همین صورت برای دو مقدار دیگر داریم:</description>
+    </item>
+    
+    <item>
+      <title>Putting It Together</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week5/putting-it-together/</link>
+      <pubDate>Sun, 11 Oct 2020 19:45:27 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week5/putting-it-together/</guid>
+      <description></description>
     </item>
     
     <item>
