@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Optimization Objective</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week7/optimization-objective/</link>
+      <pubDate>Mon, 12 Oct 2020 14:37:24 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week7/optimization-objective/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>ارزیابی فرضیه</title>
       <link>https://mehrdad-dev.github.io/ml-andrew-ng/week6/evaluating-hypothesis/</link>
       <pubDate>Sun, 04 Oct 2020 13:22:30 +0330</pubDate>
@@ -354,7 +363,9 @@ $$ {\color{Red} J(\theta_1) = \frac{1}{2m} \sum_{i=1}^{m} (\theta_1x - y_i)^2 \R
       <pubDate>Sun, 11 Oct 2020 19:45:27 +0330</pubDate>
       
       <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week5/putting-it-together/</guid>
-      <description></description>
+      <description>ابتدا معماری شبکه خود را انتخاب کنید!
+لایه های شبکه عصبی خود را انتخاب کنید، از جمله اینکه چند گره پنهان در هر لایه و در کل چند لایه می‌خواهد داشته باشید.
+ تعداد گره های ورودی = ابعاد ویژگی های $x^{(i)}$ تعداد گره های خروجی = تعداد کلاس ها (طبقه بندی ها) تعداد گره های پنهان در هر لایه = معمولا هر چه بیشتر بهتر (افزایش تعداد گره های پنهان باید با هزینه محاسبه آن ها تعادل داشته باشد) پیشفرض ها: ۱ لایه پنهان، اگر بیش از ۱ لایه پنهان دارید پیشنهاد می‌شود که در هر لایه پنهان تعداد گره یکسانی داشته باشید.</description>
     </item>
     
     <item>
@@ -398,6 +409,20 @@ $$ {\color{Red} J(\theta_1) = \frac{1}{2m} \sum_{i=1}^{m} (\theta_1x - y_i)^2 \R
     </item>
     
     <item>
+      <title>نمونه ای از رانندگی خودکار</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week5/autonomous-driving/</link>
+      <pubDate>Mon, 12 Oct 2020 13:09:44 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week5/autonomous-driving/</guid>
+      <description>پروژه ALVINN ماشین خودران در سال ۱۹۸۹ ALVINN: Autonomous Land Vehicle In a Neural Network
+برای مشاهده ویدئو این پروژه در YouTube بر روی تصویر زیر کلیک کنید:
+
+توییت ای جالب در توییتر در این مورد (نیاز به vpn):
+GPU? Gez, ALVINN ran on 100 MFLOP CPU, ~10x slower than iWatch; Refrigerator-size &amp;amp; needed 5000 watt generator. @olivercameron pic.twitter.com/QdGpZUzGCs
+&amp;mdash; Dean Pomerleau (@deanpomerleau) November 24, 2016  </description>
+    </item>
+    
+    <item>
       <title>فایل های هفته چهارم</title>
       <link>https://mehrdad-dev.github.io/ml-andrew-ng/week4/files/</link>
       <pubDate>Wed, 30 Sep 2020 13:04:55 +0330</pubDate>
@@ -427,6 +452,15 @@ $$ {\color{Red} J(\theta_1) = \frac{1}{2m} \sum_{i=1}^{m} (\theta_1x - y_i)^2 \R
 مراحل کار به این شکل است:
 با حدس های اولیه برای دو پارامتر $\theta_0$ و $\theta_1$ شروع می‌کنیم، مثلا مقدار هر دو را در ابتدا $0$ تعیین می‌کنیم.
 و سپس مقادیر $\theta_0$ و $\theta_1$ را به صورت جزئی تغییر می‌دهیم تا تابع $J$ کاهش یابد، تا زمانی که به مینیمم کلی یا محلی برسیم.</description>
+    </item>
+    
+    <item>
+      <title>فایل های هفته پنجم</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week5/files/</link>
+      <pubDate>Mon, 12 Oct 2020 13:33:56 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week5/files/</guid>
+      <description>اسلاید ها  Neural Networks: Learning - pdf  غلط نامه  Errata - pdf  تمرین برنامه نویسی  Programming Exercise 4: Neural Networks Learning - pdf | problem  </description>
     </item>
     
     <item>

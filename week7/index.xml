@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title> هفته هفتم on Machine Learning Andrew Ng</title>
+    <link>https://mehrdad-dev.github.io/ml-andrew-ng/week7/</link>
+    <description>Recent content in  هفته هفتم on Machine Learning Andrew Ng</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 12 Oct 2020 14:35:04 +0330</lastBuildDate>
+    
+	<atom:link href="https://mehrdad-dev.github.io/ml-andrew-ng/week7/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Optimization Objective</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week7/optimization-objective/</link>
+      <pubDate>Mon, 12 Oct 2020 14:37:24 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week7/optimization-objective/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

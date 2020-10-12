@@ -85,7 +85,32 @@ $$ \frac{\partial}{\partial \Theta} J(\Theta) \approx \frac{ J(\Theta _1, &amp;h
       <pubDate>Sun, 11 Oct 2020 19:45:27 +0330</pubDate>
       
       <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week5/putting-it-together/</guid>
-      <description></description>
+      <description>ابتدا معماری شبکه خود را انتخاب کنید!
+لایه های شبکه عصبی خود را انتخاب کنید، از جمله اینکه چند گره پنهان در هر لایه و در کل چند لایه می‌خواهد داشته باشید.
+ تعداد گره های ورودی = ابعاد ویژگی های $x^{(i)}$ تعداد گره های خروجی = تعداد کلاس ها (طبقه بندی ها) تعداد گره های پنهان در هر لایه = معمولا هر چه بیشتر بهتر (افزایش تعداد گره های پنهان باید با هزینه محاسبه آن ها تعادل داشته باشد) پیشفرض ها: ۱ لایه پنهان، اگر بیش از ۱ لایه پنهان دارید پیشنهاد می‌شود که در هر لایه پنهان تعداد گره یکسانی داشته باشید.</description>
+    </item>
+    
+    <item>
+      <title>نمونه ای از رانندگی خودکار</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week5/autonomous-driving/</link>
+      <pubDate>Mon, 12 Oct 2020 13:09:44 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week5/autonomous-driving/</guid>
+      <description>پروژه ALVINN ماشین خودران در سال ۱۹۸۹ ALVINN: Autonomous Land Vehicle In a Neural Network
+برای مشاهده ویدئو این پروژه در YouTube بر روی تصویر زیر کلیک کنید:
+
+توییت ای جالب در توییتر در این مورد (نیاز به vpn):
+GPU? Gez, ALVINN ran on 100 MFLOP CPU, ~10x slower than iWatch; Refrigerator-size &amp;amp; needed 5000 watt generator. @olivercameron pic.twitter.com/QdGpZUzGCs
+&amp;mdash; Dean Pomerleau (@deanpomerleau) November 24, 2016  </description>
+    </item>
+    
+    <item>
+      <title>فایل های هفته پنجم</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week5/files/</link>
+      <pubDate>Mon, 12 Oct 2020 13:33:56 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week5/files/</guid>
+      <description>اسلاید ها  Neural Networks: Learning - pdf  غلط نامه  Errata - pdf  تمرین برنامه نویسی  Programming Exercise 4: Neural Networks Learning - pdf | problem  </description>
     </item>
     
   </channel>

@@ -4883,6 +4883,48 @@
 
             
           
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ml-andrew-ng/week5/autonomous-driving/" title="نمونه ای از رانندگی خودکار" class="dd-item ">
+        <a href="/ml-andrew-ng/week5/autonomous-driving/">
+        نمونه ای از رانندگی خودکار
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ml-andrew-ng/week5/files/" title="فایل های هفته پنجم" class="dd-item ">
+        <a href="/ml-andrew-ng/week5/files/">
+        فایل های هفته پنجم
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
         
         </ul>
               
@@ -4994,6 +5036,63 @@
           
       </a>
       
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/ml-andrew-ng/week7/" title=" هفته هفتم" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/ml-andrew-ng/week7/">
+          <i class='fa fa-graduation-cap ' ></i>  هفته هفتم 
+          
+            <i  class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ml-andrew-ng/week7/optimization-objective/" title="Optimization Objective" class="dd-item ">
+        <a href="/ml-andrew-ng/week7/optimization-objective/">
+        Optimization Objective
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -5148,7 +5247,15 @@
           
           <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#آموزش-یک-شبکه-عصبی">آموزش یک شبکه عصبی</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -5169,8 +5276,40 @@
           
 
           
-<div class="page-description"><i class="fas fa-clock"></i> 0 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/10/11
+<div class="page-description"><i class="fas fa-clock"></i> 2 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/10/11
 </div>
+<p>ابتدا معماری شبکه خود را انتخاب کنید!</p>
+<p>لایه های شبکه عصبی خود را انتخاب کنید،
+از جمله اینکه چند گره پنهان در هر لایه و در کل چند لایه می‌خواهد داشته باشید.</p>
+<ul>
+<li>تعداد گره های ورودی = ابعاد ویژگی های $x^{(i)}$</li>
+<li>تعداد گره های خروجی = تعداد کلاس ها (طبقه بندی ها)</li>
+<li>تعداد گره های پنهان در هر لایه = معمولا هر چه بیشتر بهتر (افزایش تعداد گره های پنهان باید با هزینه محاسبه آن ها تعادل داشته باشد)</li>
+<li>پیشفرض ها: ۱ لایه پنهان، اگر بیش از ۱ لایه پنهان دارید پیشنهاد می‌شود که در هر لایه پنهان تعداد گره یکسانی داشته باشید.</li>
+</ul>
+<h3 id="آموزش-یک-شبکه-عصبی">آموزش یک شبکه عصبی</h3>
+<ol>
+<li>مقدار دهی اولیه تصادفی وزن ها</li>
+<li>برای پیاده سازی forward propagation، محاسبه $h_\Theta(x ^{(i)})$ برای هر $x ^{(i)}$</li>
+<li>پیاده سازی تابع هزینه</li>
+<li>پیاده سازی backpropagation برای محاسبه مشتقات جزئی</li>
+<li>استفاده از بررسی گرادیان برای اینکه مطمئن شویم backpropagation کار می‌کند، و بعد از آن توقف بررسی گرادیان.</li>
+<li>استفاده از گرادیان کاهشی یا یک  تابع built-in بهینه سازی برای به حداقل برساندن تابع هزینه با استفاده از وزن های داخل تتا</li>
+</ol>
+<p>هنگام استفاده از forward propagation و back propagation در هر نمونه آموزشی حلقه می‌زنیم:</p>
+<div align="left">
+<pre><code>,for i = 1:m
+   Perform forward propagation and backpropagation using example (x(i),y(i))
+   Get activations a(l) and delta terms d(l) for l = 2,...,L
+</code></pre></div>
+<p>تصویر زیر به ما شهودی از آنچه که در حین پیاده سازی شبکه عصبی اتفاق می‌افتد می‌دهد:
+<img src="../images/image4.png?width=35pc" alt="image4.png"></p>
+<p>در حالت ایده آل، می‌خواهیم:
+$$
+h_\Theta (x^{(i)}) \approx  y^{(i)}
+$$</p>
+<p>که این یعنی تابع هزینه ما به حداقل می‌رسد، اما به خاطر داشته باشید که $J(\Theta)$ محدب نیست،
+که بنابراین می‌توانیم به جای آن در مینیمم محلی قرار بگیریم.</p>
 
 
 <footer class="footline">
@@ -5976,9 +6115,6 @@
             
         
                     
-            
-        
-                    
                         
             
             
@@ -5986,38 +6122,6 @@
                     
                         
                         
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -6042,6 +6146,105 @@
                     
                     
 
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
             
         
@@ -6090,7 +6293,7 @@
 			<a class="nav nav-prev" href="/ml-andrew-ng/week5/random-initialization/" title="مقدار دهی اولیه تصادفی"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ml-andrew-ng/week6/" title=" هفته ششم" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/ml-andrew-ng/week5/autonomous-driving/" title="نمونه ای از رانندگی خودکار" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
