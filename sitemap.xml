@@ -198,13 +198,18 @@
   </url>
   
   <url>
-    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/questions/</loc>
-    <lastmod>2020-10-03T13:28:44+03:30</lastmod>
+    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/dictionary/</loc>
+    <lastmod>2020-10-12T19:45:26+03:30</lastmod>
   </url>
   
   <url>
     <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week5/putting-it-together/</loc>
     <lastmod>2020-10-11T19:45:27+03:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/questions/</loc>
+    <lastmod>2020-10-03T13:28:44+03:30</lastmod>
   </url>
   
   <url>
@@ -223,18 +228,13 @@
   </url>
   
   <url>
-    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/useful-articles/</loc>
-    <lastmod>2020-09-10T17:04:49+04:30</lastmod>
-  </url>
-  
-  <url>
     <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week1/cost3/</loc>
     <lastmod>2020-09-06T16:31:03+04:30</lastmod>
   </url>
   
   <url>
-    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/sponsorship/</loc>
-    <lastmod>2020-09-10T17:18:51+04:30</lastmod>
+    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/useful-articles/</loc>
+    <lastmod>2020-09-10T17:04:49+04:30</lastmod>
   </url>
   
   <url>
@@ -253,13 +253,18 @@
   </url>
   
   <url>
-    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/about/</loc>
-    <lastmod>2020-09-10T17:16:09+04:30</lastmod>
+    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/sponsorship/</loc>
+    <lastmod>2020-09-10T17:18:51+04:30</lastmod>
   </url>
   
   <url>
     <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week1/gradient1/</loc>
     <lastmod>2020-09-09T16:31:43+04:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/about/</loc>
+    <lastmod>2020-09-10T17:16:09+04:30</lastmod>
   </url>
   
   <url>
