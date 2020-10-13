@@ -38,7 +38,7 @@
 
   <link rel="icon" href="/ml-andrew-ng/images/favicon.png" type="image/png">
 
-  <title>یادگیری نظارتی چیست؟ | Machine Learning Andrew Ng</title>
+  <title>یادگیری با نظارت چیست؟ | Machine Learning Andrew Ng</title>
 
   
   <link href="/ml-andrew-ng/css/nucleus.css" rel="stylesheet">
@@ -61,8 +61,13 @@
   
   <link href="/ml-andrew-ng/css/foo.css" rel="stylesheet"><link href="/ml-andrew-ng/css/bar.css" rel="stylesheet">
 
+  
+  
   <script src="/ml-andrew-ng/js/jquery-3.3.1.min.js"></script>
-
+  
+  <script src="/ml-andrew-ng/js/tipso.js"></script>
+  <link href="/ml-andrew-ng/css/tipso.css" rel="stylesheet">
+  <link href="/ml-andrew-ng/css/animate.css" rel="stylesheet">
   
   
   
@@ -3866,9 +3871,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week1/supervised/" title="یادگیری نظارتی چیست؟" class="dd-item active">
+      <li data-nav-id="/ml-andrew-ng/week1/supervised/" title="یادگیری با نظارت چیست؟" class="dd-item active">
         <a href="/ml-andrew-ng/week1/supervised/">
-        یادگیری نظارتی چیست؟
+        یادگیری با نظارت چیست؟
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -3887,9 +3892,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week1/unsupervised/" title="یادگیری غیر نظارتی چیست؟" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week1/unsupervised/" title="یادگیری بدون نظارت چیست؟" class="dd-item ">
         <a href="/ml-andrew-ng/week1/unsupervised/">
-        یادگیری غیر نظارتی چیست؟
+        یادگیری بدون نظارت چیست؟
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -4175,9 +4180,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week2/debugging-gradient/" title="Debugging Gradient" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week2/debugging-gradient/" title="اشکال زدایی گرادیان" class="dd-item ">
         <a href="/ml-andrew-ng/week2/debugging-gradient/">
-        Debugging Gradient
+        اشکال زدایی گرادیان
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -4766,9 +4771,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week5/backpropagation-1/" title="Backpropagation قسمت اول" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week5/backpropagation-1/" title="پس انتشار قسمت اول" class="dd-item ">
         <a href="/ml-andrew-ng/week5/backpropagation-1/">
-        Backpropagation قسمت اول
+        پس انتشار قسمت اول
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -4787,9 +4792,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week5/backpropagation-2/" title="Backpropagation قسمت دوم" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week5/backpropagation-2/" title="پس انتشار قسمت دوم" class="dd-item ">
         <a href="/ml-andrew-ng/week5/backpropagation-2/">
-        Backpropagation قسمت دوم
+        پس انتشار قسمت دوم
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -4808,9 +4813,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week5/unrolling-parameters/" title="Unrolling Parameters" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week5/unrolling-parameters/" title="بازکردن پارامتر ها" class="dd-item ">
         <a href="/ml-andrew-ng/week5/unrolling-parameters/">
-        Unrolling Parameters
+        بازکردن پارامتر ها
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -5260,7 +5265,7 @@
           
           
           
-          <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week1/'>   هفته اول </a> > یادگیری نظارتی چیست؟
+          <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week1/'>   هفته اول </a> > یادگیری با نظارت چیست؟
           
           
           
@@ -5277,7 +5282,7 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#تعریف-یادگیری-نظارتی">تعریف یادگیری نظارتی</a></li>
+        <li><a href="#تعریف-یادگیری-با-نظارت">تعریف یادگیری با نظارت</a></li>
         <li><a href="#رگرسیون--regression">رگرسیون | Regression</a></li>
         <li><a href="#طبقه-بندی--classification">طبقه بندی | Classification</a></li>
         <li><a href="#مثال-های-بیشتری-که-شما-پاسخ-دهید">مثال های بیشتری که شما پاسخ دهید!</a></li>
@@ -5300,19 +5305,19 @@
           
           <h1>
             
-            یادگیری نظارتی چیست؟
+            یادگیری با نظارت چیست؟
           </h1>
           
 
           
 <div class="page-description"><i class="fas fa-clock"></i> 2 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/09/06
 </div>
-<h3 id="تعریف-یادگیری-نظارتی">تعریف یادگیری نظارتی</h3>
+<h3 id="تعریف-یادگیری-با-نظارت">تعریف یادگیری با نظارت</h3>
 <p>در یـادگـیری نــظارتـی یک مجموعه داده داریم و از قبل
 می‌دانیم که خروجی صحیح باید چطور باشد، اصطلاحا
 داده های لیبل خورده اند!
 با این ایده که به بین خروجی و ورودی رابطه وجود دارد.</p>
-<p>مسائل یادگیری نظارتی یا همان Supervised Learning
+<p>مسائل یادگیری با نظارت یا همان Supervised Learning
 به دو دسته <strong>رگرسیون</strong> و <strong>طبقه بندی</strong> تقسیم می‌شوند.</p>
 <h3 id="رگرسیون--regression">رگرسیون | Regression</h3>
 <p><img src="../images/linearRegression.jpg?width=30pc" alt="linearRegression"></p>
@@ -6354,7 +6359,7 @@
 			<a class="nav nav-prev" href="/ml-andrew-ng/week1/what-is-ml/" title="یادگیری ماشین چیست؟"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ml-andrew-ng/week1/unsupervised/" title="یادگیری غیر نظارتی چیست؟" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/ml-andrew-ng/week1/unsupervised/" title="یادگیری بدون نظارت چیست؟" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

@@ -61,8 +61,13 @@
   
   <link href="/ml-andrew-ng/css/foo.css" rel="stylesheet"><link href="/ml-andrew-ng/css/bar.css" rel="stylesheet">
 
+  
+  
   <script src="/ml-andrew-ng/js/jquery-3.3.1.min.js"></script>
-
+  
+  <script src="/ml-andrew-ng/js/tipso.js"></script>
+  <link href="/ml-andrew-ng/css/tipso.css" rel="stylesheet">
+  <link href="/ml-andrew-ng/css/animate.css" rel="stylesheet">
   
   
   
@@ -3866,9 +3871,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week1/supervised/" title="یادگیری نظارتی چیست؟" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week1/supervised/" title="یادگیری با نظارت چیست؟" class="dd-item ">
         <a href="/ml-andrew-ng/week1/supervised/">
-        یادگیری نظارتی چیست؟
+        یادگیری با نظارت چیست؟
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -3887,9 +3892,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week1/unsupervised/" title="یادگیری غیر نظارتی چیست؟" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week1/unsupervised/" title="یادگیری بدون نظارت چیست؟" class="dd-item ">
         <a href="/ml-andrew-ng/week1/unsupervised/">
-        یادگیری غیر نظارتی چیست؟
+        یادگیری بدون نظارت چیست؟
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -4175,9 +4180,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week2/debugging-gradient/" title="Debugging Gradient" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week2/debugging-gradient/" title="اشکال زدایی گرادیان" class="dd-item ">
         <a href="/ml-andrew-ng/week2/debugging-gradient/">
-        Debugging Gradient
+        اشکال زدایی گرادیان
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -4766,9 +4771,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week5/backpropagation-1/" title="Backpropagation قسمت اول" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week5/backpropagation-1/" title="پس انتشار قسمت اول" class="dd-item ">
         <a href="/ml-andrew-ng/week5/backpropagation-1/">
-        Backpropagation قسمت اول
+        پس انتشار قسمت اول
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -4787,9 +4792,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week5/backpropagation-2/" title="Backpropagation قسمت دوم" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week5/backpropagation-2/" title="پس انتشار قسمت دوم" class="dd-item ">
         <a href="/ml-andrew-ng/week5/backpropagation-2/">
-        Backpropagation قسمت دوم
+        پس انتشار قسمت دوم
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -4808,9 +4813,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week5/unrolling-parameters/" title="Unrolling Parameters" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week5/unrolling-parameters/" title="بازکردن پارامتر ها" class="dd-item ">
         <a href="/ml-andrew-ng/week5/unrolling-parameters/">
-        Unrolling Parameters
+        بازکردن پارامتر ها
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -5298,7 +5303,7 @@
 </div>
 <p>مقدار دهی اولیه همه وزن های تتا (theta weights) به مقدار
 $0$ برای شبکه های عصبی کار ساز نیست!</p>
-<p>وقتی از Backpropagation استفاده می‌کنیم،
+<p>وقتی از پس انتشار استفاده می‌کنیم،
 همه گره ها به طور مکرر به یک مقدار مشابه به روز می‌شوند.
 اما در عوض می‌توانیم وزن های ماتریس $\Theta$ خودمان را به روش زیر به صورت تصادفی مقدار دهی کنیم:</p>
 <p><img src="../images/image3.png?width=35pc" alt="image3.png"></p>
@@ -5314,7 +5319,7 @@ $0$ برای شبکه های عصبی کار ساز نیست!</p>
 ;Theta2 = rand(10,11) * (2 * INIT_EPSILON) - INIT_EPSILON
 ;Theta3 = rand(1,11) * (2 * INIT_EPSILON) - INIT_EPSILON
 </code></pre></div>
-<p><strong>rand(x,y)</strong> تابعی در octave است که
+<p><strong>rand(x,y)</strong> تابعی در اوکتاو است که
 ماتریسی از اعداد حقیقی تصادفی بین 0 و 1 ایجاد می‌کند.</p>
 
 <div class="notices note" ><p>اپسیلون استفاده شده در بالا ربطی به اپسیلون استفاده شده در قسمت بررسی گرادیان ندارد.</p>

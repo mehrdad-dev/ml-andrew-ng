@@ -61,8 +61,13 @@
   
   <link href="/ml-andrew-ng/css/foo.css" rel="stylesheet"><link href="/ml-andrew-ng/css/bar.css" rel="stylesheet">
 
+  
+  
   <script src="/ml-andrew-ng/js/jquery-3.3.1.min.js"></script>
-
+  
+  <script src="/ml-andrew-ng/js/tipso.js"></script>
+  <link href="/ml-andrew-ng/css/tipso.css" rel="stylesheet">
+  <link href="/ml-andrew-ng/css/animate.css" rel="stylesheet">
   
   
   
@@ -3866,9 +3871,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week1/supervised/" title="یادگیری نظارتی چیست؟" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week1/supervised/" title="یادگیری با نظارت چیست؟" class="dd-item ">
         <a href="/ml-andrew-ng/week1/supervised/">
-        یادگیری نظارتی چیست؟
+        یادگیری با نظارت چیست؟
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -3887,9 +3892,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week1/unsupervised/" title="یادگیری غیر نظارتی چیست؟" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week1/unsupervised/" title="یادگیری بدون نظارت چیست؟" class="dd-item ">
         <a href="/ml-andrew-ng/week1/unsupervised/">
-        یادگیری غیر نظارتی چیست؟
+        یادگیری بدون نظارت چیست؟
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -4175,9 +4180,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week2/debugging-gradient/" title="Debugging Gradient" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week2/debugging-gradient/" title="اشکال زدایی گرادیان" class="dd-item ">
         <a href="/ml-andrew-ng/week2/debugging-gradient/">
-        Debugging Gradient
+        اشکال زدایی گرادیان
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -4766,9 +4771,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week5/backpropagation-1/" title="Backpropagation قسمت اول" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week5/backpropagation-1/" title="پس انتشار قسمت اول" class="dd-item ">
         <a href="/ml-andrew-ng/week5/backpropagation-1/">
-        Backpropagation قسمت اول
+        پس انتشار قسمت اول
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -4787,9 +4792,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week5/backpropagation-2/" title="Backpropagation قسمت دوم" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week5/backpropagation-2/" title="پس انتشار قسمت دوم" class="dd-item ">
         <a href="/ml-andrew-ng/week5/backpropagation-2/">
-        Backpropagation قسمت دوم
+        پس انتشار قسمت دوم
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -4808,9 +4813,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week5/unrolling-parameters/" title="Unrolling Parameters" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week5/unrolling-parameters/" title="بازکردن پارامتر ها" class="dd-item ">
         <a href="/ml-andrew-ng/week5/unrolling-parameters/">
-        Unrolling Parameters
+        بازکردن پارامتر ها
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -5323,7 +5328,7 @@ $- y \hspace{0.2cm} log(h_\theta(x))$
 <p>$$
 J(\theta) = - \frac{1}{m} \sum_{i = 1}^m [y^{(i)} log(h_\theta(x^{(i)})) + (1 - y^{(i)}) log(1 - h_\theta(x^{(i)})) ]
 $$</p>
-<p>و پیاده سازی برداری شده (vectorized) به این صورت خواهد بود:</p>
+<p>و پیاده سازی برداری شده به این صورت خواهد بود:</p>
 <p>$$
 \begin{align*} &amp; h = g(X\theta)\newline &amp; J(\theta) = \frac{1}{m} \cdot \left(-y^{T}\log(h)-(1-y)^{T}\log(1-h)\right) \end{align*}
 $$</p>
@@ -5337,7 +5342,7 @@ $$</p>
 \begin{align*} &amp; Repeat \lbrace \newline &amp;  \theta_j := \theta_j - \frac{\alpha}{m} \sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)}) x_j^{(i)} \newline &amp; \rbrace \end{align*}
 $$</p>
 <p>توجه داشته باشید که این الگوریتم مشابه الگوریتمی است که ما در رگرسیون خطی استفاده کردیم، هنوز باید به صورت همزمان همه مقادیر $\theta$ را به روز کنیم.</p>
-<p>و پیاده سازی برداری شده (vectorized) به این صورت خواهد بود:</p>
+<p>و پیاده سازی برداری شده به این صورت خواهد بود:</p>
 <p>$$
 \theta := \theta - \frac{\alpha}{m} X^T g((X \theta) -\vec{y} )
 $$</p>

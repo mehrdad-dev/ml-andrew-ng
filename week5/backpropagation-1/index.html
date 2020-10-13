@@ -38,7 +38,7 @@
 
   <link rel="icon" href="/ml-andrew-ng/images/favicon.png" type="image/png">
 
-  <title>Backpropagation قسمت اول | Machine Learning Andrew Ng</title>
+  <title>پس انتشار قسمت اول | Machine Learning Andrew Ng</title>
 
   
   <link href="/ml-andrew-ng/css/nucleus.css" rel="stylesheet">
@@ -61,8 +61,13 @@
   
   <link href="/ml-andrew-ng/css/foo.css" rel="stylesheet"><link href="/ml-andrew-ng/css/bar.css" rel="stylesheet">
 
+  
+  
   <script src="/ml-andrew-ng/js/jquery-3.3.1.min.js"></script>
-
+  
+  <script src="/ml-andrew-ng/js/tipso.js"></script>
+  <link href="/ml-andrew-ng/css/tipso.css" rel="stylesheet">
+  <link href="/ml-andrew-ng/css/animate.css" rel="stylesheet">
   
   
   
@@ -3866,9 +3871,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week1/supervised/" title="یادگیری نظارتی چیست؟" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week1/supervised/" title="یادگیری با نظارت چیست؟" class="dd-item ">
         <a href="/ml-andrew-ng/week1/supervised/">
-        یادگیری نظارتی چیست؟
+        یادگیری با نظارت چیست؟
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -3887,9 +3892,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week1/unsupervised/" title="یادگیری غیر نظارتی چیست؟" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week1/unsupervised/" title="یادگیری بدون نظارت چیست؟" class="dd-item ">
         <a href="/ml-andrew-ng/week1/unsupervised/">
-        یادگیری غیر نظارتی چیست؟
+        یادگیری بدون نظارت چیست؟
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -4175,9 +4180,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week2/debugging-gradient/" title="Debugging Gradient" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week2/debugging-gradient/" title="اشکال زدایی گرادیان" class="dd-item ">
         <a href="/ml-andrew-ng/week2/debugging-gradient/">
-        Debugging Gradient
+        اشکال زدایی گرادیان
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -4766,9 +4771,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week5/backpropagation-1/" title="Backpropagation قسمت اول" class="dd-item active">
+      <li data-nav-id="/ml-andrew-ng/week5/backpropagation-1/" title="پس انتشار قسمت اول" class="dd-item active">
         <a href="/ml-andrew-ng/week5/backpropagation-1/">
-        Backpropagation قسمت اول
+        پس انتشار قسمت اول
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -4787,9 +4792,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week5/backpropagation-2/" title="Backpropagation قسمت دوم" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week5/backpropagation-2/" title="پس انتشار قسمت دوم" class="dd-item ">
         <a href="/ml-andrew-ng/week5/backpropagation-2/">
-        Backpropagation قسمت دوم
+        پس انتشار قسمت دوم
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -4808,9 +4813,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week5/unrolling-parameters/" title="Unrolling Parameters" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week5/unrolling-parameters/" title="بازکردن پارامتر ها" class="dd-item ">
         <a href="/ml-andrew-ng/week5/unrolling-parameters/">
-        Unrolling Parameters
+        بازکردن پارامتر ها
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -5260,7 +5265,7 @@
           
           
           
-          <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week5/'> هفته پنجم</a> > Backpropagation قسمت اول
+          <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week5/'> هفته پنجم</a> > پس انتشار قسمت اول
           
           
           
@@ -5277,7 +5282,7 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#الگوریتم-backpropagation">الگوریتم Backpropagation</a></li>
+        <li><a href="#الگوریتم-پس-انتشار">الگوریتم پس انتشار</a></li>
       </ul>
     </li>
   </ul>
@@ -5297,15 +5302,15 @@
           
           <h1>
             
-            Backpropagation قسمت اول
+            پس انتشار قسمت اول
           </h1>
           
 
           
 <div class="page-description"><i class="fas fa-clock"></i> 4 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/10/01
 </div>
-<p>اصطلاح <strong>Backpropagation</strong> یا به فارسی <strong>پس انتشار</strong>
-در شبکه های عصبی، برای به حداقل رساندن تابع هزینه (minimizing cost function)
+<p><strong>پس انتشار</strong>
+در شبکه های عصبی، برای به حداقل رساندن تابع هزینه
 مثل کاری که با گرادیان کاهشی در رگرسیون لجستیک و خطی انجام می‌دادیم، استفاده می‌شود.</p>
 <p>هدف ما محاسبه این است:</p>
 <p>$$
@@ -5318,7 +5323,7 @@ $$</p>
 <p>$$
 \frac{\partial}{\partial \Theta_ {i,j} ^{(l)}} J(\Theta)
 $$</p>
-<p>در Backpropagation ما برای هر گره (node) محاسبه خواهیم کرد:</p>
+<p>در پس انتشار ما برای هر گره محاسبه خواهیم کرد:</p>
 <p>$
 = \delta_j ^{(l)}
 $
@@ -5329,12 +5334,12 @@ $ \delta_j ^{(l)} $
 گره فعال ساز $j$ در لایه $l$ است.</p>
 </div>
 
-<p>برای آخرین لایه یا همان لایه خروجی، می‌توانیم وکتور مقادیر دلتا را به این صورت حساب کنیم:
+<p>برای آخرین لایه یا همان لایه خروجی، می‌توانیم بردار مقادیر دلتا را به این صورت حساب کنیم:
 $$
 \delta ^{(L)} = a ^{(L)} - y
 $$</p>
 <p>به طوری که $L$ تعداد کل لایه های ما است و
-$a ^{(L)}$ وکتور خروجی گره های فعال ساز در آخرین لایه است.
+$a ^{(L)}$ بردار خروجی گره های فعال ساز در آخرین لایه است.
 بنابراین مقادیر خطای ما برای آخرین لایه، تفاوت نتایج واقعی در لایه آخر و خروجی صحیح در
 $y$ است.</p>
 <p>برای محاسبه مقادیر دلتای، لایه های قبل از لایه آخر می‌توانیم از معادله ای استفاده کنیم که ما را از سمت راست به چپ عقب می‌‌برد:</p>
@@ -5342,13 +5347,13 @@ $y$ است.</p>
 \delta ^{(l)} = ( (\Theta ^ {(l)}) ^ T  \delta ^ {(l+1)}) \hspace{0.2cm} .*  \hspace{0.2cm} {g}&rsquo; (z^{(l)})
 $$</p>
 <p>مقادیر دلتای لایه $l$ با ضرب مقادیر دلتا در لایه بعدی با ماتریس تتا لایه $l$ محاسبه می‌شود،
-سپس به صورت element-wise آن را در تابعی به اسم g-prime یا همان $g'$ ضرب می‌کنیم.</p>
+سپس به صورت عنصر به عنصر آن را در تابعی به اسم g-prime یا همان $g'$ ضرب می‌کنیم.</p>
 <p>که $g'$ مشتق تابع فعال سازی $g$ است، و به عنوان ورودی $z^{(l)}$ را می‌گیرد.</p>
 <p>بخش $g'$ را به صورت زیر نیز می‌توان نوشت:
 $$
 g&rsquo;(u) = g(u) \hspace{0.2cm} .*  \hspace{0.2cm} (1 - g(u))
 $$</p>
-<p>و معادله کامل B‌ackpropagation برای گره های داخلی را به این شکل می‌نویسیم:
+<p>و معادله کامل پس انتشار برای گره های داخلی را به این شکل می‌نویسیم:
 $$
 \delta ^{(l)} = ( (\Theta ^ {(l)}) ^ T  \delta ^ {(l+1)}) \hspace{0.2cm} .*  \hspace{0.2cm} a^{(l)}
 \hspace{0.2cm} .*  \hspace{0.2cm}  (1 -  a^{(l)})
@@ -5361,12 +5366,12 @@ a_j ^{(t) (l)} \delta _ i ^{(t) (l+1)}
 $$</p>
 <p><strong>نکته:</strong></p>
 <p>$\delta ^{(l+1)}$ و $a ^{(l+1)}$
-وکتور هایی با $s_ {l+1}$ عضو هستند و
-$a ^ {(l)}$ وکتوری با $s_l$ عضو است،
+بردار هایی با $s_ {l+1}$ عضو هستند و
+$a ^ {(l)}$ برداری با $s_l$ عضو است،
 که ضرب آن ها ماتریسی تولید می‌کند که $s_ {l+1}$ در  $s_l$  است،
 که ابعاد آن شبیه به $\Theta^{(l)}$ است.</p>
 <p>که این فرایند برای هر عنصر موجود در $\Theta^{(l)}$ گرادیان تولید می‌کند.</p>
-<h3 id="الگوریتم-backpropagation">الگوریتم Backpropagation</h3>
+<h3 id="الگوریتم-پس-انتشار">الگوریتم پس انتشار</h3>
 <p>تصور کنید چنین مجموعه آموزشی داریم:
 $
 \{  (x^{(1)}, y^{(1)}) &hellip; (x^{(m)}, y^{(m)}) \}
@@ -5380,7 +5385,7 @@ $</p>
 <p>تنظیم $a ^{(1)} := x ^{(t)}$</p>
 </li>
 <li>
-<p>برای انجام forward propagation محاسبه $a ^{(1)}$ برای $l = 1,2,3, &hellip; , L$ را انجام می‌دهیم</p>
+<p>برای انجام انتشار به جلو محاسبه $a ^{(1)}$ برای $l = 1,2,3, &hellip; , L$ را انجام می‌دهیم</p>
 </li>
 <li>
 <p>با استفاده از $y^{(t)}$ ، محاسبه $\delta ^{(L)} = a ^{(L)} - y^{(t)}$ را انجام می‌دهیم</p>
@@ -5399,7 +5404,7 @@ $</p>
 <p>$D _{i,j} ^{(l)} := \frac{1}{m} \Delta _{i,j} ^{(l)} $ اگر $j = 0$</p>
 </li>
 </ul>
-<p>ماتریس دلتا بزرگ یا همان $\Delta$ به عنوان <strong>جمع کننده</strong> (accumulator) برای جمع آوری
+<p>ماتریس دلتا بزرگ یا همان $\Delta$ به عنوان <strong>انباشتگر</strong> برای جمع آوری
 مقادیر ما در طول کار و محاسبه مشتق جزئی استفاده می‌شود.</p>
 <p>اثبات واقعی این الگوریتم کاملا پیچیده است، همانطور که Andew Ng می‌گوید که
 استنتاج و اثبات آن پیچیده است، اما ما می‌توانیم از معادلات برای انجام کارمان استفاده کنیم بدون دانستن جزئیات آن.</p>
@@ -6411,7 +6416,7 @@ $$</p>
 			<a class="nav nav-prev" href="/ml-andrew-ng/week5/nn-cost-function/" title="تابع هزینه شبکه عصبی"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ml-andrew-ng/week5/backpropagation-2/" title="Backpropagation قسمت دوم" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/ml-andrew-ng/week5/backpropagation-2/" title="پس انتشار قسمت دوم" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

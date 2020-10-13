@@ -61,8 +61,13 @@
   
   <link href="/ml-andrew-ng/css/foo.css" rel="stylesheet"><link href="/ml-andrew-ng/css/bar.css" rel="stylesheet">
 
+  
+  
   <script src="/ml-andrew-ng/js/jquery-3.3.1.min.js"></script>
-
+  
+  <script src="/ml-andrew-ng/js/tipso.js"></script>
+  <link href="/ml-andrew-ng/css/tipso.css" rel="stylesheet">
+  <link href="/ml-andrew-ng/css/animate.css" rel="stylesheet">
   
   
   
@@ -3866,9 +3871,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week1/supervised/" title="یادگیری نظارتی چیست؟" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week1/supervised/" title="یادگیری با نظارت چیست؟" class="dd-item ">
         <a href="/ml-andrew-ng/week1/supervised/">
-        یادگیری نظارتی چیست؟
+        یادگیری با نظارت چیست؟
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -3887,9 +3892,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week1/unsupervised/" title="یادگیری غیر نظارتی چیست؟" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week1/unsupervised/" title="یادگیری بدون نظارت چیست؟" class="dd-item ">
         <a href="/ml-andrew-ng/week1/unsupervised/">
-        یادگیری غیر نظارتی چیست؟
+        یادگیری بدون نظارت چیست؟
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -4175,9 +4180,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week2/debugging-gradient/" title="Debugging Gradient" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week2/debugging-gradient/" title="اشکال زدایی گرادیان" class="dd-item ">
         <a href="/ml-andrew-ng/week2/debugging-gradient/">
-        Debugging Gradient
+        اشکال زدایی گرادیان
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -4766,9 +4771,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week5/backpropagation-1/" title="Backpropagation قسمت اول" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week5/backpropagation-1/" title="پس انتشار قسمت اول" class="dd-item ">
         <a href="/ml-andrew-ng/week5/backpropagation-1/">
-        Backpropagation قسمت اول
+        پس انتشار قسمت اول
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -4787,9 +4792,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week5/backpropagation-2/" title="Backpropagation قسمت دوم" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week5/backpropagation-2/" title="پس انتشار قسمت دوم" class="dd-item ">
         <a href="/ml-andrew-ng/week5/backpropagation-2/">
-        Backpropagation قسمت دوم
+        پس انتشار قسمت دوم
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -4808,9 +4813,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week5/unrolling-parameters/" title="Unrolling Parameters" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week5/unrolling-parameters/" title="بازکردن پارامتر ها" class="dd-item ">
         <a href="/ml-andrew-ng/week5/unrolling-parameters/">
-        Unrolling Parameters
+        بازکردن پارامتر ها
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -5302,53 +5307,53 @@
 <p><img src="../images/image6.png?width=30pc" alt="image6.png"></p>
 <p>که به طور کلی از سه بخش قابل توجه زیر ساخته شده است:</p>
 <ul>
-<li>بدنه سلول (Cell body)</li>
-<li>بخش ورودی دنریت (dendrites)</li>
-<li>بخش خروجی اکسون(axon)</li>
+<li>بدنه سلول</li>
+<li>بخش ورودی دنریت</li>
+<li>بخش خروجی اکسون</li>
 </ul>
 <p><strong>به طور ساده می‌توانیم بگوییم که:</strong></p>
-<p>نورون ها اساسا واحد های محاسباتی هستند که از طریق رشته سیم های دنریت پالس های الکتریکی به اسم  اسپایک (spikes) را ورودی می‌گیرند،
+<p>نورون ها اساسا واحد های محاسباتی هستند که از طریق رشته سیم های دنریت پالس های الکتریکی به اسم  اسپایک را ورودی می‌گیرند،
 و آن ها را به خروجی یا همان اکسون هدایت می‌کنند.
 بنابراین متوجه می‌شویم که نورون ها توسط پالس های الکتریکی با هم ارتباط برقرار می‌کنند.</p>
-<p>در شبکه های عصبی مصنوعی، نورون ها واحد هایی لجستیکی (logistic unit) هستند:</p>
+<p>در شبکه های عصبی مصنوعی، نورون ها واحد هایی لجستیکی هستند:</p>
 <p><img src="../images/image7.png?width=30pc" alt="image7.png"></p>
 <p>در مدل ما دنریت ها شبیه به ویژگی ها ورودی $x_1 &hellip; x_n$ هستند،
 و خروجی ما تابع فرضیه است.</p>
-<p>در این مدل گره ورودی (node) $x_0$ <strong>واحد بایاس</strong> یا <strong>bias unit</strong> نام دارد که همیشه برابر با مقدار ۱ است.
+<p>در این مدل گره ورودی $x_0$ <strong>واحد بایاس</strong> یا  نام دارد که همیشه برابر با مقدار ۱ است.
 در شبکه های عصبی ما از تابع لجستیکی که در طبقه بندی داشتیم استفاده می‌کنیم:
 $$
 \frac{1}{1+e^{- \theta^T x}}
 $$
 اگر چه که در شبکه های عصبی گاهی اوقات آن را <strong>تابع فعال سازی سیگموئید</strong> صدا می‌زنیم،
-وکتور $\theta$ نیز weights یا وزن های مدل نامیده می‌شوند.</p>
+بردار $\theta$ نیز weights یا وزن های مدل نامیده می‌شوند.</p>
 <p>به طور ساده می‌توانیم به این شکل نمایش دهیم:</p>
 <p><img src="../images/image8.png?width=13pc" alt="image8.png"></p>
-<p>نود های ورودی یا لایه اول داخل لایه دوم می‌شوند، و خروجی هم تابع فرضیه است.
-لایه اول را لایه ورودی یا input layer می‌نامیم،
-و لایه دوم را هم output layer یا لایه خروجی می‌نامیم،
+<p>گره های ورودی یا لایه اول داخل لایه دوم می‌شوند، و خروجی هم تابع فرضیه است.
+لایه اول را لایه ورودی می‌نامیم،
+و لایه دوم را هم لایه خروجی می‌نامیم،
 که تابع فرضیه را به عنوان خروجی نتیجه می‌دهد.</p>
-<p>ما می‌توانیم لایه های میانی از نود ها داشته باشیم که بین لایه ورودی و خروجی قرار می‌گیرند، که
-به آن ها لایه های پنهان یا hidden layers می‌گوییم.</p>
-<p>ما نود های لایه های میانی یا پنهان را به صورت
+<p>ما می‌توانیم لایه های میانی از گره ها داشته باشیم که بین لایه ورودی و خروجی قرار می‌گیرند، که
+به آن ها لایه های پنهان می‌گوییم.</p>
+<p>ما گره های لایه های میانی یا پنهان را به صورت
 $a_0 ^2 &hellip; a_n ^2$ نام گذاری می‌کنیم،
-و به آن ها واحد های فعال سازی یا activation units می‌گوییم.</p>
+و به آن ها واحد های فعال سازی می‌گوییم.</p>
 <p>$$
 \begin{align*}&amp; a_i^{(j)} = \text{&ldquo;activation&rdquo; of unit $i$ in layer $j$} \newline&amp; \Theta^{(j)} = \text{matrix of weights controlling function mapping from layer $j$ to layer $j+1$}\end{align*}
 $$</p>
 <p>به طور مثال اگر فقط یک لایه پنهان داشته باشیم به این شکل می‌شود:</p>
 <p><img src="../images/image9.png?width=13pc" alt="image9.png"></p>
-<p>مقدار هر نود فعال ساز به صورت زیر به دست می‌آید:</p>
+<p>مقدار هر گره فعال ساز به صورت زیر به دست می‌آید:</p>
 <p>$$
 \begin{align*} a_1^{(2)} = g(\Theta_{10}^{(1)}x_0 + \Theta_{11}^{(1)}x_1 + \Theta_{12}^{(1)}x_2 + \Theta_{13}^{(1)}x_3) \newline a_2^{(2)} = g(\Theta_{20}^{(1)}x_0 + \Theta_{21}^{(1)}x_1 + \Theta_{22}^{(1)}x_2 + \Theta_{23}^{(1)}x_3) \newline a_3^{(2)} = g(\Theta_{30}^{(1)}x_0 + \Theta_{31}^{(1)}x_1 + \Theta_{32}^{(1)}x_2 + \Theta_{33}^{(1)}x_3) \newline h_\Theta(x) = a_1^{(3)} = g(\Theta_{10}^{(2)}a_0^{(2)} + \Theta_{11}^{(2)}a_1^{(2)} + \Theta_{12}^{(2)}a_2^{(2)} + \Theta_{13}^{(2)}a_3^{(2)}) \newline \end{align*}
 $$</p>
 <p><img src="../images/image10.png?width=40pc" alt="image10.png"></p>
-<p>این به ما می‌گوید که نود های فعال ساز مان را با استفاده از یک ماتریس
+<p>این به ما می‌گوید که گره های فعال ساز مان را با استفاده از یک ماتریس
 $3 \times 4$ از پارامتر ها محاسبه می‌کنیم.
 به این ترتیب که ما هر ردیف (row) از پارامتر ها را به ورودی های خود
-اعمال می‌کنیم، تا مقدار یک نود فعال ساز را بدست آوریم.</p>
+اعمال می‌کنیم، تا مقدار یک گره فعال ساز را بدست آوریم.</p>
 <p><img src="../images/image12.png?width=40pc" alt="image12.png">
 <img src="../images/image11.png?width=40pc" alt="image11.png"></p>
-<p>و خروجی فرضیه ما تابعی لجستیکی است که روی مجموع مقادیر نود های فعال ساز ما اعمال می‌شود،
+<p>و خروجی فرضیه ما تابعی لجستیکی است که روی مجموع مقادیر گره های فعال ساز ما اعمال می‌شود،
 که در ماتریسی از پارامتر های دیگری ($\Theta^{(2)}$) ضرب می‌شود.</p>
 <p><strong>محاسبه $a_1 ^{(2)}$ :</strong>
 <img src="../images/image13.png?width=30pc" alt="image13.png"></p>
@@ -5361,25 +5366,25 @@ $3 \times 4$ از پارامتر ها محاسبه می‌کنیم.
 <img src="../images/image16.png?width=30pc" alt="image16.png"></p>
 
 <div class="notices note" ><p>$\Theta^{(2)}$
-شامل وزن های نود های لایه دوم است.</p>
+شامل وزن های گره های لایه دوم است.</p>
 </div>
 
 <p>به طور کلی هر لابه ماتریس وزن خود را دارد که به شکل
 $ \Theta^{(j)} $ نام گذاری می‌شود.</p>
 <p><strong>ابعاد این ماتریس های وزنی به شکل زیر محاسبه می‌شوند:</strong></p>
-<p>اگر شبکه ما شامل $s_j$ واحد (unit) در هر لایه $j$ است،
+<p>اگر شبکه ما شامل $s_j$ واحد در هر لایه $j$ است،
 و $s_{j+1}$ واحد داخل لایه $j+1$ ام است،
 سپس ابعاد ماتریس $\Theta^{(j)}$ برابر با
 $ s_{j+1} \times (s_j + 1) $ خواهد بود.</p>
 
 <div class="notices note" ><p>1+ آورده شده به خاطر
-نود بایاس است.
-نود بایاس در نود های خروجی شامل نمی‌شود، اما در نود های ورودی وجود دارد.</p>
+گره بایاس است.
+گره بایاس در گره های خروجی شامل نمی‌شود، اما در گره های ورودی وجود دارد.</p>
 </div>
 
 <p><strong>مثال:</strong></p>
-<p>اگر لایه اول ۲ نود ورودی،
-و لایه دوم ۴ نود فعال ساز داشته باشد،
+<p>اگر لایه اول ۲ گره ورودی،
+و لایه دوم ۴ گره فعال ساز داشته باشد،
 ابعاد $\Theta^{(1)}$ به صورت
 $4 \times 3$ خواهد بود،
 به طوری که:</p>

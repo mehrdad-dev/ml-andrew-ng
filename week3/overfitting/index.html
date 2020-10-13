@@ -61,8 +61,13 @@
   
   <link href="/ml-andrew-ng/css/foo.css" rel="stylesheet"><link href="/ml-andrew-ng/css/bar.css" rel="stylesheet">
 
+  
+  
   <script src="/ml-andrew-ng/js/jquery-3.3.1.min.js"></script>
-
+  
+  <script src="/ml-andrew-ng/js/tipso.js"></script>
+  <link href="/ml-andrew-ng/css/tipso.css" rel="stylesheet">
+  <link href="/ml-andrew-ng/css/animate.css" rel="stylesheet">
   
   
   
@@ -3866,9 +3871,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week1/supervised/" title="یادگیری نظارتی چیست؟" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week1/supervised/" title="یادگیری با نظارت چیست؟" class="dd-item ">
         <a href="/ml-andrew-ng/week1/supervised/">
-        یادگیری نظارتی چیست؟
+        یادگیری با نظارت چیست؟
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -3887,9 +3892,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week1/unsupervised/" title="یادگیری غیر نظارتی چیست؟" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week1/unsupervised/" title="یادگیری بدون نظارت چیست؟" class="dd-item ">
         <a href="/ml-andrew-ng/week1/unsupervised/">
-        یادگیری غیر نظارتی چیست؟
+        یادگیری بدون نظارت چیست؟
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -4175,9 +4180,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week2/debugging-gradient/" title="Debugging Gradient" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week2/debugging-gradient/" title="اشکال زدایی گرادیان" class="dd-item ">
         <a href="/ml-andrew-ng/week2/debugging-gradient/">
-        Debugging Gradient
+        اشکال زدایی گرادیان
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -4766,9 +4771,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week5/backpropagation-1/" title="Backpropagation قسمت اول" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week5/backpropagation-1/" title="پس انتشار قسمت اول" class="dd-item ">
         <a href="/ml-andrew-ng/week5/backpropagation-1/">
-        Backpropagation قسمت اول
+        پس انتشار قسمت اول
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -4787,9 +4792,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week5/backpropagation-2/" title="Backpropagation قسمت دوم" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week5/backpropagation-2/" title="پس انتشار قسمت دوم" class="dd-item ">
         <a href="/ml-andrew-ng/week5/backpropagation-2/">
-        Backpropagation قسمت دوم
+        پس انتشار قسمت دوم
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -4808,9 +4813,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week5/unrolling-parameters/" title="Unrolling Parameters" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week5/unrolling-parameters/" title="بازکردن پارامتر ها" class="dd-item ">
         <a href="/ml-andrew-ng/week5/unrolling-parameters/">
-        Unrolling Parameters
+        بازکردن پارامتر ها
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -5320,18 +5325,18 @@ $y = \theta_0 + \theta_1x$ را بر روی  مجموعه داده نشان می
 <p>سمت راست ترین شکل نتیجه چند جمله ای مرتبه ۵
 $y = \sum_{j = 0}^5  \theta _j x^j$ است.</p>
 <p>ما می‌بینیم که منحنی اعمال شده به خوبی از داده ها عبور می‌کند، اما انتظار نداریم که
-این پیش بینی کننده (predictor) خوبی برای
+این پیش بینی کننده خوبی برای
 پیش بینی قیمت مسکن (y) در مناطق مختلف قابل سکونت (x) باشد.</p>
 <p>بدون اینکه به طور رسمی معنی این اصطلاحات را مشخص کنیم، می‌گوییم که:</p>
 <p>شکل سمت چپ نمونه ای از <strong>underfitting</strong> است.
 و شکل سمت راست نیز نمونه ای <strong>overfitting</strong> است.</p>
 <h3 id="underfitting">Underfitting</h3>
-<p>Underfitting یا بایاس زیاد (high bias)
+<p>Underfitting بایاس زیاد
 زمانی رخ می‌دهد که شکل حاصل از تابع فرضیه ما (h) به طور ضعیفی با روند داده های ما در مجموعه داده (dataset) تطابق داشته باشد.</p>
 <p>این وضعیت معمولا به دلیل بسیار ساده بودن تابع یا استفاده از ویژگی های کم رخ می‌دهد.</p>
 <h3 id="overfitting">Overfitting</h3>
-<p>در طرف دیگر overfitting یا واریانس زیاد (high variance)
-وضعیتی است که توسط یک تابع فرضیه ایجاد می‌شود که تناسب خوبی با داده های ما دارد، اما پیش بینی داده های جدید که تا کنون ندیده است را به خوبی انجام نمی‌دهد، اصطلاحا generalize نیست.</p>
+<p>در طرف دیگر overfitting واریانس زیاد
+وضعیتی است که توسط یک تابع فرضیه ایجاد می‌شود که تناسب خوبی با داده های ما دارد، اما پیش بینی داده های جدید که تا کنون ندیده است را به خوبی انجام نمی‌دهد، اصطلاحا تعمیم داده شده یا عمومی نیست.</p>
 <p>این وضعیت معمولا به دلیل پیچیده بودن تابع فرضیه ایجاد می‌شود که انحنا ها و زوایای غیر ضروری
 زیادی را ایجاد می‌کند که با داده های ما ارتباطی ندارند.</p>
 <p><img src="../images/image5.png?width=40pc" alt="image5.png"></p>
@@ -5341,14 +5346,14 @@ $y = \sum_{j = 0}^5  \theta _j x^j$ است.</p>
 </ol>
 <ul>
 <li>به طور دستی ویژگی هایی را برای نگهداری انتخاب کنید</li>
-<li>از یک الگوریتم model selection استفاده کنید</li>
+<li>از یک الگوریتم انتخاب مدل استفاده کنید</li>
 </ul>
 <ol start="2">
-<li>منظم سازی | Regularization</li>
+<li><span class="top-dict" data-tipso="regularization <br>">منظم سازی </span></li>
 </ol>
 <ul>
 <li>همه ویژگی ها را نگه دارید، اما اندازه پارامتر های $\theta_j$ را کاهش دهید</li>
-<li>Regularization زمانی خوب عمل می‌کند که ویژگی های مفیدی داشته باشیم</li>
+<li>منظم سازی زمانی خوب عمل می‌کند که ویژگی های مفیدی داشته باشیم</li>
 </ul>
 
 

@@ -61,8 +61,13 @@
   
   <link href="/ml-andrew-ng/css/foo.css" rel="stylesheet"><link href="/ml-andrew-ng/css/bar.css" rel="stylesheet">
 
+  
+  
   <script src="/ml-andrew-ng/js/jquery-3.3.1.min.js"></script>
-
+  
+  <script src="/ml-andrew-ng/js/tipso.js"></script>
+  <link href="/ml-andrew-ng/css/tipso.css" rel="stylesheet">
+  <link href="/ml-andrew-ng/css/animate.css" rel="stylesheet">
   
   
   
@@ -3866,9 +3871,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week1/supervised/" title="یادگیری نظارتی چیست؟" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week1/supervised/" title="یادگیری با نظارت چیست؟" class="dd-item ">
         <a href="/ml-andrew-ng/week1/supervised/">
-        یادگیری نظارتی چیست؟
+        یادگیری با نظارت چیست؟
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -3887,9 +3892,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week1/unsupervised/" title="یادگیری غیر نظارتی چیست؟" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week1/unsupervised/" title="یادگیری بدون نظارت چیست؟" class="dd-item ">
         <a href="/ml-andrew-ng/week1/unsupervised/">
-        یادگیری غیر نظارتی چیست؟
+        یادگیری بدون نظارت چیست؟
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -4175,9 +4180,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week2/debugging-gradient/" title="Debugging Gradient" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week2/debugging-gradient/" title="اشکال زدایی گرادیان" class="dd-item ">
         <a href="/ml-andrew-ng/week2/debugging-gradient/">
-        Debugging Gradient
+        اشکال زدایی گرادیان
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -4766,9 +4771,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week5/backpropagation-1/" title="Backpropagation قسمت اول" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week5/backpropagation-1/" title="پس انتشار قسمت اول" class="dd-item ">
         <a href="/ml-andrew-ng/week5/backpropagation-1/">
-        Backpropagation قسمت اول
+        پس انتشار قسمت اول
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -4787,9 +4792,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week5/backpropagation-2/" title="Backpropagation قسمت دوم" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week5/backpropagation-2/" title="پس انتشار قسمت دوم" class="dd-item ">
         <a href="/ml-andrew-ng/week5/backpropagation-2/">
-        Backpropagation قسمت دوم
+        پس انتشار قسمت دوم
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -4808,9 +4813,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week5/unrolling-parameters/" title="Unrolling Parameters" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week5/unrolling-parameters/" title="بازکردن پارامتر ها" class="dd-item ">
         <a href="/ml-andrew-ng/week5/unrolling-parameters/">
-        Unrolling Parameters
+        بازکردن پارامتر ها
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -5296,8 +5301,8 @@
           
 <div class="page-description"><i class="fas fa-clock"></i> 2 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/10/11
 </div>
-<p>بررسی گرادیان یا همان Gradient checking به شما این اطمینان را می‌دهد که
-Backpropagation همانطور که در نظر گرفته شده کار می‌کند‌
+<p>بررسی گرادیان به شما این اطمینان را می‌دهد که
+پس انتشار همانطور که در نظر گرفته شده کار می‌کند‌
 (مطابق هدف کار می‌کند).</p>
 <p>ما می‌توانیم مشتق تابع خود را به این صورت تقریب بزنیم:
 $$
@@ -5311,7 +5316,7 @@ $$</p>
 ریاضیات به درستی کار می‌کنند،
 اگر مقدار ϵ خیلی کوچک باشد امکان دارد
 که با مشکلات عددی مواجه شویم.</p>
-<p>از این رو، ما فقط epsilon را به ماتریس
+<p>از این رو، ما فقط اپسیلون را به ماتریس
 $\Theta _j$ اضافه یا کم می‌کنیم.
 در اکتاو می‌توانیم آن را به صورت زیر انجام دهیم:</p>
 <div align="left">
@@ -5325,9 +5330,9 @@ $\Theta _j$ اضافه یا کم می‌کنیم.
 ;end
 </code></pre></div>
 <p>قبلا نحوه محاسبه deltaVector را مشاهده کردیم،
-و بعد از محاسبه وکتور gradApprox در بالا
+و بعد از محاسبه بردار gradApprox در بالا
 می‌توانیم آن را چک کنیم $gradApprox \approx deltaVector$ .</p>
-<p>زمانی که یک بار تأیید شد که الگوریتم backpropagation شما درست کار می‌کند،
+<p>زمانی که یک بار تأیید شد که الگوریتم پس انتشار شما درست کار می‌کند،
 دیگر نیازی به محاسبه مجدد gradApprox نیست،
 زیرا که قطعه کد محاسبه gradApprox می‌تواند بسیار کند باشد!</p>
 
@@ -6326,7 +6331,7 @@ $\Theta _j$ اضافه یا کم می‌کنیم.
 	 
 	 
 		
-			<a class="nav nav-prev" href="/ml-andrew-ng/week5/unrolling-parameters/" title="Unrolling Parameters"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/ml-andrew-ng/week5/unrolling-parameters/" title="بازکردن پارامتر ها"> <i class="fa fa-chevron-left"></i></a>
 		
 		
 			<a class="nav nav-next" href="/ml-andrew-ng/week5/random-initialization/" title="مقدار دهی اولیه تصادفی" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>

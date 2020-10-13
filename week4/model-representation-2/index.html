@@ -61,8 +61,13 @@
   
   <link href="/ml-andrew-ng/css/foo.css" rel="stylesheet"><link href="/ml-andrew-ng/css/bar.css" rel="stylesheet">
 
+  
+  
   <script src="/ml-andrew-ng/js/jquery-3.3.1.min.js"></script>
-
+  
+  <script src="/ml-andrew-ng/js/tipso.js"></script>
+  <link href="/ml-andrew-ng/css/tipso.css" rel="stylesheet">
+  <link href="/ml-andrew-ng/css/animate.css" rel="stylesheet">
   
   
   
@@ -3866,9 +3871,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week1/supervised/" title="یادگیری نظارتی چیست؟" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week1/supervised/" title="یادگیری با نظارت چیست؟" class="dd-item ">
         <a href="/ml-andrew-ng/week1/supervised/">
-        یادگیری نظارتی چیست؟
+        یادگیری با نظارت چیست؟
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -3887,9 +3892,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week1/unsupervised/" title="یادگیری غیر نظارتی چیست؟" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week1/unsupervised/" title="یادگیری بدون نظارت چیست؟" class="dd-item ">
         <a href="/ml-andrew-ng/week1/unsupervised/">
-        یادگیری غیر نظارتی چیست؟
+        یادگیری بدون نظارت چیست؟
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -4175,9 +4180,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week2/debugging-gradient/" title="Debugging Gradient" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week2/debugging-gradient/" title="اشکال زدایی گرادیان" class="dd-item ">
         <a href="/ml-andrew-ng/week2/debugging-gradient/">
-        Debugging Gradient
+        اشکال زدایی گرادیان
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -4766,9 +4771,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week5/backpropagation-1/" title="Backpropagation قسمت اول" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week5/backpropagation-1/" title="پس انتشار قسمت اول" class="dd-item ">
         <a href="/ml-andrew-ng/week5/backpropagation-1/">
-        Backpropagation قسمت اول
+        پس انتشار قسمت اول
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -4787,9 +4792,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week5/backpropagation-2/" title="Backpropagation قسمت دوم" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week5/backpropagation-2/" title="پس انتشار قسمت دوم" class="dd-item ">
         <a href="/ml-andrew-ng/week5/backpropagation-2/">
-        Backpropagation قسمت دوم
+        پس انتشار قسمت دوم
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -4808,9 +4813,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week5/unrolling-parameters/" title="Unrolling Parameters" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week5/unrolling-parameters/" title="بازکردن پارامتر ها" class="dd-item ">
         <a href="/ml-andrew-ng/week5/unrolling-parameters/">
-        Unrolling Parameters
+        بازکردن پارامتر ها
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -5296,7 +5301,7 @@
           
 <div class="page-description"><i class="fas fa-clock"></i> 3 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/09/20
 </div>
-<p>در این قسمت چگونگی انجام محاسبات را به صورت بهینه تر از طریق پیاده سازی به روش vectorized بررسی می‌کنیم.
+<p>در این قسمت چگونگی انجام محاسبات را به صورت بهینه تر از طریق پیاده سازی به روش برداری شده بررسی می‌کنیم.
 و می‌آموزیم که چرا شبکه های عصبی خوب هستند و چطور می‌توانیم از آن ها برای یادگیری چیز های پیچیده و غیر خطی استفاده کنیم.</p>
 <p>برای یادآوری عبارات زیر مثالی های شبکه های عصبی بودند:</p>
 <p>$$
@@ -5311,7 +5316,7 @@ $z$
 $$
 \begin{align*}a_1^{(2)} = g(z_1^{(2)}) \newline a_2^{(2)} = g(z_2^{(2)}) \newline a_3^{(2)} = g(z_3^{(2)}) \newline \end{align*}
 $$</p>
-<p>به عبارت دیگر، برای لایه $j=2$ و نود $k$ متغیر $z$ به این صورت خواهد بود:
+<p>به عبارت دیگر، برای لایه $j=2$ و گره $k$ متغیر $z$ به این صورت خواهد بود:
 $$
 z_k ^{(2)} = \Theta_{k,0} ^{(1)}x_0 + \Theta_{k,1} ^{(1)}x_1 + &hellip; + \Theta_{k,n} ^{(1)} x_n
 $$</p>
@@ -5337,24 +5342,24 @@ $$</p>
 <p>ما ماتریس $\Theta^{(j - 1)}$ با ابعاد
 $ s_j \times (n+1) $
 ($s_j$ تعداد گره های فعال ساز ما است)
-را با وکتور $a^{(j - 1)}$ با ارتفاع $n+1$
+را با بردار $a^{(j - 1)}$ با ارتفاع $n+1$
 ضرب می‌کنیم،
-که به عنوان خروجی به ما وکتور $z^{(j)}$ را با ارتفاغ $s_j$ می‌دهد.</p>
-<p>اکنون ما یک وکتور از نود های فعال ساز مان از لایه j ام داریم:
+که به عنوان خروجی به ما بردار $z^{(j)}$ را با ارتفاغ $s_j$ می‌دهد.</p>
+<p>اکنون ما یک بردار از گره های فعال ساز مان از لایه j ام داریم:
 $$
 a^{(j)} = g(z^{(j)})
 $$</p>
-<p>همانطور که می‌بینیم g، تابع سیگموئید را به صورت عنصر به عنصر (element-wise)
-به هر یک از اعضای وکتور $z^{(j)}$
+<p>همانطور که می‌بینیم g، تابع سیگموئید را به صورت عنصر به عنصر
+به هر یک از اعضای بردار $z^{(j)}$
 اعمال می‌کند.</p>
-<p>و سپس می‌توانیم واحد بایاس (bias unit) که برابر ۱ است را
+<p>و سپس می‌توانیم واحد بایاس که برابر ۱ است را
 بعد از محاسبه $a^{(j)}$ اضافه کنیم.
 واحد بایاس همان $a_0 ^{(1)}$  است که برابر با ۱ می‌باشد.</p>
-<p>قبل از محاسبه فرضیه نهایی اجازه دهید یک وکتور $z$ دیگر را هم محاسبه کنیم:
+<p>قبل از محاسبه فرضیه نهایی اجازه دهید یک بردار $z$ دیگر را هم محاسبه کنیم:
 $$
 z^{(j+1)} = \Theta^{(j)} a^{(j)}
 $$</p>
-<p>این وکتور را از طریق ضرب ماتریس تتا بعد از $\Theta^{(j - 1)}$ با مقادیر تمام نود های فعال سازی که
+<p>این بردار را از طریق ضرب ماتریس تتا بعد از $\Theta^{(j - 1)}$ با مقادیر تمام گره های فعال سازی که
 به دست آورده ایم، محاسبه می‌کنیم.</p>
 <p>آخرین ماتریس تتا یعنی $\Theta^{(j)}$
 فقط یک ردیف خواهد داشت که در یک ستون $a^{(j)}$

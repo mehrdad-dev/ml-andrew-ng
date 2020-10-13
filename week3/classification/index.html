@@ -61,8 +61,13 @@
   
   <link href="/ml-andrew-ng/css/foo.css" rel="stylesheet"><link href="/ml-andrew-ng/css/bar.css" rel="stylesheet">
 
+  
+  
   <script src="/ml-andrew-ng/js/jquery-3.3.1.min.js"></script>
-
+  
+  <script src="/ml-andrew-ng/js/tipso.js"></script>
+  <link href="/ml-andrew-ng/css/tipso.css" rel="stylesheet">
+  <link href="/ml-andrew-ng/css/animate.css" rel="stylesheet">
   
   
   
@@ -3866,9 +3871,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week1/supervised/" title="یادگیری نظارتی چیست؟" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week1/supervised/" title="یادگیری با نظارت چیست؟" class="dd-item ">
         <a href="/ml-andrew-ng/week1/supervised/">
-        یادگیری نظارتی چیست؟
+        یادگیری با نظارت چیست؟
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -3887,9 +3892,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week1/unsupervised/" title="یادگیری غیر نظارتی چیست؟" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week1/unsupervised/" title="یادگیری بدون نظارت چیست؟" class="dd-item ">
         <a href="/ml-andrew-ng/week1/unsupervised/">
-        یادگیری غیر نظارتی چیست؟
+        یادگیری بدون نظارت چیست؟
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -4175,9 +4180,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week2/debugging-gradient/" title="Debugging Gradient" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week2/debugging-gradient/" title="اشکال زدایی گرادیان" class="dd-item ">
         <a href="/ml-andrew-ng/week2/debugging-gradient/">
-        Debugging Gradient
+        اشکال زدایی گرادیان
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -4766,9 +4771,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week5/backpropagation-1/" title="Backpropagation قسمت اول" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week5/backpropagation-1/" title="پس انتشار قسمت اول" class="dd-item ">
         <a href="/ml-andrew-ng/week5/backpropagation-1/">
-        Backpropagation قسمت اول
+        پس انتشار قسمت اول
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -4787,9 +4792,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week5/backpropagation-2/" title="Backpropagation قسمت دوم" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week5/backpropagation-2/" title="پس انتشار قسمت دوم" class="dd-item ">
         <a href="/ml-andrew-ng/week5/backpropagation-2/">
-        Backpropagation قسمت دوم
+        پس انتشار قسمت دوم
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -4808,9 +4813,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week5/unrolling-parameters/" title="Unrolling Parameters" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week5/unrolling-parameters/" title="بازکردن پارامتر ها" class="dd-item ">
         <a href="/ml-andrew-ng/week5/unrolling-parameters/">
-        Unrolling Parameters
+        بازکردن پارامتر ها
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -5277,10 +5282,10 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#logistic-regresstion">Logistic Regresstion</a></li>
-        <li><a href="#binary-classification">Binary Classification</a></li>
-        <li><a href="#hypothesis-representation">Hypothesis Representation</a></li>
-        <li><a href="#decision-boundary">Decision Boundary</a></li>
+        <li><a href="#رگرسیون-لجستیک">رگرسیون لجستیک</a></li>
+        <li><a href="#طبقه-بندی-دودویی">طبقه بندی دودویی</a></li>
+        <li><a href="#ارائه-فرضیه">ارائه فرضیه</a></li>
+        <li><a href="#مرز-تصمیم-گیری">مرز تصمیم گیری</a></li>
       </ul>
     </li>
   </ul>
@@ -5307,25 +5312,27 @@
           
 <div class="page-description"><i class="fas fa-clock"></i> 3 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/09/10
 </div>
-<h3 id="logistic-regresstion">Logistic Regresstion</h3>
-<p>اینجا از مسائل Regression به مسائل Classification
-می‌رویم، اما با اسم Logistic Regression گیج نشوید!
+<h3 id="رگرسیون-لجستیک">رگرسیون لجستیک</h3>
+<p>اینجا از مسائل رگرسیون به مسائل طبقه بندی
+می‌رویم، اما با اسم رگرسیون لجستیک گیج نشوید!
 این اسم به دلایل تاریخی نامگذاری شده که در واقع
 رویکردی برای حل مسائل طبقه بندی است نه رگرسیون!</p>
 <p><img src="../images/image86.png?width=18pc" alt="image86.png"></p>
-<h3 id="binary-classification">Binary Classification</h3>
+<h3 id="طبقه-بندی-دودویی">طبقه بندی دودویی</h3>
 <p>به جای اینکه خروجی یعنی $y$  مقداری پیوسته در یک
 محدوده باشد، فقط $0$ یا $1$ است، یعنی : $ y \in \text{{0,1}} $</p>
 <p>به طوری که معمولا به $0$، negative class   و به $1$ هم
 positive class می‌گوییم، اما شما آزاد هستید که هر
 اسم دلخواهی را برای نام‌گذاری آن ها انتخاب کنید!</p>
 <p>فعلا فقط دو تا کلاس داریم که به این نوع از مسئله
-Binary Classification می‌گوییم.</p>
+طبقه بندی دودویی می‌گوییم.</p>
 <p>فرض کنید از رگرسیون خطی استفاده کنیم و نتیجه
 تمام پیش بینی های بیشتر از $0.5$ را به عنوان 1 در
 نظر بگیریم (نگاشت کنیم) ، و هم چنین تمام موارد
 کوچکتر از $0.5$ را $0$ در نظر بگیریم.</p>
-<p><strong>آیا این متد برای مسائل طبقه بندی باینری خوب است؟</strong></p>
+<!-- 
+**آیا این متد برای مسائل طبقه بندی دودویی خوب است؟**
+
 
 <div class="expand">
     <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
@@ -5341,8 +5348,8 @@ Binary Classification می‌گوییم.</p>
         <p>naghes</p>
 
     </div>
-</div>
-<h3 id="hypothesis-representation">Hypothesis Representation</h3>
+</div> -->
+<h3 id="ارائه-فرضیه">ارائه فرضیه</h3>
 <p>تابع فرضیه ما باید به این شکل باشد:</p>
 <p>$$ h_\theta(x) = g(\theta^T x)  \hspace{2cm} 0 \leqslant h_\theta(x) \leqslant 1  $$</p>
 <p>$$ g(z) = \frac{1}{1 + e^{-z}} \hspace{2cm} z = \theta^Tx $$</p>
@@ -5362,7 +5369,7 @@ $1$ نگاشت می‌کند.</p>
 احتمال کلاس 0 است، که اینجا $\text{30%} $ می‌شود.</p>
 <p>$$ h_\theta(x)  = P (y=1 | x;\theta) =  1 - P (y = 0 | x;\theta) $$
 $$ P (y=0 | x;\theta) + P (y=1 | x;\theta) = 1 $$</p>
-<h3 id="decision-boundary">Decision Boundary</h3>
+<h3 id="مرز-تصمیم-گیری">مرز تصمیم گیری</h3>
 <p>برای مجزا کردن کلاس های $0$ و $1$ طبقه بندی باید
 خروجی تابع فرضیه را به این صورت تبدیل کنیم:</p>
 <p>$$ h_\theta(x) \geqslant 0.5 \rightarrow y = 1 \hspace{2cm} h_\theta(x) &lt; 0.5  \rightarrow  y = 0  $$</p>
@@ -5379,7 +5386,7 @@ $$ z \rightarrow -\infty, e^{\infty} \rightarrow \infty \Rightarrow  g(z) = 0 $$
 <p>$$ h_\theta(x) = g(\theta^T x) \geqslant 0.5 \hspace{1.5cm} \text{when } \theta^T x \geqslant 0 $$</p>
 <p>حالا می‌توانیم بگوییم که:</p>
 <p>$$ \theta^T x \geqslant 0 \Rightarrow y = 1 \hspace{1cm} \theta^T x &lt; 0  \Rightarrow  y = 0  $$</p>
-<p>خط تصمیم گیری، خطی است که قسمتی که 1=y است
+<p>مرز تصمیم گیری، خطی است که قسمتی که 1=y است
 را از قسمت های 0=y جدا می‌کند، که این خط توسط
 تابع فرضیه ساخته می‌شود.</p>
 

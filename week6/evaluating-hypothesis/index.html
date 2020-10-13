@@ -61,8 +61,13 @@
   
   <link href="/ml-andrew-ng/css/foo.css" rel="stylesheet"><link href="/ml-andrew-ng/css/bar.css" rel="stylesheet">
 
+  
+  
   <script src="/ml-andrew-ng/js/jquery-3.3.1.min.js"></script>
-
+  
+  <script src="/ml-andrew-ng/js/tipso.js"></script>
+  <link href="/ml-andrew-ng/css/tipso.css" rel="stylesheet">
+  <link href="/ml-andrew-ng/css/animate.css" rel="stylesheet">
   
   
   
@@ -3866,9 +3871,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week1/supervised/" title="یادگیری نظارتی چیست؟" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week1/supervised/" title="یادگیری با نظارت چیست؟" class="dd-item ">
         <a href="/ml-andrew-ng/week1/supervised/">
-        یادگیری نظارتی چیست؟
+        یادگیری با نظارت چیست؟
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -3887,9 +3892,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week1/unsupervised/" title="یادگیری غیر نظارتی چیست؟" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week1/unsupervised/" title="یادگیری بدون نظارت چیست؟" class="dd-item ">
         <a href="/ml-andrew-ng/week1/unsupervised/">
-        یادگیری غیر نظارتی چیست؟
+        یادگیری بدون نظارت چیست؟
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -4175,9 +4180,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week2/debugging-gradient/" title="Debugging Gradient" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week2/debugging-gradient/" title="اشکال زدایی گرادیان" class="dd-item ">
         <a href="/ml-andrew-ng/week2/debugging-gradient/">
-        Debugging Gradient
+        اشکال زدایی گرادیان
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -4766,9 +4771,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week5/backpropagation-1/" title="Backpropagation قسمت اول" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week5/backpropagation-1/" title="پس انتشار قسمت اول" class="dd-item ">
         <a href="/ml-andrew-ng/week5/backpropagation-1/">
-        Backpropagation قسمت اول
+        پس انتشار قسمت اول
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -4787,9 +4792,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week5/backpropagation-2/" title="Backpropagation قسمت دوم" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week5/backpropagation-2/" title="پس انتشار قسمت دوم" class="dd-item ">
         <a href="/ml-andrew-ng/week5/backpropagation-2/">
-        Backpropagation قسمت دوم
+        پس انتشار قسمت دوم
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -4808,9 +4813,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week5/unrolling-parameters/" title="Unrolling Parameters" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week5/unrolling-parameters/" title="بازکردن پارامتر ها" class="dd-item ">
         <a href="/ml-andrew-ng/week5/unrolling-parameters/">
-        Unrolling Parameters
+        بازکردن پارامتر ها
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -5307,7 +5312,7 @@
 </div>
 <p>خطاهای موجود در پیش بینی هایتان را با استفاده از روش های زیر می‌توانید عیب یابی کنید:</p>
 <ul>
-<li>جمع آوری دیتا های آموزشی بیشتر</li>
+<li>جمع آوری داده های آموزشی بیشتر</li>
 <li>استفاده از مجموعه های ویژگی کوچکتر</li>
 <li>امتحان کردن ویژگی های اضافی</li>
 <li>استفاده از ویژگی های چند جمله ای</li>
@@ -5320,8 +5325,8 @@
 <h3 id="ارزیابی-یک-فرضیه">ارزیابی یک فرضیه</h3>
 <p>یک فرضیه ممکن است برای یک نمونه آموزشی مقدار خطای کمی داشته باشد اما همچنان نادرست باشد (به دلیل overfitting).</p>
 <p>یک مجموعه داده از نمونه های آموزشی را می‌توانیم به دو مجموعه جدا تقسیم کنیم:</p>
-<p>۱. مجموعه آموزش (training set)</p>
-<p>۲. مجموعه تست (test set)</p>
+<p>۱. مجموعه آموزش</p>
+<p>۲. مجموعه تست</p>
 <p>روش جدید با استفاده از این دو مجموعه به صورت زیر خواهد بود:</p>
 <ol>
 <li>
@@ -5346,8 +5351,8 @@ err(h_\Theta(x),y) = \begin{matrix} 1 &amp; \mbox{if } h_\Theta(x) \geq 0.5\ and
 $$</p>
 </li>
 </ol>
-<p>این به ما یک نتیجه دودویی به صورت 0 یا 1 می‌دهد، که بر اساس طبقه بندی غلط (misclassification) است.</p>
-<p>میانگین خطای تست، برای مجموعه دیتای تست به این صورت است:
+<p>این به ما یک نتیجه دودویی به صورت 0 یا 1 می‌دهد، که بر اساس طبقه بندی غلط است.</p>
+<p>میانگین خطای تست، برای مجموعه داده تست به این صورت است:
 $$
 Test Error = \frac{1}{m_{test}}\sum_{i=1}^{m_{test}}err(h_{\Theta }(x_{test}^{(i)}), y_{test}^{(i)})
 $$</p>

@@ -17,8 +17,8 @@
       <pubDate>Thu, 10 Sep 2020 12:51:11 +0430</pubDate>
       
       <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week3/classification/</guid>
-      <description>Logistic Regresstion اینجا از مسائل Regression به مسائل Classification می‌رویم، اما با اسم Logistic Regression گیج نشوید! این اسم به دلایل تاریخی نامگذاری شده که در واقع رویکردی برای حل مسائل طبقه بندی است نه رگرسیون!
-Binary Classification به جای اینکه خروجی یعنی $y$ مقداری پیوسته در یک محدوده باشد، فقط $0$ یا $1$ است، یعنی : $ y \in \text{{0,1}} $
+      <description>رگرسیون لجستیک اینجا از مسائل رگرسیون به مسائل طبقه بندی می‌رویم، اما با اسم رگرسیون لجستیک گیج نشوید! این اسم به دلایل تاریخی نامگذاری شده که در واقع رویکردی برای حل مسائل طبقه بندی است نه رگرسیون!
+طبقه بندی دودویی به جای اینکه خروجی یعنی $y$ مقداری پیوسته در یک محدوده باشد، فقط $0$ یا $1$ است، یعنی : $ y \in \text{{0,1}} $
 به طوری که معمولا به $0$، negative class و به $1$ هم positive class می‌گوییم، اما شما آزاد هستید که هر اسم دلخواهی را برای نام‌گذاری آن ها انتخاب کنید!</description>
     </item>
     
@@ -85,7 +85,7 @@ $$ Cost(h_\theta(x), y) = - y \hspace{0.2cm} log(h_\theta(x)) - (1 - y) log(1 - 
       
       <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week3/cost-function-overfitting/</guid>
       <description>اگر تابع فرضیه ما مشکل overfitting دارد، ما می‌توانیم وزن بعضی از بخش های تابع فرضیه را با افزایش هزینه آن ها کاهش دهیم:
-تصور کنید که تابع زیر را درجه ۲ (quadratic) تر کنیم: $$ \theta_0 + \theta_1x + \theta_2 x^2 + \theta_3 x^3 +\theta_4 x^4 $$
+تصور کنید که تابع زیر را درجه دو تر کنیم: $$ \theta_0 + \theta_1x + \theta_2 x^2 + \theta_3 x^3 +\theta_4 x^4 $$
 ما می‌خواهیم تاثیر $\theta_3 x^3$ و $\theta_4 x^4$ را از بین ببریم ، بدون اینکه از شر این ویژگی ها خلاص شویم یا فرم تابع فرضیه خود را تغییر دهیم، ما می‌توانیم تابع هزینه خود را اصلاح کنیم:</description>
     </item>
     
@@ -95,7 +95,7 @@ $$ Cost(h_\theta(x), y) = - y \hspace{0.2cm} log(h_\theta(x)) - (1 - y) log(1 - 
       <pubDate>Sun, 13 Sep 2020 12:59:40 +0430</pubDate>
       
       <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week3/regularized-linear-regression/</guid>
-      <description>ما می‌توانیم regularization را هم برای رگرسیون خطی و هم برای رگرسیون لجستیک استفاده کنیم. که اینجا ابتدا رگرسیون خطی را بررسی می‌کنیم.
+      <description>ما می‌توانیم منظم سازی را هم برای رگرسیون خطی و هم برای رگرسیون لجستیک استفاده کنیم. که اینجا ابتدا رگرسیون خطی را بررسی می‌کنیم.
 Gradient Descent گرادیان کاهشی را اصلاح می‌کنیم تا $\theta_0$ را از بقیه پارامتر ها جدا کنیم، زیرا نمی‌خواهیم تاثیر $\theta_0$ را کاهش دهیم و از بین ببریم:
 $$ \begin{align*} &amp;amp; \text{Repeat}\ \lbrace \newline &amp;amp; \ \ \ \ \theta_0 := \theta_0 - \alpha\ \frac{1}{m}\ \sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)})x_0^{(i)} \newline &amp;amp; \ \ \ \ \theta_j := \theta_j - \alpha\ \left[ \left( \frac{1}{m}\ \sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)})x_j^{(i)} \right) + \frac{\lambda}{m}\theta_j \right] &amp;amp;\ \ \ \ \ \ \ \ \ \ j \in \lbrace 1,2&amp;hellip;n\rbrace\newline &amp;amp; \rbrace \end{align*} $$</description>
     </item>

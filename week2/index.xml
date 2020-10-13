@@ -18,7 +18,7 @@
       
       <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week2/linear-regression-many-variable/</guid>
       <description>توی این هفته قراره در مورد رگرسیون خطی با چندین متغیر صحبت کنیم!
-مثلا دیتا ای شبیه به این برای خانه ها را فرض کنید:
+مثلا داده ای شبیه به این برای خانه ها را فرض کنید:
    نماد      $m$ تعداد کل سطر های جدول داده ها   $n$ تعداد ویژگی ها یا همان متغیر ها   $x^{(i)}$ i امین ردیف از جدول شامل متغیر ها   $x_j^{(i)}$ مقدار موجود در ردیف i ام و ستون متغیر j    بنابراین برای تابع فرضه داریم: $h_\theta = \theta_0 + \theta_1 + \theta_2x + &amp;hellip; + \theta_nx$</description>
     </item>
     
@@ -47,7 +47,7 @@
     </item>
     
     <item>
-      <title>Debugging Gradient</title>
+      <title>اشکال زدایی گرادیان</title>
       <link>https://mehrdad-dev.github.io/ml-andrew-ng/week2/debugging-gradient/</link>
       <pubDate>Wed, 09 Sep 2020 22:03:11 +0430</pubDate>
       
@@ -63,9 +63,8 @@
       <pubDate>Wed, 09 Sep 2020 22:12:45 +0430</pubDate>
       
       <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week2/polynomial-regression/</guid>
-      <description>Polynomial Regression تابع فرضیه $h$ می‌تواند خطی نباشد، اگر تناسب خوبی با داده های ما ندارد، می‌توانیم برای تغییر منحنی تابع از توابع چند جمله ای استفاده کنیم تا به تناسب بهتری برای داده ها برسیم.
-فرض کنید که تابع فرضیه ما $ h_\theta(x) = \theta_0 + \theta_1 x_1$ باشد بنابراین می‌توانیم ویژگی جدیدی بر پایه ویژگی $x_1$ اضافه کنیم تا به تابعی quadratic یا درجه دوم برسیم:
-$$ {\color{Blue} h_\theta(x) = \theta_0 + \theta_1 x_1 + \theta_2 x_1^2}$$</description>
+      <description>Polynomial Regression | رگرسیون چند جمله ای تابع فرضیه $h$ می‌تواند خطی نباشد، اگر تناسب خوبی با داده های ما ندارد، می‌توانیم برای تغییر منحنی تابع از توابع چند جمله ای استفاده کنیم تا به تناسب بهتری برای داده ها برسیم.
+فرض کنید که تابع فرضیه ما $ h_\theta(x) = \theta_0 + \theta_1 x_1$ باشد بنابراین می‌توانیم ویژگی جدیدی بر پایه ویژگی $x_1$ اضافه کنیم تا به تابعی quadratic یا درجه دو برسیم:</description>
     </item>
     
     <item>
@@ -74,7 +73,7 @@ $$ {\color{Blue} h_\theta(x) = \theta_0 + \theta_1 x_1 + \theta_2 x_1^2}$$</desc
       <pubDate>Thu, 10 Sep 2020 11:44:59 +0430</pubDate>
       
       <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week2/normal-equation/</guid>
-      <description>Normal Equation الگوریتم گرادیان کاهشی روشی بود برای مینیمم کردن تابع $J$ ، اما روش دومی نیز وجود دارد که بدون داشتن حلقه تکرار این کار را انجام بدهد که معادله نرمال نام دارد.
+      <description>Normal Equation | معادله نرمال الگوریتم گرادیان کاهشی روشی بود برای مینیمم کردن تابع $J$ ، اما روش دومی نیز وجود دارد که بدون داشتن حلقه تکرار این کار را انجام بدهد که معادله نرمال نام دارد.
 فرض کنید که تابع هزینه درجه دو ای مثل این داریم: $$ J(\theta) = a\theta^2 + b\theta + c $$ $$ \frac{\partial} {\partial x} J(\theta) \overset{\underset{\mathrm{set}}{}}{=} 0 $$
 که برای مینیمم کردن این تابع درجه دو مشتق آن را می‌گیریم و برابر با صفر قرار می‌دهیم، که این به ما اجازه می‌دهد که مقدار $\theta$ را برای مینیمم کردن تابع پیدا کنیم.</description>
     </item>
