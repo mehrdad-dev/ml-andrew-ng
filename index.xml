@@ -76,6 +76,18 @@ $$ g(\theta_0 + \theta_1 x_1^2 + \theta_2 x_1 x_2 + \theta_3 x_1 x_3 + \theta_4 
     </item>
     
     <item>
+      <title>انتخاب مدل</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week6/model-selection/</link>
+      <pubDate>Thu, 15 Oct 2020 17:25:10 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week6/model-selection/</guid>
+      <description>فقط به این دلیل که یک الگوریتم یادگیری متناسب با مجموعه آموزشی ما است، به این معنی نیست که آن فرضیه خوبی است!
+می‌تواند overfit شده باشد، که در نتیجه پیش بینی های شما برای مجموعه آزمون ضعیف خواهد بود.
+اگر خطای فرضیه خود را با داده هایی که با آن پارامتر ها را آموزش داده اید محاسبه کنید، کمتر از مجموعه داده های دیگر خواهد بود!
+برای انتخاب مدل خود، می‌توانید هر درجه از چند جمله ای ها را آزمایش کرده و به نتیجه خطای آن توجه کنید.</description>
+    </item>
+    
+    <item>
       <title>پس انتشار قسمت اول</title>
       <link>https://mehrdad-dev.github.io/ml-andrew-ng/week5/backpropagation-1/</link>
       <pubDate>Thu, 01 Oct 2020 12:30:31 +0330</pubDate>
