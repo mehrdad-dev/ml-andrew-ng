@@ -12,6 +12,18 @@
     
     
     <item>
+      <title>مقدمه یادگیری بدون نظارت</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week8/unsupervised-learning-introduction/</link>
+      <pubDate>Mon, 19 Oct 2020 12:22:06 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week8/unsupervised-learning-introduction/</guid>
+      <description>یادگیری بدون نظارت در تضاد با یادگیری با نظارت است، زیرا از یک مجموعه آموزشی بدون لیبل استفاده می‌کند.
+به عبارت دیگر، ما بردار $y$ را به عنوان نتایج مورد انتظار نداریم، فقط مجموعه داده ای از ویژگی ها داریم که می‌خواهیم ساختاری در آن ها پیدا کنیم.
+طبقه بندی برای موراد زیر خوب است:
+ تقسیم بندی بازار تحلیل شبکه های اجتماعی سازماندهی خوشه های رایانه ای تجزیه و تحلیل داده های نجومی  </description>
+    </item>
+    
+    <item>
       <title>Optimization Objective</title>
       <link>https://mehrdad-dev.github.io/ml-andrew-ng/week7/optimization-objective/</link>
       <pubDate>Mon, 12 Oct 2020 14:37:24 +0330</pubDate>
@@ -73,6 +85,15 @@ $$ g(\theta_0 + \theta_1 x_1^2 + \theta_2 x_1 x_2 + \theta_3 x_1 x_3 + \theta_4 
  توجه: این یک تعریف قدیمی و غیر رسمی است!
  اما تعریفی مدرن تر &amp;hellip;
  Tom Mitchell: به یک برنامه کامپیوتری گفته می‌شود که: برای یادگیری از تجربه E با توجه به برخی از وظایف به عنوان T و اندازه گیری عملکرد با P اگر عملکرد وظیفه T با استفاده از P اندازه گیری شود با استفاده از تجربه E بهبود یابد.</description>
+    </item>
+    
+    <item>
+      <title>الگوریتم K-Means</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week8/k-means/</link>
+      <pubDate>Mon, 19 Oct 2020 12:43:35 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week8/k-means/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -347,7 +368,7 @@ $$ \begin{align*}\begin{bmatrix}x_0 \newline x_1 \newline x_2\end{bmatrix} \righ
     </item>
     
     <item>
-      <title>تصمیم گیری درباره اقدام بعدی</title>
+      <title>تصمیم گیری درباره اقدامات بعدی</title>
       <link>https://mehrdad-dev.github.io/ml-andrew-ng/week6/deciding-what-to-do-next/</link>
       <pubDate>Sat, 17 Oct 2020 20:45:00 +0330</pubDate>
       

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title> هفته هشتم on Machine Learning Andrew Ng</title>
+    <link>https://mehrdad-dev.github.io/ml-andrew-ng/week8/</link>
+    <description>Recent content in  هفته هشتم on Machine Learning Andrew Ng</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 19 Oct 2020 12:16:41 +0330</lastBuildDate>
+    
+	<atom:link href="https://mehrdad-dev.github.io/ml-andrew-ng/week8/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>مقدمه یادگیری بدون نظارت</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week8/unsupervised-learning-introduction/</link>
+      <pubDate>Mon, 19 Oct 2020 12:22:06 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week8/unsupervised-learning-introduction/</guid>
+      <description>یادگیری بدون نظارت در تضاد با یادگیری با نظارت است، زیرا از یک مجموعه آموزشی بدون لیبل استفاده می‌کند.
+به عبارت دیگر، ما بردار $y$ را به عنوان نتایج مورد انتظار نداریم، فقط مجموعه داده ای از ویژگی ها داریم که می‌خواهیم ساختاری در آن ها پیدا کنیم.
+طبقه بندی برای موراد زیر خوب است:
+ تقسیم بندی بازار تحلیل شبکه های اجتماعی سازماندهی خوشه های رایانه ای تجزیه و تحلیل داده های نجومی  </description>
+    </item>
+    
+    <item>
+      <title>الگوریتم K-Means</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week8/k-means/</link>
+      <pubDate>Mon, 19 Oct 2020 12:43:35 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week8/k-means/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

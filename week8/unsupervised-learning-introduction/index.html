@@ -38,7 +38,7 @@
 
   <link rel="icon" href="/ml-andrew-ng/images/favicon.png" type="image/png">
 
-  <title>تابع هزینه قسمت دوم | Machine Learning Andrew Ng</title>
+  <title>مقدمه یادگیری بدون نظارت | Machine Learning Andrew Ng</title>
 
   
   <link href="/ml-andrew-ng/css/nucleus.css" rel="stylesheet">
@@ -86,7 +86,7 @@
   
 </head>
 
-<body class="" data-url="/ml-andrew-ng/week1/cost2/">
+<body class="" data-url="/ml-andrew-ng/week8/unsupervised-learning-introduction/">
   <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -3822,7 +3822,7 @@
   
     
     <li data-nav-id="/ml-andrew-ng/week1/" title="   هفته اول " class="dd-item 
-        parent
+        
         
         
         ">
@@ -3955,7 +3955,7 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week1/cost2/" title="تابع هزینه قسمت دوم" class="dd-item active">
+      <li data-nav-id="/ml-andrew-ng/week1/cost2/" title="تابع هزینه قسمت دوم" class="dd-item ">
         <a href="/ml-andrew-ng/week1/cost2/">
         تابع هزینه قسمت دوم
         <i class="fas fa-check read-icon"></i>
@@ -5166,7 +5166,7 @@
   
     
     <li data-nav-id="/ml-andrew-ng/week8/" title=" هفته هشتم" class="dd-item 
-        
+        parent
         
         
         ">
@@ -5194,7 +5194,7 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week8/unsupervised-learning-introduction/" title="مقدمه یادگیری بدون نظارت" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week8/unsupervised-learning-introduction/" title="مقدمه یادگیری بدون نظارت" class="dd-item active">
         <a href="/ml-andrew-ng/week8/unsupervised-learning-introduction/">
         مقدمه یادگیری بدون نظارت
         <i class="fas fa-check read-icon"></i>
@@ -5448,7 +5448,7 @@
           
           
           
-          <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week1/'>   هفته اول </a> > تابع هزینه قسمت دوم
+          <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week8/'> هفته هشتم</a> > مقدمه یادگیری بدون نظارت
           
           
           
@@ -5477,33 +5477,24 @@
           
           <h1>
             
-            تابع هزینه قسمت دوم
+            مقدمه یادگیری بدون نظارت
           </h1>
           
 
           
-<div class="page-description"><i class="fas fa-clock"></i> 1 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/09/06
+<div class="page-description"><i class="fas fa-clock"></i> 1 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/10/19
 </div>
-<p>تا اینجا به طور خلاصه تمام چیزی که از تابع هزینه
-می‌دانیم در زیر آمده است:</p>
-<p><img src="../images/image13.png?width=20pc" alt="image13.png"></p>
-<p>اما اجازه بدید برای ساده سازی تابع فرضیه را تنها با
-یک پارامتر به این شکل در نظر بگیریم:
-$ h_\theta(x) = \theta_1x $
-و سه مقدار مختلف $0$، $5.0 $ و $1$ رو حساب کنیم &hellip;</p>
-<p>مثلا برای مقدار تتا برابر با $1$ محاسبات زیر را خواهیم داشت:</p>
-<p><img src="../images/image15.png?width=30pc" alt="image15.png"></p>
-<p>$$ {\color{Red} J(\theta_1) =  \frac{1}{2m} \sum_{i=1}^{m} (\theta_1x - y_i)^2 \Rightarrow \frac{1}{2m} (0^2 + 0^2 + 0^2) = 0 } $$
-به همین صورت برای دو مقدار دیگر داریم:</p>
-<p><img src="../images/image16.png?width=30pc" alt="image16.png"></p>
-<p>$$ {\color{Blue}  J(0.5) =  \frac{1}{2m} [ (0.5 - 1)^2 + (1-2)^2 + (1.5 -3)^2] \Rightarrow 0.58 }  $$
-$$ {\color{Green}  J(0) =  \frac{1}{2m} ( 1^2 + 2^2 + 3^2 +) \Rightarrow 2.3  }$$</p>
-<p>و اگر به همین ترتیب برای مقادیر دیگر رسم کنیم:</p>
-<p><img src="../images/image17.png?width=30pc" alt="image17.png"></p>
-<p>متوجه می‌شویم که به ازای هر مقدار تتا به یک تابع
-فرضیه متفاوت و یک مقدار متفاوت برای تابع $J$ می‌رسیم
-و همینطور که می‌بینیم در نقطه $1$ در مینیمم ترین
-حالت ممکن هستیم و این همان هدف ما است!</p>
+<p>یادگیری بدون نظارت در تضاد با یادگیری با نظارت است،
+زیرا از یک مجموعه آموزشی بدون لیبل استفاده می‌کند.</p>
+<p>به عبارت دیگر، ما بردار $y$ را به عنوان نتایج مورد انتظار نداریم،
+فقط مجموعه داده ای از ویژگی ها داریم که می‌خواهیم ساختاری در آن ها پیدا کنیم.</p>
+<p>طبقه بندی برای موراد زیر خوب است:</p>
+<ul>
+<li>تقسیم بندی بازار</li>
+<li>تحلیل شبکه های اجتماعی</li>
+<li>سازماندهی خوشه های رایانه ای</li>
+<li>تجزیه و تحلیل داده های نجومی</li>
+</ul>
 
 
 <footer class="footline">
@@ -5541,20 +5532,6 @@ $$ {\color{Green}  J(0) =  \frac{1}{2m} ( 1^2 + 2^2 + 3^2 +) \Rightarrow 2.3  }$
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
                         
                         
                     
@@ -5565,9 +5542,6 @@ $$ {\color{Green}  J(0) =  \frac{1}{2m} ( 1^2 + 2^2 + 3^2 +) \Rightarrow 2.3  }$
                     
                     
 
-                    
-            
-        
                     
                         
             
@@ -5638,7 +5612,6 @@ $$ {\color{Green}  J(0) =  \frac{1}{2m} ( 1^2 + 2^2 + 3^2 +) \Rightarrow 2.3  }$
             
                 
                     
-                    
                 
                 
 
@@ -5655,8 +5628,21 @@ $$ {\color{Green}  J(0) =  \frac{1}{2m} ( 1^2 + 2^2 + 3^2 +) \Rightarrow 2.3  }$
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
-                        
+            
+            
+                
                     
                 
                 
@@ -6493,6 +6479,7 @@ $$ {\color{Green}  J(0) =  \frac{1}{2m} ( 1^2 + 2^2 + 3^2 +) \Rightarrow 2.3  }$
             
                 
                     
+                    
                 
                 
 
@@ -6505,6 +6492,7 @@ $$ {\color{Green}  J(0) =  \frac{1}{2m} ( 1^2 + 2^2 + 3^2 +) \Rightarrow 2.3  }$
             
             
                 
+                    
                     
                 
                 
@@ -6521,6 +6509,9 @@ $$ {\color{Green}  J(0) =  \frac{1}{2m} ( 1^2 + 2^2 + 3^2 +) \Rightarrow 2.3  }$
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -6625,10 +6616,10 @@ $$ {\color{Green}  J(0) =  \frac{1}{2m} ( 1^2 + 2^2 + 3^2 +) \Rightarrow 2.3  }$
 	 
 	 
 		
-			<a class="nav nav-prev" href="/ml-andrew-ng/week1/cost1/" title="تابع هزینه قسمت اول"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/ml-andrew-ng/week8/" title=" هفته هشتم"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ml-andrew-ng/week1/cost3/" title="تابع هزینه قسمت سوم" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/ml-andrew-ng/week8/k-means/" title="الگوریتم K-Means" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
