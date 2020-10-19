@@ -146,6 +146,16 @@ $$ min_\Theta J(\Theta) $$
     </item>
     
     <item>
+      <title>تشخیص بایاس در مقابل واریانس</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week6/diagnosing-bias-variance/</link>
+      <pubDate>Fri, 16 Oct 2020 19:43:49 +0000</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week6/diagnosing-bias-variance/</guid>
+      <description>در این بخش به بررسی رابطه بین درجه چند جمله ای (d) و underfit و یا overfit بودن فرضیه می‌پردازیم.
+ در ابتدا لازم است که تشخیص دهیم، عاملی که باعث پیش بینی نادرست شده بایاس است یا واریانس؟ بایاس زیاد همان underfitting و واریانس زیاد همان overfitting است که باید یک میانگین مناسب بین این دو مقدار انتخاب شود.  مادامی که ما درجه چندجمله ای را افزایش می‌دهیم، خطای آموزش کاهش می‌یابد.</description>
+    </item>
+    
+    <item>
       <title>پس انتشار قسمت دوم</title>
       <link>https://mehrdad-dev.github.io/ml-andrew-ng/week5/backpropagation-2/</link>
       <pubDate>Thu, 08 Oct 2020 12:25:51 +0330</pubDate>
@@ -199,6 +209,17 @@ $$ Cost(h_\theta(x), y) = -log(h_\theta(x)) \hspace{1cm} if \hspace{0.3cm} y = 1
       
       <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week1/unsupervised/</guid>
       <description>تعریف یادگیری بدون نظارت یادگیری بدون نظارت این امکان را به ما مـی‌دهد کــه بدون داشتن هیچ ایده ای نسبت به خروجی داده ها به حل مشکلات نزدیک شویم. در واقع در اینجا داده های ما هیچ برچسبی نـدارنـد و الگوریتم‌ها به حال خود رها می‌شوند تا سـاختـارهــای موجود در میان داده‌ها را کشف کنند. مسائل بدون نظارت ها به دو دسته خوشه بندی و غیر خوشه بندی تقسیم می‌شوند.</description>
+    </item>
+    
+    <item>
+      <title>منظم سازی و بایاس/واریانس</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week6/regularization-and-bias-variance/</link>
+      <pubDate>Fri, 16 Oct 2020 19:43:49 +0000</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week6/regularization-and-bias-variance/</guid>
+      <description>در ادامه به جای بررسی d و تاثیر آن بر بایاس/واریانس، نگاهی به پارامتر مرتب سازی $\lambda$ خواهیم داشت.
+ $\lambda$ بزرگ: بایاس زیاد (underfitting) $\lambda$ متوسط: مقدار مناسب $\lambda$ کوچک: واریانس زیاد (overfitting)  $\lambda$ بزرگ به شدت در تمامی پارامترهای $\theta$ ایجاد نقص می‌کند که این مسئله خط تابع حاصل شده را بسیار ساده کرده و موجب underfitting خواهد شد.
+رابطه $\lambda$ با مجموعه آموزشی و مجموعه واریانس به صورت زیر است:</description>
     </item>
     
     <item>
@@ -258,6 +279,18 @@ $$(x_i, y_i) \Rightarrow x_1= 2104, y_1 = 460$$
     </item>
     
     <item>
+      <title>منحنی های یادگیری</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week6/learning-curves/</link>
+      <pubDate>Fri, 16 Oct 2020 19:43:49 +0000</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week6/learning-curves/</guid>
+      <description>آموزش 3 نمونه به آسانی خطایی برابر با صفر خواهد داشت زیرا امکان پیدا کردن یک منحنی درجه دو که دقیقا با این سه نقطه برخورد کند همیشه وجود دارد!
+  هرچه مجموعه آموزشی بزرگتر می‌شود، خطای تابع درجه دو افزایش می‌یابد.
+  مقدار خطا پس از تعیین اندازه m یا مجموعه آموزشی، ثابت خواهد بود.
+  با بایاس زیاد مجموعه آموزشی کوچک: باعث می‌شود تا $J_{train}\left ( \Theta \right )$ کم و $J_{cv}\left ( \Theta \right )$ زیاد باشد.</description>
+    </item>
+    
+    <item>
       <title>بررسی گرادیان</title>
       <link>https://mehrdad-dev.github.io/ml-andrew-ng/week5/gradient-checking/</link>
       <pubDate>Sun, 11 Oct 2020 16:33:27 +0330</pubDate>
@@ -311,6 +344,16 @@ $$ \begin{align*}\begin{bmatrix}x_0 \newline x_1 \newline x_2\end{bmatrix} \righ
       
       <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week1/cost1/</guid>
       <description>تابع هزینه | Cost Function با این تابع می‌توانیم بهترین خط مستقیم را برای داده هایمان به دست آوریم. با انتخاب های متفاوت برای پارامتر های $\theta_1$ و $\theta_0$ تابع های فرضیه متفاوتی به دست می‌آوریم: در رگرسیون خطی مجموعه آموزشی مثل این نمودار داریم و می‌خواهیم مقادیری برای $\theta_0$ و $\theta_1$ به دست آوریم به طوری که خط راستی که رسم می‌کنیم، بهترین تطابق را با داده هایمان داشته باشد.</description>
+    </item>
+    
+    <item>
+      <title>تصمیم گیری درباره اقدام بعدی</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week6/deciding-what-to-do-next/</link>
+      <pubDate>Sat, 17 Oct 2020 20:45:00 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week6/deciding-what-to-do-next/</guid>
+      <description>روند تصمیم‌گیری ما می‌تواند به به شرح زیر باشد:
+ جمع‌آوری نمونه آموزشی بیشتر: اصلاح واریانس زیاد استفاده از مجموعه کوچکتری از ویژگی‌ها: اصلاح واریانس زیاد اضافه کردن ویژگی: اصلاح بایاس زیاد اضافه کردن ویژگی‌های چندجمله‌ای: اصلاح بایاس زیاد کاهش $\lambda$: اصلاح بایاس زیاد افزایش $\lambda$: اصلاح واریانس زیاد  تشخیص شبکه‌های عصبی   یک شبکه عصبی با تعداد پارامترهای کم مستعد underfitting خواهد بود. همچنین این شبکه عصبی از نظر محاسباتی ارزان است.</description>
     </item>
     
     <item>

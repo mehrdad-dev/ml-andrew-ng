@@ -38,7 +38,7 @@
 
   <link rel="icon" href="/ml-andrew-ng/images/favicon.png" type="image/png">
 
-  <title> هفته سوم | Machine Learning Andrew Ng</title>
+  <title>تصمیم گیری درباره اقدام بعدی | Machine Learning Andrew Ng</title>
 
   
   <link href="/ml-andrew-ng/css/nucleus.css" rel="stylesheet">
@@ -86,7 +86,7 @@
   
 </head>
 
-<body class="" data-url="/ml-andrew-ng/week3/">
+<body class="" data-url="/ml-andrew-ng/week6/deciding-what-to-do-next/">
   <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -4272,8 +4272,8 @@
   
     
     <li data-nav-id="/ml-andrew-ng/week3/" title=" هفته سوم" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/ml-andrew-ng/week3/">
@@ -4947,7 +4947,7 @@
   
     
     <li data-nav-id="/ml-andrew-ng/week6/" title=" هفته ششم" class="dd-item 
-        
+        parent
         
         
         ">
@@ -5080,7 +5080,7 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week6/deciding-what-to-do-next/" title="تصمیم گیری درباره اقدام بعدی" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week6/deciding-what-to-do-next/" title="تصمیم گیری درباره اقدام بعدی" class="dd-item active">
         <a href="/ml-andrew-ng/week6/deciding-what-to-do-next/">
         تصمیم گیری درباره اقدام بعدی
         <i class="fas fa-check read-icon"></i>
@@ -5366,7 +5366,13 @@
           
           
           
-          <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> >  هفته سوم
+          
+          
+          
+          
+          <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week6/'> هفته ششم</a> > تصمیم گیری درباره اقدام بعدی
+          
+          
           
           
           
@@ -5377,7 +5383,16 @@
           
           <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#تشخیص-شبکههای-عصبی">تشخیص شبکه‌های عصبی</a></li>
+        <li><a href="#انتخاب-مدل">انتخاب مدل</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -5393,179 +5408,108 @@
           
           <h1>
             
-             هفته سوم
+            تصمیم گیری درباره اقدام بعدی
           </h1>
           
 
           
-
-
-	<p>این هفته با رگرسیون لجستیک آشنا می‌شویم که
-برای طبقه بندی از آن استفاده می‌کنیم.</p>
-<p>هم چنین با منظم سازی یا منظم سازی برای مدل مان آشنا می‌شویم،
-تا با استفاده از آن از مشکل overfit پرهیز کنیم.</p>
-
-
-
-
-
-
-
-<ul class="children children-li">
-	
-
-	
-		
-	
-
-	
-
-	
-		
-	
-		
-			
-				
+<div class="page-description"><i class="fas fa-clock"></i> 3 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/10/17
+</div>
+<p>روند تصمیم‌گیری ما می‌تواند به به شرح زیر باشد:</p>
+<ul>
+<li>جمع‌آوری نمونه آموزشی بیشتر:
+اصلاح واریانس زیاد</li>
+<li>استفاده از مجموعه کوچکتری از ویژگی‌ها:
+اصلاح واریانس زیاد</li>
+<li>اضافه کردن ویژگی:
+اصلاح بایاس زیاد</li>
+<li>اضافه کردن ویژگی‌های چندجمله‌ای:
+اصلاح بایاس زیاد</li>
+<li>کاهش  $\lambda$:
+اصلاح بایاس زیاد</li>
+<li>افزایش  $\lambda$:
+اصلاح واریانس زیاد</li>
+</ul>
+<h3 id="تشخیص-شبکههای-عصبی">تشخیص شبکه‌های عصبی</h3>
+<ul>
 <li>
-<a href="/ml-andrew-ng/week3/classification/" >طبقه بندی</a>
+<p>یک شبکه عصبی با تعداد پارامترهای کم مستعد underfitting خواهد بود. همچنین این شبکه عصبی از نظر محاسباتی <strong>ارزان</strong> است.</p>
 </li>
-				
-
-				
-			
-			
-		
-	
-		
-			
-				
 <li>
-<a href="/ml-andrew-ng/week3/cost-function/" >تابع هزینه</a>
+<p>یک شبکه عصبی با تعداد بیشتری از پارامتر مستعد overfitting خواهد بود و از نظر محاسباتی <strong>گران</strong> است. در این شرایط می‌توانید از منظم‌سازی (افزایش $\lambda$) برای اصلاح overfitting استفاده کنید.</p>
 </li>
-				
-
-				
-			
-			
-		
-	
-		
-			
-				
+</ul>
+<p>استفاده از یک عدد لایه پنهان پیش‌ فرض مناسبی برای شروع است. با کمک مجموعه cross validation می‌توان شبکه عصبی را روی تعدادی از لایه‌های پنهان آموزش داد.</p>
+<h3 id="انتخاب-مدل">انتخاب مدل</h3>
+<p>انتخاب M به ترتیب چندجمله‌ای‌ها.<br>
+چگونه می‌توانیم تعیین کنیم که کدام یک از پارامترهای $\theta$ را در مدل قرار دهیم (معروف به &ldquo;انتخاب مدل&rdquo;)؟</p>
+<p>راه‌های گوناگونی برای حل این مسئله وجود دارد:</p>
+<ul>
+<li>جمع‌آوری داده بیشتر (که روش بسیار سختی است).</li>
+<li>انتخاب مدلی که بیشترین سازگاری را با داده دارد و باعث overfitting نخواهد شد (این روش هم بسیار مشکل است).</li>
+<li>کم کردن امکان overfitting از طریق منظم‌سازی.</li>
+</ul>
+<p><strong>بایاس: خطای تقریب (اختلاف مقدار مورد نظر و مقدار بهینه)</strong></p>
+<ul>
+<li>بایاس زیاد = Underfitting (BU)</li>
+<li>$J_{train }\left ( \Theta  \right )$ و $J_{CV }\left ( \Theta  \right )$ مقادیر زیادی خواهند داشت و $J_{train }\left ( \Theta  \right ) \approx J_{CV}\left ( \Theta  \right )$</li>
+</ul>
+<p><strong>واریانس: خطای تخمین به دلیل داده‌های محدود</strong></p>
+<ul>
+<li>واریانس زیاد = Overfitting (VO)</li>
+<li>$J_{train }\left ( \Theta  \right )$ کم خواهد بود و $J_{CV }\left ( \Theta  \right ) \gg  J_{train}\left ( \Theta  \right )$</li>
+</ul>
+<p><strong>آگاهی برای متوازن کردن بایاس و واریانس</strong></p>
+<ul>
+<li>مدل پیچیده $\Leftarrow$ حساس به دیتا $\Leftarrow$ تحت تاثیر تغییرات در X $\Leftarrow$ واریانس زیاد، بایاس کم</li>
+<li>مدل ساده $\Leftarrow$ پایدارتر $\Leftarrow$ با تغییرات X چندان تغییر نمی‌کند $\Leftarrow$ واریانس کم، بایاس زیاد</li>
+</ul>
+<p>یکی از مهم‌ترین اهداف در یادگیری: پیدا کردن مدلی که در بایاس و واریانس توازن داشته باشد.</p>
+<p><strong>تاثیرات منظم‌سازی:</strong></p>
+<ul>
 <li>
-<a href="/ml-andrew-ng/week3/simplified-cost-gradient/" >ساده شده تابع هزینه و گرادیان کاهشی</a>
+<p>مقادیر کوچک $\lambda$ به مدل اجازه می‌دهند تا نسبت به اختلالاتی که به واریانس بزرگ منتهی می‌شوند، به خوبی وفق پیدا کنند $\Leftarrow$ Overfitting.</p>
 </li>
-				
-
-				
-			
-			
-		
-	
-		
-			
-				
 <li>
-<a href="/ml-andrew-ng/week3/advanced-optimization/" >بهینه سازی پیشرفته</a>
+<p>مقادیر بزرگ $\lambda$ پارامترهای وزن را که به بایاس بزرگ منتهی می‌شوند به صفر می‌رساند $\Leftarrow$ Underfitting.</p>
 </li>
-				
-
-				
-			
-			
-		
-	
-		
-			
-				
+</ul>
+<p><strong>تاثیرات پیچیدگی مدل:</strong></p>
+<ul>
 <li>
-<a href="/ml-andrew-ng/week3/multiclass-classification/" >طبقه بندی چند کلاسه</a>
+<p>چندجمله‌ای‌های درجه پایین (پیچیدگی پایین مدل) بایاس زیاد و واریانس کم دارند. در این شرایط مدل همواره سازگاری کمی خواهد داشت.</p>
 </li>
-				
-
-				
-			
-			
-		
-	
-		
-			
-				
 <li>
-<a href="/ml-andrew-ng/week3/overfitting/" >مشکل Overfitting</a>
+<p>چندجمله‌ای‌های درجه بالا (پیچیدگی بالای مدل) با داده آموزشی سازگاری بسیار خوب و با داده آزمون سازگاری بسیار کمی خواهد داشت. این مسئله باعث بایاس کم و واریانس بسیار زیاد روی داده آموزشی خواهد شد.</p>
 </li>
-				
-
-				
-			
-			
-		
-	
-		
-			
-				
 <li>
-<a href="/ml-andrew-ng/week3/cost-function-overfitting/" > تابع هزینه در Overfitting</a>
+<p>در واقعیت، ما می‌خواهیم مدل میانه‌ای را انتخاب کنیم که به خوبی اعتبارسنجی شود و همچنین به خوبی با داده سازگار باشد.</p>
 </li>
-				
-
-				
-			
-			
-		
-	
-		
-			
-				
+</ul>
+<p><strong>یک قانون معمول هنگام اجرای تشخیص:</strong></p>
+<ul>
 <li>
-<a href="/ml-andrew-ng/week3/regularized-linear-regression/" >رگرسیون خطی منظم</a>
+<p>نمونه‌های آموزشی بیشتر واریانس زیاد را اصلاح می‌کند اما تاثیری بر بایاس زیاد ندارد.</p>
 </li>
-				
-
-				
-			
-			
-		
-	
-		
-			
-				
 <li>
-<a href="/ml-andrew-ng/week3/regularized-logistic-regression/" >رگرسیون لجستیک منظم</a>
+<p>ویژگی‌های کمتر واریانس زیاد را اصلاح می‌کند اما تاثیری بر بایاس زیاد ندارد.</p>
 </li>
-				
-
-				
-			
-			
-		
-	
-		
-			
-				
 <li>
-<a href="/ml-andrew-ng/week3/files/" >فایل های هفته سوم</a>
+<p>ویژگی‌های اضافه بایاس زیاد را اصلاح می‌کند اما بر واریانس زیاد تاثیری ندارد.</p>
 </li>
-				
-
-				
-			
-			
-		
-	
-
-	
+<li>
+<p>اضافه کردن چند‌جمله‌ای  و ویژگی‌های متقابل بایاس زیاد را اصلاح می‌کند اما تاثیری بر واریانس زیاد ندارد.</p>
+</li>
+<li>
+<p>هنگام استفاده از گرادیان کاهشی، کاهش $\lambda$ می‌تواند بایاس زیاد را اصلاح کند و افزایش $\lambda$ واریانس زیاد را اصلاح می‌کند. ($\lambda$ پارامتر منظم‌سازی است.)</p>
+</li>
+<li>
+<p>هنگام استفاده از شبکه‌های عصبی، شبکه‌های کوچک بیشتر در معرض Underfitting و شبکه‌های بزرگ بیشتر در معرض Overfitting هستند.</p>
+</li>
 </ul>
 
 
-
-
-
-
-
-
-
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -5923,7 +5867,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -5936,9 +5879,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -6407,6 +6347,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -6419,6 +6360,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -6500,6 +6444,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -6518,6 +6463,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -6635,10 +6583,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/ml-andrew-ng/week2/files/" title="فایل های هفته دوم"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/ml-andrew-ng/week6/learning-curves/" title="منحنی های یادگیری"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ml-andrew-ng/week3/classification/" title="طبقه بندی" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/ml-andrew-ng/week7/" title=" هفته هفتم" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

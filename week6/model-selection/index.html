@@ -5008,6 +5008,90 @@
 
             
           
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ml-andrew-ng/week6/diagnosing-bias-variance/" title="تشخیص بایاس در مقابل واریانس" class="dd-item ">
+        <a href="/ml-andrew-ng/week6/diagnosing-bias-variance/">
+        تشخیص بایاس در مقابل واریانس
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ml-andrew-ng/week6/regularization-and-bias-variance/" title="منظم سازی و بایاس/واریانس" class="dd-item ">
+        <a href="/ml-andrew-ng/week6/regularization-and-bias-variance/">
+        منظم سازی و بایاس/واریانس
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ml-andrew-ng/week6/learning-curves/" title="منحنی های یادگیری" class="dd-item ">
+        <a href="/ml-andrew-ng/week6/learning-curves/">
+        منحنی های یادگیری
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ml-andrew-ng/week6/deciding-what-to-do-next/" title="تصمیم گیری درباره اقدام بعدی" class="dd-item ">
+        <a href="/ml-andrew-ng/week6/deciding-what-to-do-next/">
+        تصمیم گیری درباره اقدام بعدی
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
         
         </ul>
               
@@ -5330,11 +5414,11 @@
 <p>برای انتخاب مدل خود، می‌توانید هر درجه از چند جمله ای ها را آزمایش کرده و به نتیجه خطای آن توجه کنید.</p>
 <p><strong>بدون مجموعه اعتبار سنجی:</strong></p>
 <p>(توجه داشته باشید: این روش بدی است - از آن استفاده نکنید!)</p>
-<ul>
+<ol>
 <li>بهنیه سازی پارامتر های $\Theta$، با استفاده از مجموعه آموزشی برای هر یک از درجات چند جمله ای.</li>
 <li>با استفاده از مجموعه آزمون، درجه چند جمله ای d را که کمترین خطا را دارد پیدا کنید.</li>
 <li>خطای تعمیم را با استفاده از مجموعه آزمون محاسبه کنید $J_{test}(\Theta^{d})$</li>
-</ul>
+</ol>
 <p>در این حالت ما متغیر d یا درجه چند جمله ای را با استفاده از مجموعه آزمون آموزش می‌دهیم.</p>
 <p><strong>CV set:</strong></p>
 <p>برای انجام این کار می‌توانیم از مجموعه  Cross Validation به عناون یک مجموعه میانی برای آموزش دادن d استفاده کنیم، و سپس
@@ -5347,6 +5431,20 @@
 </ul>
 <p>اکنون می توانیم سه مقدار خطای جداگانه را برای سه مجموعه مختلف محاسبه کنیم.</p>
 <p><strong>با مجموعه اعتبار سنجی:</strong></p>
+
+<div class="notices note" ><p>در این روش فرض می‌کنیم که از مجموعه cross validation در منظم سازی استفاده نشده است.</p>
+</div>
+
+<ol>
+<li>برای هر درجه چندجمله ای با استفاده از مجموعه آموزشی، پارامترهای موجود در $\Theta$ را  بهینه سازی کنید.</li>
+<li>با استفاده از مجموعه cross validation درجه چند جمله ای d را که کمترین خطا را دارد پیدا کنید.</li>
+<li>با استفاده از مجموعه آزمون و $J_{test}(\Theta ^{d})$ مقدار خطای تعمیم را تخمین بزنید.</li>
+</ol>
+<p>از این روش، درجه چندجمله ای (d) با استفاده از مجموعه آزمون آموزش داده نخواهد شد.</p>
+
+<div class="notices warning" ><p>توجه کنید که استفاده از مجموعه cross validation برای انتخاب مقدار d به این معناست که نمی‌توانیم از آن در روند منحنی اعتبار سنجی  برای تعیین مقدار $\lambda$ استفاده کنیم.</p>
+</div>
+
 
 
 <footer class="footline">
@@ -6232,6 +6330,22 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
             
         
                     
@@ -6240,8 +6354,56 @@
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -6362,7 +6524,7 @@
 			<a class="nav nav-prev" href="/ml-andrew-ng/week6/evaluating-hypothesis/" title="ارزیابی فرضیه"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ml-andrew-ng/week7/" title=" هفته هفتم" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/ml-andrew-ng/week6/diagnosing-bias-variance/" title="تشخیص بایاس در مقابل واریانس" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

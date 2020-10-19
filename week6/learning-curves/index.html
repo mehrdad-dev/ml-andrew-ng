@@ -38,7 +38,7 @@
 
   <link rel="icon" href="/ml-andrew-ng/images/favicon.png" type="image/png">
 
-  <title> هفته سوم | Machine Learning Andrew Ng</title>
+  <title>منحنی های یادگیری | Machine Learning Andrew Ng</title>
 
   
   <link href="/ml-andrew-ng/css/nucleus.css" rel="stylesheet">
@@ -86,7 +86,7 @@
   
 </head>
 
-<body class="" data-url="/ml-andrew-ng/week3/">
+<body class="" data-url="/ml-andrew-ng/week6/learning-curves/">
   <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -4272,8 +4272,8 @@
   
     
     <li data-nav-id="/ml-andrew-ng/week3/" title=" هفته سوم" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/ml-andrew-ng/week3/">
@@ -4947,7 +4947,7 @@
   
     
     <li data-nav-id="/ml-andrew-ng/week6/" title=" هفته ششم" class="dd-item 
-        
+        parent
         
         
         ">
@@ -5059,7 +5059,7 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week6/learning-curves/" title="منحنی های یادگیری" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week6/learning-curves/" title="منحنی های یادگیری" class="dd-item active">
         <a href="/ml-andrew-ng/week6/learning-curves/">
         منحنی های یادگیری
         <i class="fas fa-check read-icon"></i>
@@ -5366,7 +5366,13 @@
           
           
           
-          <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> >  هفته سوم
+          
+          
+          
+          
+          <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week6/'> هفته ششم</a> > منحنی های یادگیری
+          
+          
           
           
           
@@ -5377,7 +5383,16 @@
           
           <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#با-بایاس-زیاد">با بایاس زیاد</a></li>
+        <li><a href="#با-واریانس-زیاد">با واریانس زیاد</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -5393,179 +5408,36 @@
           
           <h1>
             
-             هفته سوم
+            منحنی های یادگیری
           </h1>
           
 
           
-
-
-	<p>این هفته با رگرسیون لجستیک آشنا می‌شویم که
-برای طبقه بندی از آن استفاده می‌کنیم.</p>
-<p>هم چنین با منظم سازی یا منظم سازی برای مدل مان آشنا می‌شویم،
-تا با استفاده از آن از مشکل overfit پرهیز کنیم.</p>
-
-
-
-
-
-
-
-<ul class="children children-li">
-	
-
-	
-		
-	
-
-	
-
-	
-		
-	
-		
-			
-				
+<div class="page-description"><i class="fas fa-clock"></i> 2 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/10/16
+</div>
+<p>آموزش 3 نمونه به آسانی خطایی برابر با صفر خواهد داشت زیرا امکان پیدا کردن یک منحنی درجه دو که دقیقا با این سه نقطه برخورد کند همیشه وجود دارد!</p>
+<ul>
 <li>
-<a href="/ml-andrew-ng/week3/classification/" >طبقه بندی</a>
+<p>هرچه مجموعه آموزشی بزرگتر می‌شود، خطای تابع درجه دو افزایش می‌یابد.</p>
 </li>
-				
-
-				
-			
-			
-		
-	
-		
-			
-				
 <li>
-<a href="/ml-andrew-ng/week3/cost-function/" >تابع هزینه</a>
+<p>مقدار خطا پس از تعیین اندازه m یا مجموعه آموزشی، ثابت خواهد بود.</p>
 </li>
-				
-
-				
-			
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week3/simplified-cost-gradient/" >ساده شده تابع هزینه و گرادیان کاهشی</a>
-</li>
-				
-
-				
-			
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week3/advanced-optimization/" >بهینه سازی پیشرفته</a>
-</li>
-				
-
-				
-			
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week3/multiclass-classification/" >طبقه بندی چند کلاسه</a>
-</li>
-				
-
-				
-			
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week3/overfitting/" >مشکل Overfitting</a>
-</li>
-				
-
-				
-			
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week3/cost-function-overfitting/" > تابع هزینه در Overfitting</a>
-</li>
-				
-
-				
-			
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week3/regularized-linear-regression/" >رگرسیون خطی منظم</a>
-</li>
-				
-
-				
-			
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week3/regularized-logistic-regression/" >رگرسیون لجستیک منظم</a>
-</li>
-				
-
-				
-			
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week3/files/" >فایل های هفته سوم</a>
-</li>
-				
-
-				
-			
-			
-		
-	
-
-	
 </ul>
+<h3 id="با-بایاس-زیاد">با بایاس زیاد</h3>
+<p><strong>مجموعه آموزشی کوچک:</strong> باعث می‌شود تا  $J_{train}\left ( \Theta  \right )$ کم و $J_{cv}\left ( \Theta  \right )$ زیاد باشد.</p>
+<p><strong>مجموعه آموزشی بزرگ:</strong> باعث می‌شود تا $J_{train}\left ( \Theta  \right )$ و $J_{CV}\left ( \Theta  \right )$ هر دو مقدار زیادی داشته باشند و $J_{train}\left ( \Theta  \right ) \approx J_{CV}\left ( \Theta  \right )$</p>
+<p>اگر یک الگوریتم با مشکل <strong>بایاس زیاد</strong> مواجه باشد، اضافه کردن داده آموزشی <strong>(به تنهایی) موثر نخواهد بود.</strong></p>
+<p><img src="../images/high-bias.jpg?width=25pc" alt="High Bias"></p>
+<p>برای مقدار واریانس زیاد، روابط زیر را به لحاظ اندازه مجموعه آموزشی داریم:</p>
+<h3 id="با-واریانس-زیاد">با واریانس زیاد</h3>
+<p><strong>مجموعه آموزشی کوچک:</strong> $J_{train}\left ( \Theta  \right )$ مقداری کم و $J_{CV}\left ( \Theta  \right )$ مقدار زیادی داشته باشد.</p>
+<p><strong>مجموعه آموزشی بزرگ:</strong> $J_{train}\left ( \Theta  \right )$ متناسب با اندازه مجموعه آموزشی افزایش می‌یابد و $J_{CV}\left ( \Theta  \right )$ بدون ثابت شدن کاهش می یابد. همچنین $J_{train}\left ( \Theta  \right ) &lt;  J_{CV}\left ( \Theta  \right )$ خواهد بود و اختلاف قابل توجهی خواهند داشت.</p>
+<p>اگر یک الگوریتم با مشکل <strong>واریانس زیاد</strong> مواجه باشد، داده آموزشی بیشتر <strong>احتمالا موثر خواهد بود.</strong></p>
+<p><img src="../images/high-variance.jpg?width=25pc" alt="High Variance"></p>
 
 
-
-
-
-
-
-
-
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -5923,7 +5795,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -5936,9 +5807,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -6407,6 +6275,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -6419,6 +6288,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -6484,6 +6356,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -6499,6 +6372,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -6635,10 +6511,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/ml-andrew-ng/week2/files/" title="فایل های هفته دوم"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/ml-andrew-ng/week6/regularization-and-bias-variance/" title="منظم سازی و بایاس/واریانس"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ml-andrew-ng/week3/classification/" title="طبقه بندی" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/ml-andrew-ng/week6/deciding-what-to-do-next/" title="تصمیم گیری درباره اقدام بعدی" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

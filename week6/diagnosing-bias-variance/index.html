@@ -38,7 +38,7 @@
 
   <link rel="icon" href="/ml-andrew-ng/images/favicon.png" type="image/png">
 
-  <title> هفته سوم | Machine Learning Andrew Ng</title>
+  <title>تشخیص بایاس در مقابل واریانس | Machine Learning Andrew Ng</title>
 
   
   <link href="/ml-andrew-ng/css/nucleus.css" rel="stylesheet">
@@ -86,7 +86,7 @@
   
 </head>
 
-<body class="" data-url="/ml-andrew-ng/week3/">
+<body class="" data-url="/ml-andrew-ng/week6/diagnosing-bias-variance/">
   <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -4272,8 +4272,8 @@
   
     
     <li data-nav-id="/ml-andrew-ng/week3/" title=" هفته سوم" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/ml-andrew-ng/week3/">
@@ -4947,7 +4947,7 @@
   
     
     <li data-nav-id="/ml-andrew-ng/week6/" title=" هفته ششم" class="dd-item 
-        
+        parent
         
         
         ">
@@ -5017,7 +5017,7 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week6/diagnosing-bias-variance/" title="تشخیص بایاس در مقابل واریانس" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week6/diagnosing-bias-variance/" title="تشخیص بایاس در مقابل واریانس" class="dd-item active">
         <a href="/ml-andrew-ng/week6/diagnosing-bias-variance/">
         تشخیص بایاس در مقابل واریانس
         <i class="fas fa-check read-icon"></i>
@@ -5366,7 +5366,13 @@
           
           
           
-          <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> >  هفته سوم
+          
+          
+          
+          
+          <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week6/'> هفته ششم</a> > تشخیص بایاس در مقابل واریانس
+          
+          
           
           
           
@@ -5393,179 +5399,26 @@
           
           <h1>
             
-             هفته سوم
+            تشخیص بایاس در مقابل واریانس
           </h1>
           
 
           
-
-
-	<p>این هفته با رگرسیون لجستیک آشنا می‌شویم که
-برای طبقه بندی از آن استفاده می‌کنیم.</p>
-<p>هم چنین با منظم سازی یا منظم سازی برای مدل مان آشنا می‌شویم،
-تا با استفاده از آن از مشکل overfit پرهیز کنیم.</p>
-
-
-
-
-
-
-
-<ul class="children children-li">
-	
-
-	
-		
-	
-
-	
-
-	
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week3/classification/" >طبقه بندی</a>
-</li>
-				
-
-				
-			
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week3/cost-function/" >تابع هزینه</a>
-</li>
-				
-
-				
-			
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week3/simplified-cost-gradient/" >ساده شده تابع هزینه و گرادیان کاهشی</a>
-</li>
-				
-
-				
-			
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week3/advanced-optimization/" >بهینه سازی پیشرفته</a>
-</li>
-				
-
-				
-			
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week3/multiclass-classification/" >طبقه بندی چند کلاسه</a>
-</li>
-				
-
-				
-			
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week3/overfitting/" >مشکل Overfitting</a>
-</li>
-				
-
-				
-			
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week3/cost-function-overfitting/" > تابع هزینه در Overfitting</a>
-</li>
-				
-
-				
-			
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week3/regularized-linear-regression/" >رگرسیون خطی منظم</a>
-</li>
-				
-
-				
-			
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week3/regularized-logistic-regression/" >رگرسیون لجستیک منظم</a>
-</li>
-				
-
-				
-			
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/ml-andrew-ng/week3/files/" >فایل های هفته سوم</a>
-</li>
-				
-
-				
-			
-			
-		
-	
-
-	
+<div class="page-description"><i class="fas fa-clock"></i> 1 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/10/16
+</div>
+<p>در این بخش به بررسی رابطه بین درجه چند جمله ای (d) و underfit و یا overfit بودن فرضیه می‌پردازیم.</p>
+<ul>
+<li>در ابتدا لازم است که تشخیص دهیم، عاملی که باعث پیش بینی نادرست شده بایاس است یا واریانس؟</li>
+<li>بایاس زیاد همان underfitting و واریانس زیاد همان overfitting است که باید یک میانگین مناسب بین این دو مقدار انتخاب شود.</li>
 </ul>
+<p>مادامی که ما درجه چندجمله ای را افزایش می‌دهیم، خطای آموزش کاهش می‌یابد.</p>
+<p>خطای cross validation  نیز با افزایش مقدار d تا یک نقطه مشخص، کاهش یافته و در ادامه با افزایش مقدار d، افزایش می‌یابد که این مسئله موجب به وجود آمدن یک منحنی محدب می شود. (منحنی سیز رنگ در شکل زیر)</p>
+<p><strong>بایاس زیاد (underfitting):</strong> $J_{train}(\Theta )$ و $J_{CV}(\Theta )$ هردو مقادیر بزرگی خواهند بود. همچنین $J_{CV}(\Theta ) \approx J_{train}(\Theta )$.</p>
+<p><strong>واریانس زیاد(overfitting):</strong> $J_{train}(\Theta )$ مقداری کوچک و $J_{CV}(\Theta )$ مقداری بسیار بزرگ تر از $J_{train}(\Theta )$ خواهد داشت که در تصویر زیر نمایش داده شده است:</p>
+<p><img src="../images/underfit-overfit.jpg" alt="underfitting-overfitting"></p>
 
 
-
-
-
-
-
-
-
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -5923,7 +5776,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -5936,9 +5788,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -6407,6 +6256,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -6419,6 +6269,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -6452,6 +6305,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -6467,6 +6321,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -6635,10 +6492,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/ml-andrew-ng/week2/files/" title="فایل های هفته دوم"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/ml-andrew-ng/week6/model-selection/" title="انتخاب مدل"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ml-andrew-ng/week3/classification/" title="طبقه بندی" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/ml-andrew-ng/week6/regularization-and-bias-variance/" title="منظم سازی و بایاس/واریانس" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

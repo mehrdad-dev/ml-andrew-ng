@@ -33,5 +33,48 @@
 برای انتخاب مدل خود، می‌توانید هر درجه از چند جمله ای ها را آزمایش کرده و به نتیجه خطای آن توجه کنید.</description>
     </item>
     
+    <item>
+      <title>تشخیص بایاس در مقابل واریانس</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week6/diagnosing-bias-variance/</link>
+      <pubDate>Fri, 16 Oct 2020 19:43:49 +0000</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week6/diagnosing-bias-variance/</guid>
+      <description>در این بخش به بررسی رابطه بین درجه چند جمله ای (d) و underfit و یا overfit بودن فرضیه می‌پردازیم.
+ در ابتدا لازم است که تشخیص دهیم، عاملی که باعث پیش بینی نادرست شده بایاس است یا واریانس؟ بایاس زیاد همان underfitting و واریانس زیاد همان overfitting است که باید یک میانگین مناسب بین این دو مقدار انتخاب شود.  مادامی که ما درجه چندجمله ای را افزایش می‌دهیم، خطای آموزش کاهش می‌یابد.</description>
+    </item>
+    
+    <item>
+      <title>منظم سازی و بایاس/واریانس</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week6/regularization-and-bias-variance/</link>
+      <pubDate>Fri, 16 Oct 2020 19:43:49 +0000</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week6/regularization-and-bias-variance/</guid>
+      <description>در ادامه به جای بررسی d و تاثیر آن بر بایاس/واریانس، نگاهی به پارامتر مرتب سازی $\lambda$ خواهیم داشت.
+ $\lambda$ بزرگ: بایاس زیاد (underfitting) $\lambda$ متوسط: مقدار مناسب $\lambda$ کوچک: واریانس زیاد (overfitting)  $\lambda$ بزرگ به شدت در تمامی پارامترهای $\theta$ ایجاد نقص می‌کند که این مسئله خط تابع حاصل شده را بسیار ساده کرده و موجب underfitting خواهد شد.
+رابطه $\lambda$ با مجموعه آموزشی و مجموعه واریانس به صورت زیر است:</description>
+    </item>
+    
+    <item>
+      <title>منحنی های یادگیری</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week6/learning-curves/</link>
+      <pubDate>Fri, 16 Oct 2020 19:43:49 +0000</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week6/learning-curves/</guid>
+      <description>آموزش 3 نمونه به آسانی خطایی برابر با صفر خواهد داشت زیرا امکان پیدا کردن یک منحنی درجه دو که دقیقا با این سه نقطه برخورد کند همیشه وجود دارد!
+  هرچه مجموعه آموزشی بزرگتر می‌شود، خطای تابع درجه دو افزایش می‌یابد.
+  مقدار خطا پس از تعیین اندازه m یا مجموعه آموزشی، ثابت خواهد بود.
+  با بایاس زیاد مجموعه آموزشی کوچک: باعث می‌شود تا $J_{train}\left ( \Theta \right )$ کم و $J_{cv}\left ( \Theta \right )$ زیاد باشد.</description>
+    </item>
+    
+    <item>
+      <title>تصمیم گیری درباره اقدام بعدی</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week6/deciding-what-to-do-next/</link>
+      <pubDate>Sat, 17 Oct 2020 20:45:00 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week6/deciding-what-to-do-next/</guid>
+      <description>روند تصمیم‌گیری ما می‌تواند به به شرح زیر باشد:
+ جمع‌آوری نمونه آموزشی بیشتر: اصلاح واریانس زیاد استفاده از مجموعه کوچکتری از ویژگی‌ها: اصلاح واریانس زیاد اضافه کردن ویژگی: اصلاح بایاس زیاد اضافه کردن ویژگی‌های چندجمله‌ای: اصلاح بایاس زیاد کاهش $\lambda$: اصلاح بایاس زیاد افزایش $\lambda$: اصلاح واریانس زیاد  تشخیص شبکه‌های عصبی   یک شبکه عصبی با تعداد پارامترهای کم مستعد underfitting خواهد بود. همچنین این شبکه عصبی از نظر محاسباتی ارزان است.</description>
+    </item>
+    
   </channel>
 </rss>
