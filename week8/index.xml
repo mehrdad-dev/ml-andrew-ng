@@ -29,7 +29,18 @@
       <pubDate>Mon, 19 Oct 2020 12:43:35 +0330</pubDate>
       
       <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week8/k-means/</guid>
-      <description></description>
+      <description>الگوریتم K-Means محبوب ترین و پرکاربردترین الگوریتم برای گروه بندی خودکار داده ها در زیر مجموعه های منسجم (اعضای آن به هم مربوط هستند) است.
+ به طور تصادفی دو نقطه از مجموعه داده ها را به نام مرکز خوشه ای مقدار دهی می‌کنیم تخصیص خوشه: همه مثالها را به یکی از دو گروه تقسیم کنید بر اساس اینکه به کدام مرکز خوشه نزدیک است میانگین تمام نقاط داخل هر دو گروه مرکز خوشه ای را محاسبه کنید، سپس نقاط مرکز خوشه را به آن میانگین ها منتقل کنید مرحله ۲ و ۳ را دوباره اجرا کنید تا زمانی که خوشه های خود را پیدا کنید  متغیرهای اصلی ما عبارتند از:</description>
+    </item>
+    
+    <item>
+      <title>بهینه سازی هدفمند</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week8/optimization-objective/</link>
+      <pubDate>Thu, 22 Oct 2020 17:08:35 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week8/optimization-objective/</guid>
+      <description>برخی از پارامتر هایی را که در الگوریتم خود استفاده کردیم به یاد بیاورید:
+ $ = c ^ {(i)}$ ایندکس خوشه ای ${1,2,&amp;hellip;,k}$ که به نمونه $x^{(i)}$ منتسب شده است. $ = \mu _k $ خوشه مرکزی k $(\mu _k \in \mathbb{R} ^ n)$ $ = \mu _ {c ^ {(i)}} $ مرکز خوشه ای که به نمونه $x^{(i)}$ منتسب شد است.  </description>
     </item>
     
   </channel>

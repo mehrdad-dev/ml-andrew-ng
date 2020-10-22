@@ -12,12 +12,15 @@
     
     
     <item>
-      <title>Optimization Objective</title>
+      <title>بهینه سازی هدفمند</title>
       <link>https://mehrdad-dev.github.io/ml-andrew-ng/week7/optimization-objective/</link>
       <pubDate>Mon, 12 Oct 2020 14:37:24 +0330</pubDate>
       
       <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week7/optimization-objective/</guid>
-      <description></description>
+      <description>ماشین بردار پشتیبان (SVM) یکی دیگر از الگوریتم های یادگیری ماشین با نظارت است که گاهی تمیزتر و قدرتمندتر عمل می کند. اگر به خاطر بیاورید، ما در رگریسیون لجستیک از ضوابط زیر استفاده می کردیم:
+$$ if\hspace{0.3cm} y=1,\hspace{0.2cm} then \hspace{0.3cm} h_\theta(x)\approx 1 \hspace{0.3cm} and \hspace{0.3cm}\theta\ ^ T x \gg 0 $$
+$$ if\hspace{0.3cm} y=0,\hspace{0.2cm} then \hspace{0.3cm} h_\theta(x)\approx 0 \hspace{0.3cm} and \hspace{0.3cm}\theta\ ^ T x \ll 0 $$
+تابع هزینه را برای رگریسیون لجستیک (نامنظم) به خاطر بیاورید:</description>
     </item>
     
   </channel>

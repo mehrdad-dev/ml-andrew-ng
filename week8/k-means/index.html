@@ -5137,9 +5137,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week7/optimization-objective/" title="Optimization Objective" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week7/optimization-objective/" title="بهینه سازی هدفمند" class="dd-item ">
         <a href="/ml-andrew-ng/week7/optimization-objective/">
-        Optimization Objective
+        بهینه سازی هدفمند
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -5218,6 +5218,27 @@
       <li data-nav-id="/ml-andrew-ng/week8/k-means/" title="الگوریتم K-Means" class="dd-item active">
         <a href="/ml-andrew-ng/week8/k-means/">
         الگوریتم K-Means
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ml-andrew-ng/week8/optimization-objective/" title="بهینه سازی هدفمند" class="dd-item ">
+        <a href="/ml-andrew-ng/week8/optimization-objective/">
+        بهینه سازی هدفمند
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -5482,8 +5503,64 @@
           
 
           
-<div class="page-description"><i class="fas fa-clock"></i> 0 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/10/19
+<div class="page-description"><i class="fas fa-clock"></i> 3 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/10/19
 </div>
+<p>الگوریتم K-Means
+محبوب ترین و پرکاربردترین الگوریتم برای گروه بندی خودکار داده ها در زیر مجموعه های منسجم (اعضای آن به هم مربوط هستند) است.</p>
+<ol>
+<li>به طور تصادفی دو نقطه از مجموعه داده ها را به نام مرکز خوشه ای مقدار دهی می‌کنیم</li>
+<li>تخصیص خوشه: همه مثالها را به یکی از دو گروه تقسیم کنید بر اساس اینکه به کدام مرکز خوشه نزدیک است</li>
+<li>میانگین تمام نقاط داخل هر دو گروه مرکز خوشه ای را محاسبه کنید، سپس نقاط مرکز خوشه را به آن میانگین ها منتقل کنید</li>
+<li>مرحله ۲ و ۳ را دوباره اجرا کنید تا زمانی که خوشه های خود را پیدا کنید</li>
+</ol>
+<p>متغیرهای اصلی ما عبارتند از:</p>
+<ul>
+<li>$K$ = تعدلد خوشه ها</li>
+<li>مجموعه آموزشی = $x^{(1)}, x^{(2)}, &hellip; , x^{(m)}$</li>
+<li>به طوری که $x^{(i)} \in \mathbb{R} ^ n$</li>
+</ul>
+<p>توجه داشته باشید که ما از عبارت $x ^ 0 = 1$ استفاده نخواهیم کرد.</p>
+<p>الگوریتم:</p>
+<div align="left">
+<pre><code>Randomly initialize K cluster centroids mu(1), mu(2), ..., mu(K)
+Repeat:
+    for i = 1 to m:      
+        c(i):= index (from 1 to K) of cluster centroid closest to x(i)‍
+    for k = 1 to K:      
+        mu(k):= average (mean) of points assigned to cluster k
+</code></pre></div>
+<p>حلقه for اول مرحله تخصیص خوشه یعنی مرحله ۲ است،
+یک بردار به اسم $c$ می‌سازیم که $c^{(i)}$ نمایانگر مرکزی است که به نمونه $x ^ {(i)}$ منتسب شده است.</p>
+<p>ما می‌توانیم مرحله تخصیص خوشه رابه ریاضی بنویسیم:
+$$
+c^{(i)} = argmin _ k \begin{Vmatrix} x^{(i)} - \mu _ k \end{Vmatrix} ^2
+$$</p>
+<p>یعنی هر $c^{(i)}$ حاوی ایندکس مرکزی است که حداقل فاصله را تا $x^{(i)}$ دارد.</p>
+<p>طبق قرارداد، ما سمت راست معادله را به توان ۲ می‌رسانیم،
+که باعث می‌شود بار محاسباتی کاهش پیدا کند.</p>
+<p>بدون توان ۲:
+$$
+\begin{Vmatrix} x^{(i)} - \mu _ k \end{Vmatrix} = \begin{Vmatrix} \sqrt{ (x^{(i) _ 1 - \mu _ {1 (k)}})^2 +
+(x^{(i) _ 2 - \mu _ {2 (k)}})^2  + (x^{(i) _ 3 - \mu _ {3 (k)}})^2 + &hellip; } \end{Vmatrix}
+$$</p>
+<p>با توان ۲:
+$$
+\begin{Vmatrix} x^{(i)} - \mu _ k \end{Vmatrix} ^2 = \begin{Vmatrix} (x^{(i) _ 1 - \mu _ {1 (k)}})^2 +
+(x^{(i) _ 2 - \mu _ {2 (k)}})^2  + (x^{(i) _ 3 - \mu _ {3 (k)}})^2 + &hellip;  \end{Vmatrix}
+$$</p>
+<p>بنابراین هدف از قرارداد توان ۲ محاسبه کمتر و دقیق تر است.</p>
+<p>حلقه for دوم همان مرحله ۳ است،
+جایی که هر مرکز را به میانگین گروه خود منتقل می‌کنیم.</p>
+<p>به صورت رسمی تر ، معادله برای این حلقه به شرح زیر است:</p>
+<p>$$
+\mu _k = \frac{1}{n} [ x^{(k _ 1)} + x^{(k _ 2)} + &hellip; + x^{(k _ n)}] \in \mathbb{R} ^ n
+$$</p>
+<p>به طوری که هر کدام از $x^{(k _ 1)} + x^{(k _ 2)} + &hellip; + x^{(k _ n)}$ ها نمونه های آموزشی اختصاص داده شده به گروه $\mu _k$ هستند.</p>
+<p>اگر یک مرکز خوشه ای دارید که 0 امتیاز به آن اختصاص داده شده است، می توانید آن مرکز را به طور تصادفی مجدداً در یک نقطه جدید تنظیم کنید. شما همچنین می توانید آن گروه خوشه را به سادگی از بین ببرید.</p>
+<p>بعد از تعدادی تکرار الگوریتم به همگرایی خواهید رسید،
+به طوری که تکرار های جدید تاثیری بر خوشه ها نمی‌گذارند!</p>
+<p><strong>نکته ای در مورد خوشه های جدا نشده:</strong></p>
+<p>برخی از مجموعه های داده هیچ جدایی داخلی و ساختار طبیعی ندارند. K-mean هنوز هم می تواند داده های شما را به K  زیر مجموعه تقسیم کند، بنابراین در این حالت نیز همچنان می‌تواند مفید باشد.</p>
 
 
 <footer class="footline">
@@ -6513,9 +6590,6 @@
             
         
                     
-            
-        
-                    
                         
             
             
@@ -6523,6 +6597,25 @@
                     
                         
                         
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -6611,7 +6704,7 @@
 			<a class="nav nav-prev" href="/ml-andrew-ng/week8/unsupervised-learning-introduction/" title="مقدمه یادگیری بدون نظارت"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ml-andrew-ng/dictionary/" title="لغت نامه دوره " style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/ml-andrew-ng/week8/optimization-objective/" title="بهینه سازی هدفمند" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

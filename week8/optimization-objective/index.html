@@ -38,7 +38,7 @@
 
   <link rel="icon" href="/ml-andrew-ng/images/favicon.png" type="image/png">
 
-  <title>نمونه ای از رانندگی خودکار | Machine Learning Andrew Ng</title>
+  <title>بهینه سازی هدفمند | Machine Learning Andrew Ng</title>
 
   
   <link href="/ml-andrew-ng/css/nucleus.css" rel="stylesheet">
@@ -86,7 +86,7 @@
   
 </head>
 
-<body class="" data-url="/ml-andrew-ng/week5/autonomous-driving/">
+<body class="" data-url="/ml-andrew-ng/week8/optimization-objective/">
   <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -4722,7 +4722,7 @@
   
     
     <li data-nav-id="/ml-andrew-ng/week5/" title=" هفته پنجم" class="dd-item 
-        parent
+        
         
         
         ">
@@ -4897,7 +4897,7 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week5/autonomous-driving/" title="نمونه ای از رانندگی خودکار" class="dd-item active">
+      <li data-nav-id="/ml-andrew-ng/week5/autonomous-driving/" title="نمونه ای از رانندگی خودکار" class="dd-item ">
         <a href="/ml-andrew-ng/week5/autonomous-driving/">
         نمونه ای از رانندگی خودکار
         <i class="fas fa-check read-icon"></i>
@@ -5166,7 +5166,7 @@
   
     
     <li data-nav-id="/ml-andrew-ng/week8/" title=" هفته هشتم" class="dd-item 
-        
+        parent
         
         
         ">
@@ -5236,7 +5236,7 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week8/optimization-objective/" title="بهینه سازی هدفمند" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week8/optimization-objective/" title="بهینه سازی هدفمند" class="dd-item active">
         <a href="/ml-andrew-ng/week8/optimization-objective/">
         بهینه سازی هدفمند
         <i class="fas fa-check read-icon"></i>
@@ -5469,7 +5469,7 @@
           
           
           
-          <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week5/'> هفته پنجم</a> > نمونه ای از رانندگی خودکار
+          <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week8/'> هفته هشتم</a> > بهینه سازی هدفمند
           
           
           
@@ -5482,15 +5482,7 @@
           
           <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#پروژه-alvinn-ماشین-خودران-در-سال-۱۹۸۹">پروژه ALVINN ماشین خودران در سال ۱۹۸۹</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -5506,19 +5498,19 @@
           
           <h1>
             
-            نمونه ای از رانندگی خودکار
+            بهینه سازی هدفمند
           </h1>
           
 
           
-<div class="page-description"><i class="fas fa-clock"></i> 1 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/10/12
+<div class="page-description"><i class="fas fa-clock"></i> 1 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/10/22
 </div>
-<h3 id="پروژه-alvinn-ماشین-خودران-در-سال-۱۹۸۹">پروژه ALVINN ماشین خودران در سال ۱۹۸۹</h3>
-<p><strong>ALVINN:</strong> Autonomous Land Vehicle In a Neural Network</p>
-<p>برای مشاهده ویدئو این پروژه در YouTube بر روی تصویر زیر کلیک کنید:</p>
-<p><a href="http://www.youtube.com/watch?v=IaoIqVMd6tc" title="ALVINN"><img src="http://img.youtube.com/vi/IaoIqVMd6tc/0.jpg" alt="دوره یادگیری ماشین دانشگاه استنفورد به فارسی"></a></p>
-<p>توییت ای جالب در توییتر در این مورد (نیاز به vpn):</p>
-<blockquote align="center" class="twitter-tweet"><p lang="de" dir="ltr">GPU? Gez, ALVINN ran on 100 MFLOP CPU, ~10x slower than iWatch; Refrigerator-size &amp; needed 5000 watt generator. <a href="https://twitter.com/olivercameron?ref_src=twsrc%5Etfw">@olivercameron</a> <a href="https://t.co/QdGpZUzGCs">pic.twitter.com/QdGpZUzGCs</a></p>&mdash; Dean Pomerleau (@deanpomerleau) <a href="https://twitter.com/deanpomerleau/status/801837566358093824?ref_src=twsrc%5Etfw">November 24, 2016</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+<p>برخی از پارامتر هایی را که در الگوریتم خود استفاده کردیم به یاد بیاورید:</p>
+<ul>
+<li>$ = c ^ {(i)}$  ایندکس خوشه ای ${1,2,&hellip;,k}$ که به نمونه $x^{(i)}$ منتسب شده است.</li>
+<li>$ = \mu _k $ خوشه مرکزی k $(\mu _k \in \mathbb{R} ^ n)$</li>
+<li>$ = \mu _ {c ^ {(i)}} $ مرکز خوشه ای که به نمونه $x^{(i)}$ منتسب شد است.</li>
+</ul>
 
 
 <footer class="footline">
@@ -6199,7 +6191,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -6212,9 +6203,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -6328,7 +6316,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -6344,9 +6331,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -6511,6 +6495,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -6523,6 +6508,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -6556,6 +6544,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -6574,6 +6563,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -6659,10 +6651,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/ml-andrew-ng/week5/putting-it-together/" title="Putting It Together"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/ml-andrew-ng/week8/k-means/" title="الگوریتم K-Means"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ml-andrew-ng/week5/files/" title="فایل های هفته پنجم" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/ml-andrew-ng/dictionary/" title="لغت نامه دوره " style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
