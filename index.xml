@@ -446,6 +446,19 @@ $$ {\color{Red} J(\theta_1) = \frac{1}{2m} \sum_{i=1}^{m} (\theta_1x - y_i)^2 \R
     </item>
     
     <item>
+      <title>اولویت بندی کارها</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week6/prioritizing-what-to-work-on/</link>
+      <pubDate>Mon, 19 Oct 2020 15:41:53 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week6/prioritizing-what-to-work-on/</guid>
+      <description>راه‌های متفاوتی در برخورد با یک مسئله یادگیری ماشین وجود دارد:
+  جمع‌آوری داده‌های زیاد (برای مثال مسئله &amp;ldquo;کوزه عسل&amp;rdquo;. اما این روش در تمامی موارد پاسخگو نخواهد بود).
+  ایجاد ویژگی‌های پیچیده (برای مثال: استفاده از داده‌های سرتیتر ایمیل در ایمیل‌های spam).
+  توسعه الگوریتم‌هایی که ورودی‌ها را به گونه متفاوتی پردازش کنند (تشخیص غلط‌های املایی در spam).
+  اما انتخاب این که کدام یک از این گزینه‌ها مفید خواهد بود مشکل است.</description>
+    </item>
+    
+    <item>
       <title>Putting It Together</title>
       <link>https://mehrdad-dev.github.io/ml-andrew-ng/week5/putting-it-together/</link>
       <pubDate>Sun, 11 Oct 2020 19:45:27 +0330</pubDate>
@@ -497,6 +510,18 @@ $$ {\color{Red} J(\theta_1) = \frac{1}{2m} \sum_{i=1}^{m} (\theta_1x - y_i)^2 \R
     </item>
     
     <item>
+      <title>تحلیل خطا</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week6/error-analysis/</link>
+      <pubDate>Mon, 19 Oct 2020 17:16:27 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week6/error-analysis/</guid>
+      <description>رویکرد پیشنهادی برای حل کردن یک مسئله یادگیری ماشین به شرح زیر است:
+  با یک الگوریتم ساده شروع کنید، سریعا آن را پیاده کرده و تست کنید.
+  منحنی یادگیری را رسم کنید تا متوجه شوید که آیا داده بیشتر، ویژگی‌های بیشتر و &amp;hellip; مفید خواهند بود یا خیر.
+  تحلیل خطا: به صورت دستی خطای موجود در نمونه‌های مجموعه cross validation را بررسی کرده و سعی کنید روند الگوریتم را تشخیص دهید.</description>
+    </item>
+    
+    <item>
       <title>نمونه ای از رانندگی خودکار</title>
       <link>https://mehrdad-dev.github.io/ml-andrew-ng/week5/autonomous-driving/</link>
       <pubDate>Mon, 12 Oct 2020 13:09:44 +0330</pubDate>
@@ -543,6 +568,17 @@ GPU? Gez, ALVINN ran on 100 MFLOP CPU, ~10x slower than iWatch; Refrigerator-siz
     </item>
     
     <item>
+      <title>معیار‌های خطا برای کلاس‌های نامتوازن</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week6/error-metrics-for-skewed-classes/</link>
+      <pubDate>Mon, 19 Oct 2020 18:13:55 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week6/error-metrics-for-skewed-classes/</guid>
+      <description>گاهی اوقات دشوار است که بگوییم کاهش خطاها باعث بهبود الگوریتم می‌شوند.
+ برای مثال: در پیش‌ بینی تشخیص سرطان که 0.5% از نمونه‌ها سرطان دارند، متوجه می‌شویم که الگوریتم یادگیری 1% خطا دارد.  هرچند اگر به سادگی هریک از نمونه‌ها را با عنوان 0 طبقه‌بندی می‌کردیم، خطا به 0.5% کاهش پیدا میکرد، با این وجود که ما الگوریتم را بهبود نداده بودیم.
+این مسئله در کلاس‌های نامتوازن رخ می‌دهد، هنگامی که کلاس در کل مجموعه داده بسیار نادر است.</description>
+    </item>
+    
+    <item>
       <title>فایل های هفته پنجم</title>
       <link>https://mehrdad-dev.github.io/ml-andrew-ng/week5/files/</link>
       <pubDate>Mon, 12 Oct 2020 13:33:56 +0330</pubDate>
@@ -573,6 +609,17 @@ $$ \begin{align*} &amp;amp; \text{Repeat}\ \lbrace \newline &amp;amp; \ \ \ \ \t
     </item>
     
     <item>
+      <title>متوازن کردن Precision  و Recall</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week6/trading-off-precision-and-recall/</link>
+      <pubDate>Mon, 19 Oct 2020 21:27:10 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week6/trading-off-precision-and-recall/</guid>
+      <description>ممکن است ما نیاز به یک پیش بینی مطمئن از دو کلاس به وسیله رگرسیون لجستیک داشته باشیم. یک راه این است که آستانه را افزایش دهیم:
+ پیش بینی 1 اگر: $h_{\theta }\left ( x \right ) \geq 0.7$ پیش بینی 0 اگر: $h_{\theta }\left ( x \right ) &amp;lt; 0.7$  بدین ترتیب تنها درصورتی که بیمار 70% شانس بیماری داشته باشد، سرطان را پیش بینی می‌کنیم.
+اکنون ما precision زیادتر و recall کمتر خواهیم داشت(با توجه به تعاریف در بخش قبل).</description>
+    </item>
+    
+    <item>
       <title>رگرسیون لجستیک منظم</title>
       <link>https://mehrdad-dev.github.io/ml-andrew-ng/week3/regularized-logistic-regression/</link>
       <pubDate>Tue, 15 Sep 2020 12:48:24 +0430</pubDate>
@@ -596,6 +643,17 @@ $$ J(\theta) = - \frac{1}{m} \sum_{i=1}^m [y^{(i)} log(h_\theta(x^{(i)})) + (1 -
 اینجا می‌خواهیم از گرادیان کاهشی برای مینیمم کردن تابع هزینه استفاده کنیم! ابتدا تابع $J$ را در الگوریتم گرادیان جاگذاری می‌کنیم و &amp;hellip;
 با محاسبه عبارت مشتق جزئی در گرادیان کاهشی برای دو پارامتر $\theta_0$ و $\theta_1$ خواهیم داشت:
 $$ \theta_0, j = 0: \frac{\partial}{\partial \theta_j} J(\theta_0, \theta_1) = \frac{1}{m} \sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)}) $$</description>
+    </item>
+    
+    <item>
+      <title>داده برای یادگیری ماشین</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week6/data-for-machine-learning/</link>
+      <pubDate>Mon, 19 Oct 2020 22:37:58 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week6/data-for-machine-learning/</guid>
+      <description>چه مقدار داده را باید آموزش دهیم؟ در موارد مشخص، یک الگوریتم کم کیفیت با داده بیشتر، میتواند عملکرد بهتری نسبت به یک الگوریتم با کیفیت و داده کمتر داشته باشد.
+ما باید ویژگی‌هایی را انتخاب کنیم تا اطلاعات کافی داشته باشیم. یک آزمون مفید به این صورت است که: با توجه به ورودی x، آیا یک متخصص انسانی می‌تواند با اطمینان y را پیش بینی کند؟
+منطق داده‌های بزرگ: اگر یک الگوریتم با بایاس کم داشته باشیم (ویژگی‌های زیاد یا واحدهای پنهان یک تابع بسیار پیچیده می‌سازد)، پس هرچه مجموعه آموزشی بزرگتر باشد، overfitting کمتری خواهیم داشت (و الگوریتم روی مجموعه آزمون دقیق‌تر خواهد بود).</description>
     </item>
     
     <item>
