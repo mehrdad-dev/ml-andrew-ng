@@ -134,5 +134,14 @@
 منطق داده‌های بزرگ: اگر یک الگوریتم با بایاس کم داشته باشیم (ویژگی‌های زیاد یا واحدهای پنهان یک تابع بسیار پیچیده می‌سازد)، پس هرچه مجموعه آموزشی بزرگتر باشد، overfitting کمتری خواهیم داشت (و الگوریتم روی مجموعه آزمون دقیق‌تر خواهد بود).</description>
     </item>
     
+    <item>
+      <title>فایل های هفته ششم</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week6/files/</link>
+      <pubDate>Sat, 24 Oct 2020 13:15:49 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week6/files/</guid>
+      <description>اسلاید ها  Advice for applying machine learning - pdf Machine learning system design - pdf  غلط نامه  Errata - pdf  تمرین برنامه نویسی  Programming Exercise 5: Regularized Linear Regression and Bias v.s. Variance - pdf | problem  </description>
+    </item>
+    
   </channel>
 </rss>

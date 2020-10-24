@@ -177,7 +177,7 @@ $$ min_\Theta J(\Theta) $$
       
       <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week8/optimization-objective/</guid>
       <description>برخی از پارامتر هایی را که در الگوریتم خود استفاده کردیم به یاد بیاورید:
- $ = c ^ {(i)}$ ایندکس خوشه ای ${1,2,&amp;hellip;,k}$ که به نمونه $x^{(i)}$ منتسب شده است. $ = \mu _k $ خوشه مرکزی k $(\mu _k \in \mathbb{R} ^ n)$ $ = \mu _ {c ^ {(i)}} $ مرکز خوشه ای که به نمونه $x^{(i)}$ منتسب شد است.  </description>
+ $ = c ^ {(i)}$ ایندکس خوشه ای ${1,2,&amp;hellip;,k}$ که به نمونه $x^{(i)}$ منتسب شده است. $ = \mu _k $ خوشه مرکزی k $(\mu _k \in \mathbb{R} ^ n)$ $ = \mu _ {c ^ {(i)}} $ مرکز خوشه ای که به نمونه $x^{(i)}$ منتسب شد است.  با استفاده از این متغیرها می‌توانیم تابع هزینه خود را تعریف کنیم:</description>
     </item>
     
     <item>
@@ -247,6 +247,18 @@ $$ Cost(h_\theta(x), y) = -log(h_\theta(x)) \hspace{1cm} if \hspace{0.3cm} y = 1
     </item>
     
     <item>
+      <title>مقداردهی اولیه تصادفی</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week8/random-initialization/</link>
+      <pubDate>Sat, 24 Oct 2020 12:35:28 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week8/random-initialization/</guid>
+      <description>یک روش پیشنهادی برای مقداردهی اولیه تصادفی برای مرکز های خوشه ای وجود دارد.
+  اگر داشته باشید $k &amp;lt; m$، یعنی اطمینان حاصل کنید که تعداد خوشه های شما از تعداد نمونه های آموزشی شما کمتر است.
+  به طور تصادفی نمونه های آموزشی $k$ را انتخاب کنید.(مطمعن شوید که نمونه ها منحصر به فرد باشند)
+  $\mu_1, &amp;hellip;, \mu _k$ ها را برابر با نمونه های $k$ قرار بدهید.</description>
+    </item>
+    
+    <item>
       <title>منظم سازی و بایاس/واریانس</title>
       <link>https://mehrdad-dev.github.io/ml-andrew-ng/week6/regularization-and-bias-variance/</link>
       <pubDate>Fri, 16 Oct 2020 19:43:49 +0000</pubDate>
@@ -311,6 +323,15 @@ $$ Cost(h_\theta(x), y) = - y \hspace{0.2cm} log(h_\theta(x)) - (1 - y) log(1 - 
       <description>بررسی نماد ها و مفاهیم مثلا در داده ی خانه ها نماد ها به این صورت هستند:    نماد      $m$ تعداد کل ردیف های جدول داده آموزش   $x$ متغیر های ورودی   $y$ متغیر های خروجی یا هدف    برای آدرس دهی در جدول به این شکل عمل می‌کنیم:
 $$(x_i, y_i) \Rightarrow x_1= 2104, y_1 = 460$$
 اینجا منظور از $i$ اندیس داده در جدول است.</description>
+    </item>
+    
+    <item>
+      <title>انتخاب تعداد خوشه ها</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week8/choosing-the-number-of-clusters/</link>
+      <pubDate>Sat, 24 Oct 2020 13:13:58 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week8/choosing-the-number-of-clusters/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -672,6 +693,15 @@ $$ \theta_0, j = 0: \frac{\partial}{\partial \theta_j} J(\theta_0, \theta_1) = \
       
       <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week1/files/</guid>
       <description>اسلاید ها  Welcome - pdf Linear regression with one variable - pdf Linear Algebra review (Optional) - pdf  غلط نامه  Errata - pdf  </description>
+    </item>
+    
+    <item>
+      <title>فایل های هفته ششم</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week6/files/</link>
+      <pubDate>Sat, 24 Oct 2020 13:15:49 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week6/files/</guid>
+      <description>اسلاید ها  Advice for applying machine learning - pdf Machine learning system design - pdf  غلط نامه  Errata - pdf  تمرین برنامه نویسی  Programming Exercise 5: Regularized Linear Regression and Bias v.s. Variance - pdf | problem  </description>
     </item>
     
   </channel>

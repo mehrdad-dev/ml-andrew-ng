@@ -143,13 +143,23 @@
   </url>
   
   <url>
-    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week6/regularization-and-bias-variance/</loc>
-    <lastmod>2020-10-16T19:43:49+00:00</lastmod>
+    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week7/</loc>
+    <lastmod>2020-10-12T14:35:04+03:30</lastmod>
   </url>
   
   <url>
-    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week7/</loc>
-    <lastmod>2020-10-12T14:35:04+03:30</lastmod>
+    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week8/random-initialization/</loc>
+    <lastmod>2020-10-24T12:35:28+03:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week8/</loc>
+    <lastmod>2020-10-19T12:16:41+03:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week6/regularization-and-bias-variance/</loc>
+    <lastmod>2020-10-16T19:43:49+00:00</lastmod>
   </url>
   
   <url>
@@ -178,8 +188,18 @@
   </url>
   
   <url>
-    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week8/</loc>
-    <lastmod>2020-10-19T12:16:41+03:30</lastmod>
+    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week9/</loc>
+    <lastmod>2020-10-24T12:38:03+03:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week8/choosing-the-number-of-clusters/</loc>
+    <lastmod>2020-10-24T13:13:58+03:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week10/</loc>
+    <lastmod>2020-10-24T12:38:09+03:30</lastmod>
   </url>
   
   <url>
@@ -210,6 +230,11 @@
   <url>
     <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week1/cost1/</loc>
     <lastmod>2020-09-06T14:08:57+04:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week11/</loc>
+    <lastmod>2020-10-24T12:38:15+03:30</lastmod>
   </url>
   
   <url>
@@ -370,6 +395,11 @@
   <url>
     <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week1/files/</loc>
     <lastmod>2020-09-30T12:46:19+03:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week6/files/</loc>
+    <lastmod>2020-10-24T13:15:49+03:30</lastmod>
   </url>
   
   <url>

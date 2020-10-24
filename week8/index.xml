@@ -40,7 +40,28 @@
       
       <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week8/optimization-objective/</guid>
       <description>برخی از پارامتر هایی را که در الگوریتم خود استفاده کردیم به یاد بیاورید:
- $ = c ^ {(i)}$ ایندکس خوشه ای ${1,2,&amp;hellip;,k}$ که به نمونه $x^{(i)}$ منتسب شده است. $ = \mu _k $ خوشه مرکزی k $(\mu _k \in \mathbb{R} ^ n)$ $ = \mu _ {c ^ {(i)}} $ مرکز خوشه ای که به نمونه $x^{(i)}$ منتسب شد است.  </description>
+ $ = c ^ {(i)}$ ایندکس خوشه ای ${1,2,&amp;hellip;,k}$ که به نمونه $x^{(i)}$ منتسب شده است. $ = \mu _k $ خوشه مرکزی k $(\mu _k \in \mathbb{R} ^ n)$ $ = \mu _ {c ^ {(i)}} $ مرکز خوشه ای که به نمونه $x^{(i)}$ منتسب شد است.  با استفاده از این متغیرها می‌توانیم تابع هزینه خود را تعریف کنیم:</description>
+    </item>
+    
+    <item>
+      <title>مقداردهی اولیه تصادفی</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week8/random-initialization/</link>
+      <pubDate>Sat, 24 Oct 2020 12:35:28 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week8/random-initialization/</guid>
+      <description>یک روش پیشنهادی برای مقداردهی اولیه تصادفی برای مرکز های خوشه ای وجود دارد.
+  اگر داشته باشید $k &amp;lt; m$، یعنی اطمینان حاصل کنید که تعداد خوشه های شما از تعداد نمونه های آموزشی شما کمتر است.
+  به طور تصادفی نمونه های آموزشی $k$ را انتخاب کنید.(مطمعن شوید که نمونه ها منحصر به فرد باشند)
+  $\mu_1, &amp;hellip;, \mu _k$ ها را برابر با نمونه های $k$ قرار بدهید.</description>
+    </item>
+    
+    <item>
+      <title>انتخاب تعداد خوشه ها</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week8/choosing-the-number-of-clusters/</link>
+      <pubDate>Sat, 24 Oct 2020 13:13:58 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week8/choosing-the-number-of-clusters/</guid>
+      <description></description>
     </item>
     
   </channel>

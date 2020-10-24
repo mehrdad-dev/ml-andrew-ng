@@ -5197,6 +5197,27 @@
 
             
           
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ml-andrew-ng/week6/files/" title="فایل های هفته ششم" class="dd-item ">
+        <a href="/ml-andrew-ng/week6/files/">
+        فایل های هفته ششم
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
         
         </ul>
               
@@ -5353,8 +5374,128 @@
 
             
           
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ml-andrew-ng/week8/random-initialization/" title="مقداردهی اولیه تصادفی" class="dd-item ">
+        <a href="/ml-andrew-ng/week8/random-initialization/">
+        مقداردهی اولیه تصادفی
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ml-andrew-ng/week8/choosing-the-number-of-clusters/" title="انتخاب تعداد خوشه ها" class="dd-item ">
+        <a href="/ml-andrew-ng/week8/choosing-the-number-of-clusters/">
+        انتخاب تعداد خوشه ها
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
         
         </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/ml-andrew-ng/week9/" title=" هفته نهم" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/ml-andrew-ng/week9/">
+          <i class='fa fa-graduation-cap ' ></i>  هفته نهم 
+          
+            <i  class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/ml-andrew-ng/week10/" title=" هفته دهم" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/ml-andrew-ng/week10/">
+          <i class='fa fa-graduation-cap ' ></i>  هفته دهم 
+          
+            <i  class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/ml-andrew-ng/week11/" title=" هفته یازدهم" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/ml-andrew-ng/week11/">
+          <i class='fa fa-graduation-cap ' ></i>  هفته یازدهم 
+          
+            <i  class="fas fa-check read-icon"></i>
+          
+      </a>
+      
               
     </li>
   
@@ -5608,7 +5749,7 @@
           
 
           
-<div class="page-description"><i class="fas fa-clock"></i> 1 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/10/22
+<div class="page-description"><i class="fas fa-clock"></i> 2 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/10/22
 </div>
 <p>برخی از پارامتر هایی را که در الگوریتم خود استفاده کردیم به یاد بیاورید:</p>
 <ul>
@@ -5616,6 +5757,25 @@
 <li>$ = \mu _k $ خوشه مرکزی k $(\mu _k \in \mathbb{R} ^ n)$</li>
 <li>$ = \mu _ {c ^ {(i)}} $ مرکز خوشه ای که به نمونه $x^{(i)}$ منتسب شد است.</li>
 </ul>
+<p>با استفاده از این متغیرها می‌توانیم تابع هزینه خود را تعریف کنیم:</p>
+<p>$$
+J(c ^{(i)}, &hellip;, c ^{(m)}, \mu _1, &hellip;, \mu _k) = \frac{1}{m} \sum ^ m _ {i=1} || x ^{(i)} - \mu _ {c^{(i)}} || ^2
+$$</p>
+<p>هدف بهینه سازی ما این است که تمام پارامترهای خود را با استفاده از تابع هزینه بالا به حداقل برسانیم:</p>
+<p>$$
+min _ {c,\mu} J(c, \mu)
+$$</p>
+<p>یعنی همه مقادیری که در مجموعه $c$ پیدا می‌کنیم، نمایانگر همه خوشه های ما است، و $\mu$ نیز نمایانگر همه مرکز های ما است، که میانگین فاصله هر نمونه آموزشی تا مرکز خوشه مربوطه را به حداقل می‌رسانیم.</p>
+<p>تابع هزینه بالا اغلب distortion نمونه های آموزشی نامیده می‌شود.</p>
+<p>در مرحله تخصیص خوشه (مرحله ۲ در قسمت قبل) هدف ما این است:</p>
+<p>$$
+\text{Minimize } J(&hellip;) \text{ with } c^{(1)},&hellip;,c^{(m)}
+$$
+(ثابت نگه داشتن $\mu _ 1,&hellip;,\mu _ k $ ها)</p>
+<p>و در مرحله حرکت مرکز (مرحله ۳ در قسمت قبل) هدف ما این است:</p>
+<p>$$
+\text{Minimize } J(&hellip;) \text{ with } \mu _ 1,&hellip;,\mu _ k
+$$</p>
 
 
 <footer class="footline">
@@ -6640,22 +6800,6 @@
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
             
             
@@ -6680,6 +6824,38 @@
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                     
                 
                 
@@ -6741,6 +6917,22 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
             
         
                     
@@ -6749,8 +6941,72 @@
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
                         
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -6839,7 +7095,7 @@
 			<a class="nav nav-prev" href="/ml-andrew-ng/week8/k-means/" title="الگوریتم K-Means"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ml-andrew-ng/dictionary/" title="لغت نامه دوره " style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/ml-andrew-ng/week8/random-initialization/" title="مقداردهی اولیه تصادفی" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
