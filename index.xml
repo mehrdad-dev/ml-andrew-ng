@@ -91,6 +91,17 @@ $$ g(\theta_0 + \theta_1 x_1^2 + \theta_2 x_1 x_2 + \theta_3 x_1 x_3 + \theta_4 
     </item>
     
     <item>
+      <title>درک حاشیه اطمینان زیاد</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week7/large-margin-intuition/</link>
+      <pubDate>Thu, 22 Oct 2020 16:30:25 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week7/large-margin-intuition/</guid>
+      <description>یک راه مفید برای فکر کردن راجع به ماشین های بردار پشتیبان این است که آن ها را به عنوان طبقه بندی کننده هایی که حاشیه اطمینان زیادی دارند در نظر بگیرید.
+$$ if \hspace{0.3cm} y=1,\hspace{0.1cm} we\hspace{0.2cm} want \hspace{0.3cm} \theta\ ^ T x \ge 1 \hspace{0.3cm}(not\hspace{0.1cm} just\hspace{0.1cm} \ge 0 ) $$
+$$ if \hspace{0.3cm} y=0,\hspace{0.1cm} we\hspace{0.2cm} want \hspace{0.3cm} \theta\ ^ T x \le -1 \hspace{0.3cm}(not\hspace{0.1cm} just\hspace{0.1cm} &amp;lt; 0 ) $$</description>
+    </item>
+    
+    <item>
       <title>الگوریتم K-Means</title>
       <link>https://mehrdad-dev.github.io/ml-andrew-ng/week8/k-means/</link>
       <pubDate>Mon, 19 Oct 2020 12:43:35 +0330</pubDate>

@@ -38,7 +38,7 @@
 
   <link rel="icon" href="/ml-andrew-ng/images/favicon.png" type="image/png">
 
-  <title>رگرسیون خطی منظم | Machine Learning Andrew Ng</title>
+  <title>درک حاشیه اطمینان زیاد | Machine Learning Andrew Ng</title>
 
   
   <link href="/ml-andrew-ng/css/nucleus.css" rel="stylesheet">
@@ -86,7 +86,7 @@
   
 </head>
 
-<body class="" data-url="/ml-andrew-ng/week3/regularized-linear-regression/">
+<body class="" data-url="/ml-andrew-ng/week7/large-margin-intuition/">
   <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -4272,7 +4272,7 @@
   
     
     <li data-nav-id="/ml-andrew-ng/week3/" title=" هفته سوم" class="dd-item 
-        parent
+        
         
         
         ">
@@ -4447,7 +4447,7 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week3/regularized-linear-regression/" title="رگرسیون خطی منظم" class="dd-item active">
+      <li data-nav-id="/ml-andrew-ng/week3/regularized-linear-regression/" title="رگرسیون خطی منظم" class="dd-item ">
         <a href="/ml-andrew-ng/week3/regularized-linear-regression/">
         رگرسیون خطی منظم
         <i class="fas fa-check read-icon"></i>
@@ -5235,7 +5235,7 @@
   
     
     <li data-nav-id="/ml-andrew-ng/week7/" title=" هفته هفتم" class="dd-item 
-        
+        parent
         
         
         ">
@@ -5284,7 +5284,7 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week7/large-margin-intuition/" title="درک حاشیه اطمینان زیاد" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week7/large-margin-intuition/" title="درک حاشیه اطمینان زیاد" class="dd-item active">
         <a href="/ml-andrew-ng/week7/large-margin-intuition/">
         درک حاشیه اطمینان زیاد
         <i class="fas fa-check read-icon"></i>
@@ -5778,7 +5778,7 @@
           
           
           
-          <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week3/'> هفته سوم</a> > رگرسیون خطی منظم
+          <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week7/'> هفته هفتم</a> > درک حاشیه اطمینان زیاد
           
           
           
@@ -5791,16 +5791,7 @@
           
           <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#gradient-descent">Gradient Descent</a></li>
-        <li><a href="#normal-equation">Normal Equation</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -5816,50 +5807,42 @@
           
           <h1>
             
-            رگرسیون خطی منظم
+            درک حاشیه اطمینان زیاد
           </h1>
           
 
           
-<div class="page-description"><i class="fas fa-clock"></i> 2 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/09/13
+<div class="page-description"><i class="fas fa-clock"></i> 2 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/10/22
 </div>
-<p>ما می‌توانیم منظم سازی را هم برای رگرسیون خطی و هم برای رگرسیون لجستیک استفاده کنیم.
-که اینجا ابتدا رگرسیون خطی را بررسی می‌کنیم.</p>
-<h3 id="gradient-descent">Gradient Descent</h3>
-<p>گرادیان کاهشی را اصلاح می‌کنیم تا $\theta_0$ را از بقیه پارامتر ها جدا کنیم،
-زیرا نمی‌خواهیم تاثیر $\theta_0$ را کاهش دهیم و از بین ببریم:</p>
+<p>یک راه مفید برای فکر کردن راجع به ماشین های بردار پشتیبان این است که آن ها را به عنوان طبقه بندی کننده هایی که حاشیه اطمینان زیادی دارند در نظر بگیرید.</p>
 <p>$$
-\begin{align*} &amp; \text{Repeat}\ \lbrace \newline &amp; \ \ \ \ \theta_0 := \theta_0 - \alpha\ \frac{1}{m}\ \sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)})x_0^{(i)} \newline &amp; \ \ \ \ \theta_j := \theta_j - \alpha\ \left[ \left( \frac{1}{m}\ \sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)})x_j^{(i)} \right) + \frac{\lambda}{m}\theta_j \right] &amp;\ \ \ \ \ \ \ \ \ \ j \in \lbrace 1,2&hellip;n\rbrace\newline &amp; \rbrace \end{align*}
+if \hspace{0.3cm} y=1,\hspace{0.1cm} we\hspace{0.2cm} want \hspace{0.3cm} \theta\ ^ T x \ge 1 \hspace{0.3cm}(not\hspace{0.1cm} just\hspace{0.1cm} \ge 0 )
 $$</p>
-<p>قسمت $\frac{\lambda}{m}\theta_j$ منظم سازی ما را انجام می‌دهد.
-و با یک مقدار دستکاری می‌توانیم $\theta_j$ را به این صورت نشان دهیم:</p>
 <p>$$
-\theta_j := \theta_j(1 - \alpha \frac{\lambda}{m} ) - \alpha \frac{1}{m} \sum_{i = 1}^m (h_\theta(x^{(i)}) - y^{(i)}) x_j ^ {(i)}
+if \hspace{0.3cm} y=0,\hspace{0.1cm} we\hspace{0.2cm} want \hspace{0.3cm} \theta\ ^ T x \le -1 \hspace{0.3cm}(not\hspace{0.1cm} just\hspace{0.1cm} &lt; 0 )
 $$</p>
-<p>قسمت اول معدله یعنی $1 - \alpha \frac{\lambda}{m}$
-همیشه کم از $1$ خواهد بود، و به طور چشمی می‌بینیم که مقدار
-$\theta_j$ را در هر بروزرسانی کمتر می‌کند.</p>
-<p>توجه داشته باشید که قسمت دوم دقیقا مثل قبل است.</p>
-<h3 id="normal-equation">Normal Equation</h3>
-<p>حالا منظم سازی را با یک روش جایگزین و بدون نیاز به تکرار (non-iterative) یعنی معادله نرمال بررسی می‌کنیم.</p>
-<p>برای این کار معادله ما شبیه به معادله اصلی است، با این تفاوت که یک بخش جدید در داخل پرانتز اضافه می‌کنیم:</p>
+<p>حالا زمانی که ثابت C را یک مقدار خیلی بزرگ در نظر بگیریم (برای مثال 100,000)، تابع بهینه سازی ما $\theta$ را محدود می کند به طوری که معادله A (مجموع هزینه های هر نمونه) برابر 0 می شود. ما محدودیت زیر را برای $\theta$ در نظر می گیریم:</p>
 <p>$$
-\begin{align*}&amp; \theta = \left( X^TX + \lambda \cdot L \right)^{-1} X^Ty \newline&amp; \text{where}\ \ L = \begin{bmatrix} 0 &amp; &amp; &amp; &amp; \newline &amp; 1 &amp; &amp; &amp; \newline &amp; &amp; 1 &amp; &amp; \newline &amp; &amp; &amp; \ddots &amp; \newline &amp; &amp; &amp; &amp; 1 \newline\end{bmatrix}\end{align*}
+\theta\ ^ T x \ge 1 \hspace{0.3cm} if \hspace{0.3cm} y=1 \hspace{0.3cm} and \hspace{0.3cm} \theta\ ^ T x \le -1 \hspace{0.3cm} if \hspace{0.3cm} y=0.
 $$</p>
-<p>L یک ماتریس است که به صورت مورب از قسمت بالا سمت چپ با $0$ شروع شده و تا انتهای  بخش مورب
-$1$ است.
-و سایر خانه های ماتریس نیز مقدار $0$ دارند، که ابعاد آن
-(n+1)*(n+1) است.</p>
-<p>در واقع یک ماتریس همانی است،
-(اگر چه که شامل $x_0$ نمی‌شود)
-که در عدد حقیقی لامبدا ضرب شده است.</p>
-<p><strong>به خاطر بیاورید که:</strong></p>
+<p>اگر C خیلی بزرگ باشد، پارامترهای $\theta$ را باید مطابق فرمول زیر انتخاب کنیم:</p>
 <p>$$
-\text{if  } m &lt; n \text{ then  } X^TX
-$$
-وارون ناپذیر بود.
-اگر چه وقتی ما قسمت $\lambda . L $ را اضافه می‌کنیم،
-سپس $ X^TX + \lambda . L$ وارون پذیر می‌شود.</p>
+\sum_{i=1}^m y^{(i)} \hspace{0.1cm}  cost_1(\theta^T x)+(1- y^{(i)} ) \hspace{0.1cm}cost_0(\theta^T x)=0
+$$</p>
+<p>که تابع هزینه را به شکل زیر کاهش می دهد:</p>
+<p>$$
+J(\theta) = C.0+\frac{1}{2} \sum_{j=1}^n \theta_j ^ 2
+$$</p>
+<p>$$
+=\frac{1}{2} \sum_{j=1}^n \theta_j ^ 2
+$$</p>
+<p>مرز تصمیم گیری را از رگریسیون لجستیک به یاد آوردید (خطی که نمونه های مثبت و منفی را از هم جدا می کرد). خصوصیت ویژه ای که مرز تصمیم گیری در ماشین های بردار پشتیبان دارد این است که تا جای ممکن، از نمونه های مثبت و منفی فاصله دارد.</p>
+<p>فاصله مرز تصمیم گیری تا نزدیک ترین نمونه، حاشیه اطمینان نامیده می شود. از آن جایی که ماشین های بردار پشتیبان این حاشیه را حداکثر می کنند، اغلب به آن ها طبقه بندی کننده با حاشیه اطمینان زیاد می گویند.</p>
+<p>ماشین بردار پشتیبان نمونه های مثبت و منفی را با حاشیه اطمینان زیاد جدا می کند.</p>
+<p>این حاشیه اطمینان زیاد تنها زمانی به دست میاید که C خیلی بزرگ باشد.</p>
+<p>داده ها زمانی به صورت خطی قابل جدا شدن هستند که یک خط راست بتواند نمونه های مثبت و منفی را از هم جدا کند.</p>
+<p>اگر ما داده های خارج از محدوده داریم که نمی خواهیم روی مرز تصمیم گیری ما اثر بگذارند، می توانیم C را کاهش دهیم.</p>
+<p>افزایش و کاهش C، به ترتیب مانند کاهش و افزایش $\lambda$ است و می تواند مرز تصمیم گیری ما را ساده کند.</p>
 
 
 <footer class="footline">
@@ -6220,7 +6203,6 @@ $$
             
                 
                     
-                    
                 
                 
 
@@ -6233,9 +6215,6 @@ $$
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -6349,7 +6328,6 @@ $$
             
                 
                     
-                    
                 
                 
 
@@ -6365,9 +6343,6 @@ $$
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -6916,6 +6891,7 @@ $$
             
                 
                     
+                    
                 
                 
 
@@ -6928,6 +6904,9 @@ $$
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -6945,6 +6924,7 @@ $$
             
                 
                     
+                    
                 
                 
 
@@ -6963,6 +6943,9 @@ $$
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -7224,10 +7207,10 @@ $$
 	 
 	 
 		
-			<a class="nav nav-prev" href="/ml-andrew-ng/week3/cost-function-overfitting/" title=" تابع هزینه در Overfitting"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/ml-andrew-ng/week7/optimization-objective/" title="بهینه سازی هدفمند"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ml-andrew-ng/week3/regularized-logistic-regression/" title="رگرسیون لجستیک منظم" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/ml-andrew-ng/week8/" title=" هفته هشتم" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
