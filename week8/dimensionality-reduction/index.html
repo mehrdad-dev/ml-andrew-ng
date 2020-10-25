@@ -38,7 +38,7 @@
 
   <link rel="icon" href="/ml-andrew-ng/images/favicon.png" type="image/png">
 
-  <title>معیار‌های خطا برای کلاس‌های نامتوازن | Machine Learning Andrew Ng</title>
+  <title>کاهش ابعاد | Machine Learning Andrew Ng</title>
 
   
   <link href="/ml-andrew-ng/css/nucleus.css" rel="stylesheet">
@@ -86,7 +86,7 @@
   
 </head>
 
-<body class="" data-url="/ml-andrew-ng/week6/error-metrics-for-skewed-classes/">
+<body class="" data-url="/ml-andrew-ng/week8/dimensionality-reduction/">
   <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -4947,7 +4947,7 @@
   
     
     <li data-nav-id="/ml-andrew-ng/week6/" title=" هفته ششم" class="dd-item 
-        parent
+        
         
         
         ">
@@ -5143,7 +5143,7 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week6/error-metrics-for-skewed-classes/" title="معیار‌های خطا برای کلاس‌های نامتوازن" class="dd-item active">
+      <li data-nav-id="/ml-andrew-ng/week6/error-metrics-for-skewed-classes/" title="معیار‌های خطا برای کلاس‌های نامتوازن" class="dd-item ">
         <a href="/ml-andrew-ng/week6/error-metrics-for-skewed-classes/">
         معیار‌های خطا برای کلاس‌های نامتوازن
         <i class="fas fa-check read-icon"></i>
@@ -5292,7 +5292,7 @@
   
     
     <li data-nav-id="/ml-andrew-ng/week8/" title=" هفته هشتم" class="dd-item 
-        
+        parent
         
         
         ">
@@ -5425,7 +5425,7 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week8/dimensionality-reduction/" title="کاهش ابعاد" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week8/dimensionality-reduction/" title="کاهش ابعاد" class="dd-item active">
         <a href="/ml-andrew-ng/week8/dimensionality-reduction/">
         کاهش ابعاد
         <i class="fas fa-check read-icon"></i>
@@ -5757,7 +5757,7 @@
           
           
           
-          <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week6/'> هفته ششم</a> > معیار‌های خطا برای کلاس‌های نامتوازن
+          <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week8/'> هفته هشتم</a> > کاهش ابعاد
           
           
           
@@ -5770,7 +5770,16 @@
           
           <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#انگیزه-۱-فشرده-سازی-داده-ها">انگیزه ۱: فشرده سازی داده ها</a></li>
+        <li><a href="#انگیزه-۲-مصور-سازی">انگیزه ۲: مصور سازی</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -5786,38 +5795,32 @@
           
           <h1>
             
-            معیار‌های خطا برای کلاس‌های نامتوازن
+            کاهش ابعاد
           </h1>
           
 
           
-<div class="page-description"><i class="fas fa-clock"></i> 2 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/10/19
+<div class="page-description"><i class="fas fa-clock"></i> 2 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/10/25
 </div>
-<p>گاهی اوقات دشوار است که بگوییم کاهش خطاها باعث بهبود الگوریتم می‌شوند.</p>
+<h3 id="انگیزه-۱-فشرده-سازی-داده-ها">انگیزه ۱: فشرده سازی داده ها</h3>
 <ul>
-<li>برای مثال: در پیش‌ بینی تشخیص سرطان که 0.5% از نمونه‌ها سرطان دارند، متوجه می‌شویم که الگوریتم یادگیری 1% خطا دارد.</li>
+<li>اگر داده های زائد زیادی داشته باشیم ممکن است بخواهیم ابعاد ویژگی های خود را کاهش دهیم.</li>
+<li>برای انجام این کار، دو ویژگی بسیار مرتبط پیدا می‌کنیم، آنها را رسم می‌کنیم و یک خط جدید ایجاد می‌کنیم که به نظر می‌رسد هر دو ویژگی را به طور دقیق توصیف می‌کند. ما همه ویژگی های جدید را روی این خط واحد قرار می‌دهیم.</li>
 </ul>
-<p>هرچند اگر به سادگی هریک از نمونه‌ها را با عنوان 0 طبقه‌بندی می‌کردیم، خطا به 0.5% کاهش پیدا میکرد، با این وجود که ما الگوریتم را بهبود نداده بودیم.</p>
-<p>این مسئله در کلاس‌های نامتوازن رخ می‌دهد، هنگامی که کلاس در کل مجموعه داده بسیار نادر است.</p>
-<p>به بیان دیگر، هنگامی که نمونه‌های یک کلاس تعداد خیلی بیشتری از یک کلاس دیگر داشته باشد.</p>
-<p>می‌توان از Precision/Recall استفاده کرد.</p>
-<ul>
-<li>پیش ‌بینی شده: 1، حقیقی: 1 $\Leftarrow$ True positive</li>
-<li>پیش ‌بینی شده: 0، حقیقی: 0 $\Leftarrow$ True negative</li>
-<li>پیش ‌بینی شده: 0، حقیقی: 1 $\Leftarrow$ False negative</li>
-<li>پیش ‌بینی شده: 1، حقیقی: 0 $\Leftarrow$ False positive</li>
-</ul>
-<p><strong>Precision:</strong> از تمام بیمارانی که پیش بینی برای آنها  y=1 بوده است، چه بخشی از آن‌ها واقعا مبتلا به سرطان هستند؟</p>
-<p>$$\frac{\text{True Positives}}{\text{Total number of predicted positives}} = \frac{\text{True Positives}}{\text{True Positives + False positives}}$$</p>
-<p><strong>Recall:</strong> از تمام بیمارانی که واقعا به سرطان مبتلا هستند، سرطان چه بخشی از آن‌ها توسط ما به درستی تشخیص داده شده است؟</p>
-<p>$$\frac{\text{True Positives}}{\text{Total number of actual positives}} = \frac{\text{True Positives}}{\text{True Positives + False negatives}}$$</p>
-<p>این دو معیار دید بهتری نسبت به این که عملکرد طبقه‌بندی ما چگونه است می‌دهند. ما می‌خواهیم هر دو مقدار Precision و Recall زیاد باشند.</p>
-<p>در مثال ابتدای بخش، اگر تمام بیماران را به عنوان 0 طبقه‌بندی کنیم، مقدار recall با $\frac{0}{0 + f}$ برابر خواهد بود، پس با وجود داشتن درصد خطای پایین‌تر recall بدتری خواهد بود.</p>
-<p>$$Accuracy = \frac{\text{true positive + true negative}}{\text{total population}}$$</p>
+<p>انجام کاهش ابعاد باعث کاهش کل داده هایی می‌شود که باید در حافظه کامپیوتر ذخیره کنیم و الگوریتم یادگیری ما را تسریع می‌کند.</p>
 
-<div class="notices note" ><p>اگر یک الگوریتم مانند یکی از مثال‌ها فقط موارد منفی را پیش‌ بینی کند، مقدار precision تعریف نشده و تقسیم بر صفر غیر ممکن است. F1 نیز تعریف نشده خواهد بود.</p>
+<div class="notices note" ><p>در کاهش ابعاد ، ما در حال کاهش ویژگی های خود هستیم تا تعداد نمونه های خود.
+متغیر $m$ ما در همان اندازه قبلی خواهد ماند،
+$n$ یعنی تعداد ویژگی های هر نمونه از $x ^{(1)}$ تا $x ^ {(m)}$ کاهش خواهد یافت.</p>
 </div>
 
+<h3 id="انگیزه-۲-مصور-سازی">انگیزه ۲: مصور سازی</h3>
+<p>مصور سازی داده هایی که بیش از سه بعد هستند آسان نیست.
+ما می‌توانیم ابعاد داده های خود را به ۳ یا کمتر کاهش دهیم تا آنها را ترسیم کنیم.</p>
+<p>ما نیاز داریم که ویژگی های جدید پیدا کنیم،
+$z_1, z_2$ (و شاید $z_3$)، که می‌توانند به طور موثر همه ویژگی های دیگر را خلاصه کنند.</p>
+<p>به طور مثال:
+صدها ویژگی مرتبط با سیستم اقتصادی یک کشور ممکن است همه در یک ویژگی که شما آن را &ldquo;فعالیت اقتصادی&rdquo; می‌نامید، ترکیب شوند.</p>
 
 
 <footer class="footline">
@@ -6658,254 +6661,6 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                 
                 
 
@@ -7014,6 +6769,254 @@
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -7166,10 +7169,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/ml-andrew-ng/week6/error-analysis/" title="تحلیل خطا"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/ml-andrew-ng/week8/choosing-the-number-of-clusters/" title="انتخاب تعداد خوشه ها"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ml-andrew-ng/week6/trading-off-precision-and-recall/" title="متوازن کردن Precision  و Recall" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/ml-andrew-ng/week8/pca-problem-formulation/" title="تحلیل اجزای اصلی فرمول مسئله" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

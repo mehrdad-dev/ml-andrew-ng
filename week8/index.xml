@@ -61,6 +61,26 @@
       <pubDate>Sat, 24 Oct 2020 13:13:58 +0330</pubDate>
       
       <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week8/choosing-the-number-of-clusters/</guid>
+      <description>انتخاب $K$ می‌تواند کاملا خودسرانه و مبهم باشد.
+روش elbow: نمودار هزینه $J$ و تعداد خوشه های $K$ را رسم کنید، با افزایش تعداد خوشه ها مقدار تابع هزینه باید کاهش یابد، و سپس یکسان شود. $K$ را در نقطه ای انتخاب کنید که تابع هزینه در حال یکسان شدن است.
+با افزایش $K$، $J$ همیشه کاهش می‌یابد. اما یک استثنا وجود دارد اگر k-means در مینیمم محلی گیر کند.</description>
+    </item>
+    
+    <item>
+      <title>کاهش ابعاد</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week8/dimensionality-reduction/</link>
+      <pubDate>Sun, 25 Oct 2020 12:57:20 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week8/dimensionality-reduction/</guid>
+      <description>انگیزه ۱: فشرده سازی داده ها  اگر داده های زائد زیادی داشته باشیم ممکن است بخواهیم ابعاد ویژگی های خود را کاهش دهیم. برای انجام این کار، دو ویژگی بسیار مرتبط پیدا می‌کنیم، آنها را رسم می‌کنیم و یک خط جدید ایجاد می‌کنیم که به نظر می‌رسد هر دو ویژگی را به طور دقیق توصیف می‌کند. ما همه ویژگی های جدید را روی این خط واحد قرار می‌دهیم.  انجام کاهش ابعاد باعث کاهش کل داده هایی می‌شود که باید در حافظه کامپیوتر ذخیره کنیم و الگوریتم یادگیری ما را تسریع می‌کند.</description>
+    </item>
+    
+    <item>
+      <title>تحلیل اجزای اصلی فرمول مسئله</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week8/pca-problem-formulation/</link>
+      <pubDate>Sun, 25 Oct 2020 13:17:54 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week8/pca-problem-formulation/</guid>
       <description></description>
     </item>
     
