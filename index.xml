@@ -489,12 +489,24 @@ $$ {\color{Red} J(\theta_1) = \frac{1}{2m} \sum_{i=1}^{m} (\theta_1x - y_i)^2 \R
     </item>
     
     <item>
+      <title>تجزیه اجزای اصلی الگوریتم</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week8/pca-algorithm/</link>
+      <pubDate>Mon, 26 Oct 2020 09:17:16 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week8/pca-algorithm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>تحلیل اجزای اصلی فرمول مسئله</title>
       <link>https://mehrdad-dev.github.io/ml-andrew-ng/week8/pca-problem-formulation/</link>
       <pubDate>Sun, 25 Oct 2020 13:17:54 +0330</pubDate>
       
       <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week8/pca-problem-formulation/</guid>
-      <description></description>
+      <description>محبوب ترین الگوریتم کاهش ابعاد، تحلیل اجزای اصلی یا PCA است.
+فرمول مسئله باتوجه به ۲ ویژگی $x_1$ و $x_2$ ،ما می‌خواهیم یک خط واحد پیدا کنیم که به طور موثر هر دو ویژگی را همزمان توصیف کند. سپس ویژگی های قدیمی خود را بر روی این خط جدید ترسیم می‌کنیم تا یک ویژگی واحد جدید بدست آوریم.
+همین کار را می توان با سه ویژگی انجام داد.
+هدف PCA کاهش میانگین تمام فواصل هر ویژگی تا خط projection است.</description>
     </item>
     
     <item>

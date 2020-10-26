@@ -5467,6 +5467,27 @@
  
   
     
+      <li data-nav-id="/ml-andrew-ng/week8/pca-algorithm/" title="تجزیه اجزای اصلی الگوریتم" class="dd-item ">
+        <a href="/ml-andrew-ng/week8/pca-algorithm/">
+        تجزیه اجزای اصلی الگوریتم
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
       <li data-nav-id="/ml-andrew-ng/week8/pca-problem-formulation/" title="تحلیل اجزای اصلی فرمول مسئله" class="dd-item active">
         <a href="/ml-andrew-ng/week8/pca-problem-formulation/">
         تحلیل اجزای اصلی فرمول مسئله
@@ -5791,7 +5812,16 @@
           
           <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#فرمول-مسئله">فرمول مسئله</a></li>
+        <li><a href="#pca-رگرسیون-خطی-نیست">PCA رگرسیون خطی نیست</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -5812,8 +5842,41 @@
           
 
           
-<div class="page-description"><i class="fas fa-clock"></i> 0 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/10/25
+<div class="page-description"><i class="fas fa-clock"></i> 2 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/10/25
 </div>
+<p>محبوب ترین الگوریتم کاهش ابعاد، تحلیل اجزای اصلی یا PCA است.</p>
+<h3 id="فرمول-مسئله">فرمول مسئله</h3>
+<p>باتوجه به ۲ ویژگی $x_1$ و $x_2$
+،ما می‌خواهیم یک خط واحد پیدا کنیم که به طور موثر هر دو ویژگی را همزمان توصیف کند.
+سپس ویژگی های قدیمی خود را بر روی این خط جدید ترسیم می‌کنیم تا یک ویژگی واحد جدید بدست آوریم.</p>
+<p>همین کار را می توان با سه ویژگی انجام داد.</p>
+<p>هدف PCA کاهش میانگین تمام فواصل هر ویژگی تا خط projection است.
+این خطای projection است.</p>
+<p><strong>کاهش از ۲ بعدی به ۱ بعدی:</strong>
+جهتی را پیدا کنید (بردار $u^{(1)} \in \mathbb{R} ^ n $) که بتوان
+داده ها را بر روی آن نمایش داد، تا خطای projection به حداقل برسد.</p>
+<p>مورد کلی تر به شرح زیر است:</p>
+<p><strong>کاهش از n بعدی به k بعدی:</strong>
+به تعداد k بردار پیدا کنید $u^{(1)}, u^{(2)}, &hellip;, u^{(k)}$ که داده ها را بر روی
+آن ها نمایش دهید، تا خطای projection به حداقل برسد.</p>
+<p>اگر از ۳ بعدی به ۲ بعدی تبدیل می‌کنیم،
+داده ها را باید بر روی ۲ جهت نمایش دهیم، بنابراین $k=2$ خواهد بود.</p>
+<h3 id="pca-رگرسیون-خطی-نیست">PCA رگرسیون خطی نیست</h3>
+<ul>
+<li>
+<p>در رگرسیون خطی، ما خطای مجذور از هر نقطه به خط پیش بینی کننده را  به حداقل می‌رسانیم.
+اینها فاصله های عمودی هستند.</p>
+</li>
+<li>
+<p>در PCA،
+ما کمترین فاصله یا کوتاه ترین فاصله های قائم (ارتودنسی) را تا نقاط داده خود به حداقل می‌رسانیم.</p>
+</li>
+</ul>
+<p>به طور کلی در رگرسیون خطی، ما تمام نمونه های خود را در$x$ را گرفته و از پارامتر های موجود در$\Theta$
+برای پیش بینی $y$ استفاده می‌کنیم.</p>
+<p>در PCA، ما در حال گرفتن تعدادی ویژگی هستیم $x_1, x_2, &hellip;, x_n$،
+و نزدیک ترین مجموعه داده مشترک بین آن ها را پیدا می‌کنیم.
+ما سعی در پیش بینی هیچ نتیجه ای نداریم و هیچ وزن تتایی را روی ویژگی ها اعمال نمی‌کنیم.</p>
 
 
 <footer class="footline">
@@ -7023,6 +7086,22 @@
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                     
                 
                 
@@ -7178,7 +7257,7 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/ml-andrew-ng/week8/dimensionality-reduction/" title="کاهش ابعاد"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/ml-andrew-ng/week8/pca-algorithm/" title="تجزیه اجزای اصلی الگوریتم"> <i class="fa fa-chevron-left"></i></a>
 		
 		
 			<a class="nav nav-next" href="/ml-andrew-ng/week9/" title=" هفته نهم" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
