@@ -489,15 +489,6 @@ $$ {\color{Red} J(\theta_1) = \frac{1}{2m} \sum_{i=1}^{m} (\theta_1x - y_i)^2 \R
     </item>
     
     <item>
-      <title>تجزیه اجزای اصلی الگوریتم</title>
-      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week8/pca-algorithm/</link>
-      <pubDate>Mon, 26 Oct 2020 09:17:16 +0330</pubDate>
-      
-      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week8/pca-algorithm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>تحلیل اجزای اصلی فرمول مسئله</title>
       <link>https://mehrdad-dev.github.io/ml-andrew-ng/week8/pca-problem-formulation/</link>
       <pubDate>Sun, 25 Oct 2020 13:17:54 +0330</pubDate>
@@ -571,6 +562,19 @@ $$ {\color{Red} J(\theta_1) = \frac{1}{2m} \sum_{i=1}^{m} (\theta_1x - y_i)^2 \R
       <description>قسمت قبل دیدیم که با داشتن فقط یک پارامتر برای تابع فرضیه، نمودار تابع هزینه یا همان $J$ به صورت سهمی بود. اگر دو پارامتر داشته باشیم باز هم به صورت سهمی است، اما سه بعدی و بسته به داده ما ممکن است به شکل زیر باشد:
 اما ما برای نمایش این تابع از شکل سه بعدی استفاده نمی‌کنیم‌، بلکه از نمودار های کانتور استفاده می‌کنیم!
 در این نمودار ها هر یک از بیضی ها نشان دهنده مجموعه ای از نقاط است که مقادیر یکسانی در $J$ بر حسب $\theta_0$ و $\theta_1$ های مختلف دارند.</description>
+    </item>
+    
+    <item>
+      <title>تجزیه اجزای اصلی الگوریتم</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week8/pca-algorithm/</link>
+      <pubDate>Mon, 26 Oct 2020 09:17:16 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week8/pca-algorithm/</guid>
+      <description>قبل از استفاده از PCA ، یک مرحله پیش پردازش داده وجود دارد که باید انجام دهیم:
+پیش پردازش داده   گرفتن مجموعه آموزشی: $x^{(1)}, x^{(2)}, &amp;hellip; , x^{(m)}$
+  پیش پردازش (feature scaling/mean normalization): $\mu _j = \frac{1}{m} \sum _ {i=1} ^ m x ^ {(i)} _j $
+  جایگزین کردن هر $x ^ {(i)} _j $ با $x ^ {(i)} _j - \mu _j$
+  اگر ویژگی های مختلف در مقیاس های متفاوت باشند (مثلا $= x_1$ اندازه خانه، $ = x_2$ تعداد اتاق خواب ها)، ویژگی ها را برای داشتن دامنه ای قابل مقایسه از مقادیر تغییر مقیاس دهید.</description>
     </item>
     
     <item>

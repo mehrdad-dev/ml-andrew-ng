@@ -283,11 +283,6 @@
   </url>
   
   <url>
-    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week8/pca-algorithm/</loc>
-    <lastmod>2020-10-26T09:17:16+03:30</lastmod>
-  </url>
-  
-  <url>
     <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week8/pca-problem-formulation/</loc>
     <lastmod>2020-10-25T13:17:54+03:30</lastmod>
   </url>
@@ -330,6 +325,11 @@
   <url>
     <loc>https://mehrdad-dev.github.io/ml-andrew-ng/useful-articles/</loc>
     <lastmod>2020-09-10T17:04:49+04:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week8/pca-algorithm/</loc>
+    <lastmod>2020-10-26T09:17:16+03:30</lastmod>
   </url>
   
   <url>

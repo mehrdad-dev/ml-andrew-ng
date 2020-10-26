@@ -5467,9 +5467,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week8/pca-algorithm/" title="تجزیه اجزای اصلی الگوریتم" class="dd-item active">
-        <a href="/ml-andrew-ng/week8/pca-algorithm/">
-        تجزیه اجزای اصلی الگوریتم
+      <li data-nav-id="/ml-andrew-ng/week8/pca-problem-formulation/" title="تحلیل اجزای اصلی فرمول مسئله" class="dd-item ">
+        <a href="/ml-andrew-ng/week8/pca-problem-formulation/">
+        تحلیل اجزای اصلی فرمول مسئله
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -5488,9 +5488,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week8/pca-problem-formulation/" title="تحلیل اجزای اصلی فرمول مسئله" class="dd-item ">
-        <a href="/ml-andrew-ng/week8/pca-problem-formulation/">
-        تحلیل اجزای اصلی فرمول مسئله
+      <li data-nav-id="/ml-andrew-ng/week8/pca-algorithm/" title="تجزیه اجزای اصلی الگوریتم" class="dd-item active">
+        <a href="/ml-andrew-ng/week8/pca-algorithm/">
+        تجزیه اجزای اصلی الگوریتم
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -5812,7 +5812,15 @@
           
           <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#پیش-پردازش-داده">پیش پردازش داده</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -5833,8 +5841,47 @@
           
 
           
-<div class="page-description"><i class="fas fa-clock"></i> 0 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/10/26
+<div class="page-description"><i class="fas fa-clock"></i> 2 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/10/26
 </div>
+<p>قبل از استفاده از PCA ، یک مرحله پیش پردازش داده وجود دارد که باید انجام دهیم:</p>
+<h3 id="پیش-پردازش-داده">پیش پردازش داده</h3>
+<ul>
+<li>
+<p>گرفتن مجموعه آموزشی: $x^{(1)}, x^{(2)}, &hellip; , x^{(m)}$</p>
+</li>
+<li>
+<p>پیش پردازش (feature scaling/mean normalization):
+$\mu _j = \frac{1}{m} \sum _ {i=1} ^ m x ^ {(i)} _j  $</p>
+</li>
+<li>
+<p>جایگزین کردن هر $x ^ {(i)} _j $ با $x ^ {(i)} _j - \mu _j$</p>
+</li>
+<li>
+<p>اگر ویژگی های مختلف در مقیاس های متفاوت باشند (مثلا $= x_1$ اندازه خانه، $ = x_2$ تعداد اتاق خواب ها)،
+ویژگی ها را برای داشتن دامنه ای قابل مقایسه از مقادیر تغییر مقیاس دهید.</p>
+</li>
+</ul>
+<p>در بالا ، ابتدا میانگین هر ویژگی را از ویژگی اصلی کم می‌کنیم. سپس تمام ویژگی ها را مقیاس بندی می کنیم:
+$$
+x ^ {(i)} _j = \frac{x ^ {(i)} _j - \mu _j}{s_j}
+$$</p>
+<p>می‌توان به طور خاص کاهش از ۲ بعدی به ۱ بعدی داده را به این صورت تعریف کرد:</p>
+<p>$$
+\sum  = \frac{1}{m} \sum _ {i=1} ^ m (x ^ {(i)}) (x ^ {(i)}) ^ T
+$$</p>
+<p>مقادیر z، همه اعداد حقیقی هستند و پیش بینی ویژگی های ما بر روی $u ^{(1)}$ هستند.</p>
+<p>بنابراین PCA دو وظیفه دارد:
+کشف کردن $u^{(1)}, u^{(2)}, &hellip;, u^{(k)}$ ها،
+و پیدا کردن $z_1, z_2, &hellip; , z_m$</p>
+<p>اثبات ریاضی برای روش زیر پیچیده و فراتر از محدوده این دوره است.</p>
+<p><strong>1. محاسبه ماتریس کو واریانس</strong>
+$$
+\sum  = \frac{1}{m} \sum _ {i=1} ^ m (x ^ {(i)}) (x ^ {(i)}) ^ T
+$$</p>
+<p>این را می‌توان در اوکتاو به صورت زیر برداری کرد:</p>
+<div align="left">
+<pre><code>Sigma = (1/m) * X' * X
+</code></pre></div>
 
 
 <footer class="footline">
@@ -7044,7 +7091,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -7061,8 +7107,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -7082,6 +7126,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -7215,10 +7262,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/ml-andrew-ng/week8/dimensionality-reduction/" title="کاهش ابعاد"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/ml-andrew-ng/week8/pca-problem-formulation/" title="تحلیل اجزای اصلی فرمول مسئله"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ml-andrew-ng/week8/pca-problem-formulation/" title="تحلیل اجزای اصلی فرمول مسئله" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/ml-andrew-ng/week9/" title=" هفته نهم" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

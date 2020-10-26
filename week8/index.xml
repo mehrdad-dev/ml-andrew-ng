@@ -76,15 +76,6 @@
     </item>
     
     <item>
-      <title>تجزیه اجزای اصلی الگوریتم</title>
-      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week8/pca-algorithm/</link>
-      <pubDate>Mon, 26 Oct 2020 09:17:16 +0330</pubDate>
-      
-      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week8/pca-algorithm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>تحلیل اجزای اصلی فرمول مسئله</title>
       <link>https://mehrdad-dev.github.io/ml-andrew-ng/week8/pca-problem-formulation/</link>
       <pubDate>Sun, 25 Oct 2020 13:17:54 +0330</pubDate>
@@ -94,6 +85,19 @@
 فرمول مسئله باتوجه به ۲ ویژگی $x_1$ و $x_2$ ،ما می‌خواهیم یک خط واحد پیدا کنیم که به طور موثر هر دو ویژگی را همزمان توصیف کند. سپس ویژگی های قدیمی خود را بر روی این خط جدید ترسیم می‌کنیم تا یک ویژگی واحد جدید بدست آوریم.
 همین کار را می توان با سه ویژگی انجام داد.
 هدف PCA کاهش میانگین تمام فواصل هر ویژگی تا خط projection است.</description>
+    </item>
+    
+    <item>
+      <title>تجزیه اجزای اصلی الگوریتم</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week8/pca-algorithm/</link>
+      <pubDate>Mon, 26 Oct 2020 09:17:16 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week8/pca-algorithm/</guid>
+      <description>قبل از استفاده از PCA ، یک مرحله پیش پردازش داده وجود دارد که باید انجام دهیم:
+پیش پردازش داده   گرفتن مجموعه آموزشی: $x^{(1)}, x^{(2)}, &amp;hellip; , x^{(m)}$
+  پیش پردازش (feature scaling/mean normalization): $\mu _j = \frac{1}{m} \sum _ {i=1} ^ m x ^ {(i)} _j $
+  جایگزین کردن هر $x ^ {(i)} _j $ با $x ^ {(i)} _j - \mu _j$
+  اگر ویژگی های مختلف در مقیاس های متفاوت باشند (مثلا $= x_1$ اندازه خانه، $ = x_2$ تعداد اتاق خواب ها)، ویژگی ها را برای داشتن دامنه ای قابل مقایسه از مقادیر تغییر مقیاس دهید.</description>
     </item>
     
   </channel>
