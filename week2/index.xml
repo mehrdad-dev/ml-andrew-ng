@@ -31,8 +31,8 @@
       <description>الگوریتم جدید ما برای گرادیان کاهشی با چندین متغیر به این صورت است:
 و قسمت $ \frac{1}{m} \sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)} ) x_j^{(i)} $ همان مشتق جرئی $\frac {\partial} {\partial\theta_0} J(\theta)$ است.
 به طور مثال برای دو متغیره و یا بیشتر خواهیم داشت:
-یادآوری: مقدار $x_0$ برابر $1$ است.
- </description>
+$$ \theta_0 := \theta_0 - \alpha \frac{1}{m} \sum ^ m _ {i=1} (h_\theta(x^{(i)}) - y^{(i)}) x_0 ^{(i)} $$
+$$ \theta_1 := \theta_1 - \alpha \frac{1}{m} \sum ^ m _ {i=1} (h_\theta(x^{(i)}) - y^{(i)}) x_1 ^{(i)} $$</description>
     </item>
     
     <item>

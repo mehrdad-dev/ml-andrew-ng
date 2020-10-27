@@ -38,7 +38,7 @@
 
   <link rel="icon" href="/ml-andrew-ng/images/favicon.png" type="image/png">
 
-  <title>تجزیه اجزای اصلی الگوریتم | Machine Learning Andrew Ng</title>
+  <title>تحلیل اجزای اصلی الگوریتم | Machine Learning Andrew Ng</title>
 
   
   <link href="/ml-andrew-ng/css/nucleus.css" rel="stylesheet">
@@ -5488,9 +5488,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week8/pca-algorithm/" title="تجزیه اجزای اصلی الگوریتم" class="dd-item active">
+      <li data-nav-id="/ml-andrew-ng/week8/pca-algorithm/" title="تحلیل اجزای اصلی الگوریتم" class="dd-item active">
         <a href="/ml-andrew-ng/week8/pca-algorithm/">
-        تجزیه اجزای اصلی الگوریتم
+        تحلیل اجزای اصلی الگوریتم
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -5799,7 +5799,7 @@
           
           
           
-          <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week8/'> هفته هشتم</a> > تجزیه اجزای اصلی الگوریتم
+          <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week8/'> هفته هشتم</a> > تحلیل اجزای اصلی الگوریتم
           
           
           
@@ -5836,7 +5836,7 @@
           
           <h1>
             
-            تجزیه اجزای اصلی الگوریتم
+            تحلیل اجزای اصلی الگوریتم
           </h1>
           
 
@@ -5882,6 +5882,25 @@ $$</p>
 <div align="left">
 <pre><code>Sigma = (1/m) * X' * X
 </code></pre></div>
+<p>ما ماتریس کو واریانس را با یک سیگما بزرگ نشان می دهیم.</p>
+<p>توجه داشته باشید که $x ^ {(i)}$ یک بردار $n \times 1$ است،
+$(x ^ {(i)})^T$ یک بردار $1 \times n$ است و
+X یک ماتریس $m \times n$ است که نتیجه ضرب آن ها
+ماتریسی $n \times n$ است، که ابعاد $\sum$ است.</p>
+<p><strong>2. محاسبه بردار های ویژه ماتریس کو واریانس $\sum$</strong></p>
+<div align="left">
+<pre><code>[U,S,V] = svd(Sigma)
+</code></pre></div>
+<p>svd  مخفف کلمه singular value decomposition است که یک تابع توکار در اوکتاو است.</p>
+<p>در واقع آن چیزی که به عنوان خروجی از svd می‌خواهیم،
+$U$ یا ماتریس کو واریانس سیگما است:</p>
+<p>$$
+U \in \mathbb{R} ^{n \times n}
+$$</p>
+<p>$$
+U = u ^ {(1)}, &hellip;, u ^ {(n)}
+$$</p>
+<p><strong>3. k ستون اول ماتریس U را گرفته و z را محاسبه کنید</strong></p>
 
 
 <footer class="footline">

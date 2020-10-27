@@ -5488,9 +5488,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week8/pca-algorithm/" title="تجزیه اجزای اصلی الگوریتم" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week8/pca-algorithm/" title="تحلیل اجزای اصلی الگوریتم" class="dd-item ">
         <a href="/ml-andrew-ng/week8/pca-algorithm/">
-        تجزیه اجزای اصلی الگوریتم
+        تحلیل اجزای اصلی الگوریتم
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -5840,7 +5840,18 @@
 <p><img src="../images/image61.png?width=25pc" alt="image61.png"></p>
 <p>و قسمت $ \frac{1}{m} \sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)} ) x_j^{(i)} $ همان مشتق جرئی $\frac {\partial} {\partial\theta_0} J(\theta)$ است.</p>
 <p>به طور مثال برای دو متغیره و یا بیشتر خواهیم داشت:</p>
-<p><img src="../images/image64.png?width=25pc" alt="image64.png"></p>
+<p>$$
+\theta_0 := \theta_0  - \alpha \frac{1}{m} \sum ^ m _ {i=1} (h_\theta(x^{(i)}) - y^{(i)}) x_0 ^{(i)}
+$$</p>
+<p>$$
+\theta_1 := \theta_1  - \alpha \frac{1}{m} \sum ^ m _ {i=1} (h_\theta(x^{(i)}) - y^{(i)}) x_1 ^{(i)}
+$$</p>
+<p>$$
+\theta_2 := \theta_2  - \alpha \frac{1}{m} \sum ^ m _ {i=1} (h_\theta(x^{(i)}) - y^{(i)}) x_2 ^{(i)}
+$$</p>
+<p>$$
+&hellip;
+$$</p>
 
 <div class="notices note" ><p>یادآوری:  مقدار $x_0$ برابر $1$ است.</p>
 </div>
