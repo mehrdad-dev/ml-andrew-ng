@@ -4159,9 +4159,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week2/feature-scaling/" title="Feature Scaling" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week2/feature-scaling/" title="مقیاس بندی ویژگی" class="dd-item ">
         <a href="/ml-andrew-ng/week2/feature-scaling/">
-        Feature Scaling
+        مقیاس بندی ویژگی
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -5296,6 +5296,27 @@
 
             
           
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ml-andrew-ng/week7/mathematics-behind-large-margin-classification/" title="ریاضیات پشت طبقه بندی با حاشیه اطمینان زیاد (اختیاری)" class="dd-item ">
+        <a href="/ml-andrew-ng/week7/mathematics-behind-large-margin-classification/">
+        ریاضیات پشت طبقه بندی با حاشیه اطمینان زیاد (اختیاری)
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
         
         </ul>
               
@@ -5816,8 +5837,8 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#gradient-descent">Gradient Descent</a></li>
-        <li><a href="#normal-equation">Normal Equation</a></li>
+        <li><a href="#گرادیان-کاهشی">گرادیان کاهشی</a></li>
+        <li><a href="#معادله-نرمال">معادله نرمال</a></li>
       </ul>
     </li>
   </ul>
@@ -5846,7 +5867,7 @@
 </div>
 <p>ما می‌توانیم منظم سازی را هم برای رگرسیون خطی و هم برای رگرسیون لجستیک استفاده کنیم.
 که اینجا ابتدا رگرسیون خطی را بررسی می‌کنیم.</p>
-<h3 id="gradient-descent">Gradient Descent</h3>
+<h3 id="گرادیان-کاهشی">گرادیان کاهشی</h3>
 <p>گرادیان کاهشی را اصلاح می‌کنیم تا $\theta_0$ را از بقیه پارامتر ها جدا کنیم،
 زیرا نمی‌خواهیم تاثیر $\theta_0$ را کاهش دهیم و از بین ببریم:</p>
 <p>$$
@@ -5861,7 +5882,7 @@ $$</p>
 همیشه کم از $1$ خواهد بود، و به طور چشمی می‌بینیم که مقدار
 $\theta_j$ را در هر بروزرسانی کمتر می‌کند.</p>
 <p>توجه داشته باشید که قسمت دوم دقیقا مثل قبل است.</p>
-<h3 id="normal-equation">Normal Equation</h3>
+<h3 id="معادله-نرمال">معادله نرمال</h3>
 <p>حالا منظم سازی را با یک روش جایگزین و بدون نیاز به تکرار (non-iterative) یعنی معادله نرمال بررسی می‌کنیم.</p>
 <p>برای این کار معادله ما شبیه به معادله اصلی است، با این تفاوت که یک بخش جدید در داخل پرانتز اضافه می‌کنیم:</p>
 <p>$$
@@ -5870,15 +5891,15 @@ $$</p>
 <p>L یک ماتریس است که به صورت مورب از قسمت بالا سمت چپ با $0$ شروع شده و تا انتهای  بخش مورب
 $1$ است.
 و سایر خانه های ماتریس نیز مقدار $0$ دارند، که ابعاد آن
-(n+1)*(n+1) است.</p>
-<p>در واقع یک ماتریس همانی است،
+$(n+1) \times (n+1)$ است.</p>
+<p>در واقع یک <span class="top-dict" data-tipso="identity matrix">ماتریس همانی</span> است،
 (اگر چه که شامل $x_0$ نمی‌شود)
 که در عدد حقیقی لامبدا ضرب شده است.</p>
 <p><strong>به خاطر بیاورید که:</strong></p>
 <p>$$
 \text{if  } m &lt; n \text{ then  } X^TX
 $$
-وارون ناپذیر بود.
+<span class="top-dict" data-tipso="non-invertible">وارون ناپذیر</span> بود.
 اگر چه وقتی ما قسمت $\lambda . L $ را اضافه می‌کنیم،
 سپس $ X^TX + \lambda . L$ وارون پذیر می‌شود.</p>
 
@@ -6944,6 +6965,22 @@ $$
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             

@@ -34,5 +34,19 @@ $$ if \hspace{0.3cm} y=1,\hspace{0.1cm} we\hspace{0.2cm} want \hspace{0.3cm} \th
 $$ if \hspace{0.3cm} y=0,\hspace{0.1cm} we\hspace{0.2cm} want \hspace{0.3cm} \theta\ ^ T x \le -1 \hspace{0.3cm}(not\hspace{0.1cm} just\hspace{0.1cm} &amp;lt; 0 ) $$</description>
     </item>
     
+    <item>
+      <title>ریاضیات پشت طبقه بندی با حاشیه اطمینان زیاد (اختیاری)</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week7/mathematics-behind-large-margin-classification/</link>
+      <pubDate>Mon, 26 Oct 2020 23:16:51 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week7/mathematics-behind-large-margin-classification/</guid>
+      <description>ضرب داخلی بردار
+فرض کنید دو بردار داریم ، $u$ و $v$:
+$$ u= \begin{bmatrix} u_1 \newline u_2 \end{bmatrix} \hspace{0.5cm} v= \begin{bmatrix} v_1 \newline v_2 \end{bmatrix} $$
+طول بردار $v$ با $||v||$ نمایش داده می‌شود و خطی را روی نمودار توصیف می‌کند که از مبدا (0,0) شروع شده و تا $(v_1,v_2)$ ادامه دارد.
+طبق قضیه فیثاغورث، طول بردار $v$ را می‌توان با فرمول $\sqrt{v_1^2+v_2^2}$ محاسبه کرد.
+تصویر بردار $v$ روی بردار $u$ با کشیدن یک زاویه قائم از $u$ به انتهای $v$ و ایجاد یک مثلث قائم الزاویه به دست می‌آید.</description>
+    </item>
+    
   </channel>
 </rss>

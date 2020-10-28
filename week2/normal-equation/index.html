@@ -4159,9 +4159,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week2/feature-scaling/" title="Feature Scaling" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week2/feature-scaling/" title="مقیاس بندی ویژگی" class="dd-item ">
         <a href="/ml-andrew-ng/week2/feature-scaling/">
-        Feature Scaling
+        مقیاس بندی ویژگی
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -5296,6 +5296,27 @@
 
             
           
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ml-andrew-ng/week7/mathematics-behind-large-margin-classification/" title="ریاضیات پشت طبقه بندی با حاشیه اطمینان زیاد (اختیاری)" class="dd-item ">
+        <a href="/ml-andrew-ng/week7/mathematics-behind-large-margin-classification/">
+        ریاضیات پشت طبقه بندی با حاشیه اطمینان زیاد (اختیاری)
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
         
         </ul>
               
@@ -5816,7 +5837,7 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#normal-equation--معادله-نرمال">Normal Equation | معادله نرمال</a></li>
+        <li><a href="#معادله-نرمال">معادله نرمال</a></li>
       </ul>
     </li>
   </ul>
@@ -5843,16 +5864,16 @@
           
 <div class="page-description"><i class="fas fa-clock"></i> 2 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/09/10
 </div>
-<h3 id="normal-equation--معادله-نرمال">Normal Equation | معادله نرمال</h3>
+<h3 id="معادله-نرمال">معادله نرمال</h3>
 <p>الگوریتم گرادیان کاهشی روشی بود برای مینیمم کردن
 تابع $J$ ، اما روش دومی نیز وجود دارد که بدون داشتن
-حلقه تکرار این کار را انجام بدهد که <strong>معادله نرمال</strong> نام
+حلقه تکرار این کار را انجام بدهد که <strong><span class="top-dict" data-tipso="normal equation">معادله نرمال</span></strong> نام
 دارد.</p>
 <p>فرض کنید که تابع هزینه درجه دو ای مثل این داریم:
 $$ J(\theta) = a\theta^2 + b\theta + c $$
 $$ \frac{\partial} {\partial x} J(\theta)  \overset{\underset{\mathrm{set}}{}}{=}  0 $$</p>
 <p>که برای مینیمم کردن این تابع درجه دو مشتق آن را
-می‌گیریم و برابر با صفر قرار می‌دهیم، که این به ما
+می‌گیریم و برابر با 0 قرار می‌دهیم، که این به ما
 اجازه می‌دهد که مقدار $\theta$ را برای مینیمم کردن تابع
 پیدا کنیم.</p>
 <p><img src="../images/image80.png?width=13pc" alt="image80.png"></p>
@@ -5861,15 +5882,15 @@ $$ \frac{\partial} {\partial x} J(\theta)  \overset{\underset{\mathrm{set}}{}}{=
 <p><img src="../images/image81.png?width=33pc" alt="image81.png"></p>
 <p>برای محاسبه اینکه چطور تابع هزینه را مینیمم کنیم باید
 مشتق جزئی تابع $J$ را برای هر کدام از تتا ها بگیریم و برابر
-با صفر قرار دهیم، بعد از محاسبه همه معادله ها مقدار
+با 0 قرار دهیم، بعد از محاسبه همه معادله ها مقدار
 تتا ای که تابع $J$  مینیمم می‌شود را به دست می‌آوریم.</p>
-<p>اگر مجموعه آموزشی به این شکل داشته باشیم:</p>
+<p>اگر <span class="top-dict" data-tipso="training set">مجموعه آموزشی</span> به این شکل داشته باشیم:</p>
 <p><img src="../images/image82.png?width=33pc" alt="image82.png">
 <img src="../images/image58.png?width=25pc" alt="image58.png"></p>
 <p>معادله نرمال ما برای محاسبه تتا به این صورت خواهد
 بود:</p>
 <p>$$ \theta = (X^T X)^{-1} X^T y $$</p>
-<p>با استفاده از معادله نرمال نیازی به Feature Scaling  نداریم، و برای مقایسه گرادیان کاهشی و معادله نرمال:</p>
+<p>با استفاده از معادله نرمال نیازی به <span class="top-dict" data-tipso="Feature Scaling">مقیاس بندی ویژگی</span>  نداریم، و برای مقایسه گرادیان کاهشی و معادله نرمال:</p>
 <table>
 <thead>
 <tr>
@@ -6959,6 +6980,22 @@ $$ \frac{\partial} {\partial x} J(\theta)  \overset{\underset{\mathrm{set}}{}}{=
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             

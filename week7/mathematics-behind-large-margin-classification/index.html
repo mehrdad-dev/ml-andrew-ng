@@ -38,7 +38,7 @@
 
   <link rel="icon" href="/ml-andrew-ng/images/favicon.png" type="image/png">
 
-  <title>منابع مفید  | Machine Learning Andrew Ng</title>
+  <title>ریاضیات پشت طبقه بندی با حاشیه اطمینان زیاد (اختیاری) | Machine Learning Andrew Ng</title>
 
   
   <link href="/ml-andrew-ng/css/nucleus.css" rel="stylesheet">
@@ -86,7 +86,7 @@
   
 </head>
 
-<body class="" data-url="/ml-andrew-ng/useful-articles/">
+<body class="" data-url="/ml-andrew-ng/week7/mathematics-behind-large-margin-classification/">
   <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -5235,7 +5235,7 @@
   
     
     <li data-nav-id="/ml-andrew-ng/week7/" title=" هفته هفتم" class="dd-item 
-        
+        parent
         
         
         ">
@@ -5305,7 +5305,7 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week7/mathematics-behind-large-margin-classification/" title="ریاضیات پشت طبقه بندی با حاشیه اطمینان زیاد (اختیاری)" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week7/mathematics-behind-large-margin-classification/" title="ریاضیات پشت طبقه بندی با حاشیه اطمینان زیاد (اختیاری)" class="dd-item active">
         <a href="/ml-andrew-ng/week7/mathematics-behind-large-margin-classification/">
         ریاضیات پشت طبقه بندی با حاشیه اطمینان زیاد (اختیاری)
         <i class="fas fa-check read-icon"></i>
@@ -5668,8 +5668,8 @@
   
     
     <li data-nav-id="/ml-andrew-ng/useful-articles/" title="منابع مفید " class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/ml-andrew-ng/useful-articles/">
@@ -5816,7 +5816,13 @@
           
           
           
-          <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > منابع مفید 
+          
+          
+          
+          
+          <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week7/'> هفته هفتم</a> > ریاضیات پشت طبقه بندی با حاشیه اطمینان زیاد (اختیاری)
+          
+          
           
           
           
@@ -5827,24 +5833,7 @@
           
           <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#افراد-تاثیر-گذار">افراد تاثیر گذار</a></li>
-        <li><a href="#تلگرام">تلگرام</a></li>
-        <li><a href="#یوتیوب">یوتیوب</a></li>
-        <li><a href="#توییتر">توییتر</a></li>
-        <li><a href="#اینستاگرام">اینستاگرام</a></li>
-        <li><a href="#وب-سایت-ها-و-وبلاگ-ها">وب سایت ها و وبلاگ ها</a></li>
-        <li><a href="#دیتاست">دیتاست</a></li>
-        <li><a href="#کنفرانس">کنفرانس</a></li>
-        <li><a href="#deep-learning">Deep Learning</a></li>
-        <li><a href="#data-science">Data Science</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -5860,117 +5849,81 @@
           
           <h1>
             
-            منابع مفید 
+            ریاضیات پشت طبقه بندی با حاشیه اطمینان زیاد (اختیاری)
           </h1>
           
 
           
+<div class="page-description"><i class="fas fa-clock"></i> 2 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/10/26
+</div>
+<p><strong>ضرب داخلی بردار</strong></p>
+<p>فرض کنید دو بردار داریم ، $u$ و $v$:</p>
+<p>$$
+u=
+\begin{bmatrix}
+u_1
+\newline
+u_2
+\end{bmatrix}
+\hspace{0.5cm}
+v=
+\begin{bmatrix}
+v_1
+\newline
+v_2
+\end{bmatrix}
+$$</p>
+<p>طول بردار $v$ با $||v||$ نمایش داده می‌شود و خطی را روی نمودار توصیف می‌کند که از مبدا (0,0) شروع شده و تا $(v_1,v_2)$ ادامه دارد.</p>
+<p>طبق قضیه فیثاغورث، طول بردار $v$ را می‌توان با فرمول $\sqrt{v_1^2+v_2^2}$ محاسبه کرد.</p>
+<p>تصویر بردار $v$ روی بردار $u$ با کشیدن یک زاویه قائم از $u$ به انتهای $v$ و ایجاد یک مثلث قائم الزاویه به دست می‌آید.</p>
+<ul>
+<li>p = طول تصویر $v$ روی بردار $u$</li>
+<li>$u^Tv=p.||u||$</li>
+</ul>
+<p>توجه داشته باشید که $u^Tv=||u||.||v||cos\theta$ که $\theta$ زاویه بین $u$ و $v$ است.همچنین، $p=||v||cos\theta$. اگر p را جایگزین $||v||cos\theta$ کنید، عبارت
+$u^Tv=p.||u||$
+بدست می‌آید.</p>
+<p>بنابراین حاصل‌ضرب $u^Tv$ برابر است با طول تصویر، ضرب در طول بردار $u$.</p>
+<p>در مثال ما، از آنجایی که $u$ و $v$ بردارهایی با طول برابر هستند، داریم
+$u^Tv=v^Tu$.</p>
+<p>$$
+u^Tv=v^Tu=p.||u||=u_1v_1+u_2v_2
+$$</p>
+<p>اگر زاویه بین خط های $u$ و $v$ بزرگتر از 90 درجه باشد، آن گاه
+p منفی خواهد بود.</p>
+<p>$$
+\underset{\Theta}{min}\frac{1}{2}\sum_{j=1}^n\theta_j^2
+$$</p>
+<p>$$
+=\frac{1}{2}(\theta_1^2+\theta_2^2+&hellip;+\theta_n^2)
+$$</p>
+<p>$$
+=\frac{1}{2}(\sqrt{\theta_1^2+\theta_2^2+&hellip;+\theta_n^2})^2
+$$</p>
+<p>$$
+=\frac{1}{2}||\theta||^2
+$$</p>
+<p>می‌توانیم همان قوانین را اینجا استفاده کنیم برای بازنویسی $\theta^Tx^{(i)}$:</p>
+<p>$$
+\theta^Tx^{(i)}=p^{(i)}.||\theta||=\theta_1x_1^{(i)}+\theta_2x_2^{(i)}+&hellip;+\theta_nx_n^{(i)}
+$$</p>
+<p>بنابراین حالا ما با قرار دادن $p^{(i)}.||\theta||$ به جای $\theta^Tx^{(i)}$، یک بهینه سازی هدفمند جدید داریم:</p>
+<p>$$
+if \hspace{0.3cm} y=1,\hspace{0.1cm} we\hspace{0.2cm} want \hspace{0.3cm} p^{(i)}.||\theta|| \ge 1
+$$</p>
+<p>$$
+if \hspace{0.3cm} y=0,\hspace{0.1cm} we\hspace{0.2cm} want \hspace{0.3cm} p^{(i)}.||\theta||\le -1
+$$</p>
+<p>دلیلی که این باعث یک حاشیه اطمینان زیاد می‌شود این است که:
+بردار متعلق به $\theta$، عمود بر مرز تصمیم گیری است. برای این که بهینه سازی هدفمند ما (عبارت بالا) درست باشد احتیاج داریم که قدر مطلق تصویرهای ما $p^{(i)}$ تا جای ممکن بزرگ باشد.</p>
+<p>اگر $\theta_0=0$، آن گاه همه مرزهای تصمیم گیری ما
+در
+(0,0)
+با هم تلاقی دارند،
+اگر $\theta_0\ne0$، ماشین بردار پشتیبان همچنان یک حاشیه اطمینان زیادی را برای مرز تصمیم گیری پیدا می‌کند.</p>
 
 
-	<p><strong>این صفحه در حال ویرایش و کامل شدن است &hellip;</strong></p>
-<p>لیست منابع موجود:</p>
-<ul>
-<li><a href="#%D8%A7%D9%81%D8%B1%D8%A7%D8%AF-%D8%AA%D8%A7%D8%AB%DB%8C%D8%B1-%DA%AF%D8%B0%D8%A7%D8%B1">افراد تاثیر گذار</a></li>
-<li>کانال ها و صفحات اجتماعی:
-<ul>
-<li><a href="#%D8%AA%D9%84%DA%AF%D8%B1%D8%A7%D9%85">تلگرام</a></li>
-<li><a href="#%DB%8C%D9%88%D8%AA%DB%8C%D9%88%D8%A8">یوتیوب</a></li>
-<li><a href="#%D8%AA%D9%88%DB%8C%DB%8C%D8%AA%D8%B1">توییتر</a></li>
-<li><a href="#%D8%A7%DB%8C%D9%86%D8%B3%D8%AA%D8%A7%DA%AF%D8%B1%D8%A7%D9%85">اینستاگرام</a></li>
-</ul>
-  <!-- - [لایو های ضبط شده](#لایو-های-ضبط-شده) -->
-</li>
-<li><a href="#%D9%88%D8%A8-%D8%B3%D8%A7%DB%8C%D8%AA-%D9%87%D8%A7-%D9%88-%D9%88%D8%A8%D9%84%D8%A7%DA%AF-%D9%87%D8%A7">وب سایت ها و وبلاگ ها</a></li>
-<li><a href="#%D8%AF%DB%8C%D8%AA%D8%A7%D8%B3%D8%AA">دیتاست</a></li>
-<li><a href="#%DA%A9%D9%86%D9%81%D8%B1%D8%A7%D9%86%D8%B3">کنفرانس</a></li>
-<li>دوره های مفید دیگر:
-<ul>
-<li><a href="#deep-learning">Deep Learning</a></li>
-<li><a href="#data-science">Data Science</a></li>
-</ul>
-</li>
-</ul>
-<h3 id="افراد-تاثیر-گذار">افراد تاثیر گذار</h3>
-<p>لیستی از صفحات اجتماعی افراد تاثیر گذار فارسی  زبان در حوزه هوش مصنوعی و دیتاساینس به ترتیب الفبا:</p>
-<ul>
-<li><a href="https://www.instagram.com/pooria.haddad/">پوریا حداد</a></li>
-<li><a href="https://www.instagram.com/datascience_with_sarvi/">سروناز چوبدار</a></li>
-<li><a href="https://www.instagram.com/saeed_choobani/">سعید چوپانی</a></li>
-<li><a href="https://www.instagram.com/seyed_naser_razavi/">سید ناصر رضوی</a></li>
-<li><a href="https://www.instagram.com/kooshiar/">کوشیار عظیمیان</a></li>
-<li><a href="https://www.instagram.com/sheida.vanoei/">شیدا وانوئی</a></li>
-<li><a href="https://www.instagram.com/alirezaweb/">علیرضا اخوان پور</a></li>
-<li><a href="https://www.instagram.com/thedatascientist/">علی صادقی عقیلی</a></li>
-<li><a href="https://www.instagram.com/dr.maryrahbar/">مریم رهبر عالم</a></li>
-<li><a href="https://www.instagram.com/nimahm1980/">مهدی حبیب زاده</a></li>
-</ul>
-<p>افراد تاثیر گذار انگلیسی زبان:</p>
-<ul>
-<li><a href="https://twitter.com/AndrewYNg">Andrew Ng</a></li>
-<li><a href="https://twitter.com/ylecun">Yann LeCun</a></li>
-<li><a href="https://twitter.com/alfcnz">Alfredo Canziani</a></li>
-<li><a href="https://twitter.com/goodfellow_ian">Ian Goodfellow</a></li>
-</ul>
-<h3 id="تلگرام">تلگرام</h3>
-<ul>
-<li><a href="https://t.me/AI_Events">اطلاع رسانی از رویداد های حوزه هوش مصنوعی</a></li>
-<li><a href="https://t.me/ai_python">هوش مصنوعی و برنامه نویسی پایتون</a></li>
-<li><a href="https://t.me/Recommender_System">Recommender Systems</a></li>
-<li><a href="https://t.me/AI_Lessons">آموزش هوش مصنوعی</a></li>
-<li><a href="https://t.me/pytens">دستاوردهای یادگیری عمیق(InTec)</a></li>
-<li><a href="https://t.me/cvision">Tensorflow(@CVision)</a></li>
-<li><a href="https://t.me/schoolofai">School of AI</a></li>
-<li><a href="https://t.me/nlp_stuff">NLP stuff</a></li>
-<li><a href="https://t.me/pythonicAI">Pythonic AI</a></li>
-<li><a href="https://t.me/ailib">کتابخانه هوش مصنوعی</a></li>
-<li><a href="https://t.me/ai_python_arxiv">arXiv</a></li>
-</ul>
-<h3 id="یوتیوب">یوتیوب</h3>
-<ul>
-<li><a href="https://www.youtube.com/channel/UC5zx8Owijmv-bbhAK6Z9apg">Artificial Intelligence - All in One</a></li>
-<li><a href="https://www.youtube.com/channel/UC12LqyqTQYbXatYS9AA7Nuw">Machine Learning University</a></li>
-<li><a href="https://www.youtube.com/channel/UCNJavFPJ16jeMP3zeviAJbQ">Seyed Naser Razavi</a></li>
-<li><a href="https://www.youtube.com/channel/UCtslD4DGH6PKyG_1gFAX7sg">Alexander Amini</a></li>
-<li><a href="https://www.youtube.com/channel/UC0rqucBdTuFTjJiefW5t-IQ">TensorFlow</a></li>
-</ul>
-<h3 id="توییتر">توییتر</h3>
-<h3 id="اینستاگرام">اینستاگرام</h3>
-<h3 id="وب-سایت-ها-و-وبلاگ-ها">وب سایت ها و وبلاگ ها</h3>
-<ul>
-<li><a href="https://www.kdnuggets.com/">KDnuggets</a></li>
-</ul>
-<h3 id="دیتاست">دیتاست</h3>
-<ul>
-<li><a href="https://datasetsearch.research.google.com/">Dataset Search Google</a></li>
-<li><a href="https://www.datasetlist.com/">Machine learning datasets</a></li>
-<li><a href="https://archive.ics.uci.edu/ml/index.php">UC Irvine Machine Learning Repository</a></li>
-<li><a href="https://academictorrents.com/">Academic Torrents</a></li>
-<li><a href="https://www.kaggle.com/datasets">Kaggle Dataset</a></li>
-</ul>
-<h3 id="کنفرانس">کنفرانس</h3>
-<ul>
-<li><a href="https://recsys.acm.org/">ACM Conference on Recommender Systems</a></li>
-<li><a href="http://www.icspis.ir/">Signal Processing and Intelligent Systems</a></li>
-<li><a href="https://www.aaai.org/Conferences/conferences.php">AAAI Conference</a></li>
-<li><a href="https://icml.cc/">ICML Conference</a></li>
-<li><a href="https://www.kdd.org/conferences">KDD Conference</a></li>
-<li><a href="https://nips.cc/">NIPS Conference</a></li>
-<li><a href="https://sigmod.org/">SIGMOD Conference</a></li>
-<li><a href="http://www.wsdm-conference.org/">WSDM Conference</a></li>
-<li><a href="#">CVPR Conference</a></li>
-<li><a href="#">ICDE Conference</a></li>
-</ul>
-<h3 id="deep-learning">Deep Learning</h3>
-<ul>
-<li><a href="https://atcold.github.io/pytorch-Deep-Learning/">دوره یادگیری عمیق با پایتورچ دانشگاه نیویورک توسط Yann LeCun و Alfredo Canziani (در حال ترجمه به فارسی)</a></li>
-</ul>
-<h3 id="data-science">Data Science</h3>
-
-
-
-
-
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -7016,6 +6969,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -7028,6 +6982,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -7061,6 +7018,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -7074,6 +7032,22 @@
                     
             
         
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
                     
                         
             
@@ -7087,134 +7061,6 @@
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
             
         
@@ -7304,6 +7150,40 @@
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -7321,8 +7201,85 @@
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -7360,10 +7317,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/ml-andrew-ng/questions/" title="سوالات متداول افراد "> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/ml-andrew-ng/week7/large-margin-intuition/" title="درک حاشیه اطمینان زیاد"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ml-andrew-ng/sponsorship/" title="حمایت" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/ml-andrew-ng/week8/" title=" هفته هشتم" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

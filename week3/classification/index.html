@@ -4159,9 +4159,9 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week2/feature-scaling/" title="Feature Scaling" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week2/feature-scaling/" title="مقیاس بندی ویژگی" class="dd-item ">
         <a href="/ml-andrew-ng/week2/feature-scaling/">
-        Feature Scaling
+        مقیاس بندی ویژگی
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -5296,6 +5296,27 @@
 
             
           
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ml-andrew-ng/week7/mathematics-behind-large-margin-classification/" title="ریاضیات پشت طبقه بندی با حاشیه اطمینان زیاد (اختیاری)" class="dd-item ">
+        <a href="/ml-andrew-ng/week7/mathematics-behind-large-margin-classification/">
+        ریاضیات پشت طبقه بندی با حاشیه اطمینان زیاد (اختیاری)
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
         
         </ul>
               
@@ -5816,10 +5837,10 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#رگرسیون-لجستیک">رگرسیون لجستیک</a></li>
-        <li><a href="#طبقه-بندی-دودویی">طبقه بندی دودویی</a></li>
+        <li><a href="#span-classtop-dict-data-tipsologistic-regressionرگرسیون-لجستیکspan"><span class="top-dict" data-tipso="logistic regression">رگرسیون لجستیک</span></a></li>
+        <li><a href="#span-classtop-dict-data-tipsobinary-classificationطبقه-دودوییspan"><span class="top-dict" data-tipso="binary classification">طبقه دودویی</span></a></li>
         <li><a href="#ارائه-فرضیه">ارائه فرضیه</a></li>
-        <li><a href="#مرز-تصمیم-گیری">مرز تصمیم گیری</a></li>
+        <li><a href="#span-classtop-dict-data-tipsodecision-boundaryمرز-تصمیم-گیریspan"><span class="top-dict" data-tipso="decision boundary">مرز تصمیم گیری</span></a></li>
       </ul>
     </li>
   </ul>
@@ -5846,13 +5867,13 @@
           
 <div class="page-description"><i class="fas fa-clock"></i> 3 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/09/10
 </div>
-<h3 id="رگرسیون-لجستیک">رگرسیون لجستیک</h3>
+<h3 id="span-classtop-dict-data-tipsologistic-regressionرگرسیون-لجستیکspan"><span class="top-dict" data-tipso="logistic regression">رگرسیون لجستیک</span></h3>
 <p>اینجا از مسائل رگرسیون به مسائل طبقه بندی
 می‌رویم، اما با اسم رگرسیون لجستیک گیج نشوید!
 این اسم به دلایل تاریخی نامگذاری شده که در واقع
 رویکردی برای حل مسائل طبقه بندی است نه رگرسیون!</p>
 <p><img src="../images/image86.png?width=18pc" alt="image86.png"></p>
-<h3 id="طبقه-بندی-دودویی">طبقه بندی دودویی</h3>
+<h3 id="span-classtop-dict-data-tipsobinary-classificationطبقه-دودوییspan"><span class="top-dict" data-tipso="binary classification">طبقه دودویی</span></h3>
 <p>به جای اینکه خروجی یعنی $y$  مقداری پیوسته در یک
 محدوده باشد، فقط $0$ یا $1$ است، یعنی : $ y \in \text{{0,1}} $</p>
 <p>به طوری که معمولا به $0$، negative class   و به $1$ هم
@@ -5887,7 +5908,7 @@ positive class می‌گوییم، اما شما آزاد هستید که هر
 <p>تابع فرضیه ما باید به این شکل باشد:</p>
 <p>$$ h_\theta(x) = g(\theta^T x)  \hspace{2cm} 0 \leqslant h_\theta(x) \leqslant 1  $$</p>
 <p>$$ g(z) = \frac{1}{1 + e^{-z}} \hspace{2cm} z = \theta^Tx $$</p>
-<p>که به این فرم جدید <strong>تابع سیگموئید</strong> یا <strong>تابع لجستیک</strong>
+<p>که به این فرم جدید <strong>تابع <span class="top-dict" data-tipso="sigmoid">سیگموئید</span></strong> یا <strong>تابع لجستیک</strong>
 می‌گوییم.</p>
 
 <div class="notices note" ><p>کار با نمودار تعاملی تابع سیگموئید:
@@ -5903,12 +5924,12 @@ $1$ نگاشت می‌کند.</p>
 احتمال کلاس 0 است، که اینجا $\text{30%} $ می‌شود.</p>
 <p>$$ h_\theta(x)  = P (y=1 | x;\theta) =  1 - P (y = 0 | x;\theta) $$
 $$ P (y=0 | x;\theta) + P (y=1 | x;\theta) = 1 $$</p>
-<h3 id="مرز-تصمیم-گیری">مرز تصمیم گیری</h3>
+<h3 id="span-classtop-dict-data-tipsodecision-boundaryمرز-تصمیم-گیریspan"><span class="top-dict" data-tipso="decision boundary">مرز تصمیم گیری</span></h3>
 <p>برای مجزا کردن کلاس های $0$ و $1$ طبقه بندی باید
 خروجی تابع فرضیه را به این صورت تبدیل کنیم:</p>
 <p>$$ h_\theta(x) \geqslant 0.5 \rightarrow y = 1 \hspace{2cm} h_\theta(x) &lt; 0.5  \rightarrow  y = 0  $$</p>
 <p>نحوه عملکرد تابع لجستیکی $g$ ما به این صورت است
-که وقتی ورودی آن بزرگتر یا برابر صفر باشد، خروجی
+که وقتی ورودی آن بزرگتر یا برابر 0 باشد، خروجی
 آن بزرگ تر یا مساوی $0.5$ می‌شود:</p>
 <p>$$ g(z) \geqslant 0.5 $$
 $$ \text{ when } z \geqslant 0 $$</p>
@@ -6983,6 +7004,22 @@ $$ z \rightarrow -\infty, e^{\infty} \rightarrow \infty \Rightarrow  g(z) = 0 $$
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
