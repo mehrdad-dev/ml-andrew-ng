@@ -11,5 +11,98 @@
 	<atom:link href="https://mehrdad-dev.github.io/ml-andrew-ng/week9/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>انگیزه مسئله</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week9/problem-motivation/</link>
+      <pubDate>Sat, 24 Oct 2020 13:11:36 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week9/problem-motivation/</guid>
+      <description>مانند دیگر مسائل یادگیری، مجموعه داده $x^{(1)}, x^{(2)},&amp;hellip;, x^{(m)}$ در اختیار ما قرار دارد.
+سپس یک نمونه جدید به اسم $x_{test}$ خواهیم داشت و قصد داریم بفهمیم که این نمونه غیر‌عادی/ ناهنجار است یا خیر.
+یک &amp;ldquo;مدل&amp;rdquo; $p(x)$ تعریف می‌کنیم که به ما احتمال ناهنجار نبودن نمونه را می‌گوید. همچنین از یک آستانه $\epsilon$(اپسیلون) به عنوان یک خط جداکننده استفاده می‌کنیم که تعیین می‌کند کدام نمونه‌ها ناهنجار هستند و کدام نمونه‌ها ناهنجار نیستند.</description>
+    </item>
+    
+    <item>
+      <title>توزیع گاوسی</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week9/gaussian-distribution/</link>
+      <pubDate>Wed, 28 Oct 2020 15:57:07 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week9/gaussian-distribution/</guid>
+      <description>توزیع گاوسی یک منحنی به شکل ناقوس است که با تابع $N(\mu , \sigma ^{2})$ تعریف می‌شود.
+برای مقادیر $x \in \mathbb{R}$ اگر توزیع احتمال x با میانگین $\mu$ و واریانس $\sigma ^{2}$ گاوسی باشد:
+$x \sim N(\mu , \sigma ^{2})$
+علامت $\sim$ یا &amp;lsquo;tilde&amp;rsquo; &amp;ldquo;توزیع شده به صورت&amp;rdquo; نیز خوانده می‌شود.
+توزیع گاوسی با یک میانگین و یک واریانس پارامترگذاری می‌شود.
+مقدار $\mu$ یا Mu وسط منحنی را نشان می‌دهد که میانگین نام دارد.</description>
+    </item>
+    
+    <item>
+      <title>الگوریتم</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week9/algorithm/</link>
+      <pubDate>Wed, 28 Oct 2020 16:52:56 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week9/algorithm/</guid>
+      <description>با توجه به نمونه‌های مجموعه آموزشی {${x^{(1)}, &amp;hellip; , x^{(m)}}$} که هر نمونه یک بردار است، $x \in \mathbb{R}^{n}$.
+$p(x) = p(x_{1};\mu_{1},\sigma_{1}^{2})p(x_{2};\mu_{2},\sigma_{2}^{2})&amp;hellip;p(x_{n};\mu _{n},\sigma _{n}^{2})$
+این مسئله در آمار &amp;ldquo;فرض استقلال&amp;rdquo; بر روی مقدایر ویژگی‌های داخل یک نمونه آموزشی x نامیده می‌شود.
+به صورت خلاصه‌تر، اصطلاح بالا به صورت زیر نیز بیان می‌شود:
+$=\prod_{j=1}^{n}p(x_{j};\mu_{j},\sigma ^{2})$
+الگوریتم
+ویژگی‌های $x_{i}$ را انتخاب کنید که فکر می‌کنید می‌تواند نشانگری برای نمونه‌های ناهنجار باشد.
+پارامترهای $\mu_{1},&amp;hellip;,\mu_{n},\sigma_{1}^{2},&amp;hellip;,\sigma_{n}^{2}$ را متناسب کنید.</description>
+    </item>
+    
+    <item>
+      <title>توسعه و ارزیابی سیستم تشخیص ناهنجاری</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week9/developing-evaluating-anomaly-detection-system/</link>
+      <pubDate>Wed, 28 Oct 2020 20:01:50 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week9/developing-evaluating-anomaly-detection-system/</guid>
+      <description>برای ارزیابی الگوریتم یادگیری، داده‌های دارای برچسب را به نمونه‌های ناهنجار و غیرناهنجار دسته‌بندی می‌کنیم. (y = 0 برای نمونه طبیعی و y = 1 برای نمونه ناهنجار).
+از بین این داده‌ها، بخش زیادی از داده‌های طبیعی و غیرناهنجار را به مجموعه آموزشی برای آموزش p(x) اختصاص دهید.
+سپس بخش کوچکتری از ترکیب نمونه‌های ناهنجار و غیرناهنجار را به مجموعه cross-validation و آزمون اختصاص دهید(معمولا نمونه‌های غیرناهنجار بیشتری خواهید داشت).</description>
+    </item>
+    
+    <item>
+      <title>تشخیص ناهنجاری در مقابل یادگیری با نظارت </title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week9/anomaly-detection-vs-supervised-learning/</link>
+      <pubDate>Fri, 30 Oct 2020 17:52:31 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week9/anomaly-detection-vs-supervised-learning/</guid>
+      <description>چه هنگام از تشخیص ناهنجاری و چه هنگام از یادگیری با نظارت استفاده می‌کنیم؟
+در موارد زیر از تشخیص ناهنجاری استفاده کنید:
+  هنگامی که تعداد بسیار کمی از نمونه‌های مثبت داریم(y=1 &amp;hellip; تعداد 0-20 نمونه رایج است) و تعداد زیادی از نمونه‌های منفی(y = 0).
+  ما انواع مختلفی از ناهنجاری ها داریم و برای هر الگوریتمی سخت است که از نمونه های مثبت یاد بگیرد که ناهنجاری ها چگونه هستند.</description>
+    </item>
+    
+    <item>
+      <title>انتخاب ویژگی‌ها</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week9/choosing-what-features-to-use/</link>
+      <pubDate>Fri, 30 Oct 2020 19:17:30 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week9/choosing-what-features-to-use/</guid>
+      <description>ویژگی‌ها تاثیر بسیاری بر الگوریتم تشخیص ناهنجاری خواهند داشت.
+برای بررسی این مسئله که ویژگی‌ها گاوسی هستند، می‌توان نمودار هیستوگرام را برای داده‌ها رسم و شکل ناقوسی منحنی را بررسی کرد.
+برخی از تغییراتی که می‌توان روی ویژگی x یک نمونه امتحان کرد که منحنی ناقوس شکل ندارد:
+  $log(x)$
+  $log(x+1)$
+  $log(x+c)$ برای بعضی مقادیر ثابت
+  $\sqrt{x}$
+  $x^{\frac{1}{3}}$
+  می‌توان هرکدام از موارد بالا را برای دستیابی به شکل گاوسی در داده‌ها دست کاری کرد.</description>
+    </item>
+    
+    <item>
+      <title>توزیع گاوسی چند متغیره(اختیاری)</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week9/multivariate-gaussian-distribution/</link>
+      <pubDate>Fri, 30 Oct 2020 20:06:14 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week9/multivariate-gaussian-distribution/</guid>
+      <description>توزیع گاوسی چند متغیره در واقع تعمیم تشخیص ناهنجاری است و ممکن است (یا ممکن نیست) ناهنجاری‌های بیشتری را پیدا کند.
+به جای مدل‌ سازی جداگانه $p(x_{1})$، $p(x_{2})$، &amp;hellip; ما $p(x)$ را در یک مرحله مدل سازی می‌کنیم. پارامترهای ما $\mu \in \mathbb{R}^{n}$ و $\Sigma \in \mathbb{R}^{n \times n}$ خواهند بود.
+$p(x; \mu , \Sigma ) = \frac{1}{(2\pi )^{\frac{n}{2}}\left | \Sigma \right |^{\frac{1}{2}}}exp(-\frac{1}{2}(x - \mu )^{T}\Sigma ^{-1}(x-\mu ))$
+یک نتیجه مهم این است که می‌توانیم خطوط مستطیلی گاوسی را مدل کنیم که این امکان را به ما می‌دهد تا داده‌هایی را متناسب کنیم که ممکن است در خطوط دایره‌ای طبیعی جای نگیرند.</description>
+    </item>
+    
   </channel>
 </rss>
