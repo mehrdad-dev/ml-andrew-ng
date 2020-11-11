@@ -38,7 +38,7 @@
 
   <link rel="icon" href="/ml-andrew-ng/images/favicon.png" type="image/png">
 
-  <title>گرادیان کاهشی قسمت سوم | Machine Learning Andrew Ng</title>
+  <title> کرنل ها (قسمت اول) | Machine Learning Andrew Ng</title>
 
   
   <link href="/ml-andrew-ng/css/nucleus.css" rel="stylesheet">
@@ -89,7 +89,7 @@
   
 </head>
 
-<body class="" data-url="/ml-andrew-ng/week1/gradient3/">
+<body class="" data-url="/ml-andrew-ng/week7/kernels1/">
   <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -3825,7 +3825,7 @@
   
     
     <li data-nav-id="/ml-andrew-ng/week1/" title="   هفته اول " class="dd-item 
-        parent
+        
         
         
         ">
@@ -4042,7 +4042,7 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week1/gradient3/" title="گرادیان کاهشی قسمت سوم" class="dd-item active">
+      <li data-nav-id="/ml-andrew-ng/week1/gradient3/" title="گرادیان کاهشی قسمت سوم" class="dd-item ">
         <a href="/ml-andrew-ng/week1/gradient3/">
         گرادیان کاهشی قسمت سوم
         <i class="fas fa-check read-icon"></i>
@@ -5238,7 +5238,7 @@
   
     
     <li data-nav-id="/ml-andrew-ng/week7/" title=" هفته هفتم" class="dd-item 
-        
+        parent
         
         
         ">
@@ -5329,7 +5329,7 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week7/kernels1/" title=" کرنل ها (قسمت اول)" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week7/kernels1/" title=" کرنل ها (قسمت اول)" class="dd-item active">
         <a href="/ml-andrew-ng/week7/kernels1/">
          کرنل ها (قسمت اول)
         <i class="fas fa-check read-icon"></i>
@@ -6032,7 +6032,7 @@
           
           
           
-          <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week1/'>   هفته اول </a> > گرادیان کاهشی قسمت سوم
+          <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week7/'> هفته هفتم</a> >  کرنل ها (قسمت اول)
           
           
           
@@ -6061,44 +6061,51 @@
           
           <h1>
             
-            گرادیان کاهشی قسمت سوم
+             کرنل ها (قسمت اول)
           </h1>
           
 
           
-<div class="page-description"><i class="fas fa-clock"></i> 2 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/09/09
+<div class="page-description"><i class="fas fa-clock"></i> 2 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/11/03
 </div>
-<p>در این قسمت گرادیان کاهشی را با تابع هزینه ترکیب
-می‌کنیم و الگوریتم رگرسیون خطی را به دست می‌آوریم.
-تا اینجای کار به این ها رسیدیم:</p>
-<p><img src="../images/image47.png?width=40pc" alt="دوره یادگیری ماشین دانشگاه استنفورد به فارسی"></p>
-<p>اینجا می‌خواهیم از گرادیان کاهشی برای مینیمم کردن
-تابع هزینه استفاده کنیم!
-ابتدا تابع $J$ را در الگوریتم گرادیان جاگذاری می‌کنیم و &hellip;</p>
-<p>با محاسبه عبارت مشتق جزئی در گرادیان کاهشی برای
-دو پارامتر $\theta_0$ و $\theta_1$ خواهیم داشت:</p>
-<p>$$ \theta_0, j = 0: \frac{\partial}{\partial \theta_j} J(\theta_0, \theta_1) = \frac{1}{m} \sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)}) $$</p>
-<p>$$ \theta_1, j = 1: \frac{\partial}{\partial \theta_j} J(\theta_0, \theta_1) = \frac{1}{m} \sum_{i=1}^m (h_\theta(x^{(i)}) - y^{(i)}) \cdot x^{(i)} $$</p>
-<p>به الگوریتم گرادیان کاهشی بر‌ می‌گردیم و جایگذاری،
-و در واقع به الگوریتم رگرسیون خطی می‌رسیم!</p>
-<p><img src="../images/image49.png?width=35pc" alt="دوره یادگیری ماشین دانشگاه استنفورد به فارسی"></p>
-<p>در قسمت اول گرادیان کاهشی در مثال موتور سوار
-دیدیم که بسته به اینکه از کجا شروع کنیم ممکن است
-که به مینیمم محلی برسیم!
-اما تابع هزینه برای رگرسیون خطی همیشه تابعی سهمی
-مانند مثل این است:</p>
-<p><img src="../images/image22.png?width=25pc" alt="دوره یادگیری ماشین دانشگاه استنفورد به فارسی"></p>
-<p>این تابع <span class="top-dict" data-tipso="convex">محدب</span> مینیمم
-محلی ندارد، و فقط
-یک مینیمم کلی دارد.
-یعنی گرادیان کاهشی
-برای این تابع هزینه
-همیشه به نقطه بهینه می‌رسد!
-و بنابراین گرادیان نزولی را در عمل برای داده خانه ها به
-به این صورت می‌بینیم، که نتیجه تناسب خوبی دارد:</p>
-<p><img src="../images/image51.png?width=35pc" alt="دوره یادگیری ماشین دانشگاه استنفورد به فارسی"></p>
-<p>و حالا می‌توانید از آن استفاده کنید تا قیمت خانه ها
-را برای دوستانتان پیش‌بینی کنید!</p>
+<p>کرنل ها به ما این اجازه را می دهند تا با استفاده از ماشین بردار پشتیبان، طبقه بندی کننده های پیچیده و غیرخطی بسازیم.</p>
+<p>با توجه به x ، ویژگی جدید را بسته به نزدیکی به نقاط عطف $l^{(3)}, l^{(2)}, l^{(1)}$ محاسبه کنید.</p>
+<p>برای انجام این کار ، ما &ldquo;شباهت&rdquo; x و برخی از نقاط عطف $l^{(i)}$ را پیدا می کنیم.</p>
+<p>$$
+f_i=similarity(x,l^{(i)})=exp(-\frac{||x-l^{(i)}||^2}{2\sigma^2})
+$$</p>
+<p>به این تابع &ldquo;شباهت&rdquo; کرنل گاوسی گفته می شود. این یک نمونه خاص از کرنل است.</p>
+<p>تابع شباهت را می توان به صورت زیر نیز نوشت:</p>
+<p>$$
+f_i=similarity(x,l^{(i)})=exp(-\frac{\sum_{j=1}^{n} (x_j - l_j^{(i)})^2}{2\sigma^2})
+$$</p>
+<p>تابع شباهت دو ویژگی دارد:</p>
+<p>$$
+if \hspace{0.3cm} x\approx l^{(i)}, then \hspace{0.3cm} f_i=exp(-\frac{\approx 0^2}{2\sigma^2})\approx 1
+$$</p>
+<p>$$
+if \hspace{0.3cm} x  \hspace{0.15cm} is \hspace{0.15cm} far \hspace{0.15cm}  from \hspace{0.15cm} l^{(i)}, then \hspace{0.3cm} f_i=exp(-\frac{(large \hspace{0.15cm} number)^2}{2\sigma^2})\approx 0
+$$</p>
+<p>به عبارت دیگر، اگر x و نقطه عطف نزدیک به هم باشند، در این صورت شباهت نزدیک به 1 خواهد بود، و اگر x و نقطه عطف از یکدیگر دور باشند ،
+شباهت نزدیک به 0 خواهد بود.
+هر نقطه عطف ویژگی های فرضیه ما را به ما می دهد:</p>
+<p>$$
+l^{(1)} \rightarrow f_1
+$$</p>
+<p>$$
+l^{(2)} \rightarrow f_2
+$$</p>
+<p>$$
+l^{(3)} \rightarrow f_3
+$$</p>
+<p>$$
+&hellip;
+$$</p>
+<p>$$
+h_\Theta(x)= \Theta_1f_1+\Theta_2f_2+\Theta_3f_3+&hellip;
+$$</p>
+<p>$\sigma^2$ یک پارامتر کرنل گاوسی است و می توان آن را تغییر داد تا drop-off ویژگی $f_i$ ما را کم یا زیاد کند. همراه با نگاه کردن
+مقادیر داخل $\Theta$ ، ما می توانیم این نقاط عطف را انتخاب کنیم تا شکل کلی مرز تصمیم گیری را بدست آوریم.</p>
 
 
 <footer class="footline">
@@ -6136,6 +6143,8 @@
             
                 
                     
+                        
+                        
                     
                 
                 
@@ -6149,9 +6158,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -6296,7 +6302,6 @@
             
             
                 
-                    
                     
                 
                 
@@ -6313,9 +6318,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -7151,6 +7153,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -7164,6 +7167,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -7212,6 +7218,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -7231,6 +7238,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -7636,10 +7646,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/ml-andrew-ng/week1/gradient2/" title="گرادیان کاهشی قسمت دوم"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/ml-andrew-ng/week7/mathematics-behind-large-margin-classification/" title="ریاضیات پشت طبقه بندی با حاشیه اطمینان زیاد (اختیاری)"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ml-andrew-ng/week1/files/" title="فایل های هفته اول" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/ml-andrew-ng/week8/" title=" هفته هشتم" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
