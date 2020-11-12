@@ -378,6 +378,11 @@
   </url>
   
   <url>
+    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week9/anomaly-detection-using-multivariate-gaussian-distribution/</loc>
+    <lastmod>2020-11-05T19:22:39+03:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week8/pca-algorithm/</loc>
     <lastmod>2020-10-26T09:17:16+03:30</lastmod>
   </url>
@@ -418,6 +423,16 @@
   </url>
   
   <url>
+    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week8/reconstruction-compressed-representation/</loc>
+    <lastmod>2020-11-12T12:02:43+03:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week9/problem-formulation/</loc>
+    <lastmod>2020-11-05T19:56:34+03:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week6/error-metrics-for-skewed-classes/</loc>
     <lastmod>2020-10-19T18:13:55+03:30</lastmod>
   </url>
@@ -438,6 +453,11 @@
   </url>
   
   <url>
+    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week9/content-based-recommendation/</loc>
+    <lastmod>2020-11-05T20:05:42+03:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week6/trading-off-precision-and-recall/</loc>
     <lastmod>2020-10-19T21:27:10+03:30</lastmod>
   </url>
@@ -450,6 +470,11 @@
   <url>
     <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week1/gradient3/</loc>
     <lastmod>2020-09-09T17:40:28+04:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week9/collaborative-filtering/</loc>
+    <lastmod>2020-11-05T22:48:50+03:30</lastmod>
   </url>
   
   <url>
@@ -468,8 +493,28 @@
   </url>
   
   <url>
+    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week9/collaborative-filtering-algorithm/</loc>
+    <lastmod>2020-11-05T22:46:23+03:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week6/files/</loc>
     <lastmod>2020-10-24T13:15:49+03:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week9/vectorization/</loc>
+    <lastmod>2020-11-06T12:24:16+03:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week9/mean-normalization/</loc>
+    <lastmod>2020-11-06T12:46:39+03:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mehrdad-dev.github.io/ml-andrew-ng/week9/files/</loc>
+    <lastmod>2020-11-12T10:46:14+03:30</lastmod>
   </url>
   
   <url>

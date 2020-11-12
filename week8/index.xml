@@ -100,5 +100,16 @@
   اگر ویژگی های مختلف در مقیاس های متفاوت باشند (مثلا $= x_1$ اندازه خانه، $ = x_2$ تعداد اتاق خواب ها)، ویژگی ها را برای داشتن دامنه ای قابل مقایسه از مقادیر تغییر مقیاس دهید.</description>
     </item>
     
+    <item>
+      <title>بازسازی از نمایش فشرده</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week8/reconstruction-compressed-representation/</link>
+      <pubDate>Thu, 12 Nov 2020 12:02:43 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week8/reconstruction-compressed-representation/</guid>
+      <description>اگر برای فشرده سازی داده های خود از PCA استفاده می‌کنیم، چگونه می‌توانیم داده های خود را از حالت فشرده خارج کنیم یا به تعداد اصلی ویژگی های خود برگردیم؟
+برای بازگشت از حالت 1 بعدی به 2 بعدی، این کار را انجام می‌دهیم: $z \in \mathbb{R} \rightarrow x \in \mathbb{R ^ 2} $
+ما می‌توانیم این کار را با یک معادله انجام دهیم: $ x ^{(i)} _ {approx} = Ureduce \cdot z ^{(i)} $</description>
+    </item>
+    
   </channel>
 </rss>

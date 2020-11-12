@@ -30,7 +30,7 @@
       <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week9/gaussian-distribution/</guid>
       <description>توزیع گاوسی یک منحنی به شکل ناقوس است که با تابع $N(\mu , \sigma ^{2})$ تعریف می‌شود.
 برای مقادیر $x \in \mathbb{R}$ اگر توزیع احتمال x با میانگین $\mu$ و واریانس $\sigma ^{2}$ گاوسی باشد:
-$x \sim N(\mu , \sigma ^{2})$
+$$x \sim N(\mu , \sigma ^{2})$$
 علامت $\sim$ یا &amp;lsquo;tilde&amp;rsquo; &amp;ldquo;توزیع شده به صورت&amp;rdquo; نیز خوانده می‌شود.
 توزیع گاوسی با یک میانگین و یک واریانس پارامترگذاری می‌شود.
 مقدار $\mu$ یا Mu وسط منحنی را نشان می‌دهد که میانگین نام دارد.</description>
@@ -43,10 +43,10 @@ $x \sim N(\mu , \sigma ^{2})$
       
       <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week9/algorithm/</guid>
       <description>با توجه به نمونه‌های مجموعه آموزشی {${x^{(1)}, &amp;hellip; , x^{(m)}}$} که هر نمونه یک بردار است، $x \in \mathbb{R}^{n}$.
-$p(x) = p(x_{1};\mu_{1},\sigma_{1}^{2})p(x_{2};\mu_{2},\sigma_{2}^{2})&amp;hellip;p(x_{n};\mu _{n},\sigma _{n}^{2})$
+$$p(x) = p(x_{1};\mu_{1},\sigma_{1}^{2})p(x_{2};\mu_{2},\sigma_{2}^{2})&amp;hellip;p(x_{n};\mu _{n},\sigma _{n}^{2})$$
 این مسئله در آمار &amp;ldquo;فرض استقلال&amp;rdquo; بر روی مقدایر ویژگی‌های داخل یک نمونه آموزشی x نامیده می‌شود.
 به صورت خلاصه‌تر، اصطلاح بالا به صورت زیر نیز بیان می‌شود:
-$=\prod_{j=1}^{n}p(x_{j};\mu_{j},\sigma ^{2})$
+$$=\prod_{j=1}^{n}p(x_{j};\mu_{j},\sigma ^{2})$$
 الگوریتم
 ویژگی‌های $x_{i}$ را انتخاب کنید که فکر می‌کنید می‌تواند نشانگری برای نمونه‌های ناهنجار باشد.
 پارامترهای $\mu_{1},&amp;hellip;,\mu_{n},\sigma_{1}^{2},&amp;hellip;,\sigma_{n}^{2}$ را متناسب کنید.</description>
@@ -100,8 +100,97 @@ $=\prod_{j=1}^{n}p(x_{j};\mu_{j},\sigma ^{2})$
       <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week9/multivariate-gaussian-distribution/</guid>
       <description>توزیع گاوسی چند متغیره در واقع تعمیم تشخیص ناهنجاری است و ممکن است (یا ممکن نیست) ناهنجاری‌های بیشتری را پیدا کند.
 به جای مدل‌ سازی جداگانه $p(x_{1})$، $p(x_{2})$، &amp;hellip; ما $p(x)$ را در یک مرحله مدل سازی می‌کنیم. پارامترهای ما $\mu \in \mathbb{R}^{n}$ و $\Sigma \in \mathbb{R}^{n \times n}$ خواهند بود.
-$p(x; \mu , \Sigma ) = \frac{1}{(2\pi )^{\frac{n}{2}}\left | \Sigma \right |^{\frac{1}{2}}}exp(-\frac{1}{2}(x - \mu )^{T}\Sigma ^{-1}(x-\mu ))$
+$$p(x; \mu , \Sigma ) = \frac{1}{(2\pi )^{\frac{n}{2}}\left | \Sigma \right |^{\frac{1}{2}}}exp(-\frac{1}{2}(x - \mu )^{T}\Sigma ^{-1}(x-\mu ))$$
 یک نتیجه مهم این است که می‌توانیم خطوط مستطیلی گاوسی را مدل کنیم که این امکان را به ما می‌دهد تا داده‌هایی را متناسب کنیم که ممکن است در خطوط دایره‌ای طبیعی جای نگیرند.</description>
+    </item>
+    
+    <item>
+      <title>تشخیص ناهنجاری با استفاده از توزیع گاوسی چند متغیره (اختیاری)</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week9/anomaly-detection-using-multivariate-gaussian-distribution/</link>
+      <pubDate>Thu, 05 Nov 2020 19:22:39 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week9/anomaly-detection-using-multivariate-gaussian-distribution/</guid>
+      <description>هنگام تشخیص ناهنجاری با توزیع گاوسی چند متغیره، مقدار $\mu$ و $\Sigma$ را به صورت عادی محاسبه می‌کنیم. سپس با استفاده از فرمول بخش قبل مقدار $p(x)$ را محاسبه کرده و در صورتی که $p(x) &amp;lt; \varepsilon $ باشد به عنوان ناهنجاری مشخص می‌کنیم.
+مدل اصلی برای $p(x)$ هنگامی مطابق با گاوسی چند متغیره است که خطوط $p(x;\mu,\Sigma )$ تراز محور باشند.
+مدل گاوسی چند متغیره می‌تواند همبستگی بین ویژگی‌های مختلف x را به صورت خودکار تشخیص دهد.</description>
+    </item>
+    
+    <item>
+      <title>فرمول مسئله</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week9/problem-formulation/</link>
+      <pubDate>Thu, 05 Nov 2020 19:56:34 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week9/problem-formulation/</guid>
+      <description>یکی از معروف‌‌ترین کاربردهای یادگیری ماشین، سیستم‌های پیشنهاد دهنده است.
+فرض کنید قصد داریم به مشتریان فیلم‌هایی را پیشنهاد کنیم. می‌توانیم از تعاریف زیر استفاده کنیم:
+  $n_{u}$ = تعداد کاربران
+  $n_{m}$ = تعداد فیلم‌ها
+  $r(i,j)$ = 1 اگر کاربر j به فیلم i امتیاز داده باشد
+  $y(i,j)$ = امتیاز کاربر j به فیلم i (تنها در صورتی که r(i,j)=1 باشد تعریف می‌شود)</description>
+    </item>
+    
+    <item>
+      <title>پیشنهادهای مبتنی بر محتوا</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week9/content-based-recommendation/</link>
+      <pubDate>Thu, 05 Nov 2020 20:05:42 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week9/content-based-recommendation/</guid>
+      <description>ما می‌توانیم دو ویژگی را معرفی کنیم، $x_{1}$ و $x_{2}$ که نشان می‌دهند یک فیلم چه اندازه داستان عاشقانه یا چه اندازه صحنه اکشن دارد(در مقیاس 1-0).
+یک روش این است که می‌توانیم از رگرسیون خطی برای هر کاربر استفاده کنیم. برای هر کاربر j، پارامتر $\theta ^{(j)} \in \mathbb{R}^{3}$ را یاد بگیرید.
+کاربر j را به طوریکه فیلم i را با $(\theta ^{(j)})^{T}x^{(i)}$ ستاره امتیازدهی می‌کند، پیش‌بینی کنید.
+  $\theta ^ {(j)}$ = بردار پارامتر برای کاربر j</description>
+    </item>
+    
+    <item>
+      <title>فیلترینگ مشارکتی</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week9/collaborative-filtering/</link>
+      <pubDate>Thu, 05 Nov 2020 22:48:50 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week9/collaborative-filtering/</guid>
+      <description>پیدا کردن ویژگی‌هایی مانند &amp;ldquo;تعداد صحنه‌های عاشقانه&amp;rdquo; یا &amp;ldquo;تعداد صحنه‌های اکشن&amp;rdquo; در فیلم می‌‌تواند بسیار سخت باشد. برای پی بردن به این مسئله، می‌توان از &amp;ldquo;ویژگی یاب‌ها&amp;rdquo; استفاده کرد.
+می‌توانیم به کاربران اجازه دهیم به ما نشان دهند که چقدر ژانرهای مختلف را دوست دارند که بلافاصله بردار پارامتر را برای ما فراهم می‌کند.
+برای پی بردن به ویژگی‌ها از پارامترهای موجود، از تابع خطای مجذور با منظم‌سازی بر روی تمامی کاربران استفاده می‌کنیم:</description>
+    </item>
+    
+    <item>
+      <title>الگوریتم فیلترینگ مشارکتی</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week9/collaborative-filtering-algorithm/</link>
+      <pubDate>Thu, 05 Nov 2020 22:46:23 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week9/collaborative-filtering-algorithm/</guid>
+      <description>برای سرعت بخشیدن به کارها، می‌توانیم ویژگی‌ها و پارامترها را به صورت همزمان به حداقل برسانیم:
+$$ J(x,\theta ) = \frac{1}{2}\sum_{(i,j):r(i,j)=1}^{}((\theta ^{(j)})^{T}(x^{(i)}) - y^{(i,j)})^{2} + \frac{\lambda }{2}\sum_{i=1}^{n_{m }}\sum_{k=1}^{n}(x_{k}^{(i)})^{2} + \frac{\lambda }{2}\sum_{j=1}^{n_{u }}\sum_{k=1}^{n}(\theta _{k}^{(j)})^{2} $$
+این روش ممکن است پیچیده به نظر بیاید اما فقط تابع هزینه برای تتا و تابع هزینه x را ترکیب کردیم.
+چون الگوریتم می‌تواند این موارد را خودش یاد بگیرد، واحدهای بایاس که در آن‌ها $x_{0} =1$ باشد، حذف شده‌اند، از این رو $x \in \mathbb{R}^{n}$ و $\theta \in \mathbb{R}^{n}$.</description>
+    </item>
+    
+    <item>
+      <title>بردارسازی: فاکتورگیری ماتریس با درجه پایین</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week9/vectorization/</link>
+      <pubDate>Fri, 06 Nov 2020 12:24:16 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week9/vectorization/</guid>
+      <description>با توجه به ماتریس‌های X(هر سطر مختص ویژگی‌های یک فیلم است) و $\theta$ (هر سطر مختص وزن ویژگی‌ها برای یک کاربر است)، ماتریس کامل Y از همه رتبه‌بندی‌های پیش‌بینی شده تمام فیلم‌ها توسط تمام کاربران به صورت $Y = X\theta^{T}$ به دست می‌آید.
+پیش‌بینی این که چقدر دو فیلم i و j شبیه هستند با استفاده از فاصله بین بردارهای ویژگی x آن‌ها انجام می‌شود. به طور خاص ما به دنبال یک مقدار کوچک $\left | x^{(i)} - x^{(j)} \right |$ هستیم.</description>
+    </item>
+    
+    <item>
+      <title>جزئیات پیاده‌سازی: نرمال‌سازی میانگین</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week9/mean-normalization/</link>
+      <pubDate>Fri, 06 Nov 2020 12:46:39 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week9/mean-normalization/</guid>
+      <description>اگر سیستم امتیازدهی فیلم برگرفته از قسمت قبل باشد، به کاربران جدید (که هنوز هیچ فیلمی تماشا نکرده‌اند) فیلم‌های نادرستی اختصاص پیدا می‌کند. به طور خاص، تمام اجزا در $\theta$ اختصاص داده شده به آن‌ها به علت کمینه کردن عبارت منظم‌سازی صفر خواهد بود. در نتیجه فرض می‌کنیم که کاربر جدید به تمامی فیلم‌ها امتیاز صفر داده است، که از نظر شهودی صحیح به نظر نمی‌رسد.
+این مشکل را با نرمال‌سازی داده‌ها نسبت به میانگین برطرف می‌کنیم.</description>
+    </item>
+    
+    <item>
+      <title>فایل های هفته نهم</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week9/files/</link>
+      <pubDate>Thu, 12 Nov 2020 10:46:14 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week9/files/</guid>
+      <description>اسلاید ها  Anomaly Detection - pdf Recommender Systems - pdf  غلط نامه  Errata - pdf  تمرین برنامه نویسی  Programming Exercise 8: Anomaly Detection and Recommender Systems - pdf | problem  </description>
     </item>
     
   </channel>
