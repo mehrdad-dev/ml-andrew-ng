@@ -38,7 +38,7 @@
 
   <link rel="icon" href="/ml-andrew-ng/images/favicon.png" type="image/png">
 
-  <title>بازسازی از نمایش فشرده | Machine Learning Andrew Ng</title>
+  <title>بازسازی از حالت فشرده | Machine Learning Andrew Ng</title>
 
   
   <link href="/ml-andrew-ng/css/nucleus.css" rel="stylesheet">
@@ -5554,9 +5554,51 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week8/reconstruction-compressed-representation/" title="بازسازی از نمایش فشرده" class="dd-item active">
+      <li data-nav-id="/ml-andrew-ng/week8/reconstruction-compressed-representation/" title="بازسازی از حالت فشرده" class="dd-item active">
         <a href="/ml-andrew-ng/week8/reconstruction-compressed-representation/">
-        بازسازی از نمایش فشرده
+        بازسازی از حالت فشرده
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ml-andrew-ng/week8/choosing-number-pc/" title="انتخاب تعداد اجزای اصلی" class="dd-item ">
+        <a href="/ml-andrew-ng/week8/choosing-number-pc/">
+        انتخاب تعداد اجزای اصلی
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ml-andrew-ng/week8/advice-for-applying-pca/" title="توصیه هایی برای اعمال PCA" class="dd-item ">
+        <a href="/ml-andrew-ng/week8/advice-for-applying-pca/">
+        توصیه هایی برای اعمال PCA
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -6221,7 +6263,7 @@
           
           
           
-          <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week8/'> هفته هشتم</a> > بازسازی از نمایش فشرده
+          <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week8/'> هفته هشتم</a> > بازسازی از حالت فشرده
           
           
           
@@ -6250,7 +6292,7 @@
           
           <h1>
             
-            بازسازی از نمایش فشرده
+            بازسازی از حالت فشرده
           </h1>
           
 
@@ -6263,8 +6305,20 @@
 $z \in \mathbb{R} \rightarrow x \in \mathbb{R ^ 2} $</p>
 <p>ما می‌توانیم این کار را با یک معادله انجام دهیم:
 $
-x ^{(i)} _ {approx} = Ureduce \cdot  z ^{(i)}
+x ^{(i)} _ {approx} = U _ {reduce} \cdot  z ^{(i)}
 $</p>
+<p>توجه داشته باشید که فقط می‌توانیم تقریبی از داده های اصلی خود بدست آوریم.</p>
+<p>به نظر می‌رسد ماتریس U دارای خاصیت خاصی به اسم ماتریس واحد است.
+یکی از ویژگی های خاص یک ماتریس واحد:</p>
+<p>$
+U ^ {-1} = U ^ *
+$
+به طوری که * در اینجا به معنی ترانهاده مزدوج است.</p>
+<p>از آنجا که در اینجا با اعداد واقعی سر و کار داریم، این برابر است با:</p>
+<p>$
+U ^ {-1} = U ^ T
+$
+بنابراین ما می توانیم وارون را محاسبه کنیم و از آن استفاده کنیم، اما این اتلاف انرژی خواهد بود.</p>
 
 
 <footer class="footline">
@@ -7550,6 +7604,22 @@ $</p>
             
         
                     
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
             
         
                     
@@ -7558,8 +7628,24 @@ $</p>
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
                         
-                        
+            
+            
+                
                     
                 
                 
@@ -7952,7 +8038,7 @@ $</p>
 			<a class="nav nav-prev" href="/ml-andrew-ng/week8/pca-algorithm/" title="تحلیل اجزای اصلی الگوریتم"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ml-andrew-ng/week9/" title=" هفته نهم" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/ml-andrew-ng/week8/choosing-number-pc/" title="انتخاب تعداد اجزای اصلی" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

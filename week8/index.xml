@@ -101,14 +101,35 @@
     </item>
     
     <item>
-      <title>بازسازی از نمایش فشرده</title>
+      <title>بازسازی از حالت فشرده</title>
       <link>https://mehrdad-dev.github.io/ml-andrew-ng/week8/reconstruction-compressed-representation/</link>
       <pubDate>Thu, 12 Nov 2020 12:02:43 +0330</pubDate>
       
       <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week8/reconstruction-compressed-representation/</guid>
       <description>اگر برای فشرده سازی داده های خود از PCA استفاده می‌کنیم، چگونه می‌توانیم داده های خود را از حالت فشرده خارج کنیم یا به تعداد اصلی ویژگی های خود برگردیم؟
 برای بازگشت از حالت 1 بعدی به 2 بعدی، این کار را انجام می‌دهیم: $z \in \mathbb{R} \rightarrow x \in \mathbb{R ^ 2} $
-ما می‌توانیم این کار را با یک معادله انجام دهیم: $ x ^{(i)} _ {approx} = Ureduce \cdot z ^{(i)} $</description>
+ما می‌توانیم این کار را با یک معادله انجام دهیم: $ x ^{(i)} _ {approx} = U _ {reduce} \cdot z ^{(i)} $</description>
+    </item>
+    
+    <item>
+      <title>انتخاب تعداد اجزای اصلی</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week8/choosing-number-pc/</link>
+      <pubDate>Fri, 13 Nov 2020 11:56:23 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week8/choosing-number-pc/</guid>
+      <description>چگونه k را انتخاب کنیم، که به آن تعداد اجزای اصلی نیز گفته می‌شود؟
+یکی از راه های انتخاب k استفاده از فرمول زیر است:
+  با توجه به خطای average squared projection: $\frac{1}{m} \sum _{i = 1} ^ m || x ^{(i)} - x ^{(i)} _ {approx} || ^ 2 $
+  همچنین با توجه به تنوع کل داده ها: $\frac{1}{m} \sum _{i = 1} ^ m || x ^{(i)} || $</description>
+    </item>
+    
+    <item>
+      <title>توصیه هایی برای اعمال PCA</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week8/advice-for-applying-pca/</link>
+      <pubDate>Fri, 13 Nov 2020 12:29:08 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week8/advice-for-applying-pca/</guid>
+      <description>رایج ترین کاربرد PCA سرعت بخشیدن به یادگیری با نظارت است.</description>
     </item>
     
   </channel>

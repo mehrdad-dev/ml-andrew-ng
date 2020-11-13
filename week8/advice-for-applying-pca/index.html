@@ -38,7 +38,7 @@
 
   <link rel="icon" href="/ml-andrew-ng/images/favicon.png" type="image/png">
 
-  <title>توزیع گاوسی چند متغیره(اختیاری) | Machine Learning Andrew Ng</title>
+  <title>توصیه هایی برای اعمال PCA | Machine Learning Andrew Ng</title>
 
   
   <link href="/ml-andrew-ng/css/nucleus.css" rel="stylesheet">
@@ -89,7 +89,7 @@
   
 </head>
 
-<body class="" data-url="/ml-andrew-ng/week9/multivariate-gaussian-distribution/">
+<body class="" data-url="/ml-andrew-ng/week8/advice-for-applying-pca/">
   <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -5358,7 +5358,7 @@
   
     
     <li data-nav-id="/ml-andrew-ng/week8/" title=" هفته هشتم" class="dd-item 
-        
+        parent
         
         
         ">
@@ -5596,7 +5596,7 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week8/advice-for-applying-pca/" title="توصیه هایی برای اعمال PCA" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week8/advice-for-applying-pca/" title="توصیه هایی برای اعمال PCA" class="dd-item active">
         <a href="/ml-andrew-ng/week8/advice-for-applying-pca/">
         توصیه هایی برای اعمال PCA
         <i class="fas fa-check read-icon"></i>
@@ -5625,7 +5625,7 @@
   
     
     <li data-nav-id="/ml-andrew-ng/week9/" title=" هفته نهم" class="dd-item 
-        parent
+        
         
         
         ">
@@ -5779,7 +5779,7 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week9/multivariate-gaussian-distribution/" title="توزیع گاوسی چند متغیره(اختیاری)" class="dd-item active">
+      <li data-nav-id="/ml-andrew-ng/week9/multivariate-gaussian-distribution/" title="توزیع گاوسی چند متغیره(اختیاری)" class="dd-item ">
         <a href="/ml-andrew-ng/week9/multivariate-gaussian-distribution/">
         توزیع گاوسی چند متغیره(اختیاری)
         <i class="fas fa-check read-icon"></i>
@@ -6263,7 +6263,7 @@
           
           
           
-          <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week9/'> هفته نهم</a> > توزیع گاوسی چند متغیره(اختیاری)
+          <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week8/'> هفته هشتم</a> > توصیه هایی برای اعمال PCA
           
           
           
@@ -6292,22 +6292,14 @@
           
           <h1>
             
-            توزیع گاوسی چند متغیره(اختیاری)
+            توصیه هایی برای اعمال PCA
           </h1>
           
 
           
-<div class="page-description"><i class="fas fa-clock"></i> 1 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/10/30
+<div class="page-description"><i class="fas fa-clock"></i> 1 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/11/13
 </div>
-<p>توزیع گاوسی چند متغیره در واقع تعمیم تشخیص ناهنجاری است و ممکن است (یا ممکن نیست) ناهنجاری‌های بیشتری را پیدا کند.</p>
-<p>به جای مدل‌ سازی جداگانه $p(x_{1})$، $p(x_{2})$، &hellip;  ما $p(x)$ را در یک مرحله مدل سازی می‌کنیم. پارامترهای ما $\mu \in \mathbb{R}^{n}$ و $\Sigma  \in \mathbb{R}^{n \times n}$ خواهند بود.</p>
-<p>$$p(x; \mu , \Sigma ) = \frac{1}{(2\pi )^{\frac{n}{2}}\left | \Sigma  \right |^{\frac{1}{2}}}exp(-\frac{1}{2}(x - \mu )^{T}\Sigma ^{-1}(x-\mu ))$$</p>
-<p>یک نتیجه مهم این است که می‌توانیم خطوط مستطیلی گاوسی را مدل کنیم که این امکان را به ما می‌دهد تا داده‌هایی را متناسب کنیم که ممکن است در خطوط دایره‌ای طبیعی جای نگیرند.</p>
-<p>متغیر $\Sigma$ شکل، پهنا و جهت خطوط را تغییر می‌دهد. تغییر $\mu$ مرکز توزیع را جابجا خواهد کرد.</p>
-<p>همچنین لینک زیر را مطالعه کنید:</p>
-<ul>
-<li><a href="http://cs229.stanford.edu/section/gaussians.pdf">توزیع گاوسی چندمتغیره</a> Chuong B. Do, October 10, 2008.</li>
-</ul>
+<p>رایج ترین کاربرد PCA سرعت بخشیدن به یادگیری با نظارت است.</p>
 
 
 <footer class="footline">
@@ -7436,6 +7428,206 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
                 
                 
 
@@ -7560,206 +7752,6 @@
             
             
                 
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -8024,10 +8016,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/ml-andrew-ng/week9/choosing-what-features-to-use/" title="انتخاب ویژگی‌ها"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/ml-andrew-ng/week8/choosing-number-pc/" title="انتخاب تعداد اجزای اصلی"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ml-andrew-ng/week9/anomaly-detection-using-multivariate-gaussian-distribution/" title="تشخیص ناهنجاری با استفاده از توزیع گاوسی چند متغیره (اختیاری)" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/ml-andrew-ng/week9/" title=" هفته نهم" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

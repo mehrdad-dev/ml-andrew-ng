@@ -38,7 +38,7 @@
 
   <link rel="icon" href="/ml-andrew-ng/images/favicon.png" type="image/png">
 
-  <title>توزیع گاوسی چند متغیره(اختیاری) | Machine Learning Andrew Ng</title>
+  <title>انتخاب تعداد اجزای اصلی | Machine Learning Andrew Ng</title>
 
   
   <link href="/ml-andrew-ng/css/nucleus.css" rel="stylesheet">
@@ -89,7 +89,7 @@
   
 </head>
 
-<body class="" data-url="/ml-andrew-ng/week9/multivariate-gaussian-distribution/">
+<body class="" data-url="/ml-andrew-ng/week8/choosing-number-pc/">
   <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -5358,7 +5358,7 @@
   
     
     <li data-nav-id="/ml-andrew-ng/week8/" title=" هفته هشتم" class="dd-item 
-        
+        parent
         
         
         ">
@@ -5575,7 +5575,7 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week8/choosing-number-pc/" title="انتخاب تعداد اجزای اصلی" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week8/choosing-number-pc/" title="انتخاب تعداد اجزای اصلی" class="dd-item active">
         <a href="/ml-andrew-ng/week8/choosing-number-pc/">
         انتخاب تعداد اجزای اصلی
         <i class="fas fa-check read-icon"></i>
@@ -5625,7 +5625,7 @@
   
     
     <li data-nav-id="/ml-andrew-ng/week9/" title=" هفته نهم" class="dd-item 
-        parent
+        
         
         
         ">
@@ -5779,7 +5779,7 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week9/multivariate-gaussian-distribution/" title="توزیع گاوسی چند متغیره(اختیاری)" class="dd-item active">
+      <li data-nav-id="/ml-andrew-ng/week9/multivariate-gaussian-distribution/" title="توزیع گاوسی چند متغیره(اختیاری)" class="dd-item ">
         <a href="/ml-andrew-ng/week9/multivariate-gaussian-distribution/">
         توزیع گاوسی چند متغیره(اختیاری)
         <i class="fas fa-check read-icon"></i>
@@ -6263,7 +6263,7 @@
           
           
           
-          <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week9/'> هفته نهم</a> > توزیع گاوسی چند متغیره(اختیاری)
+          <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week8/'> هفته هشتم</a> > انتخاب تعداد اجزای اصلی
           
           
           
@@ -6276,7 +6276,15 @@
           
           <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#الگوریتم-انتخاب-k">الگوریتم انتخاب k</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -6292,22 +6300,49 @@
           
           <h1>
             
-            توزیع گاوسی چند متغیره(اختیاری)
+            انتخاب تعداد اجزای اصلی
           </h1>
           
 
           
-<div class="page-description"><i class="fas fa-clock"></i> 1 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/10/30
+<div class="page-description"><i class="fas fa-clock"></i> 2 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/11/13
 </div>
-<p>توزیع گاوسی چند متغیره در واقع تعمیم تشخیص ناهنجاری است و ممکن است (یا ممکن نیست) ناهنجاری‌های بیشتری را پیدا کند.</p>
-<p>به جای مدل‌ سازی جداگانه $p(x_{1})$، $p(x_{2})$، &hellip;  ما $p(x)$ را در یک مرحله مدل سازی می‌کنیم. پارامترهای ما $\mu \in \mathbb{R}^{n}$ و $\Sigma  \in \mathbb{R}^{n \times n}$ خواهند بود.</p>
-<p>$$p(x; \mu , \Sigma ) = \frac{1}{(2\pi )^{\frac{n}{2}}\left | \Sigma  \right |^{\frac{1}{2}}}exp(-\frac{1}{2}(x - \mu )^{T}\Sigma ^{-1}(x-\mu ))$$</p>
-<p>یک نتیجه مهم این است که می‌توانیم خطوط مستطیلی گاوسی را مدل کنیم که این امکان را به ما می‌دهد تا داده‌هایی را متناسب کنیم که ممکن است در خطوط دایره‌ای طبیعی جای نگیرند.</p>
-<p>متغیر $\Sigma$ شکل، پهنا و جهت خطوط را تغییر می‌دهد. تغییر $\mu$ مرکز توزیع را جابجا خواهد کرد.</p>
-<p>همچنین لینک زیر را مطالعه کنید:</p>
+<p>چگونه k را انتخاب کنیم، که به آن تعداد اجزای اصلی نیز گفته می‌شود؟</p>
+<!-- به یاد بیاورید که k ابعادی است که ما به آن کاهش می‌دهیم. -->
+<p>یکی از راه های انتخاب k استفاده از فرمول زیر است:</p>
 <ul>
-<li><a href="http://cs229.stanford.edu/section/gaussians.pdf">توزیع گاوسی چندمتغیره</a> Chuong B. Do, October 10, 2008.</li>
+<li>
+<p>با توجه به خطای average squared projection: $\frac{1}{m} \sum _{i = 1} ^ m || x ^{(i)} - x ^{(i)} _ {approx} || ^ 2 $</p>
+</li>
+<li>
+<p>همچنین با توجه به تنوع کل داده ها: $\frac{1}{m} \sum _{i = 1} ^ m || x ^{(i)} || $</p>
+</li>
+<li>
+<p>k راه طوری انتخاب کنید که کوچکترین مقدار باشد:
+$$
+\frac{\frac{1}{m} \sum _{i = 1} ^ m || x ^{(i)} - x ^{(i)} _ {approx} || ^ 2 }
+{\frac{1}{m} \sum _{i = 1} ^ m || x ^{(i)} ||} \leq 0.01
+$$</p>
+</li>
 </ul>
+<p>به عبارت دیگر، خطای squared projection تقسیم بر کل تغییر باید کمتر از یک درصد باشد،
+به طوری که 99٪ از واریانس حفظ شود.</p>
+<h3 id="الگوریتم-انتخاب-k">الگوریتم انتخاب k</h3>
+<ol>
+<li>PCA را با $k=1,2,&hellip;$ امتحان کنید</li>
+<li>محاسبه $U _ {reduce}, z , x$</li>
+<li>فرمول بالا را بررسی کنید تا 99٪ واریانس حفظ شود. در غیر این صورت، به مرحله یک بروید و k را افزایش دهید.</li>
+</ol>
+<p>این روش در واقع به طرز وحشتناکی ناکارآمد خواهد بود.
+در اوکتاو ما از svd استفاده خواهیم کرد:</p>
+<div align="left">
+<pre><code>[U,S,V] = svd(Sigma)
+</code></pre></div>
+<p>که به ما یک ماتریس S می‌دهد،
+در واقع می‌توانیم 99٪ از واریانس حفظ شده را با استفاده از ماتریس S به شرح زیر بررسی کنیم:</p>
+<p>$$
+\frac{ \sum _ {i = 1} ^ k S_{ii} }{\sum _ {i = 1} ^ n  S_{ii}} \geq 0.99
+$$</p>
 
 
 <footer class="footline">
@@ -7436,6 +7471,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -7449,53 +7485,8 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -7620,106 +7611,6 @@
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
             
             
@@ -7760,6 +7651,150 @@
                     
                         
                         
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -8024,10 +8059,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/ml-andrew-ng/week9/choosing-what-features-to-use/" title="انتخاب ویژگی‌ها"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/ml-andrew-ng/week8/reconstruction-compressed-representation/" title="بازسازی از حالت فشرده"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ml-andrew-ng/week9/anomaly-detection-using-multivariate-gaussian-distribution/" title="تشخیص ناهنجاری با استفاده از توزیع گاوسی چند متغیره (اختیاری)" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/ml-andrew-ng/week8/advice-for-applying-pca/" title="توصیه هایی برای اعمال PCA" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
