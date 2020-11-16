@@ -55,6 +55,14 @@ https://github.com/mehrdad-dev/ml-andrew-ng-code
 
 [mehrdad.mohammadian.contact@gmail.com](mailto:mehrdad.mohammadian.contact@gmail.com)
 
+## ❤️ حمایت
+برای حمایت و دونیت کردن به بخش
+[حمایت](https://mehrdad-dev.github.io/ml-andrew-ng/sponsorship/)
+وب سایت
+مراجعه کنید.
+
+
+
 ## مجوز
 [LICENSE](https://github.com/mehrdad-dev/ml-andrew-ng/blob/master/LICENSE)
 
