@@ -323,7 +323,7 @@ $$ Cost(h_\theta(x), y) = -log(h_\theta(x)) \hspace{1cm} if \hspace{0.3cm} y = 1
     </item>
     
     <item>
-      <title> کرنل ها (قسمت اول)</title>
+      <title>کرنل ها قسمت اول</title>
       <link>https://mehrdad-dev.github.io/ml-andrew-ng/week7/kernels1/</link>
       <pubDate>Tue, 03 Nov 2020 11:24:39 +0330</pubDate>
       
@@ -423,6 +423,15 @@ $$ Cost(h_\theta(x), y) = - y \hspace{0.2cm} log(h_\theta(x)) - (1 - y) log(1 - 
       <description>بررسی نماد ها و مفاهیم مثلا در داده ی خانه ها نماد ها به این صورت هستند:    نماد      $m$ تعداد کل ردیف های جدول داده آموزش   $x$ متغیر های ورودی   $y$ متغیر های خروجی یا هدف    برای آدرس دهی در جدول به این شکل عمل می‌کنیم:
 $$(x_i, y_i) \Rightarrow x_1= 2104, y_1 = 460$$
 اینجا منظور از $i$ اندیس داده در جدول است.</description>
+    </item>
+    
+    <item>
+      <title>کرنل ها قسمت دوم</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week7/kernels2/</link>
+      <pubDate>Tue, 17 Nov 2020 16:40:46 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week7/kernels2/</guid>
+      <description></description>
     </item>
     
     <item>

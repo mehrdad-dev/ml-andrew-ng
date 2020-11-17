@@ -38,7 +38,7 @@
 
   <link rel="icon" href="/ml-andrew-ng/images/favicon.png" type="image/png">
 
-  <title>الگوریتم فیلترینگ مشارکتی | Machine Learning Andrew Ng</title>
+  <title>کرنل ها قسمت دوم | Machine Learning Andrew Ng</title>
 
   
   <link href="/ml-andrew-ng/css/nucleus.css" rel="stylesheet">
@@ -89,7 +89,7 @@
   
 </head>
 
-<body class="" data-url="/ml-andrew-ng/week9/collaborative-filtering-algorithm/">
+<body class="" data-url="/ml-andrew-ng/week7/kernels2/">
   <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -5238,7 +5238,7 @@
   
     
     <li data-nav-id="/ml-andrew-ng/week7/" title=" هفته هفتم" class="dd-item 
-        
+        parent
         
         
         ">
@@ -5350,7 +5350,7 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week7/kernels2/" title="کرنل ها قسمت دوم" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week7/kernels2/" title="کرنل ها قسمت دوم" class="dd-item active">
         <a href="/ml-andrew-ng/week7/kernels2/">
         کرنل ها قسمت دوم
         <i class="fas fa-check read-icon"></i>
@@ -5646,7 +5646,7 @@
   
     
     <li data-nav-id="/ml-andrew-ng/week9/" title=" هفته نهم" class="dd-item 
-        parent
+        
         
         
         ">
@@ -5905,7 +5905,7 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week9/collaborative-filtering-algorithm/" title="الگوریتم فیلترینگ مشارکتی" class="dd-item active">
+      <li data-nav-id="/ml-andrew-ng/week9/collaborative-filtering-algorithm/" title="الگوریتم فیلترینگ مشارکتی" class="dd-item ">
         <a href="/ml-andrew-ng/week9/collaborative-filtering-algorithm/">
         الگوریتم فیلترینگ مشارکتی
         <i class="fas fa-check read-icon"></i>
@@ -6284,7 +6284,7 @@
           
           
           
-          <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week9/'> هفته نهم</a> > الگوریتم فیلترینگ مشارکتی
+          <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week7/'> هفته هفتم</a> > کرنل ها قسمت دوم
           
           
           
@@ -6313,33 +6313,13 @@
           
           <h1>
             
-            الگوریتم فیلترینگ مشارکتی
+            کرنل ها قسمت دوم
           </h1>
           
 
           
-<div class="page-description"><i class="fas fa-clock"></i> 1 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/11/05
+<div class="page-description"><i class="fas fa-clock"></i> 0 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/11/17
 </div>
-<p>برای سرعت بخشیدن به کارها، می‌توانیم ویژگی‌ها و پارامترها را به صورت همزمان به حداقل برسانیم:</p>
-<p>$$
-J(x,\theta ) = \frac{1}{2}\sum_{(i,j):r(i,j)=1}^{}((\theta ^{(j)})^{T}(x^{(i)}) - y^{(i,j)})^{2} + \frac{\lambda }{2}\sum_{i=1}^{n_{m }}\sum_{k=1}^{n}(x_{k}^{(i)})^{2} + \frac{\lambda }{2}\sum_{j=1}^{n_{u }}\sum_{k=1}^{n}(\theta _{k}^{(j)})^{2}
-$$</p>
-<p>این روش ممکن است پیچیده به نظر بیاید اما فقط تابع هزینه برای تتا و تابع هزینه x را ترکیب کردیم.</p>
-<p>چون الگوریتم می‌تواند این موارد را خودش یاد بگیرد، واحدهای بایاس که در آن‌ها $x_{0} =1$ باشد، حذف شده‌اند، از این رو $x \in \mathbb{R}^{n}$ و $\theta \in \mathbb{R}^{n}$.</p>
-<p>مراحل الگوریتم به صورت زیر خواهند بود:</p>
-<ol>
-<li>
-<p>$( x^{(i)}, &hellip;, x^{(n_{m})}, \theta ^{(1)}, &hellip;, \theta ^{(n_{u })})$ را به مقادیر تصادفی کوچک، مقداردهی کنید. این کار به منظور از بین بردن تقارن انجام می‌شود و تضمین می‌کند که الگوریتم ویژگی‌های $x^{(i)}, &hellip;, x^{(n_{m})}$ را یاد بگیرد که با هم متفاوت هستند.</p>
-</li>
-<li>
-<p>با استفاده از گرادیان کاهشی (یا یک الگوریتم بهینه‌سازی پیشرفته) $J( x^{(i)}, &hellip;, x^{(n_{m})}, \theta ^{(1)}, &hellip;, \theta ^{(n_{u })})$ را به حداقل برسانید. بطور مثال برای هر</p>
-</li>
-</ol>
-<p>$j=1,&hellip;,n_{u}, i=1,&hellip;,n_{m}:x_{k}^{(i)}:=x_{k}^{(i)} - \alpha (\sum_{j:r(i,j)=1}^{}((\theta ^{(j)})^{T}x^{(i)} - y^{(i,j)})\theta_{k}^{(j)} + \lambda x_{k}^{(i)})$</p>
-<p>$\theta_{k}^{(j)}:= \theta_{k}^{(j)} - \alpha (\sum_{i:r(i,j)=1}^{}((\theta ^{(j)})^{T}x^{(i)} - y^{(i,j)})x_{k}^{(i)} + \lambda \theta _{k}^{(j)})$</p>
-<ol start="3">
-<li>برای یک کاربر با پارامترهای $\theta$ و یک فیلم با ویژگی‌های (یادگرفته شده) x، رتبه‌بندی ستاره‌ای $\theta^{T}x$ را پیش‌ بینی کنید.</li>
-</ol>
 
 
 <footer class="footline">
@@ -7388,6 +7368,7 @@ $$</p>
             
                 
                     
+                    
                 
                 
 
@@ -7400,6 +7381,9 @@ $$</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -7465,197 +7449,6 @@ $$</p>
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -7676,6 +7469,8 @@ $$</p>
             
                 
                     
+                        
+                        
                     
                 
                 
@@ -7689,9 +7484,6 @@ $$</p>
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -7864,11 +7656,26 @@ $$</p>
             
         
                     
+            
+        
+                    
                         
             
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -7886,8 +7693,181 @@ $$</p>
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -8072,10 +8052,10 @@ $$</p>
 	 
 	 
 		
-			<a class="nav nav-prev" href="/ml-andrew-ng/week9/collaborative-filtering/" title="فیلترینگ مشارکتی"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/ml-andrew-ng/week7/kernels1/" title="کرنل ها قسمت اول"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ml-andrew-ng/week9/vectorization/" title="بردارسازی: فاکتورگیری ماتریس با درجه پایین" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/ml-andrew-ng/week8/" title=" هفته هشتم" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
