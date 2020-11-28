@@ -129,7 +129,19 @@
       <pubDate>Fri, 13 Nov 2020 12:29:08 +0330</pubDate>
       
       <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week8/advice-for-applying-pca/</guid>
-      <description>رایج ترین کاربرد PCA سرعت بخشیدن به یادگیری با نظارت است.</description>
+      <description>رایج ترین کاربرد PCA سرعت بخشیدن به یادگیری با نظارت است.
+تصور کنید مجموعه آموزشی با تعداد زیادی ویژگی داریم $x ^ {(1)}, &amp;hellip; , x ^ {(m)} \in \mathbb{R ^ {10000} } $
+ما می‌توانیم از PCA برای کاهش تعداد ویژگی ها در هر نمونه از مجموعه آموزش استفاده کنیم $z ^ {(1)}, &amp;hellip; , z ^ {(m)} \in \mathbb{R ^ {1000} } $.
+توجه داشته باشید که ما باید PCA را صورت کاهشی از $x ^ {(1)}$ به $z ^ {(1)}$ تعریف کنیم، فقط در مجموعه آموزش و نه در مجموعه cross-validation یا تست.</description>
+    </item>
+    
+    <item>
+      <title>فایل های هفته هشتم</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week8/files/</link>
+      <pubDate>Sat, 28 Nov 2020 21:59:24 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week8/files/</guid>
+      <description>اسلاید ها  Clustering - pdf Dimensionality reduction - pdf  غلط نامه  Errata - pdf  تمرین برنامه نویسی  Programming Exercise 7: K-means Clustering and Principal Component Analysis - pdf | problem  </description>
     </item>
     
   </channel>
