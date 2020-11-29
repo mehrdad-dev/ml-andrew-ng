@@ -11,5 +11,59 @@
 	<atom:link href="https://mehrdad-dev.github.io/ml-andrew-ng/week10/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>یادگیری با مجموعه داده های بزرگ</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week10/learning-with-large-datasets/</link>
+      <pubDate>Sun, 29 Nov 2020 12:38:32 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week10/learning-with-large-datasets/</guid>
+      <description>هنگامی که الگوریتم ما واریانس زیادی داشته باشد و مقدار m کوچیک باشد، ما عمدتا از یک محموعه داده بسیار بزرگ بهره مند می‌شویم.
+به یاد بیاورید که اگر الگوریتم ما از بایاس بالایی برخوردار باشد، داده های بیشتر هیچ فایده نخواهد داشت.
+مجموعه داده ها اغلب می‌توانند به اندازه هایی مانند m = 100,000,000 نزدیک شوند. در این حالت، گرادیان کاهشی ما باید یکصد میلیون مثال را جمع بندی کند.</description>
+    </item>
+    
+    <item>
+      <title>گرادیان کاهشی تصادفی</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week10/stochastic-gradient-descent/</link>
+      <pubDate>Sun, 29 Nov 2020 12:47:59 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week10/stochastic-gradient-descent/</guid>
+      <description>گرادیان کاهشی تصادفی نسخه ای جایگزین برای گرادیان کاهشی کلاسیک است، که برای مجموعه داده های بزرگ کارآمد تر و مقیاس پذیر است.
+گرادیان کاهشی تصادفی به روشی متفاوت اما مشابه نوشته می‌شود:
+$$ cost(\theta, (x ^{(i)}, y ^{(i)})) = \frac{1}{2} (h_\theta (x ^{(i)}) - y ^{(i)}) ^ 2 $$
+تنها تفاوت در تابع هزینه فوق حذف ثابت m در داخل $\frac{1} {2} $ است.
+$$ J_ {train} (\theta) = \frac{1}{m} \sum _ {i = 1} ^ m cost cost(\theta, (x ^{(i)}, y ^{(i)})) $$</description>
+    </item>
+    
+    <item>
+      <title>همگرایی گرادیان کاهشی تصادفی</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week10/stochastic-gradient-descent-convergence/</link>
+      <pubDate>Sun, 29 Nov 2020 13:22:12 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week10/stochastic-gradient-descent-convergence/</guid>
+      <description>چگونه می‌توان نرخ یادگیری α را برای گرادیان کاهشی تصادفی انتخاب کرد؟ همچنین چگونه می‌توان گرادیان کاهشی تصادفی را اشکال زدایی کرد تا مطمئن شویم که تا حد ممکن به مینیمم کلی نزدیک شده است؟
+یک استراتژی رسم میانگین هزینه فرضیه اعمال شده در هر 1000 یا حدود نمونه آموزشی است. ما می‌توانیم این هزینه ها را در طی تکرارهای گرادیان کاهشی محاسبه و ذخیره کنیم.
+با یک نرخ یادگیری کوچک، ممکن است شما یک راه حل کمی بهتر با گرادیان کاهشی تصادفی داشته باشید.</description>
+    </item>
+    
+    <item>
+      <title>یادگیری آنلاین</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week10/online-learning/</link>
+      <pubDate>Sun, 29 Nov 2020 13:36:46 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week10/online-learning/</guid>
+      <description>با استفاده مداوم کاربران از یک وب سایت، می‌توانیم یک حلقه بی پایان (x، y) دریافت کنیم، جایی که برخی اقدامات کاربر را برای ویژگی های x جمع می‌کنیم تا برخی رفتارهای y را پیش بینی کنیم.
+در هنگام جمع آوری می‌توانید θ را برای هر زوج جداگانه (x، y) به روز کنید. از این طریق می‌توانید با مجموعه جدیدی از کاربران سازگار شوید، زیرا به طور مداوم تتا را به روز می کنید.</description>
+    </item>
+    
+    <item>
+      <title>Map Reduce and Data Parallelism</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week10/map-reduce-and-data-parallelism/</link>
+      <pubDate>Sun, 29 Nov 2020 13:40:01 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week10/map-reduce-and-data-parallelism/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
