@@ -57,12 +57,22 @@ $$ J_ {train} (\theta) = \frac{1}{m} \sum _ {i = 1} ^ m cost cost(\theta, (x ^{(
     </item>
     
     <item>
-      <title>Map Reduce and Data Parallelism</title>
+      <title>کاهش نگاشت و موازی سازی داده</title>
       <link>https://mehrdad-dev.github.io/ml-andrew-ng/week10/map-reduce-and-data-parallelism/</link>
       <pubDate>Sun, 29 Nov 2020 13:40:01 +0330</pubDate>
       
       <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week10/map-reduce-and-data-parallelism/</guid>
-      <description></description>
+      <description>ما می‌توانیم گرادیان کاهشی batch را تقسیم کنیم و تابع هزینه را برای زیر مجموعه ای از داده ها به ماشین های مختلف ارسال کنیم تا بتوانیم الگوریتم خود را به صورت موازی آموزش دهیم.
+شما می‌توانید مجموعه آموزشی خود را به تعداد z زیرمجموعه متناسب با تعداد ماشین های خود تقسیم کنید. در هر یک از ماشین ها $ \sum _ {i = p} ^ q (h_\theta (x ^{(i)}) - y ^{(i)}) .</description>
+    </item>
+    
+    <item>
+      <title>فایل های هفته دهم</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week10/files/</link>
+      <pubDate>Sun, 29 Nov 2020 17:11:10 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week10/files/</guid>
+      <description>اسلاید ها  Large scale machine learning - pdf  </description>
     </item>
     
   </channel>

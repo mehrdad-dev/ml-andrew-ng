@@ -70,5 +70,14 @@ $$ f_i=similarity(x,l^{(i)})=exp(-\frac{||x-l^{(i)}||^2}{2\sigma^2}) $$
       <description></description>
     </item>
     
+    <item>
+      <title>فایل های هفته هفتم</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week7/files/</link>
+      <pubDate>Sun, 29 Nov 2020 17:11:38 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week7/files/</guid>
+      <description>اسلاید ها  Support vector machines - pdf  غلط نامه  Errata - pdf  تمرین برنامه نویسی  Programming Exercise 6: Support Vector Machines - pdf | problem  </description>
+    </item>
+    
   </channel>
 </rss>

@@ -11,5 +11,25 @@
 	<atom:link href="https://mehrdad-dev.github.io/ml-andrew-ng/week11/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>تبریک!</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week11/congratulations/</link>
+      <pubDate>Sun, 29 Nov 2020 17:30:38 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week11/congratulations/</guid>
+      <description>تشکر و حرف های آخر Andrew Ng در پایان دوره:
+(فقط اونجاش که احساسی میشه و میخواد گریه کنه 😭🥺🥺)
+    برای دیدن ترجمه فیلم بالا کلیک کن   این ها مباحث این کلاس بود و اگر در تمام این دوره کار کرده اید شما باید خود را یک متخصص در یادگیری ماشین در نظر بگیرید. همانطور که می‌دانید ، یادگیری ماشین یک فناوری است که تأثیر بسزایی در علم، فناوری و صنعت دارد.</description>
+    </item>
+    
+    <item>
+      <title>فایل های هفته یازدهم</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week11/files/</link>
+      <pubDate>Sun, 29 Nov 2020 17:10:41 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week11/files/</guid>
+      <description>اسلاید ها  Application example: Photo OCR - pdf  </description>
+    </item>
+    
   </channel>
 </rss>

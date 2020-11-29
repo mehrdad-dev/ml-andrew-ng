@@ -38,7 +38,7 @@
 
   <link rel="icon" href="/ml-andrew-ng/images/favicon.png" type="image/png">
 
-  <title>Map Reduce and Data Parallelism | Machine Learning Andrew Ng</title>
+  <title>کاهش نگاشت و موازی سازی داده | Machine Learning Andrew Ng</title>
 
   
   <link href="/ml-andrew-ng/css/nucleus.css" rel="stylesheet">
@@ -5362,6 +5362,27 @@
 
             
           
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ml-andrew-ng/week7/files/" title="فایل های هفته هفتم" class="dd-item ">
+        <a href="/ml-andrew-ng/week7/files/">
+        فایل های هفته هفتم
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
         
         </ul>
               
@@ -6130,9 +6151,30 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week10/map-reduce-and-data-parallelism/" title="Map Reduce and Data Parallelism" class="dd-item active">
+      <li data-nav-id="/ml-andrew-ng/week10/map-reduce-and-data-parallelism/" title="کاهش نگاشت و موازی سازی داده" class="dd-item active">
         <a href="/ml-andrew-ng/week10/map-reduce-and-data-parallelism/">
-        Map Reduce and Data Parallelism
+        کاهش نگاشت و موازی سازی داده
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ml-andrew-ng/week10/files/" title="فایل های هفته دهم" class="dd-item ">
+        <a href="/ml-andrew-ng/week10/files/">
+        فایل های هفته دهم
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -6170,6 +6212,58 @@
           
       </a>
       
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ml-andrew-ng/week11/congratulations/" title="تبریک!" class="dd-item ">
+        <a href="/ml-andrew-ng/week11/congratulations/">
+        تبریک!
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/ml-andrew-ng/week11/files/" title="فایل های هفته یازدهم" class="dd-item ">
+        <a href="/ml-andrew-ng/week11/files/">
+        فایل های هفته یازدهم
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -6420,7 +6514,7 @@
           
           
           
-          <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week10/'> هفته دهم</a> > Map Reduce and Data Parallelism
+          <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week10/'> هفته دهم</a> > کاهش نگاشت و موازی سازی داده
           
           
           
@@ -6449,13 +6543,28 @@
           
           <h1>
             
-            Map Reduce and Data Parallelism
+            کاهش نگاشت و موازی سازی داده
           </h1>
           
 
           
-<div class="page-description"><i class="fas fa-clock"></i> 0 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/11/29
+<div class="page-description"><i class="fas fa-clock"></i> 1 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/11/29
 </div>
+<p>ما می‌توانیم گرادیان کاهشی batch را تقسیم کنیم و تابع هزینه را برای زیر مجموعه ای از داده ها به ماشین های مختلف ارسال کنیم تا بتوانیم الگوریتم خود را به صورت موازی آموزش دهیم.</p>
+<p>شما می‌توانید مجموعه آموزشی خود را به تعداد z زیرمجموعه  متناسب با تعداد ماشین های خود تقسیم کنید.
+در هر یک از ماشین ها
+$
+\sum _ {i = p} ^ q (h_\theta (x ^{(i)}) - y ^{(i)})
+. x ^{(i)} _ j
+$
+را محاسبه کنید.</p>
+<p>کاهش نگاشت یا همان MapReduce تمام این نگاشت ها را گرفته و با محاسبه آن ها را کاهش می‌دهد:</p>
+<p>$$
+\Theta _ j := \Theta _ j - \alpha (temp ^ {(1)} _ j + temp ^ {(2)} _ j + &hellip; + temp ^ {(z)} _ j)
+$$</p>
+<p>برای همه $j = 0, &hellip;, n$ ها.</p>
+<p>این صرفاً گرفتن هزینه محاسبه شده از همه ماشین ها ، محاسبه میانگین آنها، ضرب در نرخ یادگیری و به روزرسانی تتا است.</p>
+<p>الگوریتم یادگیری شما MapReduceable است اگر بتوان آن را به صورت مجموعی از توابع بر روی مجموعه آموزش محاسبه کرد. رگرسیون خطی و رگرسیون لجستیک به راحتی قابل موازی شدن هستند.</p>
 
 
 <footer class="footline">
@@ -7592,198 +7701,6 @@
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
             
             
@@ -8008,19 +7925,6 @@
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
             
         
                     
@@ -8037,49 +7941,10 @@
                     
 
                     
-            
-        
-                    
                         
             
             
                 
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -8145,6 +8010,165 @@
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -8165,6 +8189,20 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
                         
                         
                     
@@ -8175,6 +8213,141 @@
                     
                     
 
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
             
         
@@ -8287,7 +8460,7 @@
 			<a class="nav nav-prev" href="/ml-andrew-ng/week10/online-learning/" title="یادگیری آنلاین"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ml-andrew-ng/week11/" title=" هفته یازدهم" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/ml-andrew-ng/week10/files/" title="فایل های هفته دهم" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
