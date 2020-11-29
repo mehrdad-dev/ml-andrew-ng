@@ -506,7 +506,10 @@ $$(x_i, y_i) \Rightarrow x_1= 2104, y_1 = 460$$
       <pubDate>Tue, 17 Nov 2020 16:40:46 +0330</pubDate>
       
       <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week7/kernels2/</guid>
-      <description></description>
+      <description>یکی از راه های بدست آوردن نقطه های عطف این است که آن ها را دقیقا در مکان همه نمونه های آموزشی قرار دهیم. این کار به ما m نقطه عطف می دهد، با یک نقطه عطف به ازای هر نمونه آموزشی.
+با توجه به x:
+$$ f_1=similarity(x,l^{(1)}),\hspace{0.1cm} f_2=similarity(x,l^{(2)}),\hspace{0.1cm}f_3=similarity(x,l^{(3)}),&amp;hellip; $$
+این به ما یک «بردار ویژگی» می دهد، $f_{(i)}$ همه ویژگی های ما برای نمونه $x_{(i)}$. هم چنین می توانیم $f_0=1$ قرار دهیم تا مطابق با $\Theta_0$ شود.</description>
     </item>
     
     <item>
@@ -618,6 +621,15 @@ $$ {\color{Blue} h_\theta(x) = \theta_0 + \theta_1 x_1 + \theta_2 x_1^2}$$</desc
       
       <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week10/files/</guid>
       <description>اسلاید ها  Large scale machine learning - pdf  </description>
+    </item>
+    
+    <item>
+      <title>منابع بیشتر</title>
+      <link>https://mehrdad-dev.github.io/ml-andrew-ng/week7/additional-refrences/</link>
+      <pubDate>Sat, 21 Nov 2020 17:19:45 +0330</pubDate>
+      
+      <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week7/additional-refrences/</guid>
+      <description>&amp;ldquo;An Idiot&amp;rsquo;s Guide to Support Vector Machines&amp;rdquo;: http://web.mit.edu/6.034/wwwbob/svm-notes-long-08.pdf</description>
     </item>
     
     <item>

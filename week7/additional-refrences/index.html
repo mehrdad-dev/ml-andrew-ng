@@ -38,7 +38,7 @@
 
   <link rel="icon" href="/ml-andrew-ng/images/favicon.png" type="image/png">
 
-  <title>گرادیان کاهشی تصادفی | Machine Learning Andrew Ng</title>
+  <title>منابع بیشتر | Machine Learning Andrew Ng</title>
 
   
   <link href="/ml-andrew-ng/css/nucleus.css" rel="stylesheet">
@@ -89,7 +89,7 @@
   
 </head>
 
-<body class="" data-url="/ml-andrew-ng/week10/stochastic-gradient-descent/">
+<body class="" data-url="/ml-andrew-ng/week7/additional-refrences/">
   <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -5238,7 +5238,7 @@
   
     
     <li data-nav-id="/ml-andrew-ng/week7/" title=" هفته هفتم" class="dd-item 
-        
+        parent
         
         
         ">
@@ -5392,7 +5392,7 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week7/additional-refrences/" title="منابع بیشتر" class="dd-item ">
+      <li data-nav-id="/ml-andrew-ng/week7/additional-refrences/" title="منابع بیشتر" class="dd-item active">
         <a href="/ml-andrew-ng/week7/additional-refrences/">
         منابع بیشتر
         <i class="fas fa-check read-icon"></i>
@@ -6060,7 +6060,7 @@
   
     
     <li data-nav-id="/ml-andrew-ng/week10/" title=" هفته دهم" class="dd-item 
-        parent
+        
         
         
         ">
@@ -6109,7 +6109,7 @@
  
   
     
-      <li data-nav-id="/ml-andrew-ng/week10/stochastic-gradient-descent/" title="گرادیان کاهشی تصادفی" class="dd-item active">
+      <li data-nav-id="/ml-andrew-ng/week10/stochastic-gradient-descent/" title="گرادیان کاهشی تصادفی" class="dd-item ">
         <a href="/ml-andrew-ng/week10/stochastic-gradient-descent/">
         گرادیان کاهشی تصادفی
         <i class="fas fa-check read-icon"></i>
@@ -6535,7 +6535,7 @@
           
           
           
-          <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week10/'> هفته دهم</a> > گرادیان کاهشی تصادفی
+          <a href='/ml-andrew-ng/'>دوره یادگیری ماشین دانشگاه استنفورد به فارسی</a> > <a href='/ml-andrew-ng/week7/'> هفته هفتم</a> > منابع بیشتر
           
           
           
@@ -6564,50 +6564,15 @@
           
           <h1>
             
-            گرادیان کاهشی تصادفی
+            منابع بیشتر
           </h1>
           
 
           
-<div class="page-description"><i class="fas fa-clock"></i> 2 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/11/29
+<div class="page-description"><i class="fas fa-clock"></i> 1 دقیقه　|　<i class="far fa-calendar-check"></i> 2020/11/21
 </div>
-<p>گرادیان کاهشی تصادفی نسخه ای جایگزین برای گرادیان کاهشی کلاسیک است،
-که برای مجموعه داده های بزرگ کارآمد تر و مقیاس پذیر است.</p>
-<p>گرادیان کاهشی تصادفی به روشی متفاوت اما مشابه نوشته می‌شود:</p>
-<p>$$
-cost(\theta, (x ^{(i)}, y ^{(i)})) = \frac{1}{2} (h_\theta (x ^{(i)}) - y ^{(i)}) ^ 2
-$$</p>
-<p>تنها تفاوت در تابع هزینه فوق حذف  ثابت m در داخل
-$\frac{1} {2} $ است.</p>
-<p>$$
-J_ {train} (\theta) = \frac{1}{m} \sum _ {i = 1} ^ m cost cost(\theta, (x ^{(i)}, y ^{(i)}))
-$$</p>
-<p>$J_ {train} $ اکنون فقط میانگین هزینه ای است که برای همه نمونه های آموزشی ما اعمال می‌شود.</p>
-<p>الگوریتم به شرح زیر است:</p>
-<ol>
-<li>به طور تصادفی مجموعه داده را مخلوط کنید</li>
-<li>برای $i = 1 &hellip; m $
-$$
-\Theta _ j := \Theta _ j - \alpha (h_\Theta (x ^{(i)}) - y ^{(i)})  . x _ j ^ {(i)}
-$$</li>
-</ol>
-<p>این الگوریتم فقط سعی می‌کند هر بار یک نمونه آموزشی را متناسب (fit) کند.
-به این ترتیب می‌توانیم در گرادیان کاهشی پیشرفت کنیم بدون اینکه ابتدا همه نمونه های آموزشی m را اسکن کنیم.
-در گرادیان کاهشی تصادفی بعید به نظر می‌رسد در مینیمم اصلی همگرا شود در عوض به صورت تصادفی در اطراف آن سرگردان خواهد شد،
-اما معمولا نتیجه ای می‌دهد که به اندازه کافی نزدیک است.
-در گرادیان کاهشی تصادفی معمولا ۱ تا ۱۰ بار طول می کشد که برای مجموعه داده شما به مینیمم ملی برسد.</p>
-<p><strong>گرادیان کاهشی Mini-Batch</strong></p>
-<p>گرادیان کاهشی Mini-Batch گاهی ممکن است از گرادیان کاهشی تصادفی سریعنر باشد.</p>
-<p>به جای استفاده از همه نمونه های m مانند گرادیان کاهشی تصادفی و به جای استفاده از فقط یک نمونه در گرادیان کاهشی،
-ما از b استفاده خواهیم کرد.</p>
-<p>مقادیر معمول برای b در محدوده بین ۲ تا ۱۰۰ است.</p>
-<p>به طور مثال برای b=10 و  m=1000:</p>
-<p>تکرار کنید:</p>
-<p>برای $i = 1, 11, 21 ,31 , &hellip;, 991$</p>
-<p>$$
-\theta _ j := \theta _ j - \alpha \frac{1}{10} \sum _ {k = i } ^ {i + 9} (h_ \theta (x ^ {(k)}) - y ^ {(k)}) x ^ {(k)} _ j
-$$</p>
-<p>ما به سادگی همزمان بیش از ده نمونه را جمع بندی می‌کنیم. مزیت محاسبه بیش از یک نمونه در یک زمان این است که می توانیم از پیاده سازی های برداری شده نسبت به نمونه های b استفاده کنیم.</p>
+<p>&ldquo;An Idiot&rsquo;s Guide to Support Vector Machines&rdquo;:
+<a href="http://web.mit.edu/6.034/wwwbob/svm-notes-long-08.pdf">http://web.mit.edu/6.034/wwwbob/svm-notes-long-08.pdf</a></p>
 
 
 <footer class="footline">
@@ -7656,6 +7621,7 @@ $$</p>
             
                 
                     
+                    
                 
                 
 
@@ -7668,6 +7634,9 @@ $$</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -7765,213 +7734,6 @@ $$</p>
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -7991,6 +7753,9 @@ $$</p>
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -8192,6 +7957,214 @@ $$</p>
             
         
                     
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
             
             
@@ -8248,7 +8221,6 @@ $$</p>
             
                 
                     
-                    
                 
                 
 
@@ -8261,26 +8233,6 @@ $$</p>
             
             
                 
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -8298,8 +8250,21 @@ $$</p>
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
-                        
+            
+            
+                
                     
                 
                 
@@ -8516,10 +8481,10 @@ $$</p>
 	 
 	 
 		
-			<a class="nav nav-prev" href="/ml-andrew-ng/week10/learning-with-large-datasets/" title="یادگیری با مجموعه داده های بزرگ"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/ml-andrew-ng/week7/files/" title="فایل های هفته هفتم"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/ml-andrew-ng/week10/stochastic-gradient-descent-convergence/" title="همگرایی گرادیان کاهشی تصادفی" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/ml-andrew-ng/week8/" title=" هفته هشتم" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
