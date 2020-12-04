@@ -6573,10 +6573,10 @@
 </div>
 <p>ماشین بردار پشتیبان (SVM) یکی دیگر از الگوریتم های یادگیری ماشین با نظارت است که گاهی تمیزتر و قدرتمندتر عمل می کند. اگر به خاطر بیاورید، ما در رگریسیون لجستیک از ضوابط زیر استفاده می کردیم:</p>
 <p>$$
-if\hspace{0.3cm} y=1,\hspace{0.2cm} then \hspace{0.3cm} h_\theta(x)\approx 1 \hspace{0.3cm} and \hspace{0.3cm}\theta\ ^ T x \gg 0
+if\hspace{0.3cm} y=1,\hspace{0.2cm} then \hspace{0.3cm} h_\theta(x)\approx 1 \hspace{0.3cm} and \hspace{0.3cm}\Theta\ ^ T x \gg 0
 $$</p>
 <p>$$
-if\hspace{0.3cm} y=0,\hspace{0.2cm} then \hspace{0.3cm} h_\theta(x)\approx 0 \hspace{0.3cm} and \hspace{0.3cm}\theta\ ^ T x \ll 0
+if\hspace{0.3cm} y=0,\hspace{0.2cm} then \hspace{0.3cm} h_\theta(x)\approx 0 \hspace{0.3cm} and \hspace{0.3cm}\Theta\ ^ T x \ll 0
 $$</p>
 <p>تابع هزینه را برای رگریسیون لجستیک (نامنظم) به خاطر بیاورید:</p>
 <p>$$
@@ -6600,27 +6600,27 @@ $$ cost_0(z) = max(0,k(1 + z)) $$
 $$ cost_1(z) = max(0,k(1 - z)) $$</p>
 <p>عبارت کامل تابع هزینه را در رگریسیون لجستیک (منظم) به یاد بیاورید:</p>
 <p>$$
-J(\theta) = \frac{1}{m} \sum_{i=1}^m y^{(i)} (-log(h_\theta(x^{(i)}))) + (1 - y^{(i)}) (-log(1 - h_\theta(x^{(i)}) ))  + \frac{\lambda}{2m} \sum_{j=1}^n \theta_j ^ 2
+J(\theta) = \frac{1}{m} \sum_{i=1}^m y^{(i)} (-log(h_\theta(x^{(i)}))) + (1 - y^{(i)}) (-log(1 - h_\theta(x^{(i)}) ))  + \frac{\lambda}{2m} \sum_{j=1}^n \Theta_j ^ 2
 $$</p>
 <p>توجه داشته باشید که در معادله بالا علامت منفی در کل عبارت پخش شده است.</p>
 <p>ما با جایگزین کردن $cost_0 z$ و $cost_1 z$ در معادله، آن را به تابع هزینه ماشین های بردار پشتیبان تبدیل می کنیم:</p>
 <p>$$
-J(\theta) = \frac{1}{m} \sum_{i=1}^m y^{(i)} cost_1(\theta^Tx^{(i)}) + (1 - y^{(i)}) \hspace{0.1cm} cost_0(\theta^Tx^{(i)})  + \frac{\lambda}{2m} \sum_{j=1}^n \theta_j ^ 2
+J(\theta) = \frac{1}{m} \sum_{i=1}^m y^{(i)} cost_1(\theta^Tx^{(i)}) + (1 - y^{(i)}) \hspace{0.1cm} cost_0(\theta^Tx^{(i)})  + \frac{\lambda}{2m} \sum_{j=1}^n \Theta_j ^ 2
 $$</p>
 <p>می توانیم با ضرب کردن m در معادله کمی آن را بهینه تر کنیم (بنابراین عامل m در مخرج حذف می شود). توجه داشته باشید که این کار تاثیری در بهینه سازی ما ندارد چون ما یک عدد ثابت مثبت را در معادله ضرب کردیم (برای مثال، مینیمم $(u - 5)^2 + 1$ ، 5 است. با ضرب کردن آن در 10 تبدیل به $10(u - 5)^2 + 10$ می شود که باز هم مینیمم آن 5 است).</p>
 <p>$$
-J(\theta) = \sum_{i=1}^m y^{(i)} cost_1(\theta^Tx^{(i)}) + (1 - y^{(i)}) \hspace{0.1cm} cost_0(\theta^Tx^{(i)})  + \frac{\lambda}{2} \sum_{j=1}^n \theta_j ^ 2
+J(\theta) = \sum_{i=1}^m y^{(i)} cost_1(\theta^Tx^{(i)}) + (1 - y^{(i)}) \hspace{0.1cm} cost_0(\theta^Tx^{(i)})  + \frac{\lambda}{2} \sum_{j=1}^n \Theta_j ^ 2
 $$</p>
 <p>به علاوه، طبق قرارداد، ما برای منظم سازی از C به جای $\lambda$ استفاده می کنیم. مانند عبارت زیر:</p>
 <p>$$
-J(\theta) =C \sum_{i=1}^m y^{(i)} cost_1(\theta^Tx^{(i)}) + (1 - y^{(i)}) \hspace{0.1cm} cost_0(\theta^Tx^{(i)})  + \frac{1}{2} \sum_{j=1}^n \theta_j ^ 2
+J(\theta) =C \sum_{i=1}^m y^{(i)} cost_1(\theta^Tx^{(i)}) + (1 - y^{(i)}) \hspace{0.1cm} cost_0(\theta^Tx^{(i)})  + \frac{1}{2} \sum_{j=1}^n \Theta_j ^ 2
 $$</p>
 <p>این کار مانند این است که معادله را در $C =\frac{1}{\lambda}$ ضرب کنیم بنابراین هنگام بهینه سازی نتیجه تغییر نمی کند. حالا، برای منظم سازی بیشتر (یعنی کاهش overfitting)، C را کاهش می دهیم و زمانی که بخواهیم کم تر منظم سازی کنیم (یعنی کاهش underfitting)، C را افزایش می دهیم.</p>
 <p>در نهایت، توجه داشته باشید که معادله فرضی ماشین بردار پشتیبان احتمال 0 یا 1 بودن y را نشان نمی دهد (مانند چیزی که در معادله فرضی رگریسیون لجستیک داشتیم). در عوض، خروجی آن 0 یا 1 است. (اگر بخواهیم به طور تخصصی صحبت کنیم، این یک تابع تفکیکی است.)</p>
 <p>$$
 h_\theta(x)=
 \begin{cases}
-1 &amp; if  \hspace{0.3cm} \theta^T x\ge 0\newline
+1 &amp; if  \hspace{0.3cm} \Theta^T x\ge 0\newline
 0 &amp; otherwise
 \end{cases}
 $$</p>

@@ -63,8 +63,8 @@
       
       <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week7/optimization-objective/</guid>
       <description>ماشین بردار پشتیبان (SVM) یکی دیگر از الگوریتم های یادگیری ماشین با نظارت است که گاهی تمیزتر و قدرتمندتر عمل می کند. اگر به خاطر بیاورید، ما در رگریسیون لجستیک از ضوابط زیر استفاده می کردیم:
-$$ if\hspace{0.3cm} y=1,\hspace{0.2cm} then \hspace{0.3cm} h_\theta(x)\approx 1 \hspace{0.3cm} and \hspace{0.3cm}\theta\ ^ T x \gg 0 $$
-$$ if\hspace{0.3cm} y=0,\hspace{0.2cm} then \hspace{0.3cm} h_\theta(x)\approx 0 \hspace{0.3cm} and \hspace{0.3cm}\theta\ ^ T x \ll 0 $$
+$$ if\hspace{0.3cm} y=1,\hspace{0.2cm} then \hspace{0.3cm} h_\theta(x)\approx 1 \hspace{0.3cm} and \hspace{0.3cm}\Theta\ ^ T x \gg 0 $$
+$$ if\hspace{0.3cm} y=0,\hspace{0.2cm} then \hspace{0.3cm} h_\theta(x)\approx 0 \hspace{0.3cm} and \hspace{0.3cm}\Theta\ ^ T x \ll 0 $$
 تابع هزینه را برای رگریسیون لجستیک (نامنظم) به خاطر بیاورید:</description>
     </item>
     
@@ -175,8 +175,8 @@ $$x \sim N(\mu , \sigma ^{2})$$
       
       <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week7/large-margin-intuition/</guid>
       <description>یک راه مفید برای فکر کردن راجع به ماشین های بردار پشتیبان این است که آن ها را به عنوان طبقه بندی کننده هایی که حاشیه اطمینان زیادی دارند در نظر بگیرید.
-$$ if \hspace{0.3cm} y=1,\hspace{0.1cm} we\hspace{0.2cm} want \hspace{0.3cm} \theta\ ^ T x \ge 1 \hspace{0.3cm}(not\hspace{0.1cm} just\hspace{0.1cm} \ge 0 ) $$
-$$ if \hspace{0.3cm} y=0,\hspace{0.1cm} we\hspace{0.2cm} want \hspace{0.3cm} \theta\ ^ T x \le -1 \hspace{0.3cm}(not\hspace{0.1cm} just\hspace{0.1cm} &amp;lt; 0 ) $$</description>
+$$ if \hspace{0.3cm} y=1,\hspace{0.1cm} we\hspace{0.2cm} want \hspace{0.3cm} \Theta\ ^ T x \ge 1 \hspace{0.3cm}(not\hspace{0.1cm} just\hspace{0.1cm} \ge 0 ) $$
+$$ if \hspace{0.3cm} y=0,\hspace{0.1cm} we\hspace{0.2cm} want \hspace{0.3cm} \Theta\ ^ T x \le -1 \hspace{0.3cm}(not\hspace{0.1cm} just\hspace{0.1cm} &amp;lt; 0 ) $$</description>
     </item>
     
     <item>
