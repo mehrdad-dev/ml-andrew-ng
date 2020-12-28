@@ -6,7 +6,7 @@
 [🇮🇷](https://github.com/mehrdad-dev/ml-andrew-ng/blob/master/README.md)  &nbsp;
  Language / زبان
 
-**در حال تکمیل است ...** 
+**این مخزن به حالت read-only در آمده است، در صورتی که قصد مشارکت دارید ایمیل بزنید.**
 
 در این مخزن گیت هاب دوره یادگیری ماشین دانشگاه استنفورد با تدریس استاد Andrew Ng
 را به فارسی روان ترجمه می‌کنیم و منابع مفید در حوزه یادگیری ماشین و دیتاساینس را به مرور کامل می‌کنیم.
@@ -32,11 +32,6 @@ https://mehrdad-dev.github.io/ml-andrew-ng
 1. [تماشای ویدئو ها از طریق یوتیوب](https://www.youtube.com/watch?v=PPLop4L2eGk&list=PLLssT5z_DsK-h9vYZkQkYNWcItqhlRJLN)
 
 2. [دسترسی به دوره از طریق کورسرا](https://www.coursera.org/learn/machine-learning?)
-
-ریپو زیرنویس های این دوره به فارسی:
-
-https://github.com/BahramJannesar/AndrewNgMachineLearningCoursePersianSubtitle
-
 
 
 ## مشارکت
