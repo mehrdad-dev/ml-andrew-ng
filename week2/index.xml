@@ -19,7 +19,7 @@
       <guid>https://mehrdad-dev.github.io/ml-andrew-ng/week2/linear-regression-many-variable/</guid>
       <description>توی این هفته قراره در مورد رگرسیون خطی با چندین متغیر صحبت کنیم!
 مثلا داده ای شبیه به این برای خانه ها را فرض کنید:
-   نماد      $m$ تعداد کل سطر های جدول داده ها   $n$ تعداد ویژگی ها یا همان متغیر ها   $x^{(i)}$ i امین ردیف از جدول شامل متغیر ها   $x_j^{(i)}$ مقدار موجود در ردیف i ام و ستون متغیر j    بنابراین برای تابع فرضه داریم: $h_\theta = \theta_0 + \theta_1 + \theta_2x + &amp;hellip; + \theta_nx$</description>
+   نماد      $m$ تعداد کل سطر های جدول داده ها   $n$ تعداد ویژگی ها یا همان متغیر ها   $x^{(i)}$ i امین ردیف از جدول شامل متغیر ها   $x_j^{(i)}$ مقدار موجود در ردیف i ام و ستون متغیر j    بنابراین برای تابع فرضه داریم: $h_\theta = \theta_0 + \theta_1x + \theta_2x + &amp;hellip; + \theta_nx$</description>
     </item>
     
     <item>
