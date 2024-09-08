@@ -46,10 +46,6 @@ https://mehrdad-dev.github.io/ml-andrew-ng
 
 https://github.com/mehrdad-dev/ml-andrew-ng-code
 
-برای اطلاعات بیشتر با آدرس ایمیل زیر در ارتباط باشید:
-
-[mehrdad.mohammadian.contact@gmail.com](mailto:mehrdad.mohammadian.contact@gmail.com)
-
 ## ❤️ حمایت
 برای حمایت و دونیت کردن به بخش
 [حمایت](https://mehrdad-dev.github.io/ml-andrew-ng/sponsorship/)
